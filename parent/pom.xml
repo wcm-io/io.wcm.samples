@@ -61,7 +61,7 @@
     </plugins>
     <pluginManagement>
       <plugins>
-      
+
         <!-- Skipt code coverage checks for sample projects -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -70,9 +70,9 @@
             <skip>true</skip>
           </configuration>
         </plugin>
-      
+
       </plugins>
-    </pluginManagement>    
+    </pluginManagement>
   </build>
 
   <distributionManagement>

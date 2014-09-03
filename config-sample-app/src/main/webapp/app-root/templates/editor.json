@@ -1,0 +1,11 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "wcm.io Sample Configuration Editor",
+
+  "allowedPaths": "^/content(/.*)?$",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "/apps/wcm-io/config/editor/components/page/editor"
+  }
+}

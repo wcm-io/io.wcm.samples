@@ -41,11 +41,6 @@ public class SampleParameterProvider implements ParameterProvider {
       .build();
 
   @Override
-  public String getApplicationId() {
-    return Params.APPLICATION_ID;
-  }
-
-  @Override
   public Set<Parameter<?>> getParameters() {
     return ALL_PARAMETERS;
   }

@@ -19,8 +19,8 @@
  */
 package io.wcm.samples.configsampleapp.config;
 
+import static io.wcm.config.api.ParameterBuilder.create;
 import io.wcm.config.api.Parameter;
-import io.wcm.config.api.ParameterBuilder;
 
 /**
  * Defines some example paramters.
@@ -34,11 +34,11 @@ public final class Params {
   /**
    * Application ID
    */
-  public static final String APPLICATION_ID = "sample";
+  public static final String APPLICATION_ID = "/apps/wcm-io/samples/config-sample-app";
 
   /**
    * String parameter
    */
-  public static final Parameter<String> STRING_PARAM = ParameterBuilder.create("string-param", String.class).build();
+  public static final Parameter<String> STRING_PARAM = create("string-param", String.class, APPLICATION_ID).build();
 
 }

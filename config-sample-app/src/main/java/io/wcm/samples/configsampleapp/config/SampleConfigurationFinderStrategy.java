@@ -19,45 +19,23 @@
  */
 package io.wcm.samples.configsampleapp.config;
 
-import io.wcm.config.spi.ConfigurationFinderStrategy;
+import io.wcm.config.spi.helpers.AbstractAbsoluteParentConfigurationFinderStrategy;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-import org.apache.commons.lang3.StringUtils;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
-import org.apache.sling.api.resource.Resource;
-
-import com.day.jcr.vault.util.Text;
 
 /**
  * Sample configuration finder strategy wich accepts absolute root levels 1/2/3 as site configuration id.
  */
 @Component(immediate = true)
 @Service
-public class SampleConfigurationFinderStrategy implements ConfigurationFinderStrategy {
+public class SampleConfigurationFinderStrategy extends AbstractAbsoluteParentConfigurationFinderStrategy {
 
-  @Override
-  public String getApplicationId() {
-    return Params.APPLICATION_ID;
-  }
-
-  @Override
-  public Iterator<String> findConfigurationIds(Resource resource) {
-    List<String> configurationIds = new ArrayList<>();
-    addAbsoluteParent(configurationIds, resource, 3);
-    addAbsoluteParent(configurationIds, resource, 2);
-    addAbsoluteParent(configurationIds, resource, 1);
-    return configurationIds.iterator();
-  }
-
-  private void addAbsoluteParent(List<String> configurationIds, Resource resource, int absoluteParent) {
-    String configurationId = Text.getAbsoluteParent(resource.getPath(), absoluteParent);
-    if (StringUtils.isNotEmpty(configurationId)) {
-      configurationIds.add(configurationId);
-    }
+  /**
+   * Use absolute parent(s) finder strategy
+   */
+  public SampleConfigurationFinderStrategy() {
+    super(Params.APPLICATION_ID, 1, 2, 3);
   }
 
 }

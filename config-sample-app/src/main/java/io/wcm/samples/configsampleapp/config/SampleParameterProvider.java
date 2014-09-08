@@ -19,30 +19,23 @@
  */
 package io.wcm.samples.configsampleapp.config;
 
-import io.wcm.config.api.Parameter;
-import io.wcm.config.spi.ParameterProvider;
-
-import java.util.Set;
+import io.wcm.config.spi.helpers.AbstractParameterProvider;
 
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
-
-import com.google.common.collect.ImmutableSet;
 
 /**
  * Provides parameter metadata.
  */
 @Component(immediate = true)
 @Service
-public class SampleParameterProvider implements ParameterProvider {
+public class SampleParameterProvider extends AbstractParameterProvider {
 
-  private static final Set<Parameter<?>> ALL_PARAMETERS = ImmutableSet.<Parameter<?>>builder()
-      .add(Params.STRING_PARAM)
-      .build();
-
-  @Override
-  public Set<Parameter<?>> getParameters() {
-    return ALL_PARAMETERS;
+  /**
+   * Provide all parameters from {@link Params}.
+   */
+  public SampleParameterProvider() {
+    super(Params.class);
   }
 
 }

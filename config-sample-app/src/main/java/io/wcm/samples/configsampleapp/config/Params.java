@@ -41,7 +41,7 @@ public final class Params {
    * String parameter
    */
   public static final Parameter<String> STRING_PARAM = create("string-param", String.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").build();
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").defaultValue("default value").build();
 
   /**
    * Text field parameter

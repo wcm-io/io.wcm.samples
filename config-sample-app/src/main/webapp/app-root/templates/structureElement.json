@@ -1,0 +1,11 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "Sample Structure Element",
+
+  "allowedPaths": "^/content(/.*)?$",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "/apps/wcm-io/config/editor/components/page/structureElement"
+  }
+}

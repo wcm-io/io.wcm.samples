@@ -21,6 +21,7 @@ package io.wcm.samples.configsampleapp.config;
 
 import static io.wcm.config.api.ParameterBuilder.create;
 import io.wcm.config.api.Parameter;
+import io.wcm.config.editor.widgets.WidgetTypes;
 
 /**
  * Defines some example paramters.
@@ -39,6 +40,25 @@ public final class Params {
   /**
    * String parameter
    */
-  public static final Parameter<String> STRING_PARAM = create("string-param", String.class, APPLICATION_ID).build();
+  public static final Parameter<String> STRING_PARAM = create("string-param", String.class, APPLICATION_ID).properties(
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").build();
+
+  /**
+   * Text field parameter
+   */
+  public static final Parameter<String[]> TEXT_PARAM = create("text-param", String[].class, APPLICATION_ID).properties(
+      WidgetTypes.TEXTAREA.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").build();
+
+  /**
+   * Checkbox field parameter
+   */
+  public static final Parameter<Boolean> CHECKBOX_PARAM = create("checkbox-param", Boolean.class, APPLICATION_ID).properties(
+      WidgetTypes.CHECKBOX.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 2").build();
+
+  /**
+   * Path Browser field parameter
+   */
+  public static final Parameter<String> PATHBROWSER_PARAM = create("pathbrowser-param", String.class, APPLICATION_ID).properties(
+      WidgetTypes.PATHBROWSER.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 2").build();
 
 }

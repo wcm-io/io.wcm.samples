@@ -23,6 +23,10 @@ import static io.wcm.config.api.ParameterBuilder.create;
 import io.wcm.config.api.Parameter;
 import io.wcm.config.editor.widgets.WidgetTypes;
 
+import java.util.Map;
+
+import com.google.common.collect.ImmutableMap;
+
 /**
  * Defines some example paramters.
  */
@@ -41,24 +45,59 @@ public final class Params {
    * String parameter
    */
   public static final Parameter<String> STRING_PARAM = create("string-param", String.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").defaultValue("default value").build();
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").defaultValue("default value")
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a simple String parameter with default value").build();
+
+  /**
+   * Integer parameter
+   */
+  public static final Parameter<Integer> INTEGER_PARAM = create("int-param", Integer.class, APPLICATION_ID).properties(
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").defaultValue(5)
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a simple Integer parameter with default value").build();
+
+  /**
+   * Double parameter
+   */
+  public static final Parameter<Double> DOUBLE_PARAM = create("double-param", Double.class, APPLICATION_ID).properties(
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").defaultValue(5.343)
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a simple Double parameter with default value").build();
+
+  /**
+   * Long parameter
+   */
+  public static final Parameter<Long> LONG_PARAM = create("long-param", Long.class, APPLICATION_ID).properties(
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").defaultValue(5L)
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a simple Long parameter with default value").build();
+
+  /**
+   * Map parameter
+   */
+  public static final Parameter<Map> MAP_PARAM = create("map-param", Map.class, APPLICATION_ID).properties(
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").
+      defaultValue(ImmutableMap.of("key1", "value1", "key2", "value2"))
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a Map parameter. Single entries of the map are defined as key=value pairs. "
+          + "The delimiter between entries is ';'").build();
 
   /**
    * Text field parameter
    */
   public static final Parameter<String[]> TEXT_PARAM = create("text-param", String[].class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTAREA.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").build();
+      WidgetTypes.TEXTAREA.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1")
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a String[] parameter. The delimiter between single entries is ';'").build();
 
   /**
    * Checkbox field parameter
    */
   public static final Parameter<Boolean> CHECKBOX_PARAM = create("checkbox-param", Boolean.class, APPLICATION_ID).properties(
-      WidgetTypes.CHECKBOX.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 2").build();
+      WidgetTypes.CHECKBOX.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 2")
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a simple Boolean parameter").build();
 
   /**
    * Path Browser field parameter
    */
   public static final Parameter<String> PATHBROWSER_PARAM = create("pathbrowser-param", String.class, APPLICATION_ID).properties(
-      WidgetTypes.PATHBROWSER.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 2").build();
+      WidgetTypes.PATHBROWSER.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 2")
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a Pathbrowser parameter with default tree root set to '/content'. Start typing with '/' to "
+          + "receive suggestions").build();
 
 }

@@ -1,21 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
-<html data-sly-use.denyWcmDisabled="de.viessmann.wcm.base.controller.http.DenyWcmDisabled"
-    data-sly-test="${!wcmmode.disabled}">
+<html>
+
   <head>
-    <meta data-sly-resource="${'.' @ resourceType='/apps/viessmann/components/global/wcmInit' }" data-sly-unwrap/>
+    <meta data-sly-resource="${'.' @ resourceType='/apps/wcm-io/wcm/commons/components/global/wcmInit' }" data-sly-unwrap/>
     <title>${currentPage.title}</title>
   </head>
   <body>
-
-    <div id="admin_table_container">
-
-      <h1>${currentPage.title}</h1>
-      
-      <ul data-sly-list.childPage="${currentPage.listChildren}">
-        <li><a href="${childPage.path}.html">${childPage.title}</a></li>
-      </ul>
-
-    </div>
-
+    <h1>${currentPage.title}</h1>
+    <ul data-sly-list.childPage="${currentPage.listChildren}">
+      <li><a href="${childPage.path}.html">${childPage.title}</a></li>
+    </ul>
   </body>
 </html>

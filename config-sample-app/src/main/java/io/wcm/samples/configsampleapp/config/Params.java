@@ -73,17 +73,24 @@ public final class Params {
    * Map parameter
    */
   public static final Parameter<Map> MAP_PARAM = create("map-param", Map.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").
+      WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1").
       defaultValue(ImmutableMap.of("key1", "value1", "key2", "value2"))
-      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a Map parameter. Single entries of the map are defined as key=value pairs. "
-          + "The delimiter between entries is ';'").build();
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a Map parameter. Single entries of the map are defined as key=value pairs.").build();
 
   /**
    * Text field parameter
    */
-  public static final Parameter<String[]> TEXT_PARAM = create("text-param", String[].class, APPLICATION_ID).properties(
+  public static final Parameter<String> TEXT_PARAM = create("text-param", String.class, APPLICATION_ID).properties(
       WidgetTypes.TEXTAREA.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1")
-      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a String[] parameter. The delimiter between single entries is ';'").build();
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a String parameter. The delimiter between single entries is ';'").build();
+
+  /**
+   * Multivalue field parameter
+   */
+  public static final Parameter<String[]> MULTIVALUE_PARAM = create("multivalue-param", String[].class, APPLICATION_ID).properties(
+      WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration()).property(WidgetTypes.Defaults.PN_GROUP, "Group 1")
+      .property(WidgetTypes.Defaults.PN_DESCRIPTION, "This is a multivalue parameter.").build();
+
 
   /**
    * Checkbox field parameter

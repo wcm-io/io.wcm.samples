@@ -53,7 +53,8 @@ public final class Params {
    * Integer parameter
    */
   public static final Parameter<Integer> INTEGER_PARAM = create("int-param", Integer.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_GROUP, "Group 1").defaultValue(5)
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_PATTERN, "/^[0-9]*$/")
+      .property(EditorNameConstants.PN_GROUP, "Group 1").defaultValue(5)
       .property(EditorNameConstants.PN_DESCRIPTION, "This is a simple Integer parameter with default value").build();
 
   /**

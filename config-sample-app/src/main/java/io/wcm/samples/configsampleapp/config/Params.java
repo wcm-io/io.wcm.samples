@@ -21,8 +21,8 @@ package io.wcm.samples.configsampleapp.config;
 
 import static io.wcm.config.api.ParameterBuilder.create;
 import io.wcm.config.api.Parameter;
-import io.wcm.config.editor.widgets.EditorNameConstants;
-import io.wcm.config.editor.widgets.WidgetTypes;
+import io.wcm.config.editor.EditorNameConstants;
+import io.wcm.config.editor.WidgetTypes;
 
 import java.util.Map;
 

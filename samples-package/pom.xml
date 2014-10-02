@@ -52,7 +52,7 @@
       <version>0.1.0-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
-    
+
     <!-- Sling packages not included in AEM 6.0 (yet) -->
     <dependency>
       <groupId>org.apache.sling</groupId>

@@ -45,68 +45,89 @@ public final class Params {
   /**
    * String parameter
    */
-  public static final Parameter<String> STRING_PARAM = create("string-param", String.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1").defaultValue("default value")
-      .property(EditorProperties.DESCRIPTION, "This is a simple String parameter with default value").build();
+  public static final Parameter<String> STRING_PARAM = create("string-param", String.class, APPLICATION_ID)
+      .property(EditorProperties.LABEL, "String Param")
+      .property(EditorProperties.DESCRIPTION, "This is a simple String parameter with default value")
+      .property(EditorProperties.GROUP, "Group 1").defaultValue("default value")
+      .properties(WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration())
+      .build();
 
   /**
    * Integer parameter
    */
-  public static final Parameter<Integer> INTEGER_PARAM = create("int-param", Integer.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.PATTERN, "/^[0-9]*$/")
-      .property(EditorProperties.GROUP, "Group 1").defaultValue(5)
-      .property(EditorProperties.DESCRIPTION, "This is a simple Integer parameter with default value").build();
+  public static final Parameter<Integer> INTEGER_PARAM = create("int-param", Integer.class, APPLICATION_ID)
+      .property(EditorProperties.GROUP, "Group 1")
+      .property(EditorProperties.DESCRIPTION, "This is a simple Integer parameter with default value")
+      .properties(WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.PATTERN, "/^[0-9]*$/")
+      .defaultValue(5)
+      .build();
 
   /**
    * Double parameter
    */
-  public static final Parameter<Double> DOUBLE_PARAM = create("double-param", Double.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1").defaultValue(5.343)
-      .property(EditorProperties.DESCRIPTION, "This is a simple Double parameter with default value").build();
+  public static final Parameter<Double> DOUBLE_PARAM = create("double-param", Double.class, APPLICATION_ID)
+      .property(EditorProperties.DESCRIPTION, "This is a simple Double parameter with default value")
+      .property(EditorProperties.GROUP, "Group 1")
+      .properties(WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration())
+      .defaultValue(5.343d)
+      .build();
 
   /**
    * Long parameter
    */
-  public static final Parameter<Long> LONG_PARAM = create("long-param", Long.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1").defaultValue(5L)
-      .property(EditorProperties.DESCRIPTION, "This is a simple Long parameter with default value").build();
+  public static final Parameter<Long> LONG_PARAM = create("long-param", Long.class, APPLICATION_ID)
+      .property(EditorProperties.DESCRIPTION, "This is a simple Long parameter with default value")
+      .property(EditorProperties.GROUP, "Group 1")
+      .properties(WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration())
+      .defaultValue(5L)
+      .build();
 
   /**
    * Map parameter
    */
-  public static final Parameter<Map> MAP_PARAM = create("map-param", Map.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1").
-      defaultValue(ImmutableMap.of("key1", "value1", "key2", "value2"))
-      .property(EditorProperties.DESCRIPTION, "This is a Map parameter. Single entries of the map are defined as key=value pairs.").build();
+  public static final Parameter<Map> MAP_PARAM = create("map-param", Map.class, APPLICATION_ID)
+      .property(EditorProperties.DESCRIPTION, "This is a Map parameter. Single entries of the map are defined as key=value pairs.")
+      .property(EditorProperties.GROUP, "Group 1")
+      .properties(WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration())
+      .defaultValue(ImmutableMap.of("key1", "value1", "key2", "value2"))
+      .build();
 
   /**
    * Text field parameter
    */
-  public static final Parameter<String> TEXT_PARAM = create("text-param", String.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTAREA.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1")
-      .property(EditorProperties.DESCRIPTION, "This is a String parameter. The delimiter between single entries is ';'").build();
+  public static final Parameter<String> TEXT_PARAM = create("text-param", String.class, APPLICATION_ID)
+      .property(EditorProperties.DESCRIPTION, "This is a String parameter. The delimiter between single entries is ';'")
+      .property(EditorProperties.GROUP, "Group 1")
+      .properties(WidgetTypes.TEXTAREA.getDefaultWidgetConfiguration())
+      .build();
 
   /**
    * Multivalue field parameter
    */
-  public static final Parameter<String[]> MULTIVALUE_PARAM = create("multivalue-param", String[].class, APPLICATION_ID).properties(
-      WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1")
-      .property(EditorProperties.DESCRIPTION, "This is a multivalue parameter.").build();
+  public static final Parameter<String[]> MULTIVALUE_PARAM = create("multivalue-param", String[].class, APPLICATION_ID)
+      .property(EditorProperties.DESCRIPTION, "This is a multivalue parameter.")
+      .property(EditorProperties.GROUP, "Group 1")
+      .properties(WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration())
+      .build();
 
 
   /**
    * Checkbox field parameter
    */
-  public static final Parameter<Boolean> CHECKBOX_PARAM = create("checkbox-param", Boolean.class, APPLICATION_ID).properties(
-      WidgetTypes.CHECKBOX.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 2")
-      .property(EditorProperties.DESCRIPTION, "This is a simple Boolean parameter").build();
+  public static final Parameter<Boolean> CHECKBOX_PARAM = create("checkbox-param", Boolean.class, APPLICATION_ID)
+      .properties(WidgetTypes.CHECKBOX.getDefaultWidgetConfiguration())
+      .property(EditorProperties.GROUP, "Group 2")
+      .property(EditorProperties.DESCRIPTION, "This is a simple Boolean parameter")
+      .build();
 
   /**
    * Path Browser field parameter
    */
-  public static final Parameter<String> PATHBROWSER_PARAM = create("pathbrowser-param", String.class, APPLICATION_ID).properties(
-      WidgetTypes.PATHBROWSER.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 2")
-      .property(EditorProperties.DESCRIPTION, "This is a Pathbrowser parameter with default tree root set to '/content'. Start typing with '/' to "
-          + "receive suggestions").build();
+  public static final Parameter<String> PATHBROWSER_PARAM = create("pathbrowser-param", String.class, APPLICATION_ID)
+      .property(EditorProperties.GROUP, "Group 2")
+      .property(EditorProperties.DESCRIPTION, "This is a Pathbrowser parameter with default tree root set to '/content'. "
+          + "Start typing with '/' to receive suggestions")
+          .properties(WidgetTypes.PATHBROWSER.getDefaultWidgetConfiguration())
+          .build();
 
 }

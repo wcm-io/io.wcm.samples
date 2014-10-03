@@ -21,7 +21,7 @@ package io.wcm.samples.configsampleapp.config;
 
 import static io.wcm.config.api.ParameterBuilder.create;
 import io.wcm.config.api.Parameter;
-import io.wcm.config.editor.EditorNameConstants;
+import io.wcm.config.editor.EditorProperties;
 import io.wcm.config.editor.WidgetTypes;
 
 import java.util.Map;
@@ -46,67 +46,67 @@ public final class Params {
    * String parameter
    */
   public static final Parameter<String> STRING_PARAM = create("string-param", String.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_GROUP, "Group 1").defaultValue("default value")
-      .property(EditorNameConstants.PN_DESCRIPTION, "This is a simple String parameter with default value").build();
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1").defaultValue("default value")
+      .property(EditorProperties.DESCRIPTION, "This is a simple String parameter with default value").build();
 
   /**
    * Integer parameter
    */
   public static final Parameter<Integer> INTEGER_PARAM = create("int-param", Integer.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_PATTERN, "/^[0-9]*$/")
-      .property(EditorNameConstants.PN_GROUP, "Group 1").defaultValue(5)
-      .property(EditorNameConstants.PN_DESCRIPTION, "This is a simple Integer parameter with default value").build();
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.PATTERN, "/^[0-9]*$/")
+      .property(EditorProperties.GROUP, "Group 1").defaultValue(5)
+      .property(EditorProperties.DESCRIPTION, "This is a simple Integer parameter with default value").build();
 
   /**
    * Double parameter
    */
   public static final Parameter<Double> DOUBLE_PARAM = create("double-param", Double.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_GROUP, "Group 1").defaultValue(5.343)
-      .property(EditorNameConstants.PN_DESCRIPTION, "This is a simple Double parameter with default value").build();
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1").defaultValue(5.343)
+      .property(EditorProperties.DESCRIPTION, "This is a simple Double parameter with default value").build();
 
   /**
    * Long parameter
    */
   public static final Parameter<Long> LONG_PARAM = create("long-param", Long.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_GROUP, "Group 1").defaultValue(5L)
-      .property(EditorNameConstants.PN_DESCRIPTION, "This is a simple Long parameter with default value").build();
+      WidgetTypes.TEXTFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1").defaultValue(5L)
+      .property(EditorProperties.DESCRIPTION, "This is a simple Long parameter with default value").build();
 
   /**
    * Map parameter
    */
   public static final Parameter<Map> MAP_PARAM = create("map-param", Map.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_GROUP, "Group 1").
+      WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1").
       defaultValue(ImmutableMap.of("key1", "value1", "key2", "value2"))
-      .property(EditorNameConstants.PN_DESCRIPTION, "This is a Map parameter. Single entries of the map are defined as key=value pairs.").build();
+      .property(EditorProperties.DESCRIPTION, "This is a Map parameter. Single entries of the map are defined as key=value pairs.").build();
 
   /**
    * Text field parameter
    */
   public static final Parameter<String> TEXT_PARAM = create("text-param", String.class, APPLICATION_ID).properties(
-      WidgetTypes.TEXTAREA.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_GROUP, "Group 1")
-      .property(EditorNameConstants.PN_DESCRIPTION, "This is a String parameter. The delimiter between single entries is ';'").build();
+      WidgetTypes.TEXTAREA.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1")
+      .property(EditorProperties.DESCRIPTION, "This is a String parameter. The delimiter between single entries is ';'").build();
 
   /**
    * Multivalue field parameter
    */
   public static final Parameter<String[]> MULTIVALUE_PARAM = create("multivalue-param", String[].class, APPLICATION_ID).properties(
-      WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_GROUP, "Group 1")
-      .property(EditorNameConstants.PN_DESCRIPTION, "This is a multivalue parameter.").build();
+      WidgetTypes.TEXT_MULTIFIELD.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 1")
+      .property(EditorProperties.DESCRIPTION, "This is a multivalue parameter.").build();
 
 
   /**
    * Checkbox field parameter
    */
   public static final Parameter<Boolean> CHECKBOX_PARAM = create("checkbox-param", Boolean.class, APPLICATION_ID).properties(
-      WidgetTypes.CHECKBOX.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_GROUP, "Group 2")
-      .property(EditorNameConstants.PN_DESCRIPTION, "This is a simple Boolean parameter").build();
+      WidgetTypes.CHECKBOX.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 2")
+      .property(EditorProperties.DESCRIPTION, "This is a simple Boolean parameter").build();
 
   /**
    * Path Browser field parameter
    */
   public static final Parameter<String> PATHBROWSER_PARAM = create("pathbrowser-param", String.class, APPLICATION_ID).properties(
-      WidgetTypes.PATHBROWSER.getDefaultWidgetConfiguration()).property(EditorNameConstants.PN_GROUP, "Group 2")
-      .property(EditorNameConstants.PN_DESCRIPTION, "This is a Pathbrowser parameter with default tree root set to '/content'. Start typing with '/' to "
+      WidgetTypes.PATHBROWSER.getDefaultWidgetConfiguration()).property(EditorProperties.GROUP, "Group 2")
+      .property(EditorProperties.DESCRIPTION, "This is a Pathbrowser parameter with default tree root set to '/content'. Start typing with '/' to "
           + "receive suggestions").build();
 
 }

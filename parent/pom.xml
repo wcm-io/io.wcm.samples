@@ -46,6 +46,9 @@
 
   <properties>
     <site.url.module.prefix>samples</site.url.module.prefix>
+
+    <!-- Do not make baseline checks for sample applications -->
+    <baseline.skip>true</baseline.skip>
   </properties>
 
   <build>

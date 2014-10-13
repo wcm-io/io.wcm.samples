@@ -98,7 +98,7 @@
               SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io/samples/config-sample-app
             </Sling-Initial-Content>
             <Export-Package>
-              io.wcm.samples.configsampleapp;version=${project.version}
+              io.wcm.samples.configsampleapp
             </Export-Package>
           </instructions>
         </configuration>

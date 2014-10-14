@@ -40,7 +40,7 @@ public final class Params {
   /**
    * Application ID
    */
-  public static final String APPLICATION_ID = "/apps/wcm-io/samples/config-sample-app";
+  public static final String APPLICATION_ID = "/apps/wcm-io-config-sample-app";
 
   /**
    * String parameter

@@ -95,11 +95,8 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
-              SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io/samples/config-sample-app
+              SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-config-sample-app
             </Sling-Initial-Content>
-            <Export-Package>
-              io.wcm.samples.configsampleapp
-            </Export-Package>
           </instructions>
         </configuration>
       </plugin>

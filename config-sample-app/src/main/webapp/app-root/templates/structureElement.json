@@ -6,6 +6,6 @@
 
   "jcr:content": {
     "jcr:primaryType": "cq:PageContent",
-    "sling:resourceType": "/apps/wcm-io/samples/config-sample-app/components/page/structureElement"
+    "sling:resourceType": "/apps/wcm-io-config-sample-app/components/page/structureElement"
   }
 }

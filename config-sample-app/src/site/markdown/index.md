@@ -18,3 +18,8 @@ See [wcm.io Configuration](http://wcm.io/config/) for more details about the con
 - In you AEM instance, create a page using the template "wcm.io Sample Configuration Editor"
 - Try out the editor capabilities
 - Inspect the source code
+
+
+### System requirements
+
+- AEM 6.0 SP1

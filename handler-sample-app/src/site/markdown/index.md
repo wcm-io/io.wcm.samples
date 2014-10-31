@@ -12,3 +12,7 @@ See [wcm.io Handler](http://wcm.io/handler/) for more details about the handler 
 - Build samples with `mvn clean install`
 - Deploy package /samples/samples-package/wcm-io-samples-*.zip to AEM instance
 
+
+### System requirements
+
+- AEM 6.0 SP1

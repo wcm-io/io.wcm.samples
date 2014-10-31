@@ -40,7 +40,7 @@ public class SiteRootRelativePageLinkTest {
   @Test
   public void testSiteRoot_PageTitle() {
     context.request().setAttribute("titleType", "pageTitle");
-    assertLink("adaptTo() 2014", "/content/handler/sample/en.html");
+    assertLink("Handler Sample 2014", "/content/handler/sample/en.html");
   }
 
   @Test

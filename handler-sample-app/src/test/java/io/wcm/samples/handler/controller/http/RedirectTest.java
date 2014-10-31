@@ -41,7 +41,7 @@ public class RedirectTest {
 
   @Test
   public void testRedirectDefault() {
-    context.currentPage("/content/handler/sample/en/archive/adaptto---2012");
+    context.currentPage("/content/handler/sample/en/archive/handlerSample---2012");
     Redirect redirect = context.request().adaptTo(Redirect.class);
 
     assertEquals(HttpServletResponse.SC_MOVED_TEMPORARILY, context.response().getStatus());
@@ -51,7 +51,7 @@ public class RedirectTest {
 
   @Test
   public void testRedirect301() throws Exception {
-    context.currentPage("/content/handler/sample/en/archive/adaptto---2012");
+    context.currentPage("/content/handler/sample/en/archive/handlerSample---2012");
 
     Resource currenResource = context.request().getResource();
     ModifiableValueMap props = currenResource.adaptTo(ModifiableValueMap.class);
@@ -79,7 +79,7 @@ public class RedirectTest {
   public void testRedirectEditMode() throws Exception {
     WCMMode.EDIT.toRequest(context.request());
 
-    context.currentPage("/content/handler/sample/en/archive/adaptto---2012");
+    context.currentPage("/content/handler/sample/en/archive/handlerSample---2012");
     Redirect redirect = context.request().adaptTo(Redirect.class);
 
     assertEquals(HttpServletResponse.SC_OK, context.response().getStatus());

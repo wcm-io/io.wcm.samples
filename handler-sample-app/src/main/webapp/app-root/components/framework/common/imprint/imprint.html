@@ -2,7 +2,7 @@
     data-sly-use.link="${'io.wcm.samples.handler.controller.navigation.SiteRootRelativePageLink' @ relativePath='/tools/navigation/imprint'}"
     data-sly-use.currentDate="io.wcm.samples.handler.controller.common.CurrentDate">
 
-  ${'Credits: ©{0} pro!vision GmbH' @ i18n, hint='adaptto_base', format=[currentDate.year]}
+  ${'Credits: ©{0} wcm.io' @ i18n, hint='handlerSample_base', format=[currentDate.year]}
 
   <span data-sly-test="${link.valid}" data-sly-unwrap>
     - <a data-sly-attribute="${link.attributes}" class="navlink">${link.title}</a>

@@ -72,7 +72,7 @@
               "name": "./linkMediaRef",
               "fieldLabel": "Asset reference",
               "fieldDescription": "Reference to asset from DAM",
-              "rootPath": "/content/dam/adaptto"
+              "rootPath": "/content/dam/handlerSample"
             },
             "linkMediaDownload": {
               "sling:resourceType": "granite/ui/components/foundation/form/checkbox",

@@ -6,7 +6,7 @@
     "cq:dialogMode": "floating",
     "cq:disableTargeting": true,
     "cq:listeners": {
-      "afteredit": "adaptto.authoring.listener.refreshAjaxContentAfterEdit"
+      "afteredit": "handlerSample.authoring.listener.refreshAjaxContentAfterEdit"
     }
   },
 
@@ -37,7 +37,7 @@
                 "name": "./mediaFolderRef",
                 "fieldLabel": "DAM Folder",
                 "fieldDescription": "DAM folder containing images to display in gallery.",
-                "rootPath": "/content/dam/adaptto"
+                "rootPath": "/content/dam/handlerSample"
               }
               }
 

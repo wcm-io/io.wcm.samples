@@ -42,7 +42,7 @@ public class ApplicationProviderImpl implements ApplicationProvider {
   /**
    * Application labe
    */
-  public static final String APPLICATION_LABEL = "adaptTo() Website";
+  public static final String APPLICATION_LABEL = "wcm.io Handler Sample Website";
 
   private static final Pattern PATH_PATTERN = Pattern.compile("^/content/(dam/)?handler(/.*)?$");
 

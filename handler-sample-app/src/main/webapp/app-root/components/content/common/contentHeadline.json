@@ -7,7 +7,7 @@
     "cq:dialogMode": "floating",
     "cq:disableTargeting": true,
     "cq:listeners": {
-      "afteredit": "adaptto.authoring.listener.refreshAjaxContentAfterEdit"
+      "afteredit": "handlerSample.authoring.listener.refreshAjaxContentAfterEdit"
     }
   },
 

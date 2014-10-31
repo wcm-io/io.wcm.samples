@@ -15,12 +15,12 @@
       <h1>${currentPage.title}</h1>
 
       <p data-sly-test="${link.valid}">
-        ${'redirectInfo' @ i18n, hint='adaptto_base'}
+        ${'redirectInfo' @ i18n, hint='handlerSample_base'}
         <a data-sly-attribute="${link.attributes}">${link.metadata.linkUrl}</a>
       </p>
 
       <p data-sly-test="${!link.valid}">
-        ${'redirectMissing' @ i18n, hint='adaptto_base'}
+        ${'redirectMissing' @ i18n, hint='handlerSample_base'}
       </p>
 
     </div>

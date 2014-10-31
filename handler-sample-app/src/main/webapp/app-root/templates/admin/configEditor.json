@@ -1,8 +1,8 @@
 {
   "jcr:primaryType": "cq:Template",
-  "jcr:title": "adaptTo() Configuration Editor",
+  "jcr:title": "wcm.io Handler Sample Configuration Editor",
 
-  "allowedPaths": "^/content/handler/sample/[^/]+/[^/]+/tools(/.*)?$",
+  "allowedPaths": "^/content/handler/[^/]+/[^/]+/tools(/.*)?$",
   "allowedChildren": "",
 
   "jcr:content": {

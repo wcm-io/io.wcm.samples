@@ -1,8 +1,8 @@
 {
   "jcr:primaryType": "cq:Template",
-  "jcr:title": "adaptTo() Homepage",
+  "jcr:title": "wcm.io Handler Sample Homepage",
 
-  "allowedPaths": "/content/handler/sample/[^/]*",
+  "allowedPaths": "/content/handler/[^/]*",
   "allowedChildren": "^/apps/wcm-io-handler-sample-app/.*$",
 
   "jcr:content": {

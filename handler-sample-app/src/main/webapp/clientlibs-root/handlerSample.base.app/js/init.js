@@ -7,19 +7,19 @@
 jQuery.noConflict();
 
 // enable underscore noConflict mode
-//var adaptto_underscore = _.noConflict();
+//var handlerSample_underscore = _.noConflict();
 
 // set up namespace
-var adaptto = adaptto || {};
+var handlerSample = handlerSample || {};
 // set configuration
-adaptto.config = adaptto.config || {};
+handlerSample.config = handlerSample.config || {};
 // whether site runs in debug mode
-adaptto.config.debug = (location.search.match(/frontend-debug/i) !== null || location.hostname.match(/local/i) !== null)? true : false;
+handlerSample.config.debug = (location.search.match(/frontend-debug/i) !== null || location.hostname.match(/local/i) !== null)? true : false;
 // start application
 jQuery(document).ready(function ($) {
   if (jQuery.debug) {
     // use Logging proxy
-    jQuery.debug(adaptto.config.debug);
+    jQuery.debug(handlerSample.config.debug);
   } else {
     // Else create dummy log function to prevent errors
     jQuery.extend({ log: function () {} });

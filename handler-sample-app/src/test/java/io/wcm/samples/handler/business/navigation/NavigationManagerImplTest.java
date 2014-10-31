@@ -59,8 +59,8 @@ public class NavigationManagerImplTest {
     List<NavigationPageItem> archiveItems = mainnavItems.get(4).getChildren();
     assertEquals(2, archiveItems.size());
 
-    assertLinkItem("adaptTo() 2012", "http://adapt.to/2012/", archiveItems.get(0));
-    assertLinkItem("adaptTo() 2011", "http://adapt.to/2011/", archiveItems.get(1));
+    assertLinkItem("Handler Sample 2012", "http://adapt.to/2012/", archiveItems.get(0));
+    assertLinkItem("Handler Sample 2011", "http://adapt.to/2011/", archiveItems.get(1));
   }
 
   @Test

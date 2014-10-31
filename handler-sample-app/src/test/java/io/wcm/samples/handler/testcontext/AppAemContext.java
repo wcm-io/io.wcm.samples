@@ -21,12 +21,10 @@ package io.wcm.samples.handler.testcontext;
 
 import io.wcm.config.spi.ApplicationProvider;
 import io.wcm.config.spi.ConfigurationFinderStrategy;
-import io.wcm.config.spi.ParameterProvider;
 import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.samples.handler.config.ApplicationProviderImpl;
 import io.wcm.samples.handler.config.ConfigurationFinderStrategyImpl;
 import io.wcm.samples.handler.config.MediaFormatProviderImpl;
-import io.wcm.samples.handler.config.ParameterProviderImpl;
 import io.wcm.testing.mock.aem.junit.AemContext;
 import io.wcm.testing.mock.aem.junit.AemContextCallback;
 import io.wcm.testing.mock.wcmio.handler.MockHandler;
@@ -62,7 +60,6 @@ public final class AppAemContext {
 
       // setup handler
       context.registerService(ApplicationProvider.class, new ApplicationProviderImpl());
-      context.registerService(ParameterProvider.class, new ParameterProviderImpl());
       context.registerService(ConfigurationFinderStrategy.class, new ConfigurationFinderStrategyImpl());
       context.registerService(MediaFormatProvider.class, new MediaFormatProviderImpl());
       MockHandler.setUp(context);

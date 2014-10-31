@@ -1,6 +1,6 @@
 {
   "jcr:primaryType": "cq:Template",
-  "jcr:title": "adaptTo() Redirect Template",
+  "jcr:title": "wcm.io Handler Sample Redirect",
 
   "allowedPaths": "^/content/[^/]+/[^/]+(/.*)?$",
   "allowedParents": "^/apps/wcm-io-handler-sample-app/templates/.*$",

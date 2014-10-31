@@ -55,7 +55,7 @@
     <pluginManagement>
       <plugins>
 
-        <!-- Skipt code coverage checks for sample projects -->
+        <!-- Skip code coverage checks for sample projects -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>cobertura-maven-plugin</artifactId>

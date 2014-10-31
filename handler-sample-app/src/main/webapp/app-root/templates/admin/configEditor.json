@@ -1,0 +1,12 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "adaptTo() Configuration Editor",
+
+  "allowedPaths": "^/content/handler/sample/[^/]+/[^/]+/tools(/.*)?$",
+  "allowedChildren": "",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "/apps/wcm-io/config/editor/components/page/editor"
+  }
+}

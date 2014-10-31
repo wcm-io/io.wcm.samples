@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html
+    data-sly-use.redirect="io.wcm.samples.handler.controller.http.Redirect"
+    data-sly-use.link="io.wcm.samples.handler.controller.resource.ResourceLink"
+    data-sly-test="${redirect.renderPage}">
+  <head>
+    <meta data-sly-resource="${'.' @ resourceType='/apps/wcm-io-handler-sample-app/components/global/wcmInit' }" data-sly-unwrap/>
+    <title>${currentPage.title}</title>
+    <link rel="stylesheet" type="text/css" href="/apps/wcm-io-handler-sample-app/docroot/admin/css/admin.css" />
+  </head>
+  <body>
+
+    <div id="admin_table_container">
+
+      <h1>${currentPage.title}</h1>
+
+      <p data-sly-test="${link.valid}">
+        ${'redirectInfo' @ i18n, hint='adaptto_base'}
+        <a data-sly-attribute="${link.attributes}">${link.metadata.linkUrl}</a>
+      </p>
+
+      <p data-sly-test="${!link.valid}">
+        ${'redirectMissing' @ i18n, hint='adaptto_base'}
+      </p>
+
+    </div>
+
+  </body>
+</html>

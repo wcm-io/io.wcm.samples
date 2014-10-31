@@ -1,0 +1,30 @@
+<div class="box-padding"
+    data-sly-use.link="io.wcm.samples.handler.controller.resource.ResourceLink"
+    data-sly-use.media="${'io.wcm.samples.handler.controller.resource.ResourceMedia' @ mediaFormat='content_480'}">
+
+  <header data-sly-test="${properties.title}">
+    <h1 class="title title-section title-teaser" data-sly-text="${properties.title}">Why to attend</h1>
+  </header>
+
+  <div class="cq-placeholder" data-emptytext="${component.title}" data-sly-test="${!properties.title}"></div>
+
+  <figure class="image-small" data-sly-unwrap="${media.valid}">
+    <a href="conference.shtml" data-sly-attribute="${link.attributes}" data-sly-unwrap="${!link.valid}">
+      <img src="media/user.png" data-sly-unwrap data-sly-text="${media.markup @ context='html'}"/>
+    </a>
+  </figure>
+
+  <p class="teaser-content" data-sly-text="${properties.teaserContent}">
+    Still not convinced to attend? Need persuasion? Facts for your boss?
+  </p>
+
+  <ul class="link-list" data-sly-test="${link.valid && properties.linkTitle}">
+    <li class="link-list-item">
+      <a href="conference.shtml" data-sly-attribute="${link.attributes}" class="link-internal link-teaser"
+          data-sly-text="${properties.linkTitle}">
+        This should help you with your decision
+      </a>
+    </li>
+  </ul>
+
+</div>

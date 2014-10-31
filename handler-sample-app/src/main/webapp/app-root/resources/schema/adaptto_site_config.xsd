@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="adaptto-site-config">
+    <xs:annotation>
+      <xs:documentation>Config root node</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="link-handling" minOccurs="0"/>
+        <xs:element ref="amiando-ticketing" minOccurs="0"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="link-handling">
+    <xs:annotation>
+      <xs:documentation>Link handling configuration</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="site-url" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>Root URL of CQ publish delivery (unsecured access)</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="site-url-secure" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>Root URL of CQ publish delivery (secured access). Leave empty to disable auto-switching between secured and unsecured access.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="site-url-author" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>Root URL of CQ author instance. Leave empty to use default from site-url.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="amiando-ticketing">
+    <xs:annotation>
+      <xs:documentation>Amiando ticketing configuration</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="fallback-url" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>Fallback URL to the Amiando Website</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="script-url" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>URL of the Script to include.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="iframe-url" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>URL of the iFrame to include.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="iframe-name" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Parameter for the iFrames name and id.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

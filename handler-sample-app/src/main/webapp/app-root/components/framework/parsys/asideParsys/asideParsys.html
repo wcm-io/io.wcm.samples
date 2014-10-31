@@ -1,0 +1,6 @@
+<div data-sly-use.parsys="io.wcm.wcm.parsys.controller.Parsys"
+    data-sly-list.item="${parsys.items}" data-sly-unwrap>
+
+  <div class="col-1-4 ${item.cssClassName}" data-sly-resource="${item.resourcePath @ resourceType=item.resourceType}"></div>
+
+</div>

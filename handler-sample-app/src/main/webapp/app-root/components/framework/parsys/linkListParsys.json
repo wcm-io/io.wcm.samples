@@ -1,0 +1,5 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "sling:resourceSuperType": "/apps/wcm-io/wcm/parsys/components/parsys",
+  "cq:isContainer": true
+}

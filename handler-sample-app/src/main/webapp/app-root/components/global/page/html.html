@@ -1,0 +1,50 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+  <head>
+    <meta data-sly-resource="${'.' @ resourceType='/apps/wcm-io-handler-sample-app/components/global/wcmInit' }" data-sly-unwrap></meta>
+    <meta data-sly-resource="${'.' @ resourceType='/apps/wcm-io-handler-sample-app/components/framework/common/htmlHead' }" data-sly-unwrap></meta>
+  </head>
+
+  <body>
+
+    <div id="page">
+
+      <!-- Page header (Logo etc) -->
+      <header class="header-site clearfix"
+          data-sly-resource="${'.' @ resourceType='/apps/wcm-io-handler-sample-app/components/framework/common/pageHeader' }">
+      </header>
+      <hr />
+
+      <!-- Global navigation -->
+      <nav id="nav-main" class="clearfix"
+          data-sly-resource="${'.' @ resourceType='/apps/wcm-io-handler-sample-app/components/framework/navigation/mainNavigation' }">
+      </nav>
+      <hr />
+
+      <!-- The main content -->
+      <div id="main" role="main" class="row">
+
+        <div data-sly-include="content.html" data-sly-unwrap></div>
+
+      </div>
+      <hr />
+
+      <!-- Teaserbar which can be enabled in pageproperties -->
+      <div id="teaserbar" class="row" data-sly-resource="${'./teaserbar' @ '/apps/wcm-io/wcm/parsys/components/parsys'"></div>
+
+      <!-- The page-footer -->
+      <footer class="footer-site"
+          data-sly-resource="${'.' @ resourceType='/apps/wcm-io-handler-sample-app/components/framework/common/pageFooter'}">
+      </footer>
+    </div>
+
+    <!-- The javascript includes -->
+    <div data-sly-resource="${'.' @ resourceType='/apps/wcm-io-handler-sample-app/components/framework/common/pageFooterJavaScript'}" data-sly-unwrap></div>
+
+  </body>
+
+</html>

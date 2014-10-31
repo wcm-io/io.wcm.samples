@@ -1,0 +1,47 @@
+{
+  "jcr:primaryType": "nt:folder",
+  "jcr:language": "en",
+  "jcr:mixinTypes": ["mix:language"],
+  "mainNavigation": {
+    "jcr:primaryType": "nt:folder",
+    "sling:key": "mainNavigation ((adaptto_base))",
+    "sling:message": "Navigation",
+    "jcr:mixinTypes": ["sling:Message"]
+  },
+  "metaNavigation": {
+    "jcr:primaryType": "nt:folder",
+    "sling:key": "metaNavigation ((adaptto_base))",
+    "sling:message": "Meta Navigation",
+    "jcr:mixinTypes": ["sling:Message"]
+  },
+  "disclaimerText": {
+    "jcr:primaryType": "nt:folder",
+    "sling:key": "disclaimerText ((adaptto_base))",
+    "sling:message": "Apache Trademarks<br/><br/>Apache Sling, Apache Jackrabbit and Apache Felix are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries, and are used with permission as of 2011. The Apache Software Foundation has no affiliation with and does not endorse, or review the materials provided at this event, which is managed by pro!vision GmbH.<br/><br/>Adobe and the Adobe logo are either registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries.",
+    "jcr:mixinTypes": ["sling:Message"]
+  },
+  "credits": {
+    "jcr:primaryType": "nt:folder",
+    "sling:key": "Credits: ©{0} pro!vision GmbH ((adaptto_base))",
+    "sling:message": "Credits: ©{0} pro!vision GmbH",
+    "jcr:mixinTypes": ["sling:Message"]
+  },
+  "subtitle": {
+    "jcr:primaryType": "nt:folder",
+    "sling:key": "APACHE SLING & FRIENDS TECH MEETUP ((adaptto_base))",
+    "sling:message": "APACHE SLING & FRIENDS TECH MEETUP",
+    "jcr:mixinTypes": ["sling:Message"]
+  },
+  "redirectInfo": {
+    "jcr:primaryType": "nt:folder",
+    "sling:key": "redirectInfo ((adaptto_base))",
+    "sling:message": "This page forwards to",
+    "jcr:mixinTypes": ["sling:Message"]
+  },
+  "redirectMissing": {
+    "jcr:primaryType": "nt:folder",
+    "sling:key": "redirectMissing ((adaptto_base))",
+    "sling:message": "Please specify a redirect link in page properties.",
+    "jcr:mixinTypes": ["sling:Message"]
+  }
+}

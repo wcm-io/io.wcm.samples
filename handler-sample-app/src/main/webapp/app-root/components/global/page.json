@@ -1,0 +1,118 @@
+{
+  /*
+   * Root page component
+   * Default Page properties dialog
+   */
+  "jcr:primaryType": "cq:Component",
+  "sling:resourceSuperType": "/libs/wcm/foundation/components/page",
+
+  /*
+   * Global definition of item sub-components for components
+   */
+  "wcmio:parsysConfig": {
+    "jcr:primaryType": "nt:unstructured",
+    "paths": {
+
+      "stageheaderLinks": {
+        "pattern": "^jcr:content/.*$",
+        "parentAncestorLevel": 2,
+        "allowedParents": [
+        "/apps/wcm-io-handler-sample-app/components/content/stage/stageheader"
+        ],
+        "allowedChildren": [
+        "/apps/wcm-io-handler-sample-app/components/content/stage/stageheaderLinkItem"
+        ]
+      },
+      "teaserbar": {
+        "allowedChildren": [
+          "/apps/wcm-io-handler-sample-app/components/content/teaserbar/teaserbarItem"
+        ]
+      },
+      "aside": {
+        "allowedChildren": [
+          "/apps/wcm-io-handler-sample-app/components/content/aside/asideTeaser",
+          "/apps/wcm-io-handler-sample-app/components/content/aside/asideSponsorTeaser",
+          "/apps/wcm-io-handler-sample-app/components/content/aside/asideSocialTeaser"
+        ]
+      },
+      "aside_teaserLinks": {
+        "pattern": "^jcr:content/.*$",
+        "parentAncestorLevel": 2,
+        "allowedParents": [
+        "/apps/wcm-io-handler-sample-app/components/content/aside/asideTeaser"
+        ],
+        "allowedChildren": [
+        "/apps/wcm-io-handler-sample-app/components/framework/item/linkItem"
+        ]
+      },
+      "aside_SponsorTeaser": {
+        "pattern": "^jcr:content/.*$",
+        "parentAncestorLevel": 2,
+        "allowedParents": [
+        "/apps/wcm-io-handler-sample-app/components/content/aside/asideSponsorTeaser"
+        ],
+        "allowedChildren": [
+        "/apps/wcm-io-handler-sample-app/components/content/aside/asideSponsorTeaserItem"
+        ]
+      },
+      "aside_SocialTeaser": {
+        "pattern": "^jcr:content/.*$",
+        "parentAncestorLevel": 2,
+        "allowedParents": [
+        "/apps/wcm-io-handler-sample-app/components/content/aside/asideSocialTeaser"
+        ],
+        "allowedChildren": [
+        "/apps/wcm-io-handler-sample-app/components/content/aside/asideSocialTeaserItem"
+        ]
+      }
+    }
+  },
+
+  /*
+   * Global page properties dialog
+   */
+  "cq:dialog": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "Page",
+    "extraClientlibs": [
+      "cq.common.wcm",
+      "cq.siteadmin.admin.properties"
+    ],
+    "mode": "edit",
+    "sling:resourceType": "cq/gui/components/authoring/dialog",
+    "content": {
+      "sling:resourceType": "granite/ui/components/foundation/container",
+      "items": {
+        "tabs": {
+          "sling:resourceType": "granite/ui/components/foundation/container",
+          "layout": {
+            "sling:resourceType": "granite/ui/components/foundation/layouts/tabs",
+            "type": "nav"
+          },
+          "items": {
+
+            "basic": {
+              "sling:resourceType": "granite/ui/components/foundation/include",
+              "jcr:title": "Basic",
+              "path": "/apps/wcm-io-handler-sample-app/components/global/include/pagepropsBasicTab"
+            },
+
+            "advanced": {
+              "sling:resourceType": "granite/ui/components/foundation/include",
+              "jcr:title": "Advanced",
+              "path": "/apps/wcm-io-handler-sample-app/components/global/include/pagepropsAdvancedTab"
+            },
+
+            "preview": {
+              "sling:resourceType": "granite/ui/components/foundation/include",
+              "jcr:title": "Preview",
+              "path": "/apps/wcm-io-handler-sample-app/components/global/include/pagepropsPreviewTab"
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+}

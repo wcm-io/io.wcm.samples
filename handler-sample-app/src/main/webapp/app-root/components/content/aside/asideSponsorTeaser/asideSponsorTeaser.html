@@ -1,0 +1,11 @@
+<section class="box-padding">
+
+  <header data-sly-test="${properties.title}">
+    <h1 class="title title-section title-sidebar">${properties.title}</h1>
+  </header>
+
+  <div class="cq-placeholder" data-emptytext="${component.title}" data-sly-test="${!properties.title}"></div>
+
+  <div data-sly-resource="${'./images' @ resourceType='/apps/wcm-io/wcm/parsys/components/parsys'}" data-sly-unwrap></div>
+
+</section>

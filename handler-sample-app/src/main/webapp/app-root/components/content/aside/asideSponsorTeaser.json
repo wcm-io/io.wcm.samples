@@ -1,0 +1,51 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "componentGroup": "Aside",
+  "jcr:title": "Sponsor teaser",
+  "cq:editConfig": {
+    "cq:dialogMode": "floating",
+    "cq:disableTargeting": true,
+    "cq:listeners": {
+      "afteredit": "adaptto.authoring.listener.refreshAjaxContentAfterEdit"
+    }
+  },
+
+  "cq:dialog": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "cq/gui/components/authoring/dialog",
+    "jcr:title": "Sponsor teaser",
+    "content": {
+      "sling:resourceType": "granite/ui/components/foundation/container",
+      "layout": {
+        "sling:resourceType": "granite/ui/components/foundation/layouts/tabs",
+        "type": "nav"
+      },
+      "items": {
+
+        "teaser": {
+          "sling:resourceType": "granite/ui/components/foundation/section",
+          "jcr:title": "Teaser",
+          "layout": {
+            "sling:resourceType": "granite/ui/components/foundation/layouts/fixedcolumns"
+          },
+          "items": {
+            "column": {
+              "sling:resourceType": "granite/ui/components/foundation/container",
+              "items": {
+                "title": {
+                  "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+                  "name": "./title",
+                  "fieldLabel": "Title",
+                  "required": true
+                }
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}

@@ -1,0 +1,6 @@
+<ul class="link-list" data-sly-use.parsys="io.wcm.wcm.parsys.controller.Parsys"
+    data-sly-list.item="${parsys.items}">
+
+  <li class="link-list-item ${item.cssClassName}" data-sly-resource="${item.resourcePath @ resourceType=item.resourceType}"></li>
+
+</ul>

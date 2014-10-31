@@ -1,0 +1,4 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "sling:resourceSuperType": "/apps/wcm-io-handler-sample-app/components/global/page"
+}

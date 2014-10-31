@@ -1,0 +1,7 @@
+#base=js
+
+debug.js
+navmenu.js
+navtabs.js
+teaserbar.js
+init.js

@@ -1,0 +1,20 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "sling:resourceSuperType": "/apps/wcm-io-handler-sample-app/components/global/page",
+
+  "wcmio:parsysConfig": {
+    "jcr:primaryType": "nt:unstructured",
+    "paths": {
+
+      "content": {
+        "allowedChildren": [
+          "/apps/wcm-io-handler-sample-app/components/content/common/contentHeadline",
+          "/apps/wcm-io-handler-sample-app/components/content/common/contentRichText",
+          "/apps/wcm-io-handler-sample-app/components/content/stage/stagegallery"
+        ]
+      }
+
+    }
+  }
+
+}

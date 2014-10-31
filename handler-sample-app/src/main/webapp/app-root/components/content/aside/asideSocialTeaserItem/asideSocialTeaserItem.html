@@ -1,0 +1,13 @@
+<div class="clearfix"
+    data-sly-use.link="io.wcm.samples.handler.controller.resource.ResourceLink"
+    data-sly-use.media="${'io.wcm.samples.handler.controller.resource.ResourceMedia' @ mediaFormat='socialTeaser', cssClass='social-icon'}">
+  <p class="small-center">
+
+    <a data-sly-attribute="${link.attributes}" data-sly-unwrap="${!link.valid}" class="icon">
+      <img data-sly-unwrap data-sly-text="${media.markup @ context='html'}"/>
+      <span class="social-icon-text">${properties.linkTitle}</span>
+    </a>
+    <span class="social-icon-text">${properties.title}</span>
+
+  </p>
+</div>

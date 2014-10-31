@@ -1,0 +1,93 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "sling:resourceType": "granite/ui/components/foundation/section",
+  "items": {
+    "title": {
+      "sling:resourceType": "granite/ui/components/foundation/form/fieldset",
+      "items": {
+        "title": {
+          "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+          "required": true,
+          "name": "./jcr:title",
+          "cq-msm-lockable": "jcr:title",
+          "fieldLabel": "Title",
+          "renderReadOnly": true
+        },
+        "pagetitle": {
+          "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+          "name": "./pageTitle",
+          "cq-msm-lockable": "pageTitle",
+          "fieldLabel": "Page Title",
+          "renderReadOnly": true
+        },
+        "navigationtitle": {
+          "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+          "name": "./navTitle",
+          "cq-msm-lockable": "navTitle",
+          "fieldLabel": "Navigation Title",
+          "renderReadOnly": true
+        },
+        "msmConfigEndpoint": {
+          "sling:resourceType": "granite/ui/components/foundation/form/hidden",
+          "class": "msm-config-endpoint",
+          "value": "${empty param.item ? requestPathInfo.suffix : param.item }"
+        },
+        "hideinnav": {
+          "sling:resourceType": "granite/ui/components/foundation/form/checkbox",
+          "name": "./hideInNav",
+          "text": "Hide in Navigation",
+          "value": "true",
+          "cq-msm-lockable": "hideInNav",
+          "renderReadOnly": true
+        },
+        "deletehideinnav": {
+          "sling:resourceType": "granite/ui/components/foundation/form/hidden",
+          "name": "./hideInNav@Delete",
+          "value": "true"
+        },
+        "charset": {
+          "sling:resourceType": "granite/ui/components/foundation/form/hidden",
+          "name": "_charset_",
+          "value": "utf-8",
+          "ignoreData": true
+        }
+      }
+    },
+    "onofftime": {
+      "sling:resourceType": "granite/ui/components/foundation/form/fieldset",
+      "jcr:title": "On/Off Time",
+      "items": {
+        "ondate": {
+          "sling:resourceType": "granite/ui/components/foundation/form/datepicker",
+          "displayedFormat": "DD.MM.YYYY HH:mm",
+          "name": "./onTime",
+          "type": "datetime",
+          "cq-msm-lockable": "onTime",
+          "fieldLabel": "On Time",
+          "renderReadOnly": true
+        },
+        "ondate_type": {
+          "sling:resourceType": "granite/ui/components/foundation/form/hidden",
+          "name": "./onTime@TypeHint",
+          "value": "Date",
+          "ignoreData": true
+        },
+        "offdate": {
+          "sling:resourceType": "granite/ui/components/foundation/form/datepicker",
+          "displayedFormat": "DD.MM.YYYY HH:mm",
+          "name": "./offTime",
+          "type": "datetime",
+          "cq-msm-lockable": "offTime",
+          "fieldLabel": "Off Time",
+          "renderReadOnly": true
+        },
+        "offdate_type": {
+          "sling:resourceType": "granite/ui/components/foundation/form/hidden",
+          "name": "./offTime@TypeHint",
+          "value": "Date",
+          "ignoreData": true
+        }
+      }
+    }
+  }
+}

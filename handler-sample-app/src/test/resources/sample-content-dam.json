@@ -1,0 +1,226 @@
+{
+  "jcr:primaryType": "sling:OrderedFolder",
+  "jcr:title": "sample",
+  "content": {
+    "jcr:primaryType": "sling:OrderedFolder",
+    "jcr:title": "content",
+    "user.png": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "image/png",
+              ":jcr:data": 4476
+            }
+          }
+        },
+        "metadata": {
+          "jcr:primaryType": "nt:unstructured",
+          "tiff:ImageLength": 270,
+          "tiff:ImageWidth": 480
+        }
+      }
+    },
+    "talk.png": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "image/png",
+              ":jcr:data": 3886
+            }
+          }
+        },
+        "metadata": {
+          "jcr:primaryType": "nt:unstructured",
+          "tiff:ImageLength": 270,
+          "tiff:ImageWidth": 480
+        }
+      }
+    },
+    "location.png": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "cq:name": "location.png",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "image/png",
+              ":jcr:data": 6487
+            }
+          }
+        },
+        "metadata": {
+          "jcr:primaryType": "nt:unstructured",
+          "tiff:ImageLength": 270,
+          "tiff:ImageWidth": 480
+        }
+      }
+    },
+    "archive.png": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "cq:name": "archive.png",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "image/png",
+              ":jcr:data": 5445
+            }
+          }
+        },
+        "metadata": {
+          "jcr:primaryType": "nt:unstructured",
+          "tiff:ImageLength": 270,
+          "tiff:ImageWidth": 480
+        }
+      }
+    },
+    "adobe-logo.png": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "cq:name": "adobe-logo.png",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "image/png",
+              ":jcr:data": 10876
+            }
+          }
+        },
+        "metadata": {
+          "jcr:primaryType": "nt:unstructured",
+          "tiff:ImageLength": 232,
+          "tiff:ImageWidth": 200
+        }
+      }
+    },
+    "provision-logo.png": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "cq:name": "provision-logo.png",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "image/png",
+              ":jcr:data": 19108
+            }
+          }
+        },
+        "metadata": {
+          "jcr:primaryType": "nt:unstructured",
+          "tiff:ImageLength": 82,
+          "tiff:ImageWidth": 400
+        }
+      }
+    },
+    "twitter-icon.png": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "cq:name": "twitter-icon.png",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "image/png",
+              ":jcr:data": 5221
+            }
+          }
+        },
+        "metadata": {
+          "jcr:primaryType": "nt:unstructured",
+          "tiff:ImageLength": 120,
+          "tiff:ImageWidth": 120
+        }
+      }
+    },
+    "stageheader-outside2.jpg": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "cq:name": "stageheader-outside2.jpg",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "image/jpeg",
+              ":jcr:data": 102447
+            }
+          }
+        },
+        "metadata": {
+          "jcr:primaryType": "nt:unstructured",
+          "tiff:ImageLength": 300,
+          "tiff:ImageWidth": 1000
+        }
+      }
+    },
+    "presentation.pdf": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "cq:name": "presentation.pdf",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "application/pdf",
+              ":jcr:data": 102447
+            }
+          }
+        }
+      }
+    },
+    "download.zip": {
+      "jcr:primaryType": "dam:Asset",
+      "jcr:content": {
+        "jcr:primaryType": "dam:AssetContent",
+        "cq:name": "download.zip",
+        "renditions": {
+          "jcr:primaryType": "nt:folder",
+          "original": {
+            "jcr:primaryType": "nt:file",
+            "jcr:content": {
+              "jcr:primaryType": "nt:resource",
+              "jcr:mimeType": "application/pdf",
+              ":jcr:data": 102447
+            }
+          }
+        }
+      }
+    }
+  }
+}

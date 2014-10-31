@@ -1,0 +1,19 @@
+<div class="stage-large"
+    data-sly-use.media="${'io.wcm.samples.handler.controller.resource.ResourceMedia' @ mediaFormat='stageHeader'}"
+>
+  <img data-sly-unwrap data-sly-text="${media.markup @ context='html'}"/>
+
+  <div class="stage-overlay">
+    <div class="box-padding">
+
+      <div class="stage-title">
+        <h2 class="title title-section" data-sly-test="${properties.title}">${properties.title}</h2>
+        <p data-sly-test="${properties.subtitle}">${properties.subtitle}</p>
+      </div>
+
+      <div data-sly-resource="${'./links' @ resourceType='/apps/wcm-io/wcm/parsys/components/parsys'}" class="stage-cta-box"></div>
+
+    </div>
+  </div>
+
+</div>

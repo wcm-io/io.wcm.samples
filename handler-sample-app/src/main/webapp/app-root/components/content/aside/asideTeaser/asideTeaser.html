@@ -1,0 +1,16 @@
+<section class="box-padding"
+    data-sly-use.richtext="${'io.wcm.samples.handler.controller.resource.ResourceRichText' @ propertyName='teaserContent'}">
+
+  <header data-sly-test="${properties.title}">
+    <h1 class="title title-section title-sidebar">${properties.title}</h1>
+  </header>
+
+  <div>
+    ${richtext.markup @ context='html'}
+  </div>
+
+  <div class="cq-placeholder" data-emptytext="${component.title}" data-sly-test="${!richtext.valid || !properties.title}"></div>
+
+  <div data-sly-resource="${'./links' @ resourceType='/apps/wcm-io-handler-sample-app/components/framework/parsys/linkListParsys'}" data-sly-unwrap></div>
+
+</section>

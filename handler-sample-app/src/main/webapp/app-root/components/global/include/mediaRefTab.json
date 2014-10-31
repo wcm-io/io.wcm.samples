@@ -1,0 +1,21 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "sling:resourceType": "granite/ui/components/foundation/section",
+  "jcr:title": "Image",
+  "layout": {
+    "sling:resourceType": "granite/ui/components/foundation/layouts/fixedcolumns"
+  },
+  "items": {
+    "column": {
+      "sling:resourceType": "granite/ui/components/foundation/container",
+      "items": {
+
+        "mediaRef": {
+          "sling:resourceType": "cq/gui/components/authoring/dialog/image",
+          "name": "./mediaRef"
+        }
+      }
+
+    }
+  }
+}

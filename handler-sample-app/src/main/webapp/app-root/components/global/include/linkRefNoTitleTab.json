@@ -1,0 +1,111 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "sling:resourceType": "granite/ui/components/foundation/section",
+  "layout": {
+    "sling:resourceType": "granite/ui/components/foundation/layouts/fixedcolumns"
+  },
+  "items": {
+    "column": {
+      "sling:resourceType": "granite/ui/components/foundation/container",
+      "items": {
+        "linkType": {
+          "sling:resourceType": "granite/ui/components/foundation/form/select",
+          "name": "./linkType",
+          "fieldLabel": "Link type",
+          "defaultValue": "internal",
+          "class": "cq-dialog-dropdown-showhide",
+          "cq-dialog-dropdown-showhide-target": ".option-linktype-showhide-target",
+          "items": {
+            "internal": {
+              "value": "internal",
+              "text": "Internal"
+            },
+            "external": {
+              "value": "external",
+              "text": "External"
+            },
+            "media": {
+              "value": "media",
+              "text": "Asset"
+            }
+          }
+        },
+        "internalWell": {
+          "sling:resourceType": "granite/ui/components/foundation/well",
+          "class": "hide option-linktype-showhide-target foundation-layout-util-vmargin",
+          "showhidetargetvalue": "internal",
+          "items": {
+            "linkContentRef": {
+              "sling:resourceType": "granite/ui/components/foundation/form/pathbrowser",
+              "name": "./linkContentRef",
+              "fieldLabel": "Internal page",
+              "fieldDescription": "Link to target page in CMS (same site)",
+              "rootPath": "/content/handler/sample"
+            }
+          }
+        },
+        "externalWell": {
+          "sling:resourceType": "granite/ui/components/foundation/well",
+          "class": "hide option-linktype-showhide-target foundation-layout-util-vmargin",
+          "showhidetargetvalue": "external",
+          "items": {
+            "linkExternalRef": {
+              "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+              "name": "./linkExternalRef",
+              "fieldLabel": "URL",
+              "fieldDescription": "Link to external destination"
+            }
+          }
+        },
+        "mediaWell": {
+          "sling:resourceType": "granite/ui/components/foundation/well",
+          "class": "hide option-linktype-showhide-target foundation-layout-util-vmargin",
+          "showhidetargetvalue": "media",
+          "items": {
+            "linkMediaRef": {
+              "sling:resourceType": "granite/ui/components/foundation/form/pathbrowser",
+              "name": "./linkMediaRef",
+              "fieldLabel": "Asset reference",
+              "fieldDescription": "Reference to asset from DAM",
+              "rootPath": "/content/dam/adaptto"
+            },
+            "linkMediaDownload": {
+              "sling:resourceType": "granite/ui/components/foundation/form/checkbox",
+              "name": "./linkMediaDownload",
+              "text": "Download",
+              "value": "true",
+              "fieldDescription": "Open DAM asset item with download dialog"
+            },
+            "linkMediaDownloadDelete": {
+              "sling:resourceType": "granite/ui/components/foundation/form/hidden",
+              "name": "./linkMediaDownload@Delete",
+              "value": "true"
+            },
+            "linkMediaDownloadTypeHint": {
+              "sling:resourceType": "granite/ui/components/foundation/form/hidden",
+              "name": "./linkMediaDownload@TypeHint",
+              "value": "Boolean"
+            }
+          }
+        },
+        "linkWindowTarget": {
+          "sling:resourceType": "granite/ui/components/foundation/form/select",
+          "name": "./linkWindowTarget",
+          "fieldLabel": "Window target",
+          "defaultValue": "_self",
+          "items": {
+            "_self": {
+              "value": "_self",
+              "text": "Same window"
+            },
+            "_blank": {
+              "value": "_blank",
+              "text": "New window"
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<div data-sly-use.navigation="${'io.wcm.samples.handler.controller.navigation.FooterNavPageLink'}" data-sly-unwrap
+    data-sly-test="${!navigation.root.children.empty}">
+
+  <h1 class="title title-nav">${'metaNavigation' @ i18n, hint='adaptto_base'}</h1>
+
+  <!--/* one section for each footernav section */-->
+  <div data-sly-list.section="${navigation.root.children}" data-sly-unwrap>
+    <section class="col-1-4">
+      <div class="box-padding">
+        <h2 class="title title-section title-footer">${section.title}</h2>
+
+        <ul class="navlist navlist-footer">
+
+          <!--/* iterate first subnavigation level */-->
+          <div data-sly-list.subnav="${section.children}" data-sly-unwrap>
+            <li data-sly-call="${navItem @ link=subnav}"></li>
+          </div>
+
+        </ul>
+
+      </div>
+    </section>
+  </div>
+
+</div>
+
+<template data-sly-template.navItem="${ @ link}">
+  <a data-sly-attribute="${link.link.anchorAttributes}" class="navlink navlink-footer">${link.title}</a>
+</template>

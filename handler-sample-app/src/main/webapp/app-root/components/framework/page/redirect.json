@@ -1,0 +1,82 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "sling:resourceSuperType": "/apps/wcm-io-handler-sample-app/components/global/page",
+
+  "cq:dialog": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "Page",
+    "extraClientlibs": [
+      "cq.common.wcm",
+      "cq.siteadmin.admin.properties"
+    ],
+    "mode": "edit",
+    "sling:resourceType": "cq/gui/components/authoring/dialog",
+    "content": {
+      "sling:resourceType": "granite/ui/components/foundation/container",
+      "items": {
+        "tabs": {
+          "sling:resourceType": "granite/ui/components/foundation/container",
+          "layout": {
+            "sling:resourceType": "granite/ui/components/foundation/layouts/tabs",
+            "type": "nav"
+          },
+          "items": {
+
+            "basic": {
+              "sling:resourceType": "granite/ui/components/foundation/include",
+              "jcr:title": "Basic",
+              "path": "/apps/wcm-io-handler-sample-app/components/global/include/pagepropsBasicTab"
+            },
+
+            "link": {
+              "sling:resourceType": "granite/ui/components/foundation/include",
+              "jcr:title": "Redirect Link",
+              "path": "/apps/wcm-io-handler-sample-app/components/global/include/linkRefNoTitleTab"
+            },
+
+            "redirectStatus": {
+              "sling:resourceType": "granite/ui/components/foundation/section",
+              "jcr:title": "Redirect Status",
+              "layout": {
+                "sling:resourceType": "granite/ui/components/foundation/layouts/fixedcolumns"
+              },
+              "items": {
+                "column": {
+                  "sling:resourceType": "granite/ui/components/foundation/container",
+                  "items": {
+                    "redirectStatus": {
+                      "sling:resourceType": "granite/ui/components/foundation/form/select",
+                      "name": "./redirectStatus",
+                      "fieldLabel": "Redirect Status",
+                      "fieldDescription": "HTTP response code used for the redirect.",
+                      "defaultValue": "302",
+                      "items": {
+                        "302": {
+                          "value": "302",
+                          "text": "Moved Temporarily (302, default)"
+                        },
+                        "301": {
+                          "value": "301",
+                          "text": "Moved Permanently (301)"
+                        }
+                      }
+                    }
+                  }
+
+                }
+              }
+            },
+
+            "advanced": {
+              "sling:resourceType": "granite/ui/components/foundation/include",
+              "jcr:title": "Advanced",
+              "path": "/apps/wcm-io-handler-sample-app/components/global/include/pagepropsAdvancedTab"
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+}

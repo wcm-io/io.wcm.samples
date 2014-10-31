@@ -1,0 +1,48 @@
+<head
+    data-sly-use.pageTitle="io.wcm.samples.handler.controller.common.PageTitle"
+    data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-unwrap>
+
+  <!--/* Template info */-->
+  <!-- cms_template=${properties.cq:template @ context='uri'} -->
+
+  <title>${pageTitle.recursivePageTitle}</title>
+
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+  <meta name="description" content="${pageTitle.siteRootPageTitle}"/>
+  <meta name="author" content="pro!vision GmbH"/>
+
+  <!--/* Make sure iPad/iPhone do no zooming */-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+  <!--/* make Web-App */-->
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-touch-fullscreen" content="yes"/>
+
+  <!--/* Icons */-->
+  <link rel="shortcut icon" href="/etc/clientlibs/wcm-io-handler-sample-app/adaptto.base.app/resources/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/etc/clientlibs/wcm-io-handler-sample-app/adaptto.base.app/resources/img/icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/etc/clientlibs/wcm-io-handler-sample-app/adaptto.base.app/resources/img/icon-ipad.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/etc/clientlibs/wcm-io-handler-sample-app/adaptto.base.app/resources/img/icon-iphone4.png" />
+
+  <!--/* CSS */-->
+  <meta
+      data-sly-call="${clientLib.css @ categories=['adaptto.base.app']}"
+      data-sly-unwrap
+  ></meta>
+
+  <!--/* JavaScript */-->
+${'<!--[if lt IE 9]>' @ context='unsafe'}
+  <meta
+      data-sly-call="${clientLib.js @ categories=['adaptto.base.lib.html5shiv']}"
+      data-sly-unwrap
+  ></meta>
+${'<![endif]-->' @ context='unsafe'}
+  <meta
+      data-sly-call="${clientLib.js @ categories=['adaptto.base.lib.modernizr']}"
+      data-sly-unwrap
+  ></meta>
+
+</head>

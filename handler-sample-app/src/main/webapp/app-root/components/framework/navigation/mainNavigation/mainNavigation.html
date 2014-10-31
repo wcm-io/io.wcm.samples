@@ -1,0 +1,24 @@
+<h1 class="title title-nav title-mainnav">
+  <a href="#" class="menu-opener">${'mainNavigation' @ i18n, hint='adaptto_base'}</a>
+</h1>
+
+<ul class="row navlist navlist-main"
+    data-sly-use.navigation="${'io.wcm.samples.handler.controller.navigation.MainNavPageLink' @ levels=2}">
+
+  <!--/* first link in list is link to homepage */-->
+  <li data-sly-call="${navItem @ item=navigation.root}"></li>
+
+  <!--/* iterate main navigation level */-->
+  <div data-sly-list.mainnav="${navigation.root.children}" data-sly-unwrap>
+    <li data-sly-call="${navItem @ item=mainnav, subnav=true}"></li>
+  </div>
+
+</ul>
+
+<template data-sly-template.navItem="${ @ item, subnav}">
+  <a data-sly-attribute="${item.link.anchorAttributes}"
+      class="navlink navlink-main ${item.active ? 'navlink-active' : ''}">${item.title}</a>
+  <ul data-sly-list.subnav="${item.children}" data-sly-test="${!item.children.empty && subnav}">
+    <li data-sly-call="${navItem @ item=subnav}"></li>
+  </ul>
+</template>

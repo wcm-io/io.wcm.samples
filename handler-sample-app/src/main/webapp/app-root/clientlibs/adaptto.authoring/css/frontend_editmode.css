@@ -1,0 +1,11 @@
+/**
+ * Additional CSS rules included in WCM edit mode
+ */
+
+/*
+-- disabled - do we still need this?`--
+
+#OverlayWrapper .cq-Overlay > .cq-Overlay-subdroptarget {
+  z-index: inherit !important;
+}
+*/

@@ -1,0 +1,156 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+
+  "htmlRules": {
+
+    // Ensure valid XHTML markup with <strong> and <em> tags
+    "docType": {
+      "baseType": "xhtml",
+      "version": "1.0",
+      "typeConfig": {
+        "useSemanticMarkup": true,
+        "semanticMarkupMap": {
+          "b": "strong",
+          "i": "em"
+        },
+        "isXhtmlStrict": true
+      }
+    },
+
+    // Default link dialog configuration
+    "links": {
+      "cssMode": "keep",
+      "protocols": [
+        "http://",
+        "https://",
+        "mailto:"
+      ],
+      "targetConfig": {
+        "mode": "blank"
+      },
+      "ensureInternalLinkExt": false
+    }
+
+  },
+
+  // Configure rich text plugins
+  "rtePlugins": {
+    "format": {
+      "features": "*"
+    },
+    "misctools": {
+      "features": "*"
+    },
+    "edit": {
+      "features": "*"
+    },
+    "findreplace": {
+      "features": "*"
+    },
+    "keys": {
+      "features": "*"
+    },
+    "justify": {
+      "features": "*"
+    },
+    "lists": {
+      "features": "*"
+    },
+    "paraformat": {
+      "features": "*",
+      "formats": {
+        "p": "Paragraph",
+        "h1": "Heading 1",
+        "h2": "Heading 2",
+        "h3": "Heading 3",
+        "h4": "Heading 4"
+      }
+    },
+    "spellcheck": {
+      "features": "*"
+    },
+    "undo": {
+      "features": "*"
+    }
+  },
+
+  // Configure toolbars for IPE and fulltext mode in Touch UI
+  "uiSettings": {
+    "cui": {
+      "inline": {
+        "toolbar": [
+          "format#bold",
+          "#lists",
+          "-",
+          "links#modifylink",
+          "links#unlink",
+          "-",
+          "#paraformat",
+          "-",
+          "fullscreen#start",
+          "-",
+          "control#close"
+        ],
+        "popovers": {
+          "lists": {
+            "ref": "lists",
+            "icon": "text",
+            "items": [
+              "lists#insertunorderedlist",
+              "lists#insertorderedlist",
+              "lists#outdent",
+              "lists#indent"
+            ]
+          },
+          "paraformat": {
+            "ref": "paraformat",
+            "items": "paraformat:getFormats:paraformat-pulldown"
+          }
+        }
+      },
+      "fullscreen": {
+        "toolbar": [
+          "format#bold",
+          "-",
+          "links#modifylink",
+          "links#unlink",
+          "links#anchor",
+          "-",
+          "findreplace#find",
+          "findreplace#replace",
+          "-",
+          "undo#undo",
+          "undo#redo",
+          "-",
+          "justify#justifyleft",
+          "justify#justifycenter",
+          "justify#justifyright",
+          "-",
+          "lists#insertunorderedlist",
+          "lists#insertorderedlist",
+          "lists#outdent",
+          "lists#indent",
+          "-",
+          "misctools#specialchars",
+          "-",
+          "#paraformat",
+          "-",
+          "fullscreen#finish"
+        ],
+        "popovers": {
+          "paraformat": {
+            "ref": "paraformat",
+            "items": "paraformat:getFormats:paraformat-pulldown"
+          }
+        }
+      },
+      "icons": {
+        "justify": {
+          "command": "#justify",
+          "icon": "coral-Icon coral-Icon--textCenter"
+        }
+      }
+    }
+  }
+
+}

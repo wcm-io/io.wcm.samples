@@ -1,0 +1,6 @@
+<div data-sly-use.link="io.wcm.samples.handler.controller.resource.ResourceLink" data-sly-unwrap>
+  <a data-sly-attribute="${link.attributes}" data-sly-test="{link.valid}">
+    ${properties.linkTitle}
+  </a>
+</div>
+<div class="cq-placeholder" data-emptytext="${component.title}" data-sly-test="${!link.valid}"></div>

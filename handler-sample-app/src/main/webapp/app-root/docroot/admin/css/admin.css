@@ -1,0 +1,114 @@
+body {
+  color: #000000;
+  font-family: Verdana, Arial, Helvetica;
+  font-size: 11px
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#admin_table_container {
+  padding-left: 0px;
+  padding-top: 0px;
+  width: 70%;
+}
+
+.admin_table {
+  border: #dddddd 1px solid;
+  width: 100%;
+  border-spacing: 0px;
+  padding: 0px;
+  empty-cells: show;
+  border-collapse: collapse;
+  margin-bottom: 5px;
+}
+
+.admin_table tr {
+  vertical-align: top;
+}
+
+.admin_table td {
+  border: #dddddd 1px solid;
+  background-color: #fcfcfc;
+  padding: 3px;
+}
+
+.admin_table th {
+  border: #dddddd 1px solid;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 3px;
+}
+
+.admin_table img {
+  border: 0;
+}
+
+.admin_long_input {
+  width: 99%;
+}
+
+.global_update th {
+  width: 30%;
+}
+
+body {
+  margin: 10px;
+}
+
+h1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+table {
+  width: 600px;
+  font-family: Verdana, Arial, Helvetica;
+}
+
+td {
+  font-size: 12px;
+  font-family: Verdana, Arial, Helvetica;
+}
+
+.td_title {
+  width: 40%;
+  background-color: #C0C0C0;
+}
+.td_value {
+  width: 60%;
+  background-color: #F0F0F0;
+}

@@ -1,0 +1,43 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Content Richtext",
+  "componentGroup": "Content",
+
+  "cq:editConfig": {
+    "cq:dialogMode": "floating",
+    "cq:disableTargeting": true,
+    "cq:listeners": {
+      "afteredit": "adaptto.authoring.listener.refreshAjaxContentAfterEdit"
+    },
+    "cq:inplaceEditing": {
+      "jcr:primaryType": "cq:InplaceEditingConfig",
+      "active": true,
+      "editorType": "text",
+      "configPath": "/apps/wcm-io-handler-sample-app/components/global/include/richTextConfig"
+    }
+  },
+
+  "cq:dialog": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "cq/gui/components/authoring/dialog",
+    "jcr:title": "Content Richtext",
+    "content": {
+      "sling:resourceType": "granite/ui/components/foundation/section",
+      "layout": {
+        "sling:resourceType": "granite/ui/components/foundation/layouts/fixedcolumns"
+      },
+      "items": {
+        "column": {
+          "sling:resourceType": "granite/ui/components/foundation/container",
+          "items": {
+            "xhtmlText": {
+              "sling:resourceType": "cq/gui/components/authoring/dialog/richtext/readonly",
+              "name": "./text"
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

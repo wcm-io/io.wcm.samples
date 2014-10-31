@@ -1,0 +1,32 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "sling:resourceType": "granite/ui/components/foundation/section",
+  "items": {
+    "section1": {
+      "sling:resourceType": "granite/ui/components/foundation/form/fieldset",
+      "items": {
+        "language": {
+          "sling:resourceType": "granite/ui/components/foundation/form/select",
+          "emptyText": "Select",
+          "name": "./jcr:language",
+          "class": "language",
+          "cq-msm-lockable": "jcr:language",
+          "fieldLabel": "Language",
+          "renderReadOnly": true,
+          "translateOptions": true,
+          "datasource": {
+            "sling:resourceType": "cq/gui/components/common/datasources/languages",
+            "addNone": true
+          }
+        },
+        "alias": {
+          "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+          "name": "./sling:alias",
+          "cq-msm-lockable": "sling:alias",
+          "fieldLabel": "Alias",
+          "renderReadOnly": true
+        }
+      }
+    }
+  }
+}

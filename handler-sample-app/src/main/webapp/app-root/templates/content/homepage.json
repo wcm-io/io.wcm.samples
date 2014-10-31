@@ -1,0 +1,12 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "adaptTo() Homepage",
+
+  "allowedPaths": "/content/handler/sample/[^/]*",
+  "allowedChildren": "^/apps/wcm-io-handler-sample-app/.*$",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "/apps/wcm-io-handler-sample-app/components/content/page/homepage"
+  }
+}

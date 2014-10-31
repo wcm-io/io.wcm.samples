@@ -1,0 +1,13 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "adaptTo() Redirect Template",
+
+  "allowedPaths": "^/content/[^/]+/[^/]+(/.*)?$",
+  "allowedParents": "^/apps/wcm-io-handler-sample-app/templates/.*$",
+  "allowedChildren": "^/apps/wcm-io-handler-sample-app/templates/.*$",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "/apps/wcm-io-handler-sample-app/components/framework/page/redirect"
+  }
+}

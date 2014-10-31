@@ -1,0 +1,35 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:title": "Stage Header Link Item",
+  "componentGroup": "Stage",
+  "cq:editConfig": {
+    "cq:dialogMode": "floating",
+    "cq:disableTargeting": true,
+    "cq:listeners": {
+      "afteredit": "adaptto.authoring.listener.refreshAjaxContentAfterEdit"
+    }
+  },
+
+  "cq:dialog": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "cq/gui/components/authoring/dialog",
+    "jcr:title": "Stage Header Link ",
+    "content": {
+      "sling:resourceType": "granite/ui/components/foundation/container",
+      "layout": {
+        "sling:resourceType": "granite/ui/components/foundation/layouts/tabs",
+        "type": "nav"
+      },
+      "items": {
+
+        "link": {
+          "sling:resourceType": "granite/ui/components/foundation/include",
+          "jcr:title": "Link",
+          "path": "/apps/wcm-io-handler-sample-app/components/global/include/linkRefTab"
+        }
+
+      }
+    }
+  }
+
+}

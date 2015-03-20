@@ -1,0 +1,9 @@
+{
+  "mainNavigation ((handlerSample_base))": "Navigation",
+  "metaNavigation ((handlerSample_base))": "Meta Navigation",
+  "disclaimerText ((handlerSample_base))": "Disclaimer Text.",
+  "Credits: ©{0} wcm.io ((handlerSample_base))": "Credits: ©{0} wcm.io",
+  "WCM.IO HANDLER SAMPLE APPLICATIONP ((handlerSample_base))": "WCM.IO HANDLER SAMPLE APPLICATION",
+  "redirectInfo ((handlerSample_base))": "This page forwards to",
+  "redirectMissing ((handlerSample_base))": "Please specify a redirect link in page properties."
+}

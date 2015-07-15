@@ -1,6 +1,6 @@
 <img src="http://wcm.io/images/favicon-16@2x.png"/> wcm.io Samples
 ======
-[![Build Status](https://travis-ci.org/wcm-io/wcm-io-samples.png?branch=master)](https://travis-ci.org/wcm-io/wcm-io-samples)
+[![Build Status](https://travis-ci.org/wcm-io/wcm-io-samples.png?branch=develop)](https://travis-ci.org/wcm-io/wcm-io-samples)
 
 Sample projects and applications to demonstrate and test wcm.io features.
 

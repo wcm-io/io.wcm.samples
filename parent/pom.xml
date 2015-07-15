@@ -38,9 +38,9 @@
   <description>Sample projects and applications to demonstrate and test wcm.io features.</description>
 
   <scm>
-    <connection>scm:git:https://github.com/wcm-io/wcm-io.git</connection>
-    <developerConnection>scm:git:https://github.com/wcm-io/wcm-io.git</developerConnection>
-    <url>https://github.com/wcm-io/wcm-io</url>
+    <connection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</connection>
+    <developerConnection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</developerConnection>
+    <url>https://github.com/wcm-io/wcm-io-samples</url>
     <tag>HEAD</tag>
   </scm>
 

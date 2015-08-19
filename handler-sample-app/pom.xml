@@ -116,6 +116,12 @@
       <version>0.5.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.testing.logging-mock</artifactId>
+      <version>1.0.0</version>
+      <scope>test</scope>
+    </dependency>
 
   </dependencies>
   <dependencyManagement>

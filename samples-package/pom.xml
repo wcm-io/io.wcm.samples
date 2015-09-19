@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm</groupId>
   <artifactId>io.wcm.samples.samples-package</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>content-package</packaging>
 
   <name>Samples Package</name>
@@ -49,17 +49,17 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.samples.config-sample-app</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.samples.handler-sample-app</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
 
-    <!-- Sling packages not included in AEM 6.0 (yet) -->
+    <!-- Latest Sling Models bundles -->
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.models.api</artifactId>

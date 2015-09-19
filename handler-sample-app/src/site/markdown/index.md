@@ -15,4 +15,4 @@ See [wcm.io Handler](http://wcm.io/handler/) for more details about the handler 
 
 ### System requirements
 
-- AEM 6.0 SP1
+- AEM 6.0 SP1 or AEM 6.1

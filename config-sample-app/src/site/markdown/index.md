@@ -22,4 +22,4 @@ See [wcm.io Configuration](http://wcm.io/config/) for more details about the con
 
 ### System requirements
 
-- AEM 6.0 SP1
+- AEM 6.0 SP1 or AEM 6.1

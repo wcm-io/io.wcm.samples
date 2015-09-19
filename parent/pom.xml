@@ -22,6 +22,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <!-- Please note: This sample project inherits from io.wcm:io.wcm.parent_toplevel to support publishing to wcm.io Documentation Site
+       Real projects should inherit directly from io.wcm.maven:io.wcm.maven.aem-global-parent, and not from io.wcm:io.wcm.parent_toplevel -->
   <parent>
     <groupId>io.wcm</groupId>
     <artifactId>io.wcm.parent_toplevel</artifactId>
@@ -81,7 +83,7 @@
           </configuration>
         </plugin>
 
-        <!-- do not deploy sample apps into maven repository -->
+        <!-- Do not deploy sample apps into maven repository -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>

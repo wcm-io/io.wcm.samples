@@ -30,16 +30,16 @@
   </parent>
 
   <groupId>io.wcm</groupId>
-  <artifactId>io.wcm.samples.samples-package</artifactId>
+  <artifactId>io.wcm.samples.complete</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>content-package</packaging>
 
-  <name>Samples Package</name>
-  <description>AEM content package with all sample applications and dependencies.</description>
+  <name>Samples Applications</name>
+  <description>AEM content package with all sample application bundles and dependencies.</description>
 
   <properties>
-    <content-package-name>wcm-io-samples</content-package-name>
-    <content-package-group>wcm-io</content-package-group>
+    <content-package-name>wcm-io-samples-complete</content-package-name>
+    <content-package-group>wcm-io-samples</content-package-group>
     <dependency-includeGroupIds>io.wcm</dependency-includeGroupIds>
     <dependency-includeArtifactIds>org.apache.sling.models.api,org.apache.sling.models.impl</dependency-includeArtifactIds>
   </properties>

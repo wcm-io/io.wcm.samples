@@ -17,11 +17,13 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.handler.business.navigation;
+package io.wcm.samples.handler.business.navigation.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import io.wcm.samples.handler.business.navigation.NavigationManager;
+import io.wcm.samples.handler.business.navigation.NavigationPageItem;
 import io.wcm.samples.handler.testcontext.AppAemContext;
 import io.wcm.testing.mock.aem.junit.AemContext;
 

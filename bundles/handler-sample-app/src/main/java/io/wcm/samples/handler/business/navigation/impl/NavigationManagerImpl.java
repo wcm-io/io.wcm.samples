@@ -17,10 +17,12 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.handler.business.navigation;
+package io.wcm.samples.handler.business.navigation.impl;
 
 import io.wcm.handler.link.Link;
 import io.wcm.handler.link.LinkHandler;
+import io.wcm.samples.handler.business.navigation.NavigationManager;
+import io.wcm.samples.handler.business.navigation.NavigationPageItem;
 import io.wcm.samples.handler.util.SiteHelper;
 import io.wcm.sling.models.annotations.AemObject;
 

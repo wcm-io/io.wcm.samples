@@ -17,33 +17,36 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.handler.config;
+package io.wcm.samples.handler.config.impl;
 
 import io.wcm.config.spi.annotations.Application;
-import io.wcm.handler.url.spi.UrlHandlerConfig;
-import io.wcm.handler.url.spi.helpers.AbstractUrlHandlerConfig;
+import io.wcm.handler.link.spi.LinkHandlerConfig;
+import io.wcm.handler.link.spi.helpers.AbstractLinkHandlerConfig;
+import io.wcm.samples.handler.util.AppTemplate;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 
+import com.day.cq.wcm.api.Page;
+
 /**
- * URL handler configuration
+ * Link handler configuration
  */
 @Model(adaptables = {
     SlingHttpServletRequest.class, Resource.class
-}, adapters = UrlHandlerConfig.class)
+}, adapters = LinkHandlerConfig.class)
 @Application(ApplicationProviderImpl.APPLICATION_ID)
-public class UrlHandlerConfigImpl extends AbstractUrlHandlerConfig {
-
-  /**
-   * Site root level
-   */
-  public static final int SITE_ROOT_LEVEL = 3;
+public class LinkHandlerConfigImpl extends AbstractLinkHandlerConfig {
 
   @Override
-  public int getSiteRootLevel(String contextPath) {
-    return SITE_ROOT_LEVEL;
+  public boolean isValidLinkTarget(Page page) {
+    return !AppTemplate.isTemplate(page, AppTemplate.FRAMEWORK_STRUCTURE_ELEMENT);
+  }
+
+  @Override
+  public boolean isRedirect(Page page) {
+    return AppTemplate.isTemplate(page, AppTemplate.FRAMEWORK_REDIRECT);
   }
 
 }

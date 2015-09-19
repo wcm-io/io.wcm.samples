@@ -17,7 +17,7 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.handler.config;
+package io.wcm.samples.handler.config.impl;
 
 import io.wcm.config.spi.annotations.Application;
 import io.wcm.handler.media.format.MediaFormat;
@@ -25,6 +25,7 @@ import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
 import io.wcm.handler.media.spi.MediaHandlerConfig;
 import io.wcm.handler.media.spi.MediaMarkupBuilder;
 import io.wcm.handler.media.spi.helpers.AbstractMediaHandlerConfig;
+import io.wcm.samples.handler.config.MediaFormats;
 import io.wcm.samples.handler.handler.ResponsiveImageMediaMarkupBuilder;
 
 import java.util.List;

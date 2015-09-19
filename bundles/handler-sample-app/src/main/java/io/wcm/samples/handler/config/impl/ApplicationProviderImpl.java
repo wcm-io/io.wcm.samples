@@ -17,7 +17,7 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.handler.config;
+package io.wcm.samples.handler.config.impl;
 
 import io.wcm.config.spi.ApplicationProvider;
 

@@ -19,7 +19,7 @@
  */
 package io.wcm.samples.handler.util;
 
-import io.wcm.samples.handler.config.UrlHandlerConfigImpl;
+import io.wcm.samples.handler.config.impl.UrlHandlerConfigImpl;
 import io.wcm.sling.models.annotations.AemObject;
 
 import org.apache.commons.lang3.StringUtils;

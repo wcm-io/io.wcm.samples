@@ -17,10 +17,11 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.handler.config;
+package io.wcm.samples.handler.config.impl;
 
 import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.handler.media.spi.helpers.AbstractMediaFormatProvider;
+import io.wcm.samples.handler.config.MediaFormats;
 
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;

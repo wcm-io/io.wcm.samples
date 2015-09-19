@@ -17,26 +17,26 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.handler.config;
+package io.wcm.samples.handler.config.impl;
 
-import io.wcm.config.spi.ConfigurationFinderStrategy;
-import io.wcm.config.spi.helpers.AbstractAbsoluteParentConfigurationFinderStrategy;
+import io.wcm.config.spi.helpers.AbstractParameterProvider;
+import io.wcm.samples.handler.config.Params;
 
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
 
 /**
- * Application provider
+ * Provides parameter metadata.
  */
 @Component(immediate = true)
-@Service(ConfigurationFinderStrategy.class)
-public class ConfigurationFinderStrategyImpl extends AbstractAbsoluteParentConfigurationFinderStrategy {
+@Service
+public class ParameterProviderImpl extends AbstractParameterProvider {
 
   /**
-   * Detect via fixed site root level
+   * Provide all parameters from {@link Params}.
    */
-  public ConfigurationFinderStrategyImpl() {
-    super(ApplicationProviderImpl.APPLICATION_ID, UrlHandlerConfigImpl.SITE_ROOT_LEVEL);
+  public ParameterProviderImpl() {
+    super(Params.class);
   }
 
 }

@@ -20,7 +20,7 @@
 package io.wcm.samples.handler.config;
 
 import static io.wcm.handler.media.format.MediaFormatBuilder.create;
-import static io.wcm.samples.handler.config.ApplicationProviderImpl.APPLICATION_ID;
+import static io.wcm.samples.handler.config.impl.ApplicationProviderImpl.APPLICATION_ID;
 import io.wcm.handler.media.format.MediaFormat;
 
 /**

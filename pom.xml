@@ -44,6 +44,11 @@
     <tag>HEAD</tag>
   </scm>
 
+  <properties>
+    <site.url.module.prefix>samples</site.url.module.prefix>
+  </properties>
+
+
   <modules>
     <module>parent</module>
     <module>bundles/sample-app</module>
@@ -65,16 +70,14 @@
         </configuration>
       </plugin>
 
-      <!-- do not generate site for this project -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-        <configuration>
-          <skipDeploy>true</skipDeploy>
-        </configuration>
-      </plugin>
-
     </plugins>
   </build>
+
+  <distributionManagement>
+    <site>
+      <id>${site.deploy.id}</id>
+      <url>${site.deploy.url}${site.url.module.prefix}</url>
+    </site>
+  </distributionManagement>
 
 </project>

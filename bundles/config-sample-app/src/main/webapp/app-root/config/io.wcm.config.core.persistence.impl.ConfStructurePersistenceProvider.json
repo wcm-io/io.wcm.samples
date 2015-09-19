@@ -1,6 +1,6 @@
 {
   "jcr:primaryType": "sling:OsgiConfig",
   "enabled": "true",
-  "configPageTemplate": "/apps/wcm-io-config-sample-app/templates/configEditor",
-  "structurePageTemplate": "/apps/wcm-io-config-sample-app/templates/structureElement"
+  "configPageTemplate": "/apps/wcm-io-samples/config-sample-app/templates/configEditor",
+  "structurePageTemplate": "/apps/wcm-io-samples/config-sample-app/templates/structureElement"
 }

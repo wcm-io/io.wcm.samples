@@ -35,32 +35,32 @@ public enum AppTemplate {
   /**
    * Framework: structure element
    */
-  FRAMEWORK_STRUCTURE_ELEMENT("/apps/wcm-io-handler-sample-app/templates/framework/structureElement"),
+  FRAMEWORK_STRUCTURE_ELEMENT("/apps/wcm-io-samples/handler-sample-app/templates/framework/structureElement"),
 
   /**
    * Framework: redirect
    */
-  FRAMEWORK_REDIRECT("/apps/wcm-io-handler-sample-app/templates/framework/redirect"),
+  FRAMEWORK_REDIRECT("/apps/wcm-io-samples/handler-sample-app/templates/framework/redirect"),
 
   /**
    * Editorial: content
    */
-  EDITORIAL_CONTENT("/apps/wcm-io-handler-sample-app/templates/content/content"),
+  EDITORIAL_CONTENT("/apps/wcm-io-samples/handler-sample-app/templates/content/content"),
 
   /**
    * Editorial: tickets
    */
-  EDITORIAL_TICKETS("/apps/wcm-io-handler-sample-app/templates/content/tickets"),
+  EDITORIAL_TICKETS("/apps/wcm-io-samples/handler-sample-app/templates/content/tickets"),
 
   /**
    * Editorial: venue
    */
-  EDITORIAL_VENUE("/apps/wcm-io-handler-sample-app/templates/content/venue"),
+  EDITORIAL_VENUE("/apps/wcm-io-samples/handler-sample-app/templates/content/venue"),
 
   /**
    * Editorial: homepage
    */
-  EDITORIAL_HOMEPAGE("/apps/wcm-io-handler-sample-app/templates/content/homepage");
+  EDITORIAL_HOMEPAGE("/apps/wcm-io-samples/handler-sample-app/templates/content/homepage");
 
   private final String mTemplatePath;
   private final String mResourceType;

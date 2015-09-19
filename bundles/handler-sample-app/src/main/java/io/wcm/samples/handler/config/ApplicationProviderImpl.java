@@ -37,7 +37,7 @@ public class ApplicationProviderImpl implements ApplicationProvider {
   /**
    * Application Id
    */
-  public static final String APPLICATION_ID = "/apps/wcm-io-handler-sample-app";
+  public static final String APPLICATION_ID = "/apps/wcm-io-samples/handler-sample-app";
 
   /**
    * Application labe

@@ -3,10 +3,10 @@
   "jcr:title": "wcm.io Handler Sample Structure Element",
 
   "allowedPaths": "^/content(/.*)?$",
-  "allowedChildren": "^/apps/wcm-io-handler-sample-app/templates/.*$",
+  "allowedChildren": "^/apps/wcm-io-samples/handler-sample-app/templates/.*$",
 
   "jcr:content": {
     "jcr:primaryType": "cq:PageContent",
-    "sling:resourceType": "/apps/wcm-io-handler-sample-app/components/framework/page/structureElement"
+    "sling:resourceType": "/apps/wcm-io-samples/handler-sample-app/components/framework/page/structureElement"
   }
 }

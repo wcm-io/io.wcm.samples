@@ -3,11 +3,11 @@
   "jcr:title": "wcm.io Handler Sample Redirect",
 
   "allowedPaths": "^/content/[^/]+/[^/]+(/.*)?$",
-  "allowedParents": "^/apps/wcm-io-handler-sample-app/templates/.*$",
-  "allowedChildren": "^/apps/wcm-io-handler-sample-app/templates/.*$",
+  "allowedParents": "^/apps/wcm-io-samples/handler-sample-app/templates/.*$",
+  "allowedChildren": "^/apps/wcm-io-samples/handler-sample-app/templates/.*$",
 
   "jcr:content": {
     "jcr:primaryType": "cq:PageContent",
-    "sling:resourceType": "/apps/wcm-io-handler-sample-app/components/framework/page/redirect"
+    "sling:resourceType": "/apps/wcm-io-samples/handler-sample-app/components/framework/page/redirect"
   }
 }

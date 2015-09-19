@@ -92,6 +92,20 @@
           </configuration>
         </plugin>
 
+        <!-- CONGA -->
+        <plugin>
+          <groupId>io.wcm.devops.conga</groupId>
+          <artifactId>conga-maven-plugin</artifactId>
+          <version>1.1.2</version>
+          <dependencies>
+            <dependency>
+              <groupId>io.wcm.devops.conga.plugins</groupId>
+              <artifactId>io.wcm.devops.conga.plugins.aem</artifactId>
+              <version>1.1.0</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+
       </plugins>
     </pluginManagement>
   </build>

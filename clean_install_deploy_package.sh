@@ -84,16 +84,16 @@ echo ""
 echo "***  Deploy config and samplecontent packages  ***"
 echo ""
 
-#cd config-definition
-#mvn -B $sling_params -Pdeploy-config-packages wcmio-content-package:install
-#
-#if [ "$?" -ne "0" ]; then
-#  echo "*** Build FAILED ***"
-#  exit 1
-#fi
-#
-#cd ../
-#
+cd config-definition
+mvn -B $sling_params -Pdeploy-config-packages wcmio-content-package:install
+
+if [ "$?" -ne "0" ]; then
+  echo "*** Build FAILED ***"
+  exit 1
+fi
+
+cd ../
+
 #cd sample-content
 #mvn -B $sling_params content-package:install
 #

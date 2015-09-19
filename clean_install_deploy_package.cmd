@@ -46,15 +46,15 @@ call mvn %sling_params% wcmio-content-package:install
 if errorlevel 1 goto error
 cd ..
 
-rem echo.
-rem echo.*** Deploy config and samplecontent packages ***
-rem echo.
-rem 
-rem cd config-definition
-rem call mvn %sling_params% -Pdeploy-config-packages wcmio-content-package:install
-rem if errorlevel 1 goto error
-rem cd ..
-rem 
+echo.
+echo.*** Deploy config and samplecontent packages ***
+echo.
+ 
+cd config-definition
+call mvn %sling_params% -Pdeploy-config-packages wcmio-content-package:install
+if errorlevel 1 goto error
+cd ..
+ 
 rem cd sample-content
 rem call mvn %sling_params% wcmio-content-package:install
 rem if errorlevel 1 goto error

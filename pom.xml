@@ -41,6 +41,7 @@
     <module>parent</module>
     <module>bundles/config-sample-app</module>
     <module>bundles/handler-sample-app</module>
+    <module>config-definition</module>
     <module>complete</module>
   </modules>
 

@@ -1,6 +1,6 @@
 {
   "jcr:primaryType": "cq:ClientLibraryFolder",
   "categories": [
-    "handlerSample.base.lib"
+    "wcm-io-samples.app"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "jcr:primaryType": "cq:ClientLibraryFolder",
   "categories": [
-    "handlerSample.base.lib.modernizr"
+    "wcm-io-samples.lib.modernizr"
   ]
 }

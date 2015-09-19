@@ -37,10 +37,17 @@
   <name>Samples Root</name>
   <description>Sample projects and applications to demonstrate and test wcm.io features.</description>
 
+  <scm>
+    <connection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</connection>
+    <developerConnection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</developerConnection>
+    <url>https://github.com/wcm-io/wcm-io-samples</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <modules>
     <module>parent</module>
-    <module>bundles/config-sample-app</module>
-    <module>bundles/handler-sample-app</module>
+    <module>bundles/sample-app</module>
+    <module>bundles/clientlibs</module>
     <module>config-definition</module>
     <module>complete</module>
     <module>sample-content</module>

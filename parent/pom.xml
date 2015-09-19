@@ -39,13 +39,6 @@
   <name>Samples</name>
   <description>Sample projects and applications to demonstrate and test wcm.io features.</description>
 
-  <scm>
-    <connection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</connection>
-    <developerConnection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</developerConnection>
-    <url>https://github.com/wcm-io/wcm-io-samples</url>
-    <tag>HEAD</tag>
-  </scm>
-
   <properties>
     <site.url.module.prefix>samples</site.url.module.prefix>
 
@@ -104,6 +97,13 @@
               <version>1.1.0</version>
             </dependency>
           </dependencies>
+        </plugin>
+
+        <!-- i18n -->
+        <plugin>
+          <groupId>io.wcm.maven.plugins</groupId>
+          <artifactId>i18n-maven-plugin</artifactId>
+          <version>1.0.0</version>
         </plugin>
 
       </plugins>

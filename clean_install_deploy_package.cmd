@@ -55,10 +55,10 @@ call mvn %sling_params% -Pdeploy-config-packages wcmio-content-package:install
 if errorlevel 1 goto error
 cd ..
  
-rem cd sample-content
-rem call mvn %sling_params% wcmio-content-package:install
-rem if errorlevel 1 goto error
-rem cd ..
+cd sample-content
+call mvn %sling_params% wcmio-content-package:install
+if errorlevel 1 goto error
+cd ..
 
 goto end
 

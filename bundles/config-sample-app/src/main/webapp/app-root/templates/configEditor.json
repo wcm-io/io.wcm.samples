@@ -2,7 +2,7 @@
   "jcr:primaryType": "cq:Template",
   "jcr:title": "wcm.io Sample Configuration Editor",
 
-  "allowedPaths": "^/content(/.*)?$",
+  "allowedPaths": "/content/wcm-io-samples/config/[^/]*",
 
   "jcr:content": {
     "jcr:primaryType": "cq:PageContent",

@@ -21,6 +21,8 @@ package io.wcm.samples.configsampleapp.config;
 
 import io.wcm.config.spi.ApplicationProvider;
 
+import java.util.regex.Pattern;
+
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.resource.Resource;
@@ -31,6 +33,8 @@ import org.apache.sling.api.resource.Resource;
 @Component(immediate = true)
 @Service
 public class SampleApplicationProvider implements ApplicationProvider {
+
+  private static final Pattern PATH_PATTERN = Pattern.compile("^/content/(dam/)?wcm-io-samples/config(/.*)?$");
 
   @Override
   public String getApplicationId() {
@@ -44,7 +48,7 @@ public class SampleApplicationProvider implements ApplicationProvider {
 
   @Override
   public boolean matches(Resource resource) {
-    return true;
+    return PATH_PATTERN.matcher(resource.getPath()).matches();
   }
 
 }

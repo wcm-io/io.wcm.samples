@@ -36,7 +36,7 @@ public class ResourceRichTextTest {
 
   @Test
   public void testRichText() {
-    context.currentResource("/content/handler/sample/en/jcr:content/content/contentrichtext");
+    context.currentResource("/content/wcm-io-samples/handler/en/jcr:content/content/contentrichtext");
     ResourceRichText underTest = context.request().adaptTo(ResourceRichText.class);
     assertTrue(underTest.isValid());
     assertTrue(StringUtils.isNotBlank(underTest.getMarkup()));
@@ -44,7 +44,7 @@ public class ResourceRichTextTest {
 
   @Test
   public void testInvalidRichText() {
-    context.currentResource("/content/handler/sample/en/jcr:content/content/contentheadline");
+    context.currentResource("/content/wcm-io-samples/handler/en/jcr:content/content/contentheadline");
     ResourceRichText underTest = context.request().adaptTo(ResourceRichText.class);
     assertFalse(underTest.isValid());
     assertNull(underTest.getMarkup());

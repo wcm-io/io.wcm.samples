@@ -2,7 +2,7 @@
   "jcr:primaryType": "cq:Template",
   "jcr:title": "wcm.io Handler Sample Configuration Editor",
 
-  "allowedPaths": "^/content/handler/[^/]+/[^/]+/tools(/.*)?$",
+  "allowedPaths": "^/content/wcm-io-samples/handler/[^/]+/[^/]+/tools(/.*)?$",
   "allowedChildren": "",
 
   "jcr:content": {

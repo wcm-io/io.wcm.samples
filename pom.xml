@@ -43,6 +43,7 @@
     <module>bundles/handler-sample-app</module>
     <module>config-definition</module>
     <module>complete</module>
+    <module>sample-content</module>
   </modules>
 
   <build>

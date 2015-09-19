@@ -15,9 +15,9 @@
         "linkWindowTarget":"_self",
         "linkTitle":"This should help you with your decision",
         "teaserContent":"Still not convinced to attend? Need persuasion? Facts for your boss?",
-        "mediaRef":"/content/dam/handler/sample/content/user.png",
+        "mediaRef":"/content/dam/wcm-io-samples/handler/content/user.png",
         "title":"Why to attend",
-        "linkContentRef":"/content/handler/sample/en/conference",
+        "linkContentRef":"/content/wcm-io-samples/handler/en/conference",
         "linkMediaDownload":false,
         "linkType":"internal",
         "sling:resourceType":"wcm-io-handler-sample-app/components/content/teaserbar/teaserbarItem",
@@ -28,9 +28,9 @@
         "linkWindowTarget":"_self",
         "linkTitle":"More information",
         "teaserContent":"Take a look at the new venue for 2013. The Kulturbrauerei in the Prenzlauer Berg district.",
-        "mediaRef":"/content/dam/handler/sample/content/location.png",
+        "mediaRef":"/content/dam/wcm-io-samples/handler/content/location.png",
         "title":"Location",
-        "linkContentRef":"/content/handler/sample/en/venue",
+        "linkContentRef":"/content/wcm-io-samples/handler/en/venue",
         "linkMediaDownload":false,
         "linkType":"internal",
         "sling:resourceType":"wcm-io-handler-sample-app/components/content/teaserbar/teaserbarItem",
@@ -41,9 +41,9 @@
         "linkWindowTarget":"_self",
         "linkTitle":"Submit your proposal here",
         "teaserContent":"If you have insight and experiences with Apache Sling and want to share them? We are actually asking for your participation!",
-        "mediaRef":"/content/dam/handler/sample/content/talk.png",
+        "mediaRef":"/content/dam/wcm-io-samples/handler/content/talk.png",
         "title":"Want to share?",
-        "linkContentRef":"/content/handler/sample/en/conference/call-for-papers",
+        "linkContentRef":"/content/wcm-io-samples/handler/en/conference/call-for-papers",
         "linkMediaDownload":false,
         "linkType":"internal",
         "sling:resourceType":"wcm-io-handler-sample-app/components/content/teaserbar/teaserbarItem",
@@ -54,9 +54,9 @@
         "linkWindowTarget":"_self",
         "linkTitle":"Dive into the archive",
         "teaserContent":"Handler Sample is not a new event. Take a look at what was said and done previously.",
-        "mediaRef":"/content/dam/handler/sample/content/archive.png",
+        "mediaRef":"/content/dam/wcm-io-samples/handler/content/archive.png",
         "title":"Take a look back",
-        "linkContentRef":"/content/handler/sample/en/archive",
+        "linkContentRef":"/content/wcm-io-samples/handler/en/archive",
         "linkMediaDownload":false,
         "linkType":"internal",
         "sling:resourceType":"wcm-io-handler-sample-app/components/content/teaserbar/teaserbarItem",
@@ -77,7 +77,7 @@
             "jcr:primaryType":"nt:unstructured",
             "linkWindowTarget":"_blank",
             "imageWidth":"100",
-            "mediaRef":"/content/dam/handler/sample/content/adobe-logo.png",
+            "mediaRef":"/content/dam/wcm-io-samples/handler/content/adobe-logo.png",
             "linkType":"external",
             "sling:resourceType":"wcm-io-handler-sample-app/components/content/aside/asideSponsorTeaserItem",
             "linkWindowFeatures":"default",
@@ -88,7 +88,7 @@
             "jcr:primaryType":"nt:unstructured",
             "linkWindowTarget":"_blank",
             "imageWidth":"200",
-            "mediaRef":"/content/dam/handler/sample/content/provision-logo.png",
+            "mediaRef":"/content/dam/wcm-io-samples/handler/content/provision-logo.png",
             "linkType":"external",
             "sling:resourceType":"wcm-io-handler-sample-app/components/content/aside/asideSponsorTeaserItem",
             "linkWindowFeatures":"default",
@@ -108,7 +108,7 @@
             "jcr:primaryType":"nt:unstructured",
             "linkWindowTarget":"_blank",
             "linkTitle":"@adaptTo",
-            "mediaRef":"/content/dam/handler/sample/content/twitter-icon.png",
+            "mediaRef":"/content/dam/wcm-io-samples/handler/content/twitter-icon.png",
             "title":"on twitter",
             "linkMediaDownload":false,
             "linkType":"external",
@@ -124,7 +124,7 @@
       "sling:resourceType":"wcm-io/wcm/parsys/components/parsys",
       "contentrichtext":{
         "jcr:primaryType":"nt:unstructured",
-        "text":"<p>Handler Sample is a meetup in Berlin focused on Apache Sling including Apache Jackrabbit and Apache Felix and is addressed to all using this stack or parts of it.<\/p>\n<p><a data=\"{&quot;linkType&quot;:&quot;internal&quot;,&quot;linkContentRef&quot;:&quot;/content/handler/sample/en/conference&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">Read more...<\/a><\/p>\n<p><\/p>\n<p><\/p>\n",
+        "text":"<p>Handler Sample is a meetup in Berlin focused on Apache Sling including Apache Jackrabbit and Apache Felix and is addressed to all using this stack or parts of it.<\/p>\n<p><a data=\"{&quot;linkType&quot;:&quot;internal&quot;,&quot;linkContentRef&quot;:&quot;/content/wcm-io-samples/handler/en/conference&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">Read more...<\/a><\/p>\n<p><\/p>\n<p><\/p>\n",
         "sling:resourceType":"wcm-io-handler-sample-app/components/content/common/contentRichText"
       },
       "contentheadline":{
@@ -135,7 +135,7 @@
       },
       "contentrichtext_0":{
         "jcr:primaryType":"nt:unstructured",
-        "text":"<p>Although we got some great submissions for Handler Sample 2013, we still have some slots for further sessions. Therefore we extend the timeslot for submissions to the call for papers and for feedback by two weeks. This means you still can submit you submissions till 06.05.2013. We're looking forward to get more of your great talks.<\/p>\n<p><a data=\"{&quot;linkType&quot;:&quot;internal&quot;,&quot;linkContentRef&quot;:&quot;/content/handler/sample/en/conference/call-for-papers&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">Read more...<\/a><\/p>\n<p><\/p>\n",
+        "text":"<p>Although we got some great submissions for Handler Sample 2013, we still have some slots for further sessions. Therefore we extend the timeslot for submissions to the call for papers and for feedback by two weeks. This means you still can submit you submissions till 06.05.2013. We're looking forward to get more of your great talks.<\/p>\n<p><a data=\"{&quot;linkType&quot;:&quot;internal&quot;,&quot;linkContentRef&quot;:&quot;/content/wcm-io-samples/handler/en/conference/call-for-papers&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">Read more...<\/a><\/p>\n<p><\/p>\n",
         "sling:resourceType":"wcm-io-handler-sample-app/components/content/common/contentRichText"
       }
     },
@@ -146,7 +146,7 @@
         "jcr:primaryType":"nt:unstructured",
         "subtitle":"23.\u201325. September 2013\nKulturbrauerei Berlin",
         "linkWindowTarget":"_self",
-        "mediaRef":"/content/dam/handler/sample/content/stageheader-outside2.jpg",
+        "mediaRef":"/content/dam/wcm-io-samples/handler/content/stageheader-outside2.jpg",
         "title":"Handler Sample 2013",
         "linkMediaDownload":false,
         "linkType":"internal",
@@ -159,7 +159,7 @@
             "jcr:primaryType":"nt:unstructured",
             "linkWindowTarget":"_self",
             "linkTitle":"Get tickets now",
-            "linkContentRef":"/content/handler/sample/en/tickets",
+            "linkContentRef":"/content/wcm-io-samples/handler/en/tickets",
             "linkMediaDownload":false,
             "linkType":"internal",
             "sling:resourceType":"wcm-io-handler-sample-app/components/content/stage/stageheaderLinkItem",
@@ -169,7 +169,7 @@
             "jcr:primaryType":"nt:unstructured",
             "linkWindowTarget":"_self",
             "linkTitle":"Submit paper",
-            "linkContentRef":"/content/handler/sample/en/conference/call-for-papers",
+            "linkContentRef":"/content/wcm-io-samples/handler/en/conference/call-for-papers",
             "linkMediaDownload":false,
             "linkType":"internal",
             "sling:resourceType":"wcm-io-handler-sample-app/components/content/stage/stageheaderLinkItem",
@@ -264,7 +264,7 @@
               "linkWindowTarget":"_self",
               "cq:template":"/apps/wcm-io-samples/handler-sample-app/templates/framework/redirect",
               "redirectStatus":"302",
-              "linkContentRef":"/content/handler/sample/en/conference",
+              "linkContentRef":"/content/wcm-io-samples/handler/en/conference",
               "linkType":"internal",
               "sling:resourceType":"/apps/wcm-io-samples/handler-sample-app/components/framework/page/redirect"
             }
@@ -277,7 +277,7 @@
               "linkWindowTarget":"_self",
               "cq:template":"/apps/wcm-io-samples/handler-sample-app/templates/framework/redirect",
               "redirectStatus":"302",
-              "linkContentRef":"/content/handler/sample/en/schedule",
+              "linkContentRef":"/content/wcm-io-samples/handler/en/schedule",
               "linkType":"internal",
               "sling:resourceType":"/apps/wcm-io-samples/handler-sample-app/components/framework/page/redirect"
             }
@@ -290,7 +290,7 @@
               "linkWindowTarget":"_self",
               "cq:template":"/apps/wcm-io-samples/handler-sample-app/templates/framework/redirect",
               "redirectStatus":"302",
-              "linkContentRef":"/content/handler/sample/en/tickets",
+              "linkContentRef":"/content/wcm-io-samples/handler/en/tickets",
               "linkType":"internal",
               "sling:resourceType":"/apps/wcm-io-samples/handler-sample-app/components/framework/page/redirect"
             }
@@ -312,7 +312,7 @@
               "linkWindowTarget":"_self",
               "cq:template":"/apps/wcm-io-samples/handler-sample-app/templates/framework/redirect",
               "redirectStatus":"302",
-              "linkContentRef":"/content/handler/sample/en/venue",
+              "linkContentRef":"/content/wcm-io-samples/handler/en/venue",
               "linkType":"internal",
               "sling:resourceType":"/apps/wcm-io-samples/handler-sample-app/components/framework/page/redirect"
             }
@@ -393,7 +393,7 @@
               "jcr:primaryType":"nt:unstructured",
               "linkWindowTarget":"_self",
               "linkTitle":"Call for Papers",
-              "linkContentRef":"/content/handler/sample/en/conference/call-for-papers",
+              "linkContentRef":"/content/wcm-io-samples/handler/en/conference/call-for-papers",
               "linkMediaDownload":false,
               "linkType":"internal",
               "sling:resourceType":"wcm-io-handler-sample-app/components/framework/item/linkItem",
@@ -411,7 +411,7 @@
             "asidesponsorteaserit":{
               "jcr:primaryType":"nt:unstructured",
               "linkWindowTarget":"_blank",
-              "mediaRef":"/content/dam/handler/sample/content/adobe-logo.png",
+              "mediaRef":"/content/dam/wcm-io-samples/handler/content/adobe-logo.png",
               "linkMediaDownload":false,
               "linkType":"external",
               "sling:resourceType":"wcm-io-handler-sample-app/components/content/aside/asideSponsorTeaserItem",
@@ -421,7 +421,7 @@
             "asidesponsorteaserit_0":{
               "jcr:primaryType":"nt:unstructured",
               "linkWindowTarget":"_blank",
-              "mediaRef":"/content/dam/handler/sample/content/provision-logo.png",
+              "mediaRef":"/content/dam/wcm-io-samples/handler/content/provision-logo.png",
               "linkMediaDownload":false,
               "linkType":"external",
               "sling:resourceType":"wcm-io-handler-sample-app/components/content/aside/asideSponsorTeaserItem",
@@ -503,7 +503,7 @@
             "scheduleitemtalk":{
               "jcr:primaryType":"nt:unstructured",
               "duration":"45",
-              "linkContentRef":"/content/handler/sample/en/schedule/sling-ide-tooling",
+              "linkContentRef":"/content/wcm-io-samples/handler/en/schedule/sling-ide-tooling",
               "linkType":"internal",
               "sling:resourceType":"wcm-io-handler-sample-app/components/content/schedule/scheduleItemTalk"
             },
@@ -517,7 +517,7 @@
             "scheduleitemtalk_0":{
               "jcr:primaryType":"nt:unstructured",
               "duration":"45",
-              "linkContentRef":"/content/handler/sample/en/schedule/scaling-search-in-oak-with-solr",
+              "linkContentRef":"/content/wcm-io-samples/handler/en/schedule/scaling-search-in-oak-with-solr",
               "linkType":"internal",
               "sling:resourceType":"wcm-io-handler-sample-app/components/content/schedule/scheduleItemTalk"
             },
@@ -541,7 +541,7 @@
             "scheduleitemtalk":{
               "jcr:primaryType":"nt:unstructured",
               "duration":"60",
-              "linkContentRef":"/content/handler/sample/en/schedule/oak--an-introduction-for-users",
+              "linkContentRef":"/content/wcm-io-samples/handler/en/schedule/oak--an-introduction-for-users",
               "linkType":"internal",
               "sling:resourceType":"wcm-io-handler-sample-app/components/content/schedule/scheduleItemTalk"
             },

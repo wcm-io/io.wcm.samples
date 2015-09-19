@@ -48,13 +48,13 @@ public class NavigationManagerImplTest {
   @Test
   public void testGetMainNavigation() throws Exception {
     NavigationPageItem rootItem = underTest.getMainNavigation(2);
-    assertLinkItem("HOME", "/content/handler/sample/en.html", rootItem);
+    assertLinkItem("HOME", "/content/wcm-io-samples/handler/en.html", rootItem);
 
     List<NavigationPageItem> mainnavItems = rootItem.getChildren();
     assertEquals(5, mainnavItems.size());
 
-    assertLinkItem("CONFERENCE", "/content/handler/sample/en/conference.html", mainnavItems.get(0));
-    assertLinkItem("ARCHIVE", "/content/handler/sample/en/archive.html", mainnavItems.get(4));
+    assertLinkItem("CONFERENCE", "/content/wcm-io-samples/handler/en/conference.html", mainnavItems.get(0));
+    assertLinkItem("ARCHIVE", "/content/wcm-io-samples/handler/en/archive.html", mainnavItems.get(4));
 
     List<NavigationPageItem> archiveItems = mainnavItems.get(4).getChildren();
     assertEquals(2, archiveItems.size());
@@ -94,8 +94,8 @@ public class NavigationManagerImplTest {
     List<NavigationPageItem> confItems = footerNavItems.get(0).getChildren();
     assertEquals(3, confItems.size());
 
-    assertLinkItem("Conference", "/content/handler/sample/en/conference.html", confItems.get(0));
-    assertLinkItem("Schedule", "/content/handler/sample/en/schedule.html", confItems.get(1));
+    assertLinkItem("Conference", "/content/wcm-io-samples/handler/en/conference.html", confItems.get(0));
+    assertLinkItem("Schedule", "/content/wcm-io-samples/handler/en/schedule.html", confItems.get(1));
   }
 
   /**
@@ -105,7 +105,7 @@ public class NavigationManagerImplTest {
   public void testGetFooterNavigation_MainNav() throws Exception {
 
     // delete footer navigation in sample content
-    Resource footerNavResource = context.resourceResolver().getResource("/content/handler/sample/en/tools/navigation/footernav");
+    Resource footerNavResource = context.resourceResolver().getResource("/content/wcm-io-samples/handler/en/tools/navigation/footernav");
     context.resourceResolver().delete(footerNavResource);
 
     NavigationPageItem rootItem = underTest.getFooterNavigation();
@@ -118,8 +118,8 @@ public class NavigationManagerImplTest {
     List<NavigationPageItem> confItems = footerNavItems.get(0).getChildren();
     assertEquals(2, confItems.size());
 
-    assertLinkItem("CONFERENCE", "/content/handler/sample/en/conference.html", confItems.get(0));
-    assertLinkItem("Call for Papers", "/content/handler/sample/en/conference/call-for-papers.html", confItems.get(1));
+    assertLinkItem("CONFERENCE", "/content/wcm-io-samples/handler/en/conference.html", confItems.get(0));
+    assertLinkItem("Call for Papers", "/content/wcm-io-samples/handler/en/conference/call-for-papers.html", confItems.get(1));
   }
 
   private void assertLinkItem(String title, String linkUrl, NavigationPageItem item) {

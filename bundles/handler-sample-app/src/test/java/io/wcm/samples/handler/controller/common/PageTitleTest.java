@@ -33,28 +33,28 @@ public class PageTitleTest {
 
   @Test
   public void testGetRecursivePageTitle_Root() throws Exception {
-    context.currentPage("/content/handler/sample/en");
+    context.currentPage("/content/wcm-io-samples/handler/en");
     PageTitle underTest = context.request().adaptTo(PageTitle.class);
     assertEquals("Handler Sample 2014", underTest.getRecursivePageTitle());
   }
 
   @Test
   public void testGetRecursivePageTitle_Conference() throws Exception {
-    context.currentPage("/content/handler/sample/en/conference");
+    context.currentPage("/content/wcm-io-samples/handler/en/conference");
     PageTitle underTest = context.request().adaptTo(PageTitle.class);
     assertEquals("Conference - Handler Sample 2014", underTest.getRecursivePageTitle());
   }
 
   @Test
   public void testGetRecursivePageTitle_Conference_CallForPapers() throws Exception {
-    context.currentPage("/content/handler/sample/en/conference/call-for-papers");
+    context.currentPage("/content/wcm-io-samples/handler/en/conference/call-for-papers");
     PageTitle underTest = context.request().adaptTo(PageTitle.class);
     assertEquals("Call for Papers - Conference - Handler Sample 2014", underTest.getRecursivePageTitle());
   }
 
   @Test
   public void testGetRecursivePageTitle_Tools_Imprint() throws Exception {
-    context.currentPage("/content/handler/sample/en/tools/navigation/imprint");
+    context.currentPage("/content/wcm-io-samples/handler/en/tools/navigation/imprint");
     PageTitle underTest = context.request().adaptTo(PageTitle.class);
     assertEquals("Imprint - Handler Sample 2014", underTest.getRecursivePageTitle());
   }

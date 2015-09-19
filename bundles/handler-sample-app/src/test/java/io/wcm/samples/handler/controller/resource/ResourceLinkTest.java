@@ -35,16 +35,16 @@ public class ResourceLinkTest {
 
   @Test
   public void testValidLink() {
-    context.currentResource("/content/handler/sample/en/jcr:content/teaserbar/teaserbaritem");
+    context.currentResource("/content/wcm-io-samples/handler/en/jcr:content/teaserbar/teaserbaritem");
     ResourceLink underTest = context.request().adaptTo(ResourceLink.class);
     assertTrue(underTest.isValid());
-    assertEquals("/content/handler/sample/en/conference.html", underTest.getMetadata().getUrl());
-    assertEquals("/content/handler/sample/en/conference.html", underTest.getAttributes().get("href"));
+    assertEquals("/content/wcm-io-samples/handler/en/conference.html", underTest.getMetadata().getUrl());
+    assertEquals("/content/wcm-io-samples/handler/en/conference.html", underTest.getAttributes().get("href"));
   }
 
   @Test
   public void testInvalidLink() {
-    context.currentResource("/content/handler/sample/en/jcr:content/teaserbar");
+    context.currentResource("/content/wcm-io-samples/handler/en/jcr:content/teaserbar");
     ResourceLink underTest = context.request().adaptTo(ResourceLink.class);
     assertFalse(underTest.isValid());
   }

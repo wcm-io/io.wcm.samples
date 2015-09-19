@@ -94,15 +94,15 @@ fi
 
 cd ../
 
-#cd sample-content
-#mvn -B $sling_params content-package:install
-#
-#if [ "$?" -ne "0" ]; then
-#echo "*** Build FAILED ***"
-#exit 1
-#fi
-#
-#cd ../
+cd sample-content
+mvn -B $sling_params content-package:install
+
+if [ "$?" -ne "0" ]; then
+echo "*** Build FAILED ***"
+exit 1
+fi
+
+cd ../
 
 
 }

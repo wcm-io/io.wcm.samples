@@ -34,19 +34,19 @@ public class SiteRootRelativePageLinkTest {
 
   @Test
   public void testSiteRoot() {
-    assertLink("HOME", "/content/handler/sample/en.html");
+    assertLink("HOME", "/content/wcm-io-samples/handler/en.html");
   }
 
   @Test
   public void testSiteRoot_PageTitle() {
     context.request().setAttribute("titleType", "pageTitle");
-    assertLink("Handler Sample 2014", "/content/handler/sample/en.html");
+    assertLink("Handler Sample 2014", "/content/wcm-io-samples/handler/en.html");
   }
 
   @Test
   public void testImprint() {
     context.request().setAttribute("relativePath", "/tools/navigation/imprint");
-    assertLink("Imprint", "/content/handler/sample/en/tools/navigation/imprint.html");
+    assertLink("Imprint", "/content/wcm-io-samples/handler/en/tools/navigation/imprint.html");
   }
 
   private void assertLink(String title, String linkUrl) {

@@ -39,8 +39,8 @@ import org.apache.sling.testing.mock.sling.ResourceResolverType;
  */
 public final class AppAemContext {
 
-  public static final String CONTENT_ROOT = "/content/wcm-io-samples/handler/en";
-  public static final String DAM_ROOT = "/content/dam/wcm-io-samples/handler";
+  public static final String CONTENT_ROOT = "/content/wcm-io-samples/en";
+  public static final String DAM_ROOT = "/content/dam/wcm-io-samples";
 
   private AppAemContext() {
     // static methods only
@@ -72,7 +72,7 @@ public final class AppAemContext {
       context.load().json("/sample-content-dam.json", DAM_ROOT);
 
       // set default current page
-      context.currentPage("/content/wcm-io-samples/handler/en");
+      context.currentPage("/content/wcm-io-samples/en");
     }
 
   }

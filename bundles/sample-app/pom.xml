@@ -138,7 +138,8 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
-              SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/sample-app
+              SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/sample-app,
+              SLING-INF/app-root-config;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/config
             </Sling-Initial-Content>
             <Sling-Model-Packages>
               io.wcm.samples.app

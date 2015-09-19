@@ -19,12 +19,13 @@
  */
 package io.wcm.samples.app.util;
 
-import io.wcm.samples.app.config.impl.UrlHandlerConfigImpl;
+import io.wcm.handler.url.spi.UrlHandlerConfig;
 import io.wcm.sling.models.annotations.AemObject;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.Self;
 
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
@@ -45,13 +46,15 @@ public class SiteHelper {
   private PageManager pageManager;
   @AemObject
   private WCMMode wcmMode;
+  @Self
+  private UrlHandlerConfig urlHandlerConfig;
 
   /**
    * Gets site root level path of a site.
    * @param page CQ Page of site
    * @return Site root path for the site. The path is not checked for validness.
    */
-  public static String getSiteRootPath(Page page) {
+  public String getSiteRootPath(Page page) {
     if (page == null) {
       return null;
     }
@@ -63,8 +66,12 @@ public class SiteHelper {
    * @param path Path of page within the site
    * @return Site root path for the site. The path is not checked for validness.
    */
-  public static String getSiteRootPath(String path) {
-    return Text.getAbsoluteParent(path, UrlHandlerConfigImpl.SITE_ROOT_LEVEL);
+  public String getSiteRootPath(String path) {
+    int siteRootLevel = urlHandlerConfig.getSiteRootLevel(path);
+    if (siteRootLevel > 0) {
+      return Text.getAbsoluteParent(path, siteRootLevel);
+    }
+    return null;
   }
 
   /**
@@ -72,7 +79,7 @@ public class SiteHelper {
    * @return Site root path for the current site. The path is not checked for validness.
    */
   public String getSiteRootPath() {
-    return SiteHelper.getSiteRootPath(currentPage);
+    return getSiteRootPath(currentPage);
   }
 
   /**

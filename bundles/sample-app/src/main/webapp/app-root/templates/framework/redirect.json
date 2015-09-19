@@ -2,7 +2,7 @@
   "jcr:primaryType": "cq:Template",
   "jcr:title": "wcm.io Handler Sample Redirect",
 
-  "allowedPaths": "/content/wcm-io-samples/handler/[^/]*",
+  "allowedPaths": "/content/wcm-io-samples/[^/]*",
   "allowedParents": "^/apps/wcm-io-samples/sample-app/templates/.*$",
   "allowedChildren": "^/apps/wcm-io-samples/sample-app/templates/.*$",
 

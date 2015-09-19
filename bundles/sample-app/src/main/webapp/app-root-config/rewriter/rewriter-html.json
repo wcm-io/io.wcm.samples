@@ -1,0 +1,59 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+
+  "enabled": true,
+
+  "generatorType": "htmlparser",
+
+  "transformerTypes": [
+    /* Disable AEM default transformers
+    "linkchecker",
+    "mobile",
+    "mobiledebug",
+    "contentsync",
+     */
+    "wcm-io-urlhandler-externalizer"
+  ],
+  
+  "serializerType": "htmlwriter",
+  
+  "order": "1",
+  
+  "contentTypes": [
+    "text/html"
+  ],
+  
+  /* Apply only to templates from vw-ngw application */
+  "resourceTypes": [
+    "/apps/wcm-io-samples/sample-app/components/global/page"
+  ],
+  
+  /* Configure HTML elements/attributes to rewrite */
+  "transformer-wcm-io-urlhandler-externalizer": {
+    "rewriteElements": [
+      "img:src",
+      "link:href",
+      "script:src",
+      "use:xlink:href"
+    ]
+  },
+
+  /* Configure htmlparser to include all required elements */
+  "generator-htmlparser": {
+    "includeTags": [
+      "A",
+      "/A",
+      "IMG",
+      "AREA",
+      "FORM",
+      "BASE",
+      "LINK",
+      "SCRIPT",
+      "BODY",
+      "/BODY",
+      "USE",
+      "/USE"
+    ]
+  }
+
+}

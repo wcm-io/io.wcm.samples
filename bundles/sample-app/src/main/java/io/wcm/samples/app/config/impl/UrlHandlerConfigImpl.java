@@ -19,13 +19,17 @@
  */
 package io.wcm.samples.app.config.impl;
 
+import io.wcm.config.api.Configuration;
 import io.wcm.config.spi.annotations.Application;
 import io.wcm.handler.url.spi.UrlHandlerConfig;
 import io.wcm.handler.url.spi.helpers.AbstractUrlHandlerConfig;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 /**
  * URL handler configuration
@@ -36,14 +40,34 @@ import org.apache.sling.models.annotations.Model;
 @Application(ApplicationProviderImpl.APPLICATION_ID)
 public class UrlHandlerConfigImpl extends AbstractUrlHandlerConfig {
 
-  /**
-   * Site root level
-   */
-  public static final int SITE_ROOT_LEVEL = 3;
+  @SlingObject
+  private ResourceResolver resourceResolver;
 
   @Override
   public int getSiteRootLevel(String contextPath) {
-    return SITE_ROOT_LEVEL;
+    String siteRootpath = getSiteRootPath(contextPath);
+    if (siteRootpath != null) {
+      return getPageLevel(siteRootpath);
+    }
+    return 0;
+  }
+
+  private String getSiteRootPath(String contextPath) {
+    if (StringUtils.isNotEmpty(contextPath)) {
+      Resource resource = resourceResolver.getResource(contextPath);
+      if (resource != null) {
+        Configuration configuration = resource.adaptTo(Configuration.class);
+        if (configuration != null) {
+          // assumption: configuration id = configuration context root path = site root path
+          return configuration.getConfigurationId();
+        }
+      }
+    }
+    return null;
+  }
+
+  private int getPageLevel(String configurationId) {
+    return StringUtils.split(configurationId, "/").length - 1;
   }
 
 }

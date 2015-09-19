@@ -45,7 +45,7 @@
               "name": "./linkContentRef",
               "fieldLabel": "Internal page",
               "fieldDescription": "Link to target page in CMS (same site)",
-              "rootPath": "/content/wcm-io-samples/handler/sample"
+              "rootPath": "/content/wcm-io-samples/sample"
             }
           }
         },

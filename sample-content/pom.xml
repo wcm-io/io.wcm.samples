@@ -51,10 +51,10 @@
           <group>${content-package-group}</group>
           <filters>
             <filter>
-              <root>/content/dam/wcm-io-samples/handler</root>
+              <root>/content/dam/wcm-io-samples</root>
             </filter>
             <filter>
-              <root>/content/wcm-io-samples/handler</root>
+              <root>/content/wcm-io-samples</root>
             </filter>
           </filters>
         </configuration>

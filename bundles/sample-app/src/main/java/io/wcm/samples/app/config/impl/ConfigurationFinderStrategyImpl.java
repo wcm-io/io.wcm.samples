@@ -20,7 +20,8 @@
 package io.wcm.samples.app.config.impl;
 
 import io.wcm.config.spi.ConfigurationFinderStrategy;
-import io.wcm.config.spi.helpers.AbstractAbsoluteParentConfigurationFinderStrategy;
+import io.wcm.config.spi.helpers.AbstractRootTemplateConfigurationFinderStrategy;
+import io.wcm.samples.app.util.AppTemplate;
 
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
@@ -30,13 +31,17 @@ import org.apache.felix.scr.annotations.Service;
  */
 @Component(immediate = true)
 @Service(ConfigurationFinderStrategy.class)
-public class ConfigurationFinderStrategyImpl extends AbstractAbsoluteParentConfigurationFinderStrategy {
+public class ConfigurationFinderStrategyImpl extends AbstractRootTemplateConfigurationFinderStrategy {
+
+  private static final int MIN_LEVEL = 1;
+  private static final int MAX_LEVEL = 5;
 
   /**
    * Detect via fixed site root level
    */
   public ConfigurationFinderStrategyImpl() {
-    super(ApplicationProviderImpl.APPLICATION_ID, UrlHandlerConfigImpl.SITE_ROOT_LEVEL);
+    super(ApplicationProviderImpl.APPLICATION_ID, MIN_LEVEL, MAX_LEVEL,
+        AppTemplate.EDITORIAL_HOMEPAGE.getTemplatePath());
   }
 
 }

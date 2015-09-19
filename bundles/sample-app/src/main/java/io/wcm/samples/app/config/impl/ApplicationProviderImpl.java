@@ -44,7 +44,7 @@ public class ApplicationProviderImpl implements ApplicationProvider {
    */
   public static final String APPLICATION_LABEL = "wcm.io Sample Website";
 
-  private static final Pattern PATH_PATTERN = Pattern.compile("^/content/(dam/)?wcm-io-samples/handler(/.*)?$");
+  private static final Pattern PATH_PATTERN = Pattern.compile("^/content/(dam/)?wcm-io-samples(/.*)?$");
 
   @Override
   public String getApplicationId() {

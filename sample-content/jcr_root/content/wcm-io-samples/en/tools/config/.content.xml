@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+  <jcr:content
+      cq:template="/apps/wcm-io-samples/sample-app/templates/admin/configEditor"
+      jcr:primaryType="cq:PageContent"
+      jcr:title="config"
+      sling:resourceType="/apps/wcm-io/config/editor/components/page/editor">
+    <config
+        jcr:primaryType="nt:unstructured"
+        amiandoFallbackUrl="http://www.amiando.com/adaptto2013.html"
+        amiandoIFrameName="_amiandoIFrame1954269sHzFYKQC"
+        amiandoIFrameUrl="https://de.amiando.com/DMWRREP.html?viewType=iframe&amp;distributionChannel=CHANNEL_IFRAME&amp;panelId=1954269&amp;useDefaults=false&amp;resizeIFrame=true"
+        amiandoScriptUrl="https://de.amiando.com/resources/js/amiandoExport.js" />
+  </jcr:content>
+</jcr:root>

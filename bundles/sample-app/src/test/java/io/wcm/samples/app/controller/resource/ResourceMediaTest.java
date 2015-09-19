@@ -33,7 +33,7 @@ public class ResourceMediaTest {
 
   @Test
   public void testMedia() {
-    context.currentResource("/content/wcm-io-samples/handler/en/jcr:content/teaserbar/teaserbaritem");
+    context.currentResource("/content/wcm-io-samples/en/jcr:content/teaserbar/teaserbaritem");
     context.request().setAttribute("mediaFormat", "content_480");
 
     ResourceMedia underTest = context.request().adaptTo(ResourceMedia.class);

@@ -39,22 +39,22 @@ public class SiteHelperTest {
   @Test
   public void testGetSiteRootPath() {
     SiteHelper underTest = context.request().adaptTo(SiteHelper.class);
-    assertEquals("/content/wcm-io-samples/handler/en", underTest.getSiteRootPath());
+    assertEquals("/content/wcm-io-samples/en", underTest.getSiteRootPath());
   }
 
   @Test
   public void testGetSiteRootPage() {
     SiteHelper underTest = context.request().adaptTo(SiteHelper.class);
-    assertEquals("/content/wcm-io-samples/handler/en", underTest.getSiteRootPage().getPath());
-    assertEquals("/content/wcm-io-samples/handler/en",
-        underTest.getSiteRootPage("/content/wcm-io-samples/handler/en/conference").getPath());
+    assertEquals("/content/wcm-io-samples/en", underTest.getSiteRootPage().getPath());
+    assertEquals("/content/wcm-io-samples/en",
+        underTest.getSiteRootPage("/content/wcm-io-samples/en/conference").getPath());
     assertNull(underTest.getSiteRootPage("/other/path"));
   }
 
   @Test
   public void testGetRelativePage() {
     SiteHelper underTest = context.request().adaptTo(SiteHelper.class);
-    assertEquals("/content/wcm-io-samples/handler/en/conference", underTest.getRelativePage("/conference").getPath());
+    assertEquals("/content/wcm-io-samples/en/conference", underTest.getRelativePage("/conference").getPath());
   }
 
   @Test
@@ -73,8 +73,8 @@ public class SiteHelperTest {
   @Test
   public void testIsSiteRootPage() {
     SiteHelper underTest = context.request().adaptTo(SiteHelper.class);
-    assertTrue(underTest.isSiteRootPage(context.pageManager().getPage("/content/wcm-io-samples/handler/en")));
-    assertFalse(underTest.isSiteRootPage(context.pageManager().getPage("/content/wcm-io-samples/handler/en/conference")));
+    assertTrue(underTest.isSiteRootPage(context.pageManager().getPage("/content/wcm-io-samples/en")));
+    assertFalse(underTest.isSiteRootPage(context.pageManager().getPage("/content/wcm-io-samples/en/conference")));
   }
 
 }

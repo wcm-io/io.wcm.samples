@@ -14,6 +14,7 @@ Sample application to demonstrate the usage of the wcm.io handler infrastructure
 ### System requirements
 
 - AEM 6.0 SP1 or AEM 6.1
+- JDK 1.8 (because of maven-conga-plugin)
 
 
 ### GitHub Repository

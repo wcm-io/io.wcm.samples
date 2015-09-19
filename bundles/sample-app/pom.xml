@@ -141,7 +141,7 @@
               SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/sample-app
             </Sling-Initial-Content>
             <Sling-Model-Packages>
-              io.wcm.samples.handler
+              io.wcm.samples.app
             </Sling-Model-Packages>
           </instructions>
         </configuration>

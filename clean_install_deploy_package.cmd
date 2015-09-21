@@ -35,7 +35,7 @@ echo.***************************************************************************
 echo.
 echo.*** Build artifacts ***
 echo.
-call mvn -Pfast %sling_params% clean install eclipse:eclipse
+call mvn -Pfast %sling_params% clean install
 if errorlevel 1 goto error
 
 echo.

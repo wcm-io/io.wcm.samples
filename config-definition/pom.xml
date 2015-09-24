@@ -99,6 +99,9 @@
                   <packageFile>target/configuration/${config.environment}/aem-author/packages/aem-cms-author-dam-update-asset-workflow-minimal.zip</packageFile>
                 </packageFile>
                 <packageFile>
+                  <packageFile>target/configuration/${config.environment}/aem-author/packages/wcm-io-samples-aem-cms-author-systemusers.zip</packageFile>
+                </packageFile>
+                <packageFile>
                   <packageFile>target/configuration/${config.environment}/aem-author/packages/wcm-io-samples-aem-cms-config.zip</packageFile>
                 </packageFile>
               </packageFiles>

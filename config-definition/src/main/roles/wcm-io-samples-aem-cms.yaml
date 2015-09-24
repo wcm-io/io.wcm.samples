@@ -22,6 +22,23 @@ files:
       filters:
       - filter: /apps/wcm-io-samples-aem-cms-config
 
+# AEM Systems users with ACLs (Author)
+- file: wcm-io-samples-aem-cms-author-systemusers.json
+  dir: packages
+  template: wcm-io-samples-aem-cms-author-systemusers.json.hbs
+  variants:
+  - aem-author
+  postProcessors:
+  - aem-contentpackage
+  postProcessorOptions:
+    contentPackage:
+      name: wcm-io-samples-aem-cms-author-systemusers
+      acHandling: merge
+      rootPath: /
+      filters:
+      - filter: /content/dam/rep:policy
+      - filter: /home/users/system/wcm-io-samples/wcmioDamSystemUser
+
 
 # Defines configuration parameters and default values
 config:

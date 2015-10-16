@@ -45,7 +45,7 @@
     <dependency>
       <groupId>io.wcm.devops.conga.definitions</groupId>
       <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
-      <version>0.6.4</version>
+      <version>0.6.6</version>
       <scope>compile</scope>
     </dependency>
 

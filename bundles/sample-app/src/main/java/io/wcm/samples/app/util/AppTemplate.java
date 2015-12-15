@@ -65,7 +65,7 @@ public enum AppTemplate {
   private final String mTemplatePath;
   private final String mResourceType;
 
-  private AppTemplate(String templatePath) {
+  AppTemplate(String templatePath) {
     mTemplatePath = templatePath;
 
     // build resource type from template path
@@ -74,13 +74,13 @@ public enum AppTemplate {
     Matcher templateParts = TEMPLATE_PATH_PATTERN.matcher(templatePath);
     if (templateParts.matches()) {
       resourceType = "/apps/" + templateParts.group(1) + "/components" + StringUtils.defaultString(templateParts.group(2))
-          + "/page/" + templateParts.group(3);
+      + "/page/" + templateParts.group(3);
     }
 
     mResourceType = resourceType;
   }
 
-  private AppTemplate(String templatePath, String resourceType) {
+  AppTemplate(String templatePath, String resourceType) {
     mTemplatePath = templatePath;
     mResourceType = resourceType;
   }

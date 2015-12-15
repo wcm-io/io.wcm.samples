@@ -19,16 +19,17 @@
  */
 package io.wcm.samples.app.config.impl;
 
-import io.wcm.config.spi.annotations.Application;
-import io.wcm.handler.link.spi.LinkHandlerConfig;
-import io.wcm.handler.link.spi.helpers.AbstractLinkHandlerConfig;
-import io.wcm.samples.app.util.AppTemplate;
-
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 
 import com.day.cq.wcm.api.Page;
+
+import io.wcm.config.spi.annotations.Application;
+import io.wcm.handler.link.spi.LinkHandlerConfig;
+import io.wcm.handler.link.spi.helpers.AbstractLinkHandlerConfig;
+import io.wcm.samples.app.util.AppTemplate;
+import io.wcm.wcm.commons.util.Template;
 
 /**
  * Link handler configuration
@@ -41,12 +42,12 @@ public class LinkHandlerConfigImpl extends AbstractLinkHandlerConfig {
 
   @Override
   public boolean isValidLinkTarget(Page page) {
-    return !AppTemplate.isTemplate(page, AppTemplate.FRAMEWORK_STRUCTURE_ELEMENT);
+    return !Template.is(page, AppTemplate.FRAMEWORK_STRUCTURE_ELEMENT);
   }
 
   @Override
   public boolean isRedirect(Page page) {
-    return AppTemplate.isTemplate(page, AppTemplate.FRAMEWORK_REDIRECT);
+    return Template.is(page, AppTemplate.FRAMEWORK_REDIRECT);
   }
 
 }

@@ -19,13 +19,6 @@
  */
 package io.wcm.samples.app.business.navigation.impl;
 
-import io.wcm.handler.link.Link;
-import io.wcm.handler.link.LinkHandler;
-import io.wcm.samples.app.business.navigation.NavigationManager;
-import io.wcm.samples.app.business.navigation.NavigationPageItem;
-import io.wcm.samples.app.util.SiteHelper;
-import io.wcm.sling.models.annotations.AemObject;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -38,6 +31,13 @@ import org.apache.sling.models.annotations.injectorspecific.Self;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageFilter;
 
+import io.wcm.handler.link.Link;
+import io.wcm.handler.link.LinkHandler;
+import io.wcm.handler.url.util.SiteRoot;
+import io.wcm.samples.app.business.navigation.NavigationManager;
+import io.wcm.samples.app.business.navigation.NavigationPageItem;
+import io.wcm.sling.models.annotations.AemObject;
+
 /**
  * Generates navigation page items based on a page hierarchy for navigation controllers.
  * Only pages that are valid and not hidden with valid links are included.
@@ -47,7 +47,7 @@ import com.day.cq.wcm.api.PageFilter;
 public class NavigationManagerImpl implements NavigationManager {
 
   @Self
-  private SiteHelper siteHelper;
+  private SiteRoot siteRoot;
   @Self
   private LinkHandler linkHandler;
   @AemObject
@@ -62,7 +62,7 @@ public class NavigationManagerImpl implements NavigationManager {
    */
   @Override
   public NavigationPageItem getMainNavigation(final int maxLevels) {
-    Page siteRootPage = siteHelper.getSiteRootPage();
+    Page siteRootPage = siteRoot.getRootPage();
     NavigationPageItem rootItem = createLinkableItem(siteRootPage);
     if (maxLevels > 0) {
       rootItem.setChildren(createChildItemsRecursively(siteRootPage, new ValidLinkableItemCreator(), 1, maxLevels));
@@ -80,12 +80,12 @@ public class NavigationManagerImpl implements NavigationManager {
    */
   @Override
   public NavigationPageItem getFooterNavigation() {
-    Page footerNavRoot = siteHelper.getRelativePage(FOOTERNAV_RELATIVE_PATH);
+    Page footerNavRoot = siteRoot.getRelativePage(FOOTERNAV_RELATIVE_PATH);
     if (footerNavRoot != null) {
       return getFooterNavigationSpecific(footerNavRoot);
     }
     else {
-      return getFooterNavigationDerivedFromMainNav(siteHelper.getSiteRootPage());
+      return getFooterNavigationDerivedFromMainNav(siteRoot.getRootPage());
     }
   }
 

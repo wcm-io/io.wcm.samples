@@ -19,18 +19,13 @@
  */
 package io.wcm.samples.app.util;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import org.apache.commons.lang3.StringUtils;
-
-import com.day.cq.wcm.api.NameConstants;
-import com.day.cq.wcm.api.Page;
+import io.wcm.wcm.commons.util.Template;
+import io.wcm.wcm.commons.util.TemplatePathInfo;
 
 /**
  * List of templates with special handling in code.
  */
-public enum AppTemplate {
+public enum AppTemplate implements TemplatePathInfo {
 
   /**
    * Framework: structure element
@@ -62,86 +57,35 @@ public enum AppTemplate {
    */
   EDITORIAL_HOMEPAGE("/apps/wcm-io-samples/sample-app/templates/content/homepage");
 
-  private final String mTemplatePath;
-  private final String mResourceType;
+  private final String templatePath;
+  private final String resourceType;
 
   AppTemplate(String templatePath) {
-    mTemplatePath = templatePath;
-
-    // build resource type from template path
-    String resourceType = null;
-    final Pattern TEMPLATE_PATH_PATTERN = Pattern.compile("^/apps/([^/]+)/templates(/.*)?/([^/]+)$");
-    Matcher templateParts = TEMPLATE_PATH_PATTERN.matcher(templatePath);
-    if (templateParts.matches()) {
-      resourceType = "/apps/" + templateParts.group(1) + "/components" + StringUtils.defaultString(templateParts.group(2))
-      + "/page/" + templateParts.group(3);
-    }
-
-    mResourceType = resourceType;
+    this.templatePath = templatePath;
+    this.resourceType = Template.getResourceTypeFromTemplatePath(templatePath);
   }
 
   AppTemplate(String templatePath, String resourceType) {
-    mTemplatePath = templatePath;
-    mResourceType = resourceType;
+    this.templatePath = templatePath;
+    this.resourceType = resourceType;
   }
 
   /**
    * Template path
    * @return Path
    */
+  @Override
   public String getTemplatePath() {
-    return mTemplatePath;
+    return templatePath;
   }
 
   /**
    * Resource type
    * @return Path
    */
+  @Override
   public String getResourceType() {
-    return mResourceType;
-  }
-
-  /**
-   * Checks if the given page uses a specific template.
-   * @param page CQ page
-   * @param templates Template(s)
-   * @return true if the page uses the template
-   */
-  public static boolean isTemplate(Page page, AppTemplate... templates) {
-    if (page == null || templates == null || templates.length == 0) {
-      return false;
-    }
-    String templatePath = page.getProperties().get(NameConstants.PN_TEMPLATE, String.class);
-    for (AppTemplate template : templates) {
-      if (template.getTemplatePath().equals(templatePath)) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  /**
-   * Lookup a template by the given template path.
-   * @param templatePath Path of template
-   * @return The {@link AppTemplate} instance or null for unknown template paths
-   */
-  public static AppTemplate forTemplatePath(String templatePath) {
-    for (AppTemplate template : AppTemplate.values()) {
-      if (StringUtils.equals(template.getTemplatePath(), templatePath)) {
-        return template;
-      }
-    }
-    return null;
-  }
-
-  /**
-   * Lookup template for given page.
-   * @param page Page
-   * @return The {@link AppTemplate} instance or null for unknown template paths
-   */
-  public static AppTemplate forPage(Page page) {
-    String templatePath = page.getProperties().get(NameConstants.PN_TEMPLATE, String.class);
-    return forTemplatePath(templatePath);
+    return resourceType;
   }
 
 }

@@ -19,10 +19,6 @@
  */
 package io.wcm.samples.app.controller.navigation;
 
-import io.wcm.handler.link.Link;
-import io.wcm.handler.link.LinkHandler;
-import io.wcm.samples.app.util.SiteHelper;
-
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -36,6 +32,10 @@ import org.apache.sling.models.annotations.injectorspecific.Self;
 
 import com.day.cq.wcm.api.Page;
 
+import io.wcm.handler.link.Link;
+import io.wcm.handler.link.LinkHandler;
+import io.wcm.handler.url.util.SiteRoot;
+
 /**
  * Generic model for building a link to page addressed via a path relative to site root.
  * If not path is given, the site root is referenced.
@@ -48,24 +48,24 @@ public class SiteRootRelativePageLink {
   private String title;
 
   /**
-   * @param siteHelper
+   * @param siteRoot
    * @param linkHandler
    * @param relativePath Relative path of page to link to
    * @param titleType Type of title to display: pageTitle or navigationTitle
    */
   @Inject
   public SiteRootRelativePageLink(
-      @Self SiteHelper siteHelper,
+      @Self SiteRoot siteRoot,
       @Self LinkHandler linkHandler,
       @RequestAttribute(name = "relativePath", optional = true) String relativePath,
       @RequestAttribute(name = "titleType", optional = true) @Default(values = "navigationTitle") String titleType
       ) {
     Page page;
     if (StringUtils.isNotEmpty(relativePath)) {
-      page = siteHelper.getRelativePage(relativePath);
+      page = siteRoot.getRelativePage(relativePath);
     }
     else {
-      page = siteHelper.getSiteRootPage();
+      page = siteRoot.getRootPage();
     }
     if (page != null) {
       link = linkHandler.get(page).build();

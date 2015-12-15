@@ -19,16 +19,17 @@
  */
 package io.wcm.samples.app.controller.common;
 
-import io.wcm.samples.app.util.AppTemplate;
-import io.wcm.samples.app.util.SiteHelper;
-import io.wcm.sling.models.annotations.AemObject;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 
 import com.day.cq.wcm.api.Page;
+
+import io.wcm.handler.url.util.SiteRoot;
+import io.wcm.samples.app.util.AppTemplate;
+import io.wcm.sling.models.annotations.AemObject;
+import io.wcm.wcm.commons.util.Template;
 
 /**
  * Controller for generation page titles.
@@ -39,7 +40,7 @@ public class PageTitle {
   @AemObject
   private Page currentPage;
   @Self
-  private SiteHelper siteHelper;
+  private SiteRoot siteRoot;
 
   /**
    * @return Recursive page title for HTML title
@@ -54,10 +55,10 @@ public class PageTitle {
    * @return Html title
    */
   private String getRecursivePageTitle(Page page) {
-    if (siteHelper.isSiteRootPage(page)) {
+    if (siteRoot.isRootPage(page)) {
       return StringUtils.defaultString(page.getPageTitle(), page.getTitle());
     }
-    else if (AppTemplate.isTemplate(page, AppTemplate.FRAMEWORK_STRUCTURE_ELEMENT)) {
+    else if (Template.is(page, AppTemplate.FRAMEWORK_STRUCTURE_ELEMENT)) {
       return getRecursivePageTitle(page.getParent());
     }
     else {
@@ -69,7 +70,7 @@ public class PageTitle {
    * @return Site root page title
    */
   public String getSiteRootPageTitle() {
-    return siteHelper.getSiteRootPage().getPageTitle();
+    return siteRoot.getRootPage().getPageTitle();
   }
 
 }

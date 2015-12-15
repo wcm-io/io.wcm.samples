@@ -106,6 +106,7 @@
               <outputAbsoluteArtifactFilename>true</outputAbsoluteArtifactFilename>
               <includeGroupIds>${dependency-includeGroupIds}</includeGroupIds>
               <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io/${content-package-name}/install</outputDirectory>
+              <includeScope>compile</includeScope>
             </configuration>
           </execution>
           <execution>
@@ -118,6 +119,7 @@
               <outputAbsoluteArtifactFilename>true</outputAbsoluteArtifactFilename>
               <includeArtifactIds>${dependency-includeArtifactIds}</includeArtifactIds>
               <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io/${content-package-name}/install</outputDirectory>
+              <includeScope>compile</includeScope>
             </configuration>
           </execution>
         </executions>

@@ -19,17 +19,16 @@
  */
 package io.wcm.samples.app.config.impl;
 
+import org.osgi.service.component.annotations.Component;
+
+import io.wcm.config.spi.ParameterProvider;
 import io.wcm.config.spi.helpers.AbstractParameterProvider;
 import io.wcm.samples.app.config.Params;
-
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Service;
 
 /**
  * Provides parameter metadata.
  */
-@Component(immediate = true)
-@Service
+@Component(immediate = true, service = ParameterProvider.class)
 public class ParameterProviderImpl extends AbstractParameterProvider {
 
   /**

@@ -19,19 +19,17 @@
  */
 package io.wcm.samples.app.config.impl;
 
-import io.wcm.config.spi.ApplicationProvider;
-
 import java.util.regex.Pattern;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.resource.Resource;
+import org.osgi.service.component.annotations.Component;
+
+import io.wcm.config.spi.ApplicationProvider;
 
 /**
  * Application provider
  */
-@Component(immediate = true)
-@Service(ApplicationProvider.class)
+@Component(immediate = true, service = ApplicationProvider.class)
 public class ApplicationProviderImpl implements ApplicationProvider {
 
   /**

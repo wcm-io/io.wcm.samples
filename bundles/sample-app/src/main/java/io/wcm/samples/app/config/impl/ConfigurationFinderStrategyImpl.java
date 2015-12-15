@@ -19,18 +19,16 @@
  */
 package io.wcm.samples.app.config.impl;
 
+import org.osgi.service.component.annotations.Component;
+
 import io.wcm.config.spi.ConfigurationFinderStrategy;
 import io.wcm.config.spi.helpers.AbstractRootTemplateConfigurationFinderStrategy;
 import io.wcm.samples.app.util.AppTemplate;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Service;
-
 /**
  * Application provider
  */
-@Component(immediate = true)
-@Service(ConfigurationFinderStrategy.class)
+@Component(immediate = true, service = ConfigurationFinderStrategy.class)
 public class ConfigurationFinderStrategyImpl extends AbstractRootTemplateConfigurationFinderStrategy {
 
   private static final int MIN_LEVEL = 1;

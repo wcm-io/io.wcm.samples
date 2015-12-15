@@ -34,7 +34,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
-  <name>Sample Application</name>
+  <name>wcm.io Sample Application</name>
   <description>Sample application to demonstrate the usage of the wcm.io handler infrastructure and other wcm.io Features.</description>
 
   <dependencies>
@@ -105,6 +105,13 @@
       <version>1.6.2</version>
       <scope>test</scope>
     </dependency>
+    <!-- Overwrite osgi-mock for OSGi R6 support -->
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.testing.osgi-mock</artifactId>
+      <version>2.0.0</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
@@ -146,11 +153,6 @@
             </Sling-Model-Packages>
           </instructions>
         </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-scr-plugin</artifactId>
       </plugin>
 
       <plugin>

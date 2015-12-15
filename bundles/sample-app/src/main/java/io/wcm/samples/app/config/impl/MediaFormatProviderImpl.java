@@ -19,18 +19,16 @@
  */
 package io.wcm.samples.app.config.impl;
 
+import org.osgi.service.component.annotations.Component;
+
 import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.handler.media.spi.helpers.AbstractMediaFormatProvider;
 import io.wcm.samples.app.config.MediaFormats;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Service;
-
 /**
  * Media format provider
  */
-@Component(immediate = true)
-@Service(MediaFormatProvider.class)
+@Component(immediate = true, service = MediaFormatProvider.class)
 public class MediaFormatProviderImpl extends AbstractMediaFormatProvider {
 
   /**

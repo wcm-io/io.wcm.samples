@@ -23,14 +23,15 @@ import static org.junit.Assert.assertSame;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import io.wcm.samples.app.business.navigation.NavigationManager;
-import io.wcm.samples.app.business.navigation.NavigationPageItem;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import io.wcm.samples.app.business.navigation.NavigationManager;
+import io.wcm.samples.app.business.navigation.NavigationPageItem;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MainNavPageLinkTest {

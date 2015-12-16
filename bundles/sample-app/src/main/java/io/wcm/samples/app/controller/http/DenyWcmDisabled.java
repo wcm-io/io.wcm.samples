@@ -19,8 +19,6 @@
  */
 package io.wcm.samples.app.controller.http;
 
-import io.wcm.sling.models.annotations.AemObject;
-
 import java.io.IOException;
 
 import javax.annotation.PostConstruct;
@@ -32,6 +30,8 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 import com.day.cq.wcm.api.WCMMode;
+
+import io.wcm.sling.models.annotations.AemObject;
 
 /**
  * Sets "HTTP 403 Forbidden" header if WCM mode is disabled.

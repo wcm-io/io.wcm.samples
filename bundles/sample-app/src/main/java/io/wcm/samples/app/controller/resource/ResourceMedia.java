@@ -19,11 +19,6 @@
  */
 package io.wcm.samples.app.controller.resource;
 
-import io.wcm.handler.commons.dom.HtmlElement;
-import io.wcm.handler.media.Media;
-import io.wcm.handler.media.MediaArgs;
-import io.wcm.handler.media.MediaHandler;
-
 import javax.annotation.PostConstruct;
 
 import org.apache.commons.lang3.StringUtils;
@@ -34,6 +29,11 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+
+import io.wcm.handler.commons.dom.HtmlElement;
+import io.wcm.handler.media.Media;
+import io.wcm.handler.media.MediaArgs;
+import io.wcm.handler.media.MediaHandler;
 
 /**
  * Generic resource-based media model.

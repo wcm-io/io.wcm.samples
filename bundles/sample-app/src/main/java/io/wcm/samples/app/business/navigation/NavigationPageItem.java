@@ -19,10 +19,10 @@
  */
 package io.wcm.samples.app.business.navigation;
 
-import io.wcm.handler.link.Link;
-
 import java.util.Collections;
 import java.util.List;
+
+import io.wcm.handler.link.Link;
 
 /**
  * Navigation item with link metadata and title.

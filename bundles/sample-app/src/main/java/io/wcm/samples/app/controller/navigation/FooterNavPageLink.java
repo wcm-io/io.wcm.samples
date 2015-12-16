@@ -19,14 +19,14 @@
  */
 package io.wcm.samples.app.controller.navigation;
 
-import io.wcm.samples.app.business.navigation.NavigationManager;
-import io.wcm.samples.app.business.navigation.NavigationPageItem;
-
 import javax.inject.Inject;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.Self;
+
+import io.wcm.samples.app.business.navigation.NavigationManager;
+import io.wcm.samples.app.business.navigation.NavigationPageItem;
 
 /**
  * Controller for footer navigation.

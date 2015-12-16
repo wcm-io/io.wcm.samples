@@ -19,9 +19,6 @@
  */
 package io.wcm.samples.app.controller.http;
 
-import io.wcm.handler.link.LinkHandler;
-import io.wcm.sling.models.annotations.AemObject;
-
 import java.io.IOException;
 
 import javax.annotation.PostConstruct;
@@ -37,6 +34,9 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import com.day.cq.wcm.api.WCMMode;
+
+import io.wcm.handler.link.LinkHandler;
+import io.wcm.sling.models.annotations.AemObject;
 
 /**
  * Sets redirect header.

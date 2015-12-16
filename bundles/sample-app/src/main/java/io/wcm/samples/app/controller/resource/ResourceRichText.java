@@ -19,8 +19,6 @@
  */
 package io.wcm.samples.app.controller.resource;
 
-import io.wcm.handler.richtext.RichTextHandler;
-
 import javax.annotation.PostConstruct;
 
 import org.apache.commons.lang3.StringUtils;
@@ -31,6 +29,8 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+
+import io.wcm.handler.richtext.RichTextHandler;
 
 /**
  * Generic resource-based rich text model.

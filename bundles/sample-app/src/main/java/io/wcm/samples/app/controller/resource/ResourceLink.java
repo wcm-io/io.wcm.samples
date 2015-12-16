@@ -19,9 +19,6 @@
  */
 package io.wcm.samples.app.controller.resource;
 
-import io.wcm.handler.link.Link;
-import io.wcm.handler.link.LinkHandler;
-
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
@@ -31,6 +28,9 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+
+import io.wcm.handler.link.Link;
+import io.wcm.handler.link.LinkHandler;
 
 /**
  * Generic resource-based link model.

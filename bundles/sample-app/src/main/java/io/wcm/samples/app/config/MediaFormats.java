@@ -21,6 +21,7 @@ package io.wcm.samples.app.config;
 
 import static io.wcm.handler.media.format.MediaFormatBuilder.create;
 import static io.wcm.samples.app.config.impl.ApplicationProviderImpl.APPLICATION_ID;
+
 import io.wcm.handler.media.format.MediaFormat;
 
 /**

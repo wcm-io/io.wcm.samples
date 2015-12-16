@@ -19,17 +19,17 @@
  */
 package io.wcm.samples.app.config.impl;
 
-import io.wcm.config.api.Configuration;
-import io.wcm.config.spi.annotations.Application;
-import io.wcm.handler.url.spi.UrlHandlerConfig;
-import io.wcm.handler.url.spi.helpers.AbstractUrlHandlerConfig;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+
+import io.wcm.config.api.Configuration;
+import io.wcm.config.spi.annotations.Application;
+import io.wcm.handler.url.spi.UrlHandlerConfig;
+import io.wcm.handler.url.spi.helpers.AbstractUrlHandlerConfig;
 
 /**
  * URL handler configuration

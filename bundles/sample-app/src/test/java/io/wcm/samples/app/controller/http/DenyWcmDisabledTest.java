@@ -20,8 +20,6 @@
 package io.wcm.samples.app.controller.http;
 
 import static org.junit.Assert.assertEquals;
-import io.wcm.samples.app.testcontext.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -31,6 +29,9 @@ import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.day.cq.wcm.api.WCMMode;
+
+import io.wcm.samples.app.testcontext.AppAemContext;
+import io.wcm.testing.mock.aem.junit.AemContext;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DenyWcmDisabledTest {

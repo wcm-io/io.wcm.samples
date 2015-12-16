@@ -40,7 +40,7 @@
               "name": "./linkContentRef",
               "fieldLabel": "Internal page",
               "fieldDescription": "Link to target page in CMS (same site)",
-              "rootPath": "/content/wcm-io-samples/sample"
+              "rootPath": "/content/wcm-io-samples"
             }
           }
         },
@@ -67,7 +67,7 @@
               "name": "./linkMediaRef",
               "fieldLabel": "Asset reference",
               "fieldDescription": "Reference to asset from DAM",
-              "rootPath": "/content/dam/handlerSample"
+              "rootPath": "/content/dam/wcm-io-samples"
             },
             "linkMediaDownload": {
               "sling:resourceType": "granite/ui/components/foundation/form/checkbox",

@@ -22,11 +22,12 @@ package io.wcm.samples.app.controller.resource;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import io.wcm.samples.app.testcontext.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
 
 import org.junit.Rule;
 import org.junit.Test;
+
+import io.wcm.samples.app.testcontext.AppAemContext;
+import io.wcm.testing.mock.aem.junit.AemContext;
 
 public class ResourceLinkTest {
 

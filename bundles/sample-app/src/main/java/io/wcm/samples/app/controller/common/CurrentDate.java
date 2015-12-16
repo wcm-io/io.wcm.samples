@@ -19,11 +19,11 @@
  */
 package io.wcm.samples.app.controller.common;
 
-import io.sightly.java.api.Use;
-
 import java.util.Calendar;
 
 import javax.script.Bindings;
+
+import io.sightly.java.api.Use;
 
 /**
  * Model that provides the current date.

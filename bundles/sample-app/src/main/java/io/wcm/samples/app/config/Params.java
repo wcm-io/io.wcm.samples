@@ -21,13 +21,14 @@ package io.wcm.samples.app.config;
 
 import static io.wcm.config.api.ParameterBuilder.create;
 import static io.wcm.samples.app.config.impl.ApplicationProviderImpl.APPLICATION_ID;
-import io.wcm.config.api.Parameter;
-import io.wcm.config.editor.EditorProperties;
-import io.wcm.config.editor.WidgetTypes;
 
 import java.util.Map;
 
 import com.google.common.collect.ImmutableMap;
+
+import io.wcm.config.api.Parameter;
+import io.wcm.config.editor.EditorProperties;
+import io.wcm.config.editor.WidgetTypes;
 
 /**
  * Defines some example parameters.

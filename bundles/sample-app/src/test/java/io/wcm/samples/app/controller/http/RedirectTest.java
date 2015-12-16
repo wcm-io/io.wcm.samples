@@ -22,8 +22,6 @@ package io.wcm.samples.app.controller.http;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import io.wcm.samples.app.testcontext.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -33,6 +31,9 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import com.day.cq.wcm.api.WCMMode;
+
+import io.wcm.samples.app.testcontext.AppAemContext;
+import io.wcm.testing.mock.aem.junit.AemContext;
 
 public class RedirectTest {
 

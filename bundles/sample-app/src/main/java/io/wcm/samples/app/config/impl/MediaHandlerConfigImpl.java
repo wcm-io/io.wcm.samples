@@ -19,15 +19,6 @@
  */
 package io.wcm.samples.app.config.impl;
 
-import io.wcm.config.spi.annotations.Application;
-import io.wcm.handler.media.format.MediaFormat;
-import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
-import io.wcm.handler.media.spi.MediaHandlerConfig;
-import io.wcm.handler.media.spi.MediaMarkupBuilder;
-import io.wcm.handler.media.spi.helpers.AbstractMediaHandlerConfig;
-import io.wcm.samples.app.config.MediaFormats;
-import io.wcm.samples.app.handler.ResponsiveImageMediaMarkupBuilder;
-
 import java.util.List;
 import java.util.Set;
 
@@ -37,6 +28,15 @@ import org.apache.sling.models.annotations.Model;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+
+import io.wcm.config.spi.annotations.Application;
+import io.wcm.handler.media.format.MediaFormat;
+import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
+import io.wcm.handler.media.spi.MediaHandlerConfig;
+import io.wcm.handler.media.spi.MediaMarkupBuilder;
+import io.wcm.handler.media.spi.helpers.AbstractMediaHandlerConfig;
+import io.wcm.samples.app.config.MediaFormats;
+import io.wcm.samples.app.handler.ResponsiveImageMediaMarkupBuilder;
 
 /**
  * Media handler configuration

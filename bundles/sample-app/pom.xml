@@ -101,6 +101,13 @@
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.wcm.ui.granite</artifactId>
+      <version>0.6.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.aem-mock</artifactId>
       <version>1.6.2</version>
       <scope>test</scope>

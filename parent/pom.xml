@@ -72,6 +72,25 @@
         <version>1.2.4</version>
       </dependency>
 
+      <!-- Import AEM dependencies -->
+      <dependency>
+        <groupId>io.wcm.maven</groupId>
+        <artifactId>io.wcm.maven.aem-dependencies</artifactId>
+        <version>6.0.0.0001</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>osgi.core</artifactId>
+        <version>6.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>osgi.cmpn</artifactId>
+        <version>6.0.0</version>
+      </dependency>
+
       <!-- Testing -->
       <dependency>
         <groupId>junit</groupId>

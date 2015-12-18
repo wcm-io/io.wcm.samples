@@ -26,7 +26,7 @@ import org.apache.sling.models.annotations.injectorspecific.Self;
 
 import com.day.cq.wcm.api.Page;
 
-import io.wcm.handler.url.util.SiteRoot;
+import io.wcm.handler.url.ui.SiteRoot;
 import io.wcm.samples.app.util.AppTemplate;
 import io.wcm.sling.models.annotations.AemObject;
 import io.wcm.wcm.commons.util.Template;

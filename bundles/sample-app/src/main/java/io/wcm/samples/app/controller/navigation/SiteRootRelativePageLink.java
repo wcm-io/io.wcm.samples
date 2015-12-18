@@ -34,7 +34,7 @@ import com.day.cq.wcm.api.Page;
 
 import io.wcm.handler.link.Link;
 import io.wcm.handler.link.LinkHandler;
-import io.wcm.handler.url.util.SiteRoot;
+import io.wcm.handler.url.ui.SiteRoot;
 
 /**
  * Generic model for building a link to page addressed via a path relative to site root.

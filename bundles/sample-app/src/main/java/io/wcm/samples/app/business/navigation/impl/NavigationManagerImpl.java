@@ -33,7 +33,7 @@ import com.day.cq.wcm.api.PageFilter;
 
 import io.wcm.handler.link.Link;
 import io.wcm.handler.link.LinkHandler;
-import io.wcm.handler.url.util.SiteRoot;
+import io.wcm.handler.url.ui.SiteRoot;
 import io.wcm.samples.app.business.navigation.NavigationManager;
 import io.wcm.samples.app.business.navigation.NavigationPageItem;
 import io.wcm.sling.models.annotations.AemObject;

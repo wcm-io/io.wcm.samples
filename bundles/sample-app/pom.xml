@@ -113,7 +113,7 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.wcm.ui.granite</artifactId>
-      <version>0.6.0</version>
+      <version>0.6.1-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
 

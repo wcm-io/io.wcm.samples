@@ -3,6 +3,7 @@
     jcr:primaryType="cq:Page">
   <jcr:content
       cq:cloudserviceconfigs="[[]]"
+      cq:deviceGroups="[/etc/mobile/groups/responsive]"
       cq:template="/apps/wcm-io-samples/sample-app/templates/content/homepage"
       jcr:primaryType="cq:PageContent"
       jcr:title="en"

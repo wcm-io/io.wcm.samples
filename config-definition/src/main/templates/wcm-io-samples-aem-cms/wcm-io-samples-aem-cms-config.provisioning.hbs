@@ -19,7 +19,7 @@
     org.apache.sling.commons.log.file.number=I"15"
 
   # Set loglevel for project-specific bundles
-  org.apache.sling.commons.log.LogManager.factory.config-projectspecific
+  org.apache.sling.commons.log.LogManager.factory.config-wcmio-samples
     org.apache.sling.commons.log.file="logs/error.log"
     org.apache.sling.commons.log.level="{{log.projectSpecifcLogLevel}}"
     org.apache.sling.commons.log.names=["io.wcm"]
@@ -59,8 +59,12 @@
     authoringUIModeService.default="TOUCH"
   
   # Define service user for wcm.io Media Handler
-  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-wcmio
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-wcmio-samples
     user.mapping=["io.wcm.handler.media\=wcmioDamSystemUser"]
+
+  # Configure Responsive Preview Mode
+  io.wcm.wcm.ui.granite.emulator.impl.EmulatorProviderImpl-wcmio-samples
+    templatePathPatterns=["^/apps/wcm-io-samples/sample-app/.*$"]
 
 
 [configurations runModes=publish]

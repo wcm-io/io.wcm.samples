@@ -56,7 +56,7 @@ public class ResourceMedia {
   private Media media;
 
   @PostConstruct
-  protected void activate() {
+  private void activate() {
     media = mediaHandler.get(resource, new MediaArgs(mediaFormat)).build();
 
     if (media.isValid() && media.getElement() != null) {

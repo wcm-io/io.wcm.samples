@@ -46,7 +46,7 @@ public class ResourceLink {
   private Link link;
 
   @PostConstruct
-  protected void activate() {
+  private void activate() {
     link = linkHandler.get(resource).build();
   }
 

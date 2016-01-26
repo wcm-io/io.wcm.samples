@@ -58,7 +58,7 @@ public class Redirect {
   private boolean renderPage = true;
 
   @PostConstruct
-  protected void activate() throws IOException {
+  private void activate() throws IOException {
     // resolve link of redirect page
     String redirectUrl = linkHandler.get(resource).buildUrl();
 

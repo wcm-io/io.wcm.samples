@@ -50,7 +50,7 @@ public class ResourceRichText {
   private String markup;
 
   @PostConstruct
-  protected void activate() {
+  private void activate() {
     String xhtmlString = resource.getValueMap().get(propertyName, String.class);
     markup = richTextHandler.get(xhtmlString).buildMarkup();
   }

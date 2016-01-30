@@ -2,9 +2,8 @@
   "jcr:primaryType": "cq:Component",
   "jcr:title": "Stage Header Link Item",
   "componentGroup": "Stage",
+
   "cq:editConfig": {
-    "cq:dialogMode": "floating",
-    "cq:disableTargeting": true,
     "cq:listeners": {
       "afteredit": "handlerSample.authoring.listener.refreshAjaxContentAfterEdit"
     }

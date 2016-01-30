@@ -2,9 +2,8 @@
   "jcr:primaryType": "cq:Component",
   "componentGroup": "Aside",
   "jcr:title": "Social teaser item",
+
   "cq:editConfig": {
-    "cq:dialogMode": "floating",
-    "cq:disableTargeting": true,
     "cq:listeners": {
       "afteredit": "handlerSample.authoring.listener.refreshAjaxContentAfterEdit"
     }

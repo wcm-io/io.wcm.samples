@@ -9,8 +9,6 @@
   },
 
   "cq:editConfig": {
-    "cq:dialogMode": "floating",
-    "cq:disableTargeting": true,
     "cq:listeners": {
       "afteredit": "handlerSample.authoring.listener.refreshAjaxContentAfterEdit"
     }

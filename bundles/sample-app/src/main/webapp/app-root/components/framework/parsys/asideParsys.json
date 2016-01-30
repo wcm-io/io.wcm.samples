@@ -1,5 +1,6 @@
 {
   "jcr:primaryType": "cq:Component",
   "sling:resourceSuperType": "/apps/wcm-io/wcm/parsys/components/parsys",
-  "cq:isContainer": true
+  "cq:isContainer": true,
+  "wcmio:parsysNewAreaCss": "col-1-4"
 }

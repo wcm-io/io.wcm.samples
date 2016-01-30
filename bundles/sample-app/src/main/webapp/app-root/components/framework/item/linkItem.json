@@ -2,9 +2,8 @@
   "jcr:primaryType": "cq:Component",
   "jcr:title": "Link Item",
   "componentGroup": "Content",
+
   "cq:editConfig": {
-    "cq:dialogMode": "floating",
-    "cq:disableTargeting": true,
     "cq:listeners": {
       "afteredit": "handlerSample.authoring.listener.refreshAjaxContentAfterEdit"
     }

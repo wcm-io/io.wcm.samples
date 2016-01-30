@@ -2,9 +2,12 @@
   "jcr:primaryType": "cq:Component",
   "componentGroup": "Aside",
   "jcr:title": "Aside teaser",
+  
+  "cq:htmlTag": {
+    "class": "col-1-4"
+  },
+
   "cq:editConfig": {
-    "cq:dialogMode": "floating",
-    "cq:disableTargeting": true,
     "cq:listeners": {
       "afteredit": "handlerSample.authoring.listener.refreshAjaxContentAfterEdit"
     }

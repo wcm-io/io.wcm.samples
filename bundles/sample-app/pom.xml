@@ -54,19 +54,19 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.api</artifactId>
-      <version>0.5.2</version>
+      <version>0.5.3-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.core</artifactId>
-      <version>0.6.0</version>
+      <version>0.6.1-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.editor</artifactId>
-      <version>0.6.0</version>
+      <version>0.6.1-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

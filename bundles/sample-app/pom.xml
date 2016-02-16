@@ -42,7 +42,7 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.sling.models</artifactId>
-      <version>1.2.0</version>
+      <version>1.2.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -54,19 +54,19 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.api</artifactId>
-      <version>0.5.3-SNAPSHOT</version>
+      <version>0.5.4</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.core</artifactId>
-      <version>0.6.1-SNAPSHOT</version>
+      <version>0.6.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.editor</artifactId>
-      <version>0.6.1-SNAPSHOT</version>
+      <version>0.6.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -78,31 +78,31 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.handler.link</artifactId>
-      <version>0.7.1-SNAPSHOT</version>
+      <version>0.8.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.handler.media</artifactId>
-      <version>0.9.1-SNAPSHOT</version>
+      <version>0.10.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.handler.richtext</artifactId>
-      <version>0.5.3-SNAPSHOT</version>
+      <version>0.6.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.wcm.parsys</artifactId>
-      <version>0.6.1-SNAPSHOT</version>
+      <version>0.6.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.wcm.ui.granite</artifactId>
-      <version>0.6.1-SNAPSHOT</version>
+      <version>0.6.2</version>
       <scope>compile</scope>
     </dependency>
 
@@ -125,13 +125,13 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.aem-mock</artifactId>
-      <version>1.6.5-SNAPSHOT</version>
+      <version>1.7.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
-      <version>0.5.2</version>
+      <version>0.5.4</version>
       <scope>test</scope>
     </dependency>
     <dependency>

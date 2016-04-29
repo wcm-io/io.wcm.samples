@@ -48,13 +48,13 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.wcm.commons</artifactId>
-      <version>0.6.0</version>
+      <version>0.6.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.api</artifactId>
-      <version>0.5.4</version>
+      <version>0.5.6</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -66,13 +66,13 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.editor</artifactId>
-      <version>0.6.2</version>
+      <version>0.6.4</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.handler.url</artifactId>
-      <version>0.7.0</version>
+      <version>0.8.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -84,7 +84,7 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.handler.media</artifactId>
-      <version>0.10.0</version>
+      <version>0.10.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

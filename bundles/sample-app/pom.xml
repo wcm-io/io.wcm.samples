@@ -105,6 +105,12 @@
       <version>0.6.2</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.wcm.ui.extjs</artifactId>
+      <version>0.5.1-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
 
     <dependency>
       <groupId>org.osgi</groupId>
@@ -167,6 +173,13 @@
             <Sling-Model-Packages>
               io.wcm.samples.app
             </Sling-Model-Packages>
+
+            <!-- Exported package versions differ in major version between AEM60, AEM61 and AEM62 -->
+            <Import-Package>
+              com.day.cq.commons;version="[5,7)",
+              *
+            </Import-Package>
+
           </instructions>
         </configuration>
       </plugin>

@@ -19,10 +19,13 @@
  */
 package io.wcm.samples.app.testcontext;
 
+import static io.wcm.testing.mock.wcmio.config.ContextPlugins.WCMIO_CONFIG;
+import static io.wcm.testing.mock.wcmio.handler.ContextPlugins.WCMIO_HANDLER;
+import static io.wcm.testing.mock.wcmio.sling.ContextPlugins.WCMIO_SLING;
+
 import java.io.IOException;
 
 import org.apache.sling.api.resource.PersistenceException;
-import org.apache.sling.testing.mock.sling.ResourceResolverType;
 
 import io.wcm.config.spi.ApplicationProvider;
 import io.wcm.config.spi.ConfigurationFinderStrategy;
@@ -31,8 +34,8 @@ import io.wcm.samples.app.config.impl.ApplicationProviderImpl;
 import io.wcm.samples.app.config.impl.ConfigurationFinderStrategyImpl;
 import io.wcm.samples.app.config.impl.MediaFormatProviderImpl;
 import io.wcm.testing.mock.aem.junit.AemContext;
+import io.wcm.testing.mock.aem.junit.AemContextBuilder;
 import io.wcm.testing.mock.aem.junit.AemContextCallback;
-import io.wcm.testing.mock.wcmio.handler.MockHandler;
 
 /**
  * Sets up {@link AemContext} for unit tests in this application.
@@ -47,14 +50,16 @@ public final class AppAemContext {
   }
 
   public static AemContext newAemContext() {
-    return new AemContext(new SetUpCallback(), ResourceResolverType.RESOURCERESOLVER_MOCK);
+    return new AemContextBuilder()
+        .plugin(WCMIO_SLING, WCMIO_CONFIG, WCMIO_HANDLER)
+        .afterSetUp(SETUP_CALLBACK)
+        .build();
   }
 
   /**
    * Custom set up rules required in all unit tests.
    */
-  private static final class SetUpCallback implements AemContextCallback {
-
+  private static final AemContextCallback SETUP_CALLBACK = new AemContextCallback() {
     @Override
     public void execute(AemContext context) throws PersistenceException, IOException {
 
@@ -62,7 +67,6 @@ public final class AppAemContext {
       context.registerService(ApplicationProvider.class, new ApplicationProviderImpl());
       context.registerService(ConfigurationFinderStrategy.class, new ConfigurationFinderStrategyImpl());
       context.registerService(MediaFormatProvider.class, new MediaFormatProviderImpl());
-      MockHandler.setUp(context);
 
       // register sling models
       context.addModelsForPackage("io.wcm.samples.app");
@@ -74,7 +78,6 @@ public final class AppAemContext {
       // set default current page
       context.currentPage("/content/wcm-io-samples/en");
     }
-
-  }
+  };
 
 }

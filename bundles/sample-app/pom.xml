@@ -136,8 +136,20 @@
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.testing.wcm-io-mock.sling</artifactId>
+      <version>0.5.1-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.testing.wcm-io-mock.config</artifactId>
+      <version>0.5.1-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
-      <version>0.5.4</version>
+      <version>0.5.5-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>

@@ -185,19 +185,6 @@
       </plugin>
 
       <plugin>
-        <groupId>org.apache.sling</groupId>
-        <artifactId>maven-sling-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>validate-bundle</id>
-            <goals>
-              <goal>validate</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
         <groupId>io.wcm.maven.plugins</groupId>
         <artifactId>i18n-maven-plugin</artifactId>
         <executions>

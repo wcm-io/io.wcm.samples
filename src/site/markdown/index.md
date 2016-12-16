@@ -1,6 +1,6 @@
 ## wcm.io Sample Application
 
-Sample application to demonstrate the usage of the wcm.io handler infrastructure and other wcm.io Features.
+Sample application to demonstrate the usage of the wcm.io Handler infrastructure and other wcm.io Features.
 
 
 ### Build and deploy samples from source

@@ -21,19 +21,21 @@ package io.wcm.samples.app.controller.common;
 
 import java.util.Calendar;
 
-import javax.script.Bindings;
-
-import io.sightly.java.api.Use;
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.models.annotations.Model;
 
 /**
  * Model that provides the current date.
  */
-public class CurrentDate implements Use {
+@Model(adaptables = SlingHttpServletRequest.class)
+public class CurrentDate {
 
   private int mYear;
 
-  @Override
-  public void init(Bindings bindings) {
+  /**
+   * Constructor
+   */
+  public CurrentDate() {
     mYear = Calendar.getInstance().get(Calendar.YEAR);
   }
 

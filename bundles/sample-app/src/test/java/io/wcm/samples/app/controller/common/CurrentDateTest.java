@@ -22,21 +22,26 @@ package io.wcm.samples.app.controller.common;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+
+import io.wcm.testing.mock.aem.junit.AemContext;
 
 public class CurrentDateTest {
 
-  private CurrentDate mUnderTest;
+  @Rule
+  public AemContext context = new AemContext();
+
+  private CurrentDate underTest;
 
   @Before
   public void setUp() {
-    mUnderTest = new CurrentDate();
-    mUnderTest.init(null);
+    underTest = context.request().adaptTo(CurrentDate.class);
   }
 
   @Test
   public void testYear() {
-    assertTrue(mUnderTest.getYear() >= 2014);
+    assertTrue(underTest.getYear() >= 2014);
   }
 
 }

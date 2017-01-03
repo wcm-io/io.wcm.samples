@@ -4,7 +4,7 @@
     data-sly-unwrap="${!media.valid}">
 
   <a data-sly-attribute="${link.attributes}" data-sly-unwrap="${!link.valid}">
-    <img data-sly-unwrap data-sly-text="${media.markup @ context='html'}"/>
+    ${media.markup @ context='html'}
   </a>
 
 </p>

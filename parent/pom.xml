@@ -25,7 +25,7 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>1.1.4</version>
+    <version>1.1.5-SNAPSHOT</version>
     <relativePath/>
   </parent>
 
@@ -120,25 +120,6 @@
       </plugin>
 
     </plugins>
-    <pluginManagement>
-      <plugins>
-
-        <!-- CONGA -->
-        <plugin>
-          <groupId>io.wcm.devops.conga</groupId>
-          <artifactId>conga-maven-plugin</artifactId>
-          <version>1.1.2</version>
-          <dependencies>
-            <dependency>
-              <groupId>io.wcm.devops.conga.plugins</groupId>
-              <artifactId>io.wcm.devops.conga.plugins.aem</artifactId>
-              <version>1.1.2</version>
-            </dependency>
-          </dependencies>
-        </plugin>
-
-      </plugins>
-    </pluginManagement>
   </build>
 
 </project>

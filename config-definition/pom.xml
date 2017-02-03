@@ -45,7 +45,23 @@
     <dependency>
       <groupId>io.wcm.devops.conga.definitions</groupId>
       <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
-      <version>0.6.6</version>
+      <version>0.7.1-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <!-- Application packages -->
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.samples.complete</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>zip</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.samples.sample-content</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>zip</type>
       <scope>compile</scope>
     </dependency>
 
@@ -58,7 +74,6 @@
       <plugin>
         <groupId>io.wcm.devops.conga</groupId>
         <artifactId>conga-maven-plugin</artifactId>
-        <extensions>true</extensions>
         <executions>
 
           <!-- Generate configuration for local development AEM instance -->
@@ -94,27 +109,16 @@
 
   <profiles>
 
-    <!-- Deploy generated configuration to AEM instance -->
+    <!-- Deploy AEM packages from generated configuration to AEM instance -->
     <profile>
-      <id>deploy-config-packages</id>
+      <id>deploy-packages</id>
       <build>
         <plugins>
           <plugin>
-            <groupId>io.wcm.maven.plugins</groupId>
-            <artifactId>wcmio-content-package-maven-plugin</artifactId>
+            <groupId>io.wcm.devops.conga.plugins</groupId>
+            <artifactId>conga-aem-maven-plugin</artifactId>
             <configuration>
-              <force>true</force>
-              <packageFiles>
-                <packageFile>
-                  <packageFile>target/configuration/${config.environment}/aem-author/packages/aem-cms-author-dam-update-asset-workflow-minimal.zip</packageFile>
-                </packageFile>
-                <packageFile>
-                  <packageFile>target/configuration/${config.environment}/aem-author/packages/wcm-io-samples-aem-cms-author-systemusers.zip</packageFile>
-                </packageFile>
-                <packageFile>
-                  <packageFile>target/configuration/${config.environment}/aem-author/packages/wcm-io-samples-aem-cms-config.zip</packageFile>
-                </packageFile>
-              </packageFiles>
+              <nodeDirectory>target/configuration/${config.environment}/aem-author</nodeDirectory>
             </configuration>
           </plugin>
         </plugins>

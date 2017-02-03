@@ -48,7 +48,6 @@ echo "********************************************************************"
 
 clean_install()
 {
-
 echo ""
 echo "*** Build artifacts ***"
 echo ""
@@ -56,57 +55,40 @@ echo ""
 mvn $sling_params $other_params -Pfast clean install
 
 if [ "$?" -ne "0" ]; then
-  echo "*** Build FAILED ***"
-  exit 1
+  error_exit "*** Build artifacts FAILED ***"
 fi
 }
 
 #####
 
-
 deploy_artifacts()
 {
-echo ""
-echo "*** Deploy complete package ***"
-echo ""
-
-cd complete
-mvn -B $sling_params content-package:install
-
-if [ "$?" -ne "0" ]; then
-  echo "*** Build FAILED ***"
-  exit 1
-fi
-
-cd ../
 
 echo ""
-echo "***  Deploy config and samplecontent packages  ***"
+echo "*** Deploy AEM packages  ***"
 echo ""
 
 cd config-definition
-mvn -B $sling_params -Pdeploy-config-packages wcmio-content-package:install
+mvn -B $sling_params -Pdeploy-packages conga-aem:package-install
 
 if [ "$?" -ne "0" ]; then
-  echo "*** Build FAILED ***"
-  exit 1
+  error_exit "*** Deploying config packages FAILED ***"
 fi
 
 cd ../
-
-cd sample-content
-mvn -B $sling_params content-package:install
-
-if [ "$?" -ne "0" ]; then
-echo "*** Build FAILED ***"
-exit 1
-fi
-
-cd ../
-
 
 }
 
+#####
+
+error_exit()
+{
+  echo ""
+  echo "$1" 1>&2
+  echo ""
+  read -n1 -r -p "Press any key to continue..." key
+  exit 1
+}
 
 # check params and run
 if [ "$1" != "" ]
@@ -132,4 +114,7 @@ else
 fi
 
 
+echo ""
 echo "*** Build complete ***"
+echo ""
+read -n1 -r -p "Press any key to continue..." key

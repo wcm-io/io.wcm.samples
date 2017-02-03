@@ -52,7 +52,7 @@ echo ""
 echo "*** Build artifacts ***"
 echo ""
 
-mvn $sling_params $other_params -Pfast clean install
+mvn $sling_params $other_params -Pfast clean install eclipse:eclipse
 
 if [ "$?" -ne "0" ]; then
   error_exit "*** Build artifacts FAILED ***"

@@ -60,13 +60,13 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.core</artifactId>
-      <version>0.6.2</version>
+      <version>0.6.4</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.config.editor</artifactId>
-      <version>0.6.4</version>
+      <version>0.7.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -137,19 +137,19 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.wcm-io-mock.sling</artifactId>
-      <version>0.5.1-SNAPSHOT</version>
+      <version>0.6.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.wcm-io-mock.config</artifactId>
-      <version>0.5.1-SNAPSHOT</version>
+      <version>0.6.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
-      <version>0.5.5-SNAPSHOT</version>
+      <version>0.6.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>

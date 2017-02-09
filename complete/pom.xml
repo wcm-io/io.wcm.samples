@@ -23,13 +23,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.wcm</groupId>
+    <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
-  <groupId>io.wcm</groupId>
+  <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.complete</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>content-package</packaging>
@@ -47,13 +47,13 @@
   <dependencies>
 
     <dependency>
-      <groupId>io.wcm</groupId>
+      <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.app</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>io.wcm</groupId>
+      <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.app.clientlibs</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <scope>compile</scope>

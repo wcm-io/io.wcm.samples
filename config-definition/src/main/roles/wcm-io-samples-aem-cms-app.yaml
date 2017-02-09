@@ -3,11 +3,11 @@
 files:
 
 # Application package
-- url: mvn:io.wcm/io.wcm.samples.complete//zip
+- url: mvn:io.wcm.samples/io.wcm.samples.complete//zip
   dir: packages
 
 # Application sample content package
-- url: mvn:io.wcm/io.wcm.samples.sample-content//zip
+- url: mvn:io.wcm.samples/io.wcm.samples.sample-content//zip
   dir: packages
   condition: ${sampleContent}
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:tiff="http://ns.adobe.com/tiff/1.0/"
+    jcr:primaryType="dam:Asset">
+  <jcr:content
+      cq:name="talk.png"
+      cq:parentPath="/content/dam/wcm-io-samples/handler/content"
+      jcr:primaryType="dam:AssetContent">
+    <metadata
+        dam:Bitsperpixel="{Long}4"
+        dam:Comments="Creation Time: 24.04.13&#xA;Software: Adobe Fireworks CS6&#xA;XML:com.adobe.xmp: &lt;?xpacket begin=&quot;﻿&quot; id=&quot;W5M0MpCehiHzreSzNTczkc9d&quot;?&gt;&#xA;&lt;x:xmpmeta xmlns:x=&quot;adobe:ns:meta/&quot; x:xmptk=&quot;Adobe XMP Core 5.5-c011 79.149598, 2012/10/10-12:09:56        &quot;&gt;&#xA; &lt;rdf:RDF xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;&gt;&#xA;  &lt;rdf:Description rdf:about=&quot;&quot;&#xA;    xmlns:ns1=&quot;http://www.day.com/dam/1.0&quot;&#xA;    xmlns:tiff=&quot;http://ns.adobe.com/tiff/1.0/&quot;&#xA;    xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;&#xA;   ns1:Physicalheightininches=&quot;3.750854253768921&quot;&#xA;   ns1:Physicalwidthininches=&quot;6.668185710906982&quot;&#xA;   ns1:Fileformat=&quot;PNG&quot;&#xA;   ns1:Progressive=&quot;no&quot;&#xA;   ns1:extracted=&quot;2015-09-19T14:33:36.078+02:00&quot;&#xA;   ns1:Bitsperpixel=&quot;4&quot;&#xA;   ns1:MIMEtype=&quot;image/png&quot;&#xA;   ns1:Comments=&quot;Creation Time: 24.04.13&amp;#xA;Software: Adobe Fireworks CS6&amp;#xA;XML:com.adobe.xmp: &amp;lt;?xpacket begin=&amp;quot;﻿&amp;quot; id=&amp;quot;W5M0MpCehiHzreSzNTczkc9d&amp;quot;?&amp;gt;&amp;#xA;&amp;lt;x:xmpmeta xmlns:x=&amp;quot;adobe:ns:meta/&amp;quot; x:xmptk=&amp;quot;Adobe XMP Core 5.5-c011 79.149598, 2012/10/10-12:09:56        &amp;quot;&amp;gt;&amp;#xA; &amp;lt;rdf:RDF xmlns:rdf=&amp;quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&amp;quot;&amp;gt;&amp;#xA;  &amp;lt;rdf:Description rdf:about=&amp;quot;&amp;quot;&amp;#xA;    xmlns:ns1=&amp;quot;http://www.day.com/dam/1.0&amp;quot;&amp;#xA;    xmlns:tiff=&amp;quot;http://ns.adobe.com/tiff/1.0/&amp;quot;&amp;#xA;    xmlns:dc=&amp;quot;http://purl.org/dc/elements/1.1/&amp;quot;&amp;#xA;   ns1:Physicalheightininches=&amp;quot;3.750854253768921&amp;quot;&amp;#xA;   ns1:Physicalwidthininches=&amp;quot;6.668185710906982&amp;quot;&amp;#xA;   ns1:Fileformat=&amp;quot;PNG&amp;quot;&amp;#xA;   ns1:Progressive=&amp;quot;no&amp;quot;&amp;#xA;   ns1:extracted=&amp;quot;2015-09-19T13:48:53.070+02:00&amp;quot;&amp;#xA;   ns1:Bitsperpixel=&amp;quot;4&amp;quot;&amp;#xA;   ns1:MIMEtype=&amp;quot;image/png&amp;quot;&amp;#xA;   ns1:Comments=&amp;quot;Creation Time: 24.04.13&amp;amp;#xA;Software: Adobe Fireworks CS6&amp;amp;#xA;XML:com.adobe.xmp: &amp;amp;lt;?xpacket begin=&amp;amp;quot;﻿&amp;amp;quot; id=&amp;amp;quot;W5M0MpCehiHzreSzNTczkc9d&amp;amp;quot;?&amp;amp;gt;&amp;amp;#xA;&amp;amp;lt;x:xmpmeta xmlns:x=&amp;amp;quot;adobe:ns:meta/&amp;amp;quot; x:xmptk=&amp;amp;quot;Adobe XMP Core 5.5-c011 79.149598, 2012/10/10-12:09:56        &amp;amp;quot;&amp;amp;gt;&amp;amp;#xA; &amp;amp;lt;rdf:RDF xmlns:rdf=&amp;amp;quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&amp;amp;quot;&amp;amp;gt;&amp;amp;#xA;  &amp;amp;lt;rdf:Description rdf:about=&amp;amp;quot;&amp;amp;quot;&amp;amp;#xA;    xmlns:ns1=&amp;amp;quot;http://www.day.com/dam/1.0&amp;amp;quot;&amp;amp;#xA;    xmlns:tiff=&amp;amp;quot;http://ns.adobe.com/tiff/1.0/&amp;amp;quot;&amp;amp;#xA;    xmlns:dc=&amp;amp;quot;http://purl.org/dc/elements/1.1/&amp;amp;quot;&amp;amp;#xA;   ns1:Physicalheightininches=&amp;amp;quot;3.750854253768921&amp;amp;quot;&amp;amp;#xA;   ns1:Physicalwidthininches=&amp;amp;quot;6.668185710906982&amp;amp;quot;&amp;amp;#xA;   ns1:Fileformat=&amp;amp;quot;PNG&amp;amp;quot;&amp;amp;#xA;   ns1:Progressive=&amp;amp;quot;no&amp;amp;quot;&amp;amp;#xA;   ns1:extracted=&amp;amp;quot;2014-06-24T22:07:18.759+02:00&amp;amp;quot;&amp;amp;#xA;   ns1:Bitsperpixel=&amp;amp;quot;4&amp;amp;quot;&amp;amp;#xA;   ns1:MIMEtype=&amp;amp;quot;image/png&amp;amp;quot;&amp;amp;#xA;   ns1:Comments=&amp;amp;quot;Creation Time: 24.04.13&amp;amp;amp;#xA;Software: Adobe Fireworks CS6&amp;amp;amp;#xA;&amp;amp;quot;&amp;amp;#xA;   ns1:Physicalwidthindpi=&amp;amp;quot;72&amp;amp;quot;&amp;amp;#xA;   ns1:Physicalheightindpi=&amp;amp;quot;72&amp;amp;quot;&amp;amp;#xA;   ns1:Numberofimages=&amp;amp;quot;1&amp;amp;quot;&amp;amp;#xA;   ns1:writebackEnable=&amp;amp;quot;False&amp;amp;quot;&amp;amp;#xA;   ns1:Numberoftextualcomments=&amp;amp;quot;2&amp;amp;quot;&amp;amp;#xA;   ns1:sha1=&amp;amp;quot;f80f8999de2d33128c94d231c735ad5f8ae515b3&amp;amp;quot;&amp;amp;#xA;   ns1:size=&amp;amp;quot;3886&amp;amp;quot;&amp;amp;#xA;   tiff:ImageLength=&amp;amp;quot;270&amp;amp;quot;&amp;amp;#xA;   tiff:ImageWidth=&amp;amp;quot;480&amp;amp;quot;&amp;amp;#xA;   dc:format=&amp;amp;quot;image/png&amp;amp;quot;&amp;amp;#xA;   dc:modified=&amp;amp;quot;2014-09-19T21:20:26.812+02:00&amp;amp;quot;/&amp;amp;gt;&amp;amp;#xA; &amp;amp;lt;/rdf:RDF&amp;amp;gt;&amp;amp;#xA;&amp;amp;lt;/x:xmpmeta&amp;amp;gt;&amp;amp;#xA;&amp;amp;lt;?xpacket end=&amp;amp;quot;r&amp;amp;quot;?&amp;amp;gt;&amp;amp;#xA;&amp;quot;&amp;#xA;   ns1:Physicalwidthindpi=&amp;quot;72&amp;quot;&amp;#xA;   ns1:Physicalheightindpi=&amp;quot;72&amp;quot;&amp;#xA;   ns1:Numberofimages=&amp;quot;1&amp;quot;&amp;#xA;   ns1:writebackEnable=&amp;quot;False&amp;quot;&amp;#xA;   ns1:Numberoftextualcomments=&amp;quot;3&amp;quot;&amp;#xA;   ns1:sha1=&amp;quot;98325f209c80e095a47b9aadb47da07af527317d&amp;quot;&amp;#xA;   ns1:size=&amp;quot;5048&amp;quot;&amp;#xA;   tiff:ImageLength=&amp;quot;270&amp;quot;&amp;#xA;   tiff:ImageWidth=&amp;quot;480&amp;quot;&amp;#xA;   dc:format=&amp;quot;image/png&amp;quot;&amp;#xA;   dc:modified=&amp;quot;2014-09-19T21:20:26.812+02:00&amp;quot;/&amp;gt;&amp;#xA; &amp;lt;/rdf:RDF&amp;gt;&amp;#xA;&amp;lt;/x:xmpmeta&amp;gt;&amp;#xA;&amp;lt;?xpacket end=&amp;quot;r&amp;quot;?&amp;gt;&amp;#xA;&quot;&#xA;   ns1:Physicalwidthindpi=&quot;72&quot;&#xA;   ns1:Physicalheightindpi=&quot;72&quot;&#xA;   ns1:Numberofimages=&quot;1&quot;&#xA;   ns1:writebackEnable=&quot;False&quot;&#xA;   ns1:Numberoftextualcomments=&quot;3&quot;&#xA;   ns1:sha1=&quot;29e02b493473c2beaf851002b67b6f1b700be978&quot;&#xA;   ns1:size=&quot;6652&quot;&#xA;   tiff:ImageLength=&quot;270&quot;&#xA;   tiff:ImageWidth=&quot;480&quot;&#xA;   dc:format=&quot;image/png&quot;&#xA;   dc:modified=&quot;2014-09-19T21:20:26.812+02:00&quot;/&gt;&#xA; &lt;/rdf:RDF&gt;&#xA;&lt;/x:xmpmeta&gt;&#xA;&lt;?xpacket end=&quot;r&quot;?&gt;&#xA;"
+        dam:extracted="{Date}2015-09-19T14:33:36.078+02:00"
+        dam:Fileformat="PNG"
+        dam:MIMEtype="image/png"
+        dam:Numberofimages="{Long}1"
+        dam:Numberoftextualcomments="{Long}3"
+        dam:Physicalheightindpi="{Long}72"
+        dam:Physicalheightininches="{Decimal}3.750854253768921"
+        dam:Physicalwidthindpi="{Long}72"
+        dam:Physicalwidthininches="{Decimal}6.668185710906982"
+        dam:Progressive="no"
+        dam:sha1="29e02b493473c2beaf851002b67b6f1b700be978"
+        dam:size="{Long}6652"
+        dam:writebackEnable="False"
+        dc:format="image/png"
+        dc:modified="{Date}2014-09-19T21:20:26.812+02:00"
+        jcr:primaryType="nt:unstructured"
+        tiff:ImageLength="{Long}270"
+        tiff:ImageWidth="{Long}480"
+        writebackEnable="{Boolean}true" />
+    <renditionsMetadata
+        jcr:primaryType="nt:unstructured">
+      <cq5dam.web.1280.1280.png
+          jcr:primaryType="nt:unstructured"
+          imageHeight="{Long}270"
+          imageWidth="{Long}480" />
+      <cq5dam.thumbnail.140.100.png
+          jcr:primaryType="nt:unstructured"
+          imageHeight="{Long}78"
+          imageWidth="{Long}140" />
+      <cq5dam.thumbnail.319.319.png
+          jcr:primaryType="nt:unstructured"
+          imageHeight="{Long}179"
+          imageWidth="{Long}319" />
+    </renditionsMetadata>
+  </jcr:content>
+</jcr:root>

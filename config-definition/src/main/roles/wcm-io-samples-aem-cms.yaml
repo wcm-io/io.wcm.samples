@@ -1,0 +1,60 @@
+# Adobe Experience Manager (AEM) Instance.
+# AEM quickstart runs directly from command line with embedded Jetty Servlet Container.
+
+variants:
+- variant: aem-author
+- variant: aem-publish
+
+templateDir: wcm-io-samples-aem-cms
+
+files:
+
+# AEM OSGi System Configuration
+- file: wcm-io-samples-aem-cms-config.provisioning
+  dir: packages
+  template: wcm-io-samples-aem-cms-config.provisioning.hbs
+  postProcessors:
+  - aem-contentpackage-osgiconfig
+  postProcessorOptions:
+    contentPackage:
+      name: wcm-io-samples-aem-cms-config
+      rootPath: /apps/wcm-io-samples-aem-cms-config/config
+      filters:
+      - filter: /apps/wcm-io-samples-aem-cms-config
+
+# AEM Systems users with ACLs (Author)
+- file: wcm-io-samples-aem-cms-author-systemusers.json
+  dir: packages
+  template: wcm-io-samples-aem-cms-author-systemusers.json.hbs
+  variants:
+  - aem-author
+  postProcessors:
+  - aem-contentpackage
+  postProcessorOptions:
+    contentPackage:
+      name: wcm-io-samples-aem-cms-author-systemusers
+      acHandling: merge
+      rootPath: /
+      filters:
+      - filter: /content/dam/rep:policy
+      - filter: /home/users/system/wcm-io-samples/wcmioDamSystemUser
+
+
+# Defines configuration parameters and default values
+config:
+  contentPackage:
+    group: wcm-io-samples
+    version: "${version}"
+
+  # Log levels
+  log:
+    logPath: "logs"
+    projectSpecifcLogLevel: warn
+
+
+  # Example for config override configuration
+  #configOverrides:
+  #  "/path/to/config/scope":
+  #    siteUrl:
+  #    siteUrlSecure:
+  #    siteUrlAuthor:

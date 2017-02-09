@@ -25,23 +25,37 @@
   <parent>
     <groupId>io.wcm</groupId>
     <artifactId>io.wcm.parent_toplevel</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
-    <relativePath>../parent_toplevel/pom.xml</relativePath>
+    <version>1.1.0</version>
+    <relativePath />
   </parent>
 
-  <groupId>io.wcm</groupId>
+  <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples</artifactId>
-  <version>1</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
   <name>Samples Root</name>
   <description>Sample projects and applications to demonstrate and test wcm.io features.</description>
 
+  <scm>
+    <connection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</connection>
+    <developerConnection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</developerConnection>
+    <url>https://github.com/wcm-io/wcm-io-samples</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <properties>
+    <site.url.module.prefix>samples</site.url.module.prefix>
+  </properties>
+
+
   <modules>
     <module>parent</module>
-    <module>config-sample-app</module>
-    <module>handler-sample-app</module>
-    <module>samples-package</module>
+    <module>bundles/sample-app</module>
+    <module>bundles/clientlibs</module>
+    <module>config-definition</module>
+    <module>complete</module>
+    <module>sample-content</module>
   </modules>
 
   <build>
@@ -56,16 +70,14 @@
         </configuration>
       </plugin>
 
-      <!-- do not generate site for this project -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-        <configuration>
-          <skipDeploy>true</skipDeploy>
-        </configuration>
-      </plugin>
-
     </plugins>
   </build>
+
+  <distributionManagement>
+    <site>
+      <id>${site.deploy.id}</id>
+      <url>${site.deploy.url}${site.url.module.prefix}</url>
+    </site>
+  </distributionManagement>
 
 </project>

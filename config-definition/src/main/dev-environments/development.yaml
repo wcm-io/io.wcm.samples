@@ -1,0 +1,28 @@
+# Local AEM configuration for pro!vision Development Environment
+
+nodes:
+
+- node: aem-author
+  roles:
+  - role: aem-cms
+    variant: aem-author
+  - role: wcm-io-samples-aem-cms
+    variant: aem-author
+  - role: wcm-io-samples-aem-cms-app
+
+- node: aem-publish
+  roles:
+  - role: aem-cms
+    variant: aem-publish
+  - role: wcm-io-samples-aem-cms
+    variant: aem-publish
+  - role: wcm-io-samples-aem-cms-app
+
+config:
+  contentPackage.group: "wcm-io-samples"
+  sampleContent: true
+
+  # Log levels
+  log:
+    logPath: "logs"
+    projectSpecifcLogLevel: info

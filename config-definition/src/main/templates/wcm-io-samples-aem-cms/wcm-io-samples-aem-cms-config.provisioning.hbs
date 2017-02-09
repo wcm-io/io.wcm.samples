@@ -1,0 +1,81 @@
+[feature name=wcm-io-samplesaem-cms-config]
+
+
+[configurations]
+
+  # Enalbe GZIP and Minification for Clientlibs
+  com.adobe.granite.ui.clientlibs.impl.HtmlLibraryManagerImpl
+    htmllibmanager.debug=B"false"
+    htmllibmanager.timing=B"false"
+    htmllibmanager.minify=B"true"
+    htmllibmanager.gzip=B"true"
+
+  # Default LogManager configuration
+  org.apache.sling.commons.log.LogManager
+    org.apache.sling.commons.log.pattern="{0,date,dd.MM.yyyy\ HH:mm:ss.SSS}\ *{4}*\ [{2}]\ {3}\ {5}"
+    org.apache.sling.commons.log.file="logs/error.log"
+    org.apache.sling.commons.log.level="warn"
+    org.apache.sling.commons.log.file.size="'.'yyyy-MM-dd"
+    org.apache.sling.commons.log.file.number=I"15"
+
+  # Set loglevel for project-specific bundles
+  org.apache.sling.commons.log.LogManager.factory.config-wcmio-samples
+    org.apache.sling.commons.log.file="logs/error.log"
+    org.apache.sling.commons.log.level="{{log.projectSpecifcLogLevel}}"
+    org.apache.sling.commons.log.names=["io.wcm"]
+    org.apache.sling.commons.log.pattern="{0,date,dd.MM.yyyy\ HH:mm:ss.SSS}\ *{4}*\ [{2}]\ {3}\ {5}"
+  
+  # Configure wcm.io Configuration Persistence
+  io.wcm.config.core.persistence.impl.ToolsConfigPagePersistenceProvider
+    configPageTemplate="/apps/wcm-io-samples/handler-sample-app/templates/admin/configEditor"
+    structurePageTemplate="/apps/wcm-io-samples/handler-sample-app/templates/framework/structureElement"
+    enabled=B"true"
+
+
+# Override site configuration
+{{#if configOverrides}}
+  io.wcm.config.core.override.impl.OsgiConfigOverrideProvider-override
+    enabled=B"true"
+    description="Site URL Config Overrides"
+    overrides=[
+      {{~#each configOverrides ~}}
+        {{~#each this ~}}
+          "[{{../@key}}]{{@key}}\={{this}}",
+        {{~/each ~}}
+      {{~/each ~}}
+    ]
+{{/if}}
+
+
+
+[configurations runModes=author]
+
+  # Show "Sites" view in TouchUI after login
+  com.day.cq.commons.servlets.RootMappingServlet
+    rootmapping.target="/sites.html"
+
+  # Set TouchUI as primary authoring UI
+  com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl
+    authoringUIModeService.default="TOUCH"
+  
+  # Define service user for wcm.io Media Handler
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-wcmio-samples
+    user.mapping=["io.wcm.handler.media\=wcmioDamSystemUser"]
+
+  # Configure Responsive Preview Mode
+  io.wcm.wcm.ui.granite.emulator.impl.EmulatorProviderImpl-wcmio-samples
+    templatePathPatterns=["^/apps/wcm-io-samples/sample-app/.*$"]
+
+
+[configurations runModes=publish]
+  
+  # Disable built-in JSON and XML access features for resources
+  org.apache.sling.servlets.get.DefaultGetServlet
+    enable.html=B"false"
+    enable.json=B"false"
+    enable.txt=B"false"
+    enable.xml=B"false"
+    index=B"false"
+    index.files="[index,index.html]"
+    aliases="xml:pdf"
+    json.maximumresults=I"1000"

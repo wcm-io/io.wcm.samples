@@ -1,0 +1,6 @@
+{
+  "jcr:primaryType": "cq:ClientLibraryFolder",
+  "categories": [
+    "wcm-io-samples.app"
+  ]
+}

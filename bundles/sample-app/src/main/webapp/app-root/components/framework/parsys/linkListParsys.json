@@ -1,0 +1,9 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "sling:resourceSuperType": "/apps/wcm-io/wcm/parsys/components/parsys",
+  "cq:isContainer": true,
+  "wcmio:parsysWrapperElement": "ul",
+  "wcmio:parsysWrapperCss": "link-list",
+  "wcmio:parsysParagraphElement": "li",
+  "wcmio:parsysNewAreaCss": "link-list-item"
+}

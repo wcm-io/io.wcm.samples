@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  #%L
+  wcm.io
+  %%
+  Copyright (C) 2014 wcm.io
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.wcm.samples</groupId>
+    <artifactId>io.wcm.samples.parent</artifactId>
+    <version>1.0.0</version>
+    <relativePath>../parent/pom.xml</relativePath>
+  </parent>
+
+  <groupId>io.wcm.samples</groupId>
+  <artifactId>io.wcm.samples.config-definition</artifactId>
+  <description>AEM Application CONGA roles and templates</description>
+  <version>1.0.0</version>
+  <packaging>config-definition</packaging>
+
+  <properties>
+    <config.environment>development</config.environment>
+  </properties>
+
+  <dependencies>
+
+    <!-- Use generic AEM CMS and Dispatcher roles -->
+    <dependency>
+      <groupId>io.wcm.devops.conga.definitions</groupId>
+      <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
+      <version>0.8.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <!-- Application packages -->
+    <dependency>
+      <groupId>io.wcm.samples</groupId>
+      <artifactId>io.wcm.samples.complete</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm.samples</groupId>
+      <artifactId>io.wcm.samples.sample-content</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+
+    <plugins>
+
+      <plugin>
+        <groupId>io.wcm.devops.conga</groupId>
+        <artifactId>conga-maven-plugin</artifactId>
+        <executions>
+
+          <!-- Generate configuration for local development AEM instance -->
+          <execution>
+            <id>lauchpad-configuration-generate</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <environmentDir>${basedir}/src/main/dev-environments</environmentDir>
+              <environments>
+                <environment>${config.environment}</environment>
+              </environments>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
+
+      <!-- Do not generate eclipse project files -->
+      <plugin>
+        <groupId>io.wcm.devops.maven.plugins</groupId>
+        <artifactId>eclipse-maven-plugin</artifactId>
+        <inherited>true</inherited>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <profiles>
+
+    <!-- Deploy AEM packages from generated configuration to AEM instance -->
+    <profile>
+      <id>deploy-packages</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.wcm.devops.conga.plugins</groupId>
+            <artifactId>conga-aem-maven-plugin</artifactId>
+            <configuration>
+              <nodeDirectory>target/configuration/${config.environment}/aem-author</nodeDirectory>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+  </profiles>
+
+</project>

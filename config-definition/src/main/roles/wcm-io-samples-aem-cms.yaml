@@ -39,12 +39,24 @@ files:
       - filter: /content/dam/rep:policy
       - filter: /home/users/system/wcm-io-samples/wcmioDamSystemUser
 
+# Application package
+- url: mvn:io.wcm.samples/io.wcm.samples.complete//zip
+  dir: packages
+
+# Application sample content package
+- url: mvn:io.wcm.samples/io.wcm.samples.sample-content//zip
+  dir: packages
+  condition: ${app.sampleContent}
+
 
 # Defines configuration parameters and default values
 config:
   contentPackage:
     group: wcm-io-samples
     version: "${version}"
+
+  app:
+    sampleContent: false
 
   # Log levels
   log:

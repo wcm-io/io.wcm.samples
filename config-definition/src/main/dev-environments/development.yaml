@@ -22,5 +22,4 @@ config:
 
   # Log levels
   log:
-    logPath: "logs"
-    projectSpecifcLogLevel: info
+    projectSpecificLogLevel: info

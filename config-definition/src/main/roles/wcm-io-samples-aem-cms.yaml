@@ -60,8 +60,7 @@ config:
 
   # Log levels
   log:
-    logPath: "logs"
-    projectSpecifcLogLevel: warn
+    projectSpecificLogLevel: warn
 
 
   # Example for config override configuration

@@ -41,7 +41,13 @@
     <content-package-name>wcm-io-samples-complete</content-package-name>
     <content-package-group>wcm-io-samples</content-package-group>
     <dependency-includeGroupIds>io.wcm</dependency-includeGroupIds>
-    <dependency-includeArtifactIds>org.apache.sling.models.api,org.apache.sling.models.impl</dependency-includeArtifactIds>
+    <dependency-includeArtifactIds>
+      org.apache.sling.models.api,
+      org.apache.sling.models.impl,
+      org.apache.sling.caconfig.api,
+      org.apache.sling.caconfig.spi,
+      org.apache.sling.caconfig.impl
+    </dependency-includeArtifactIds>
   </properties>
 
   <dependencies>
@@ -66,7 +72,7 @@
       <scope>compile</scope>
     </dependency>
 
-    <!-- Latest Sling Models bundles -->
+    <!-- Additional Sling bundles -->
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.models.api</artifactId>
@@ -75,6 +81,24 @@
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.models.impl</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.api</artifactId>
+      <version>1.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.spi</artifactId>
+      <version>1.2.1-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.impl</artifactId>
+      <version>1.2.1-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
 

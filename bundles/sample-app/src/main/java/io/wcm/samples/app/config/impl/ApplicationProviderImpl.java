@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
 import org.apache.sling.api.resource.Resource;
 import org.osgi.service.component.annotations.Component;
 
-import io.wcm.config.spi.ApplicationProvider;
+import io.wcm.caconfig.application.spi.ApplicationProvider;
 
 /**
  * Application provider

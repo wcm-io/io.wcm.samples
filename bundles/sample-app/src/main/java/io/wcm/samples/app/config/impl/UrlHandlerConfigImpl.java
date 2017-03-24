@@ -26,8 +26,8 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
+import io.wcm.caconfig.application.spi.annotations.Application;
 import io.wcm.config.api.Configuration;
-import io.wcm.config.spi.annotations.Application;
 import io.wcm.handler.url.spi.UrlHandlerConfig;
 import io.wcm.handler.url.spi.helpers.AbstractUrlHandlerConfig;
 

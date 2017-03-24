@@ -19,15 +19,17 @@
  */
 package io.wcm.samples.app.testcontext;
 
-import static io.wcm.testing.mock.wcmio.config.ContextPlugins.WCMIO_CONFIG;
+import static io.wcm.testing.mock.wcmio.caconfig.ContextPlugins.WCMIO_CACONFIG;
+import static io.wcm.testing.mock.wcmio.caconfig.compat.ContextPlugins.WCMIO_CACONFIG_COMPAT;
 import static io.wcm.testing.mock.wcmio.handler.ContextPlugins.WCMIO_HANDLER;
 import static io.wcm.testing.mock.wcmio.sling.ContextPlugins.WCMIO_SLING;
+import static org.apache.sling.testing.mock.caconfig.ContextPlugins.CACONFIG;
 
 import java.io.IOException;
 
 import org.apache.sling.api.resource.PersistenceException;
 
-import io.wcm.config.spi.ApplicationProvider;
+import io.wcm.caconfig.application.spi.ApplicationProvider;
 import io.wcm.config.spi.ConfigurationFinderStrategy;
 import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.samples.app.config.impl.ApplicationProviderImpl;
@@ -51,7 +53,8 @@ public final class AppAemContext {
 
   public static AemContext newAemContext() {
     return new AemContextBuilder()
-        .plugin(WCMIO_SLING, WCMIO_CONFIG, WCMIO_HANDLER)
+        .plugin(CACONFIG)
+        .plugin(WCMIO_SLING, WCMIO_CACONFIG, WCMIO_CACONFIG_COMPAT, WCMIO_HANDLER)
         .afterSetUp(SETUP_CALLBACK)
         .build();
   }

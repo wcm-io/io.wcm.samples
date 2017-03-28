@@ -92,7 +92,7 @@
           <group>${content-package-group}</group>
           <filters>
             <filter>
-              <root>/apps/wcm-io/${content-package-name}</root>
+              <root>/apps/wcm-io-samples/${content-package-name}</root>
             </filter>
           </filters>
         </configuration>
@@ -112,7 +112,7 @@
             <configuration>
               <outputAbsoluteArtifactFilename>true</outputAbsoluteArtifactFilename>
               <includeGroupIds>${dependency-includeGroupIds}</includeGroupIds>
-              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io/${content-package-name}/install</outputDirectory>
+              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io-samples/${content-package-name}/install</outputDirectory>
               <includeScope>compile</includeScope>
             </configuration>
           </execution>
@@ -125,7 +125,7 @@
             <configuration>
               <outputAbsoluteArtifactFilename>true</outputAbsoluteArtifactFilename>
               <includeArtifactIds>${dependency-includeArtifactIds}</includeArtifactIds>
-              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io/${content-package-name}/install</outputDirectory>
+              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io-samples/${content-package-name}/install</outputDirectory>
               <includeScope>compile</includeScope>
             </configuration>
           </execution>

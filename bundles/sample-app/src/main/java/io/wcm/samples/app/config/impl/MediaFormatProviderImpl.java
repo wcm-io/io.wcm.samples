@@ -28,7 +28,7 @@ import io.wcm.samples.app.config.MediaFormats;
 /**
  * Media format provider
  */
-@Component(immediate = true, service = MediaFormatProvider.class)
+@Component(service = MediaFormatProvider.class)
 public class MediaFormatProviderImpl extends AbstractMediaFormatProvider {
 
   /**

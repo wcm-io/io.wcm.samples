@@ -28,10 +28,16 @@ import java.io.IOException;
 
 import org.apache.sling.api.resource.PersistenceException;
 
+import io.wcm.caconfig.application.impl.ApplicationAdapterFactory;
+import io.wcm.caconfig.application.impl.ApplicationFinderImpl;
+import io.wcm.caconfig.application.impl.ApplicationImplementationPicker;
 import io.wcm.caconfig.application.spi.ApplicationProvider;
 import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.samples.app.config.impl.ApplicationProviderImpl;
+import io.wcm.samples.app.config.impl.LinkHandlerConfigImpl;
 import io.wcm.samples.app.config.impl.MediaFormatProviderImpl;
+import io.wcm.samples.app.config.impl.MediaHandlerConfigImpl;
+import io.wcm.samples.app.config.impl.UrlHandlerConfigImpl;
 import io.wcm.samples.app.util.AppTemplate;
 import io.wcm.testing.mock.aem.junit.AemContext;
 import io.wcm.testing.mock.aem.junit.AemContextBuilder;
@@ -65,11 +71,19 @@ public final class AppAemContext {
     @Override
     public void execute(AemContext context) throws PersistenceException, IOException {
 
+      // application provider
+      context.registerInjectActivateService(new ApplicationFinderImpl());
+      context.registerInjectActivateService(new ApplicationImplementationPicker());
+      context.registerInjectActivateService(new ApplicationAdapterFactory());
+      context.registerService(ApplicationProvider.class, new ApplicationProviderImpl());
+
       // context path strategy
       MockCAConfig.contextPathStrategyRootTemplate(context, AppTemplate.EDITORIAL_HOMEPAGE.getTemplatePath());
 
       // setup handler
-      context.registerService(ApplicationProvider.class, new ApplicationProviderImpl());
+      context.registerInjectActivateService(new UrlHandlerConfigImpl());
+      context.registerInjectActivateService(new MediaHandlerConfigImpl());
+      context.registerInjectActivateService(new LinkHandlerConfigImpl());
       context.registerService(MediaFormatProvider.class, new MediaFormatProviderImpl());
 
       // register sling models

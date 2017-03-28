@@ -28,8 +28,10 @@ import io.wcm.caconfig.application.spi.ApplicationProvider;
 
 /**
  * Application provider
+ * @deprecated Get rid of ApplicationProvider
  */
-@Component(immediate = true, service = ApplicationProvider.class)
+@Deprecated
+@Component(service = ApplicationProvider.class)
 public class ApplicationProviderImpl implements ApplicationProvider {
 
   /**
@@ -42,7 +44,7 @@ public class ApplicationProviderImpl implements ApplicationProvider {
    */
   public static final String APPLICATION_LABEL = "wcm.io Sample Website";
 
-  private static final Pattern PATH_PATTERN = Pattern.compile("^/content/(dam/)?wcm-io-samples(/.*)?$");
+  static final Pattern PATH_PATTERN = Pattern.compile("^/content/(dam/)?wcm-io-samples(/.*)?$");
 
   @Override
   public String getApplicationId() {

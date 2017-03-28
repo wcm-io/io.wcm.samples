@@ -19,46 +19,38 @@
  */
 package io.wcm.samples.app.config.impl;
 
+import static io.wcm.samples.app.config.impl.ApplicationProviderImpl.PATH_PATTERN;
+
 import org.apache.commons.lang3.StringUtils;
-import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.caconfig.resource.ConfigurationResourceResolver;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.OSGiService;
-import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 
-import io.wcm.caconfig.application.spi.annotations.Application;
 import io.wcm.handler.url.spi.UrlHandlerConfig;
-import io.wcm.handler.url.spi.helpers.AbstractUrlHandlerConfig;
 
 /**
  * URL handler configuration
  */
-@Model(adaptables = {
-    SlingHttpServletRequest.class, Resource.class
-}, adapters = UrlHandlerConfig.class)
-@Application(ApplicationProviderImpl.APPLICATION_ID)
-public class UrlHandlerConfigImpl extends AbstractUrlHandlerConfig {
+@Component(service = UrlHandlerConfig.class)
+public class UrlHandlerConfigImpl extends UrlHandlerConfig {
 
-  @SlingObject
-  private ResourceResolver resourceResolver;
-
-  @OSGiService
+  @Reference
   private ConfigurationResourceResolver configResolver;
 
   @Override
-  public int getSiteRootLevel(String contextPath) {
-    String siteRootpath = getSiteRootPath(contextPath);
+  public int getSiteRootLevel(String contextPath, ResourceResolver resolver) {
+    String siteRootpath = getSiteRootPath(contextPath, resolver);
     if (siteRootpath != null) {
       return getPageLevel(siteRootpath);
     }
     return 0;
   }
 
-  private String getSiteRootPath(String contextPath) {
+  private String getSiteRootPath(String contextPath, ResourceResolver resolver) {
     if (StringUtils.isNotEmpty(contextPath)) {
-      Resource resource = resourceResolver.getResource(contextPath);
+      Resource resource = resolver.getResource(contextPath);
       if (resource != null) {
         // assumption: inner-most context-aware configuration path is site root path
         return configResolver.getContextPath(resource);
@@ -69,6 +61,11 @@ public class UrlHandlerConfigImpl extends AbstractUrlHandlerConfig {
 
   private int getPageLevel(String configurationId) {
     return StringUtils.split(configurationId, "/").length - 1;
+  }
+
+  @Override
+  public boolean matches(Resource resource) {
+    return resource != null && PATH_PATTERN.matcher(resource.getPath()).matches();
   }
 
 }

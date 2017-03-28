@@ -20,7 +20,6 @@
 package io.wcm.samples.app.testcontext;
 
 import static io.wcm.testing.mock.wcmio.caconfig.ContextPlugins.WCMIO_CACONFIG;
-import static io.wcm.testing.mock.wcmio.caconfig.compat.ContextPlugins.WCMIO_CACONFIG_COMPAT;
 import static io.wcm.testing.mock.wcmio.handler.ContextPlugins.WCMIO_HANDLER;
 import static io.wcm.testing.mock.wcmio.sling.ContextPlugins.WCMIO_SLING;
 import static org.apache.sling.testing.mock.caconfig.ContextPlugins.CACONFIG;
@@ -30,14 +29,14 @@ import java.io.IOException;
 import org.apache.sling.api.resource.PersistenceException;
 
 import io.wcm.caconfig.application.spi.ApplicationProvider;
-import io.wcm.config.spi.ConfigurationFinderStrategy;
 import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.samples.app.config.impl.ApplicationProviderImpl;
-import io.wcm.samples.app.config.impl.ConfigurationFinderStrategyImpl;
 import io.wcm.samples.app.config.impl.MediaFormatProviderImpl;
+import io.wcm.samples.app.util.AppTemplate;
 import io.wcm.testing.mock.aem.junit.AemContext;
 import io.wcm.testing.mock.aem.junit.AemContextBuilder;
 import io.wcm.testing.mock.aem.junit.AemContextCallback;
+import io.wcm.testing.mock.wcmio.caconfig.MockCAConfig;
 
 /**
  * Sets up {@link AemContext} for unit tests in this application.
@@ -54,7 +53,7 @@ public final class AppAemContext {
   public static AemContext newAemContext() {
     return new AemContextBuilder()
         .plugin(CACONFIG)
-        .plugin(WCMIO_SLING, WCMIO_CACONFIG, WCMIO_CACONFIG_COMPAT, WCMIO_HANDLER)
+        .plugin(WCMIO_SLING, WCMIO_CACONFIG, WCMIO_HANDLER)
         .afterSetUp(SETUP_CALLBACK)
         .build();
   }
@@ -66,9 +65,11 @@ public final class AppAemContext {
     @Override
     public void execute(AemContext context) throws PersistenceException, IOException {
 
+      // context path strategy
+      MockCAConfig.contextPathStrategyRootTemplate(context, AppTemplate.EDITORIAL_HOMEPAGE.getTemplatePath());
+
       // setup handler
       context.registerService(ApplicationProvider.class, new ApplicationProviderImpl());
-      context.registerService(ConfigurationFinderStrategy.class, new ConfigurationFinderStrategyImpl());
       context.registerService(MediaFormatProvider.class, new MediaFormatProviderImpl());
 
       // register sling models

@@ -25,12 +25,19 @@
     org.apache.sling.commons.log.names=["io.wcm"]
     org.apache.sling.commons.log.pattern="{0,date,dd.MM.yyyy\ HH:mm:ss.SSS}\ *{4}*\ [{2}]\ {3}\ {5}"
   
-  # Configure wcm.io Configuration Persistence
-  io.wcm.config.core.persistence.impl.ToolsConfigPagePersistenceProvider
-    configPageTemplate="/apps/wcm-io-samples/handler-sample-app/templates/admin/configEditor"
-    structurePageTemplate="/apps/wcm-io-samples/handler-sample-app/templates/framework/structureElement"
-    enabled=B"true"
+  # Context path strategy
+  io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-wcmio-samples
+    templatePaths=["/apps/wcm-io-samples/sample-app/templates/content/homepage"]
+    minLevel=I"1"
+    maxLevel=I"5"
+    contextPathRegex="^/content(/.+)$"
+    configPathPatterns=["/conf$1","/content$1/tools/config/jcr:content"]
 
+  # Store configuration in tools/config pages
+  io.wcm.caconfig.extensions.persistence.impl.ToolsConfigPagePersistenceStrategy
+    enabled=B"true"
+    #configPageTemplate="/apps/wcm-io-samples/handler-sample-app/templates/admin/configEditor"
+    #structurePageTemplate="/apps/wcm-io-samples/handler-sample-app/templates/framework/structureElement"
 
 # Override site configuration
 {{#if configOverrides}}

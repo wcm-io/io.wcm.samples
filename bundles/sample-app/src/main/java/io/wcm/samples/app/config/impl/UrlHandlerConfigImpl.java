@@ -23,11 +23,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.caconfig.resource.ConfigurationResourceResolver;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 import io.wcm.caconfig.application.spi.annotations.Application;
-import io.wcm.config.api.Configuration;
 import io.wcm.handler.url.spi.UrlHandlerConfig;
 import io.wcm.handler.url.spi.helpers.AbstractUrlHandlerConfig;
 
@@ -43,6 +44,9 @@ public class UrlHandlerConfigImpl extends AbstractUrlHandlerConfig {
   @SlingObject
   private ResourceResolver resourceResolver;
 
+  @OSGiService
+  private ConfigurationResourceResolver configResolver;
+
   @Override
   public int getSiteRootLevel(String contextPath) {
     String siteRootpath = getSiteRootPath(contextPath);
@@ -56,11 +60,8 @@ public class UrlHandlerConfigImpl extends AbstractUrlHandlerConfig {
     if (StringUtils.isNotEmpty(contextPath)) {
       Resource resource = resourceResolver.getResource(contextPath);
       if (resource != null) {
-        Configuration configuration = resource.adaptTo(Configuration.class);
-        if (configuration != null) {
-          // assumption: configuration id = configuration context root path = site root path
-          return configuration.getConfigurationId();
-        }
+        // assumption: inner-most context-aware configuration path is site root path
+        return configResolver.getContextPath(resource);
       }
     }
     return null;

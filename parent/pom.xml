@@ -25,7 +25,7 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>1.1.6</version>
+    <version>1.1.7-SNAPSHOT</version>
     <relativePath />
   </parent>
 
@@ -38,6 +38,10 @@
   <description>Sample projects and applications to demonstrate and test wcm.io features.</description>
 
   <properties>
+    <!-- compiler settings -->
+    <build.compiler.source>1.8</build.compiler.source>
+    <build.compiler.target>1.8</build.compiler.target>
+
     <!-- Do not make baseline checks for sample applications -->
     <baseline.skip>true</baseline.skip>
   </properties>

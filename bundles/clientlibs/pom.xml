@@ -34,7 +34,7 @@
   <version>1.0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
-  <name>wcm.io Sample Application Clientlibs</name>
+  <name>Sample Application Clientlibs</name>
   <description>Sample application to demonstrate the usage of the wcm.io handler infrastructure and other wcm.io Features.</description>
 
   <build>

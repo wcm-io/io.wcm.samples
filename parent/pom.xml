@@ -124,6 +124,18 @@
       <plugins>
 
         <plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <configuration>
+            <instructions>
+              <Bundle-Category>wcm.io</Bundle-Category>
+              <Bundle-Vendor>wcm.io</Bundle-Vendor>
+              <Bundle-Name>wcm.io ${project.name}</Bundle-Name>
+            </instructions>
+          </configuration>
+        </plugin>
+
+        <plugin>
           <groupId>external.atlassian.jgitflow</groupId>
           <artifactId>jgitflow-maven-plugin</artifactId>
           <configuration>

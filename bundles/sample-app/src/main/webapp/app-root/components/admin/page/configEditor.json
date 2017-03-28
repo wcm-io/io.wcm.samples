@@ -1,4 +1,4 @@
 {
   "jcr:primaryType": "cq:Component",
-  "sling:resourceSuperType": "/apps/wcm-io/config/editor/components/page/editor"
+  "sling:resourceSuperType": "/apps/wcm-io/caconfig/editor/components/page/editor"
 }

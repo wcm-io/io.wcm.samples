@@ -106,6 +106,7 @@ public final class MediaFormats {
   public static final MediaFormat DOWNLOAD = create("download")
       .label("Download")
       .extensions("pdf", "zip", "ppt", "pptx", "doc", "docx")
+      .download(true)
       .build();
 
 }

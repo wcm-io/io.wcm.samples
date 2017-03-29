@@ -32,7 +32,6 @@ import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.samples.app.config.impl.LinkHandlerConfigImpl;
 import io.wcm.samples.app.config.impl.MediaFormatProviderImpl;
 import io.wcm.samples.app.config.impl.MediaHandlerConfigImpl;
-import io.wcm.samples.app.config.impl.UrlHandlerConfigImpl;
 import io.wcm.samples.app.util.AppTemplate;
 import io.wcm.testing.mock.aem.junit.AemContext;
 import io.wcm.testing.mock.aem.junit.AemContextBuilder;
@@ -70,7 +69,6 @@ public final class AppAemContext {
       MockCAConfig.contextPathStrategyRootTemplate(context, AppTemplate.EDITORIAL_HOMEPAGE.getTemplatePath());
 
       // setup handler
-      context.registerInjectActivateService(new UrlHandlerConfigImpl());
       context.registerInjectActivateService(new MediaHandlerConfigImpl());
       context.registerInjectActivateService(new LinkHandlerConfigImpl());
       context.registerService(MediaFormatProvider.class, new MediaFormatProviderImpl());

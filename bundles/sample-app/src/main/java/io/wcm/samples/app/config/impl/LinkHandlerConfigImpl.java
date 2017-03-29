@@ -36,7 +36,12 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
 
   @Override
   public boolean isValidLinkTarget(Page page) {
-    return !Template.is(page, AppTemplate.FRAMEWORK_STRUCTURE_ELEMENT);
+    return !Template.is(page, AppTemplate.ADMIN_STRUCTURE_ELEMENT);
+  }
+
+  @Override
+  public boolean isRedirect(Page page) {
+    return Template.is(page, AppTemplate.ADMIN_REDIRECT);
   }
 
   @Override

@@ -184,9 +184,9 @@
     "jcr:content":{
       "jcr:primaryType":"cq:PageContent",
       "jcr:title":"tools",
-      "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
+      "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
       "hideInNav":true,
-      "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/structureElement"
+      "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
     },
     "config":{
       "jcr:primaryType":"cq:Page",
@@ -211,8 +211,8 @@
       "jcr:content":{
         "jcr:primaryType":"cq:PageContent",
         "jcr:title":"navigation",
-        "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-        "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/structureElement"
+        "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+        "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
       },
       "imprint":{
         "jcr:primaryType":"cq:Page",
@@ -245,16 +245,16 @@
         "jcr:content":{
           "jcr:primaryType":"cq:PageContent",
           "jcr:title":"footernav",
-          "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-          "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/structureElement"
+          "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+          "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
         },
         "conference":{
           "jcr:primaryType":"cq:Page",
           "jcr:content":{
             "jcr:primaryType":"cq:PageContent",
             "jcr:title":"CONFERENCE",
-            "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-            "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/structureElement"
+            "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+            "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
           },
           "conference":{
             "jcr:primaryType":"cq:Page",
@@ -262,11 +262,11 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Conference",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkContentRef":"/content/wcm-io-samples/en/conference",
               "linkType":"internal",
-              "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/redirect"
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect"
             }
           },
           "schedule":{
@@ -275,11 +275,11 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Schedule",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkContentRef":"/content/wcm-io-samples/en/schedule",
               "linkType":"internal",
-              "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/redirect"
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect"
             }
           },
           "tickets":{
@@ -288,11 +288,11 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Tickets",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkContentRef":"/content/wcm-io-samples/en/tickets",
               "linkType":"internal",
-              "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/redirect"
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect"
             }
           }
         },
@@ -301,8 +301,8 @@
           "jcr:content":{
             "jcr:primaryType":"cq:PageContent",
             "jcr:title":"VENUE",
-            "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-            "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/structureElement"
+            "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+            "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
           },
           "venue":{
             "jcr:primaryType":"cq:Page",
@@ -310,11 +310,11 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Venue",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkContentRef":"/content/wcm-io-samples/en/venue",
               "linkType":"internal",
-              "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/redirect"
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect"
             }
           }
         },
@@ -323,8 +323,8 @@
           "jcr:content":{
             "jcr:primaryType":"cq:PageContent",
             "jcr:title":"ARCHIVE",
-            "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-            "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/structureElement"
+            "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+            "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
           },
           "handlerSample---2011":{
             "jcr:primaryType":"cq:Page",
@@ -332,10 +332,10 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Handler Sample 2011",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkType":"external",
-              "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/redirect",
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect",
               "linkExternalRef":"http://adapt.to/2011/"
             }
           },
@@ -345,10 +345,10 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Handler Sample 2012",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkType":"external",
-              "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/redirect",
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect",
               "linkExternalRef":"http://adapt.to/2012/"
             }
           }
@@ -388,7 +388,7 @@
           "sling:resourceType":"wcm-io-handler-sample-app/components/content/aside/asideTeaser",
           "links":{
             "jcr:primaryType":"nt:unstructured",
-            "sling:resourceType":"wcm-io-handler-sample-app/components/framework/parsys/linkListParsys",
+            "sling:resourceType":"wcm-io-handler-sample-app/components/admin/parsys/linkListParsys",
             "linkItem":{
               "jcr:primaryType":"nt:unstructured",
               "linkWindowTarget":"_self",
@@ -396,7 +396,7 @@
               "linkContentRef":"/content/wcm-io-samples/en/conference/call-for-papers",
               "linkMediaDownload":false,
               "linkType":"internal",
-              "sling:resourceType":"wcm-io-handler-sample-app/components/framework/item/linkItem",
+              "sling:resourceType":"wcm-io-handler-sample-app/components/admin/item/linkItem",
               "linkWindowFeatures":"default"
             }
           }
@@ -729,10 +729,10 @@
         "jcr:primaryType":"cq:PageContent",
         "jcr:title":"Handler Sample 2012",
         "linkWindowTarget":"_self",
-        "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+        "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
         "redirectStatus":"302",
         "linkType":"external",
-        "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/redirect",
+        "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect",
         "linkExternalRef":"http://adapt.to/2012/"
       }
     },
@@ -742,10 +742,10 @@
         "jcr:primaryType":"cq:PageContent",
         "jcr:title":"Handler Sample 2011",
         "linkWindowTarget":"_self",
-        "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+        "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
         "redirectStatus":"302",
         "linkType":"external",
-        "sling:resourceType":"wcm-io-samples/sample-app/components/framework/page/redirect",
+        "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect",
         "linkExternalRef":"http://adapt.to/2011/"
       }
     }

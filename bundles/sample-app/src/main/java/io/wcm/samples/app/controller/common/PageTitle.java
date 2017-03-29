@@ -58,7 +58,7 @@ public class PageTitle {
     if (siteRoot.isRootPage(page)) {
       return StringUtils.defaultString(page.getPageTitle(), page.getTitle());
     }
-    else if (Template.is(page, AppTemplate.FRAMEWORK_STRUCTURE_ELEMENT)) {
+    else if (Template.is(page, AppTemplate.ADMIN_STRUCTURE_ELEMENT)) {
       return getRecursivePageTitle(page.getParent());
     }
     else {

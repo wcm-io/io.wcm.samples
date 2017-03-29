@@ -63,7 +63,7 @@ public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
   @Override
   public boolean matches(Resource resource) {
-    return resource != null && PATH_PATTERN.matcher(resource.getPath()).matches();
+    return PATH_PATTERN.matcher(resource.getPath()).matches();
   }
 
 }

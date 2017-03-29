@@ -48,7 +48,7 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
 
   @Override
   public boolean matches(Resource resource) {
-    return resource != null && PATH_PATTERN.matcher(resource.getPath()).matches();
+    return PATH_PATTERN.matcher(resource.getPath()).matches();
   }
 
 }

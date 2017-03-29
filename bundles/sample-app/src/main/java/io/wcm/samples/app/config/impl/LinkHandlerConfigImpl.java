@@ -40,11 +40,6 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
   }
 
   @Override
-  public boolean isRedirect(Page page) {
-    return Template.is(page, AppTemplate.FRAMEWORK_REDIRECT);
-  }
-
-  @Override
   public boolean matches(Resource resource) {
     return PathMatcher.matches(resource);
   }

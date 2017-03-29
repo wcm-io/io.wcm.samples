@@ -41,7 +41,7 @@
           "showhidetargetvalue": "internal",
           "items": {
             "linkContentRef": {
-              "sling:resourceType": "/apps/wcm-io/wcm/ui/granite/components/form/configScopePathBrowser",
+              "sling:resourceType": "wcm-io/wcm/ui/granite/components/form/configScopePathBrowser",
               "name": "./linkContentRef",
               "fieldLabel": "Internal page",
               "fieldDescription": "Link to target page in CMS (same site)"
@@ -74,7 +74,7 @@
               "rootPath": "/content/dam/wcm-io-samples"
             },
             "linkMediaDownload": {
-              "sling:resourceType": "/apps/wcm-io/wcm/ui/granite/components/form/checkbox",
+              "sling:resourceType": "wcm-io/wcm/ui/granite/components/form/checkbox",
               "name": "./linkMediaDownload",
               "text": "Download",
               "value": "true",

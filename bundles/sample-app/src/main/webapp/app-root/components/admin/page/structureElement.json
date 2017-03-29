@@ -1,4 +1,4 @@
 {
   "jcr:primaryType": "cq:Component",
-  "sling:resourceSuperType": "/apps/wcm-io/wcm/commons/components/page/structureElement"
+  "sling:resourceSuperType": "wcm-io/wcm/commons/components/page/structureElement"
 }

@@ -4,7 +4,7 @@
    * Default Page properties dialog
    */
   "jcr:primaryType": "cq:Component",
-  "sling:resourceSuperType": "/libs/wcm/foundation/components/page",
+  "sling:resourceSuperType": "wcm/foundation/components/page",
 
   /*
    * Global definition of item sub-components for components
@@ -17,52 +17,52 @@
         "pattern": "^jcr:content/.*$",
         "parentAncestorLevel": 2,
         "allowedParents": [
-        "/apps/wcm-io-samples/sample-app/components/content/stage/stageheader"
+          "wcm-io-samples/sample-app/components/content/stage/stageheader"
         ],
         "allowedChildren": [
-        "/apps/wcm-io-samples/sample-app/components/content/stage/stageheaderLinkItem"
+          "wcm-io-samples/sample-app/components/content/stage/stageheaderLinkItem"
         ]
       },
       "teaserbar": {
         "allowedChildren": [
-          "/apps/wcm-io-samples/sample-app/components/content/teaserbar/teaserbarItem"
+          "wcm-io-samples/sample-app/components/content/teaserbar/teaserbarItem"
         ]
       },
       "aside": {
         "allowedChildren": [
-          "/apps/wcm-io-samples/sample-app/components/content/aside/asideTeaser",
-          "/apps/wcm-io-samples/sample-app/components/content/aside/asideSponsorTeaser",
-          "/apps/wcm-io-samples/sample-app/components/content/aside/asideSocialTeaser"
+          "wcm-io-samples/sample-app/components/content/aside/asideTeaser",
+          "wcm-io-samples/sample-app/components/content/aside/asideSponsorTeaser",
+          "wcm-io-samples/sample-app/components/content/aside/asideSocialTeaser"
         ]
       },
       "aside_teaserLinks": {
         "pattern": "^jcr:content/.*$",
         "parentAncestorLevel": 2,
         "allowedParents": [
-        "/apps/wcm-io-samples/sample-app/components/content/aside/asideTeaser"
+          "wcm-io-samples/sample-app/components/content/aside/asideTeaser"
         ],
         "allowedChildren": [
-        "/apps/wcm-io-samples/sample-app/components/framework/item/linkItem"
+          "wcm-io-samples/sample-app/components/framework/item/linkItem"
         ]
       },
       "aside_SponsorTeaser": {
         "pattern": "^jcr:content/.*$",
         "parentAncestorLevel": 2,
         "allowedParents": [
-        "/apps/wcm-io-samples/sample-app/components/content/aside/asideSponsorTeaser"
+          "wcm-io-samples/sample-app/components/content/aside/asideSponsorTeaser"
         ],
         "allowedChildren": [
-        "/apps/wcm-io-samples/sample-app/components/content/aside/asideSponsorTeaserItem"
+          "wcm-io-samples/sample-app/components/content/aside/asideSponsorTeaserItem"
         ]
       },
       "aside_SocialTeaser": {
         "pattern": "^jcr:content/.*$",
         "parentAncestorLevel": 2,
         "allowedParents": [
-        "/apps/wcm-io-samples/sample-app/components/content/aside/asideSocialTeaser"
+          "wcm-io-samples/sample-app/components/content/aside/asideSocialTeaser"
         ],
         "allowedChildren": [
-        "/apps/wcm-io-samples/sample-app/components/content/aside/asideSocialTeaserItem"
+          "wcm-io-samples/sample-app/components/content/aside/asideSocialTeaserItem"
         ]
       }
     }

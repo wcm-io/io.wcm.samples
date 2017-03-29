@@ -19,23 +19,28 @@
  */
 package io.wcm.samples.app.config.impl;
 
+import org.apache.sling.api.resource.Resource;
 import org.osgi.service.component.annotations.Component;
 
 import io.wcm.handler.media.spi.MediaFormatProvider;
-import io.wcm.handler.media.spi.helpers.AbstractMediaFormatProvider;
 import io.wcm.samples.app.config.MediaFormats;
 
 /**
  * Media format provider
  */
 @Component(service = MediaFormatProvider.class)
-public class MediaFormatProviderImpl extends AbstractMediaFormatProvider {
+public class MediaFormatProviderImpl extends MediaFormatProvider {
 
   /**
    * Constructor
    */
   public MediaFormatProviderImpl() {
     super(MediaFormats.class);
+  }
+
+  @Override
+  public boolean matches(Resource resource) {
+    return PathMatcher.matches(resource);
   }
 
 }

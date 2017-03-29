@@ -19,8 +19,6 @@
  */
 package io.wcm.samples.app.config.impl;
 
-import static io.wcm.samples.app.config.impl.ApplicationProviderImpl.PATH_PATTERN;
-
 import java.util.List;
 import java.util.Set;
 
@@ -63,7 +61,7 @@ public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
   @Override
   public boolean matches(Resource resource) {
-    return PATH_PATTERN.matcher(resource.getPath()).matches();
+    return PathMatcher.matches(resource);
   }
 
 }

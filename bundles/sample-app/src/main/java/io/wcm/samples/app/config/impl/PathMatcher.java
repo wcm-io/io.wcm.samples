@@ -19,34 +19,24 @@
  */
 package io.wcm.samples.app.config.impl;
 
+import java.util.regex.Pattern;
+
 import org.apache.sling.api.resource.Resource;
-import org.osgi.service.component.annotations.Component;
 
-import com.day.cq.wcm.api.Page;
+final class PathMatcher {
 
-import io.wcm.handler.link.spi.LinkHandlerConfig;
-import io.wcm.samples.app.util.AppTemplate;
-import io.wcm.wcm.commons.util.Template;
+  private static final Pattern PATH_PATTERN = Pattern.compile("^/content/(dam/)?wcm-io-samples(/.*)?$");
 
-/**
- * Link handler configuration
- */
-@Component(service = LinkHandlerConfig.class)
-public class LinkHandlerConfigImpl extends LinkHandlerConfig {
-
-  @Override
-  public boolean isValidLinkTarget(Page page) {
-    return !Template.is(page, AppTemplate.FRAMEWORK_STRUCTURE_ELEMENT);
+  private PathMatcher() {
+    // constants only
   }
 
-  @Override
-  public boolean isRedirect(Page page) {
-    return Template.is(page, AppTemplate.FRAMEWORK_REDIRECT);
-  }
-
-  @Override
-  public boolean matches(Resource resource) {
-    return PathMatcher.matches(resource);
+  /**
+   * @param resource Context resource
+   * @return true if path matches
+   */
+  public static boolean matches(Resource resource) {
+    return resource != null && PATH_PATTERN.matcher(resource.getPath()).matches();
   }
 
 }

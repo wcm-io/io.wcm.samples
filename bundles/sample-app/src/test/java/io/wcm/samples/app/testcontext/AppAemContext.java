@@ -28,12 +28,7 @@ import java.io.IOException;
 
 import org.apache.sling.api.resource.PersistenceException;
 
-import io.wcm.caconfig.application.impl.ApplicationAdapterFactory;
-import io.wcm.caconfig.application.impl.ApplicationFinderImpl;
-import io.wcm.caconfig.application.impl.ApplicationImplementationPicker;
-import io.wcm.caconfig.application.spi.ApplicationProvider;
 import io.wcm.handler.media.spi.MediaFormatProvider;
-import io.wcm.samples.app.config.impl.ApplicationProviderImpl;
 import io.wcm.samples.app.config.impl.LinkHandlerConfigImpl;
 import io.wcm.samples.app.config.impl.MediaFormatProviderImpl;
 import io.wcm.samples.app.config.impl.MediaHandlerConfigImpl;
@@ -70,12 +65,6 @@ public final class AppAemContext {
   private static final AemContextCallback SETUP_CALLBACK = new AemContextCallback() {
     @Override
     public void execute(AemContext context) throws PersistenceException, IOException {
-
-      // application provider
-      context.registerInjectActivateService(new ApplicationFinderImpl());
-      context.registerInjectActivateService(new ApplicationImplementationPicker());
-      context.registerInjectActivateService(new ApplicationAdapterFactory());
-      context.registerService(ApplicationProvider.class, new ApplicationProviderImpl());
 
       // context path strategy
       MockCAConfig.contextPathStrategyRootTemplate(context, AppTemplate.EDITORIAL_HOMEPAGE.getTemplatePath());

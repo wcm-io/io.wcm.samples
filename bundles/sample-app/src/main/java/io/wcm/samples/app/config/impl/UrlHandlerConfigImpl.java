@@ -19,8 +19,6 @@
  */
 package io.wcm.samples.app.config.impl;
 
-import static io.wcm.samples.app.config.impl.ApplicationProviderImpl.PATH_PATTERN;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -65,7 +63,7 @@ public class UrlHandlerConfigImpl extends UrlHandlerConfig {
 
   @Override
   public boolean matches(Resource resource) {
-    return PATH_PATTERN.matcher(resource.getPath()).matches();
+    return PathMatcher.matches(resource);
   }
 
 }

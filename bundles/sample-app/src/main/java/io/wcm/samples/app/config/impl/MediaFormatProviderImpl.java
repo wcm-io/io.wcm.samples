@@ -23,14 +23,11 @@ import org.osgi.service.component.annotations.Component;
 
 import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.samples.app.config.MediaFormats;
-import io.wcm.sling.commons.caservice.ContextAwareService;
 
 /**
- * Media format provider
+ * Media format provider.
  */
-@Component(service = MediaFormatProvider.class, property = {
-    ContextAwareService.PROPERTY_CONTEXT_PATH_PATTERN + "=" + AppPathContext.PATH_PATTERN
-})
+@Component(service = MediaFormatProvider.class)
 public class MediaFormatProviderImpl extends MediaFormatProvider {
 
   /**

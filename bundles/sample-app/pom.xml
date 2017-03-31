@@ -215,6 +215,9 @@
               com.day.cq.commons;version="[5,7)",
               *
             </Import-Package>
+            
+            <!-- All wcm.io Handler SPI implementation only get active for the resource paths of this application -->
+            <wcmio-CAService-ContextPathRegex>^/content/(dam/)?wcm-io-samples(/.*)?$</wcmio-CAService-ContextPathRegex>
 
           </instructions>
         </configuration>

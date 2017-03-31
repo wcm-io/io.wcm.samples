@@ -29,14 +29,11 @@ import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
 import io.wcm.handler.media.spi.MediaHandlerConfig;
 import io.wcm.handler.media.spi.MediaMarkupBuilder;
 import io.wcm.samples.app.handler.ResponsiveImageMediaMarkupBuilder;
-import io.wcm.sling.commons.caservice.ContextAwareService;
 
 /**
  * Media handler configuration
  */
-@Component(service = MediaHandlerConfig.class, property = {
-    ContextAwareService.PROPERTY_CONTEXT_PATH_PATTERN + "=" + AppPathContext.PATH_PATTERN
-})
+@Component(service = MediaHandlerConfig.class)
 public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
   private static final List<Class<? extends MediaMarkupBuilder>> MEDIA_MARKUP_BUILDERS = ImmutableList.<Class<? extends MediaMarkupBuilder>>of(

@@ -25,15 +25,12 @@ import com.day.cq.wcm.api.Page;
 
 import io.wcm.handler.link.spi.LinkHandlerConfig;
 import io.wcm.samples.app.util.AppTemplate;
-import io.wcm.sling.commons.caservice.ContextAwareService;
 import io.wcm.wcm.commons.util.Template;
 
 /**
- * Link handler configuration
+ * Link handler configuration.
  */
-@Component(service = LinkHandlerConfig.class, property = {
-    ContextAwareService.PROPERTY_CONTEXT_PATH_PATTERN + "=" + AppPathContext.PATH_PATTERN
-})
+@Component(service = LinkHandlerConfig.class)
 public class LinkHandlerConfigImpl extends LinkHandlerConfig {
 
   @Override

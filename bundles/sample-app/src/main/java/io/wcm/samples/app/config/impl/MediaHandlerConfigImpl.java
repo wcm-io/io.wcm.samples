@@ -20,36 +20,22 @@
 package io.wcm.samples.app.config.impl;
 
 import java.util.List;
-import java.util.Set;
 
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Model;
+import org.osgi.service.component.annotations.Component;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
 
-import io.wcm.config.spi.annotations.Application;
-import io.wcm.handler.media.format.MediaFormat;
 import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
 import io.wcm.handler.media.spi.MediaHandlerConfig;
 import io.wcm.handler.media.spi.MediaMarkupBuilder;
-import io.wcm.handler.media.spi.helpers.AbstractMediaHandlerConfig;
-import io.wcm.samples.app.config.MediaFormats;
 import io.wcm.samples.app.handler.ResponsiveImageMediaMarkupBuilder;
 
 /**
  * Media handler configuration
  */
-@Model(adaptables = {
-    SlingHttpServletRequest.class, Resource.class
-}, adapters = MediaHandlerConfig.class)
-@Application(ApplicationProviderImpl.APPLICATION_ID)
-public class MediaHandlerConfigImpl extends AbstractMediaHandlerConfig {
+@Component(service = MediaHandlerConfig.class)
+public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
-  private static final Set<MediaFormat> DOWNLOAD_MEDIA_FORMATS = ImmutableSet.of(
-      MediaFormats.DOWNLOAD
-      );
   private static final List<Class<? extends MediaMarkupBuilder>> MEDIA_MARKUP_BUILDERS = ImmutableList.<Class<? extends MediaMarkupBuilder>>of(
       ResponsiveImageMediaMarkupBuilder.class,
       DummyImageMediaMarkupBuilder.class
@@ -58,11 +44,6 @@ public class MediaHandlerConfigImpl extends AbstractMediaHandlerConfig {
   @Override
   public List<Class<? extends MediaMarkupBuilder>> getMarkupBuilders() {
     return MEDIA_MARKUP_BUILDERS;
-  }
-
-  @Override
-  public Set<MediaFormat> getDownloadMediaFormats() {
-    return DOWNLOAD_MEDIA_FORMATS;
   }
 
 }

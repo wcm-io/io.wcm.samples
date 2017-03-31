@@ -37,7 +37,7 @@ public class FooterNavPageLink {
   private final NavigationPageItem root;
 
   /**
-   * @param navigationManager
+   * @param navigationManager Navigation manager
    */
   @Inject
   public FooterNavPageLink(@Self NavigationManager navigationManager) {

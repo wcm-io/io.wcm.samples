@@ -25,7 +25,7 @@
   
   /* Apply only to templates from this application */
   "resourceTypes": [
-    "/apps/wcm-io-samples/sample-app/components/global/page"
+    "wcm-io-samples/sample-app/components/global/page"
   ],
   
   /* Configure HTML elements/attributes to rewrite */

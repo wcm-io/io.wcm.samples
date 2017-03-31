@@ -5,7 +5,7 @@
     "jcr:title":"en",
     "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/homepage",
     "pageTitle":"Handler Sample 2014",
-    "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/homepage",
+    "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/homepage",
     "navTitle":"HOME",
     "teaserbar":{
       "jcr:primaryType":"nt:unstructured",
@@ -184,9 +184,9 @@
     "jcr:content":{
       "jcr:primaryType":"cq:PageContent",
       "jcr:title":"tools",
-      "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
+      "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
       "hideInNav":true,
-      "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/structureElement"
+      "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
     },
     "config":{
       "jcr:primaryType":"cq:Page",
@@ -197,7 +197,7 @@
         "xmlDtdValidation":true,
         "xmlSchemaValidation":true,
         "xmlSyntaxCheck":true,
-        "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/admin/page/textResource",
+        "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/textResource",
         "outputPublish":false,
         "data":{
           "jcr:primaryType":"nt:resource",
@@ -211,8 +211,8 @@
       "jcr:content":{
         "jcr:primaryType":"cq:PageContent",
         "jcr:title":"navigation",
-        "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-        "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/structureElement"
+        "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+        "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
       },
       "imprint":{
         "jcr:primaryType":"cq:Page",
@@ -221,7 +221,7 @@
           "jcr:title":"Imprint",
           "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/content",
           "hideInNav":false,
-          "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/content",
+          "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/content",
           "navTitle":"Imprint",
           "content":{
             "jcr:primaryType":"nt:unstructured",
@@ -245,16 +245,16 @@
         "jcr:content":{
           "jcr:primaryType":"cq:PageContent",
           "jcr:title":"footernav",
-          "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-          "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/structureElement"
+          "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+          "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
         },
         "conference":{
           "jcr:primaryType":"cq:Page",
           "jcr:content":{
             "jcr:primaryType":"cq:PageContent",
             "jcr:title":"CONFERENCE",
-            "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-            "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/structureElement"
+            "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+            "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
           },
           "conference":{
             "jcr:primaryType":"cq:Page",
@@ -262,11 +262,11 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Conference",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkContentRef":"/content/wcm-io-samples/en/conference",
               "linkType":"internal",
-              "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/redirect"
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect"
             }
           },
           "schedule":{
@@ -275,11 +275,11 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Schedule",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkContentRef":"/content/wcm-io-samples/en/schedule",
               "linkType":"internal",
-              "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/redirect"
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect"
             }
           },
           "tickets":{
@@ -288,11 +288,11 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Tickets",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkContentRef":"/content/wcm-io-samples/en/tickets",
               "linkType":"internal",
-              "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/redirect"
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect"
             }
           }
         },
@@ -301,8 +301,8 @@
           "jcr:content":{
             "jcr:primaryType":"cq:PageContent",
             "jcr:title":"VENUE",
-            "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-            "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/structureElement"
+            "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+            "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
           },
           "venue":{
             "jcr:primaryType":"cq:Page",
@@ -310,11 +310,11 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Venue",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkContentRef":"/content/wcm-io-samples/en/venue",
               "linkType":"internal",
-              "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/redirect"
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect"
             }
           }
         },
@@ -323,8 +323,8 @@
           "jcr:content":{
             "jcr:primaryType":"cq:PageContent",
             "jcr:title":"ARCHIVE",
-            "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/structureElement",
-            "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/structureElement"
+            "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/structureElement",
+            "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/structureElement"
           },
           "handlerSample---2011":{
             "jcr:primaryType":"cq:Page",
@@ -332,10 +332,10 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Handler Sample 2011",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkType":"external",
-              "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/redirect",
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect",
               "linkExternalRef":"http://adapt.to/2011/"
             }
           },
@@ -345,10 +345,10 @@
               "jcr:primaryType":"cq:PageContent",
               "jcr:title":"Handler Sample 2012",
               "linkWindowTarget":"_self",
-              "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+              "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
               "redirectStatus":"302",
               "linkType":"external",
-              "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/redirect",
+              "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect",
               "linkExternalRef":"http://adapt.to/2012/"
             }
           }
@@ -362,7 +362,7 @@
       "jcr:primaryType":"cq:PageContent",
       "jcr:title":"Conference",
       "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/content",
-      "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/content",
+      "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/content",
       "navTitle":"CONFERENCE",
       "content":{
         "jcr:primaryType":"nt:unstructured",
@@ -388,7 +388,7 @@
           "sling:resourceType":"wcm-io-handler-sample-app/components/content/aside/asideTeaser",
           "links":{
             "jcr:primaryType":"nt:unstructured",
-            "sling:resourceType":"wcm-io-handler-sample-app/components/framework/parsys/linkListParsys",
+            "sling:resourceType":"wcm-io-handler-sample-app/components/admin/parsys/linkListParsys",
             "linkItem":{
               "jcr:primaryType":"nt:unstructured",
               "linkWindowTarget":"_self",
@@ -396,7 +396,7 @@
               "linkContentRef":"/content/wcm-io-samples/en/conference/call-for-papers",
               "linkMediaDownload":false,
               "linkType":"internal",
-              "sling:resourceType":"wcm-io-handler-sample-app/components/framework/item/linkItem",
+              "sling:resourceType":"wcm-io-handler-sample-app/components/admin/item/linkItem",
               "linkWindowFeatures":"default"
             }
           }
@@ -438,7 +438,7 @@
         "jcr:primaryType":"cq:PageContent",
         "jcr:title":"Call for Papers",
         "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/content",
-        "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/content",
+        "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/content",
         "content":{
           "jcr:primaryType":"nt:unstructured",
           "sling:resourceType":"wcm-io/wcm/parsys/components/parsys",
@@ -472,7 +472,7 @@
       "jcr:primaryType":"cq:PageContent",
       "jcr:title":"Schedule",
       "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/schedule",
-      "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/schedule",
+      "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/schedule",
       "navTitle":"SCHEDULE",
       "contentBeforeSchedule":{
         "jcr:primaryType":"nt:unstructured",
@@ -596,7 +596,7 @@
         "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/talk",
         "jcr:description":"This talk is an introduction to Oak for users and developers. It covers the basic architecture of Oak and the implications for applications: what developers need to know and why they might want to adjust their application code. Also, different micro kernels and their preferred usage scenarios are discussed.",
         "hideInNav":"true",
-        "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/talk"
+        "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/talk"
       }
     },
     "sling-ide-tooling":{
@@ -610,7 +610,7 @@
         "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/talk",
         "jcr:description":"This talk contains an overview of the Sling IDE tooling which has been under development under the Apache Sling project for the last year. It will focus on how a developer can connect his/her IDE(*) to an Apache Sling installation and develop against it without the need to use other tools. We will also provide an intro to the technical foundations of the IDE tooling, for those interested in contributing.",
         "hideInNav":"true",
-        "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/talk",
+        "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/talk",
         "content":{
           "jcr:primaryType":"nt:unstructured",
           "sling:resourceType":"wcm-io/wcm/parsys/components/parsys",
@@ -634,7 +634,7 @@
         "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/talk",
         "jcr:description":"This session will introduce how Apache Solr is used in Apache Jackrabbit Oak to scale indexing and query operations showing how indexing works generically in Oak and specifically when it makes more sense to use the Solr indexer.\r\n\r\nStarting from the goals and ideas presented last years it will show where we are now and where we're heading to in terms of generic searching in Oak and specifically for Solr indexer.\r\n\r\nA short demo will be given to show how it behaves on a running Oak instance.",
         "hideInNav":"true",
-        "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/talk"
+        "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/talk"
       }
     }
   },
@@ -644,7 +644,7 @@
       "jcr:primaryType":"cq:PageContent",
       "jcr:title":"Tickets",
       "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/tickets",
-      "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/tickets",
+      "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/tickets",
       "navTitle":"TICKETS",
       "content":{
         "jcr:primaryType":"nt:unstructured",
@@ -667,7 +667,7 @@
       "jcr:primaryType":"cq:PageContent",
       "jcr:title":"Venue",
       "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/venue",
-      "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/venue",
+      "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/venue",
       "navTitle":"VENUE",
       "content":{
         "jcr:primaryType":"nt:unstructured",
@@ -702,7 +702,7 @@
       "jcr:primaryType":"cq:PageContent",
       "jcr:title":"Archive",
       "cq:template":"/apps/wcm-io-samples/sample-app/templates/content/content",
-      "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/content/page/content",
+      "sling:resourceType":"wcm-io-samples/sample-app/components/content/page/content",
       "navTitle":"ARCHIVE",
       "content":{
         "jcr:primaryType":"nt:unstructured",
@@ -729,10 +729,10 @@
         "jcr:primaryType":"cq:PageContent",
         "jcr:title":"Handler Sample 2012",
         "linkWindowTarget":"_self",
-        "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+        "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
         "redirectStatus":"302",
         "linkType":"external",
-        "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/redirect",
+        "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect",
         "linkExternalRef":"http://adapt.to/2012/"
       }
     },
@@ -742,10 +742,10 @@
         "jcr:primaryType":"cq:PageContent",
         "jcr:title":"Handler Sample 2011",
         "linkWindowTarget":"_self",
-        "cq:template":"/apps/wcm-io-samples/sample-app/templates/framework/redirect",
+        "cq:template":"/apps/wcm-io-samples/sample-app/templates/admin/redirect",
         "redirectStatus":"302",
         "linkType":"external",
-        "sling:resourceType":"/apps/wcm-io-samples/sample-app/components/framework/page/redirect",
+        "sling:resourceType":"wcm-io-samples/sample-app/components/admin/page/redirect",
         "linkExternalRef":"http://adapt.to/2011/"
       }
     }

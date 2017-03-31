@@ -39,7 +39,7 @@ public class MainNavPageLink {
   private final NavigationPageItem root;
 
   /**
-   * @param navigationManager
+   * @param navigationManager Navigation manager
    * @param levels Number of navigation hierarchy levels
    */
   @Inject

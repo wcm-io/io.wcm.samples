@@ -5,12 +5,6 @@
       cq:template="/apps/wcm-io-samples/sample-app/templates/admin/configEditor"
       jcr:primaryType="cq:PageContent"
       jcr:title="config"
-      sling:resourceType="/apps/wcm-io-samples/sample-app/components/admin/page/configEditor">
-    <config
-        jcr:primaryType="nt:unstructured"
-        amiandoFallbackUrl="http://www.amiando.com/adaptto2013.html"
-        amiandoIFrameName="_amiandoIFrame1954269sHzFYKQC"
-        amiandoIFrameUrl="https://de.amiando.com/DMWRREP.html?viewType=iframe&amp;distributionChannel=CHANNEL_IFRAME&amp;panelId=1954269&amp;useDefaults=false&amp;resizeIFrame=true"
-        amiandoScriptUrl="https://de.amiando.com/resources/js/amiandoExport.js" />
+      sling:resourceType="wcm-io-samples/sample-app/components/admin/page/configEditor">
   </jcr:content>
 </jcr:root>

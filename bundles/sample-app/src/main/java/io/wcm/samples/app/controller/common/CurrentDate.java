@@ -30,20 +30,20 @@ import org.apache.sling.models.annotations.Model;
 @Model(adaptables = SlingHttpServletRequest.class)
 public class CurrentDate {
 
-  private int mYear;
+  private int year;
 
   /**
    * Constructor
    */
   public CurrentDate() {
-    mYear = Calendar.getInstance().get(Calendar.YEAR);
+    year = Calendar.getInstance().get(Calendar.YEAR);
   }
 
   /**
    * @return Current year
    */
   public int getYear() {
-    return mYear;
+    return year;
   }
 
 }

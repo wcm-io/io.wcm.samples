@@ -2,7 +2,7 @@
  * #%L
  * wcm.io
  * %%
- * Copyright (C) 2014 wcm.io
+ * Copyright (C) 2017 wcm.io
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,24 +19,15 @@
  */
 package io.wcm.samples.app.config.impl;
 
-import java.util.regex.Pattern;
-
-import org.apache.sling.api.resource.Resource;
-
-final class PathMatcher {
-
-  private static final Pattern PATH_PATTERN = Pattern.compile("^/content/(dam/)?wcm-io-samples(/.*)?$");
-
-  private PathMatcher() {
-    // constants only
-  }
+final class AppPathContext {
 
   /**
-   * @param resource Context resource
-   * @return true if path matches
+   * All pages and resources of this application are matched by this regex.
    */
-  public static boolean matches(Resource resource) {
-    return resource != null && PATH_PATTERN.matcher(resource.getPath()).matches();
+  public static final String PATH_PATTERN = "^/content/(dam/)?wcm-io-samples(/.*)?$";
+
+  private AppPathContext() {
+    // constants only
   }
 
 }

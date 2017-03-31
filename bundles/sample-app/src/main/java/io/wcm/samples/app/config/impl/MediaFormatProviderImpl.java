@@ -19,16 +19,18 @@
  */
 package io.wcm.samples.app.config.impl;
 
-import org.apache.sling.api.resource.Resource;
 import org.osgi.service.component.annotations.Component;
 
 import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.samples.app.config.MediaFormats;
+import io.wcm.sling.commons.caservice.ContextAwareService;
 
 /**
  * Media format provider
  */
-@Component(service = MediaFormatProvider.class)
+@Component(service = MediaFormatProvider.class, property = {
+    ContextAwareService.PROPERTY_CONTEXT_PATH_PATTERN + "=" + AppPathContext.PATH_PATTERN
+})
 public class MediaFormatProviderImpl extends MediaFormatProvider {
 
   /**
@@ -36,11 +38,6 @@ public class MediaFormatProviderImpl extends MediaFormatProvider {
    */
   public MediaFormatProviderImpl() {
     super(MediaFormats.class);
-  }
-
-  @Override
-  public boolean matches(Resource resource) {
-    return PathMatcher.matches(resource);
   }
 
 }

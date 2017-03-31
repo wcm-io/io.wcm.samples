@@ -19,19 +19,21 @@
  */
 package io.wcm.samples.app.config.impl;
 
-import org.apache.sling.api.resource.Resource;
 import org.osgi.service.component.annotations.Component;
 
 import com.day.cq.wcm.api.Page;
 
 import io.wcm.handler.link.spi.LinkHandlerConfig;
 import io.wcm.samples.app.util.AppTemplate;
+import io.wcm.sling.commons.caservice.ContextAwareService;
 import io.wcm.wcm.commons.util.Template;
 
 /**
  * Link handler configuration
  */
-@Component(service = LinkHandlerConfig.class)
+@Component(service = LinkHandlerConfig.class, property = {
+    ContextAwareService.PROPERTY_CONTEXT_PATH_PATTERN + "=" + AppPathContext.PATH_PATTERN
+})
 public class LinkHandlerConfigImpl extends LinkHandlerConfig {
 
   @Override
@@ -42,11 +44,6 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
   @Override
   public boolean isRedirect(Page page) {
     return Template.is(page, AppTemplate.ADMIN_REDIRECT);
-  }
-
-  @Override
-  public boolean matches(Resource resource) {
-    return PathMatcher.matches(resource);
   }
 
 }

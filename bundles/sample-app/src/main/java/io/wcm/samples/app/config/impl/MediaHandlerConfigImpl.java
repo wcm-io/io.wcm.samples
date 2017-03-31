@@ -21,7 +21,6 @@ package io.wcm.samples.app.config.impl;
 
 import java.util.List;
 
-import org.apache.sling.api.resource.Resource;
 import org.osgi.service.component.annotations.Component;
 
 import com.google.common.collect.ImmutableList;
@@ -30,11 +29,14 @@ import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
 import io.wcm.handler.media.spi.MediaHandlerConfig;
 import io.wcm.handler.media.spi.MediaMarkupBuilder;
 import io.wcm.samples.app.handler.ResponsiveImageMediaMarkupBuilder;
+import io.wcm.sling.commons.caservice.ContextAwareService;
 
 /**
  * Media handler configuration
  */
-@Component(service = MediaHandlerConfig.class)
+@Component(service = MediaHandlerConfig.class, property = {
+    ContextAwareService.PROPERTY_CONTEXT_PATH_PATTERN + "=" + AppPathContext.PATH_PATTERN
+})
 public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
   private static final List<Class<? extends MediaMarkupBuilder>> MEDIA_MARKUP_BUILDERS = ImmutableList.<Class<? extends MediaMarkupBuilder>>of(
@@ -45,11 +47,6 @@ public class MediaHandlerConfigImpl extends MediaHandlerConfig {
   @Override
   public List<Class<? extends MediaMarkupBuilder>> getMarkupBuilders() {
     return MEDIA_MARKUP_BUILDERS;
-  }
-
-  @Override
-  public boolean matches(Resource resource) {
-    return PathMatcher.matches(resource);
   }
 
 }

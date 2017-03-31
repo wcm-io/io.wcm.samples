@@ -217,7 +217,7 @@
             </Import-Package>
             
             <!-- All wcm.io Handler SPI implementation only get active for the resource paths of this application -->
-            <wcmio-CAService-ContextPathRegex>^/content/(dam/)?wcm-io-samples(/.*)?$</wcmio-CAService-ContextPathRegex>
+            <Wcmio-CAService-ContextPathRegex>^/content/(dam/)?wcm-io-samples(/.*)?$</Wcmio-CAService-ContextPathRegex>
 
           </instructions>
         </configuration>

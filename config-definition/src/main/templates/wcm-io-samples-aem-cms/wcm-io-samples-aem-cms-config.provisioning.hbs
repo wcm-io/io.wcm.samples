@@ -39,15 +39,15 @@
     configPageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/configEditor"
     structurePageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/structureElement"
 
-# Override site configuration
 {{#if configOverrides}}
-  io.wcm.config.core.override.impl.OsgiConfigOverrideProvider-override
+  # Override site configuration
+  org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-override
     enabled=B"true"
     description="Site URL Config Overrides"
     overrides=[
       {{~#each configOverrides ~}}
         {{~#each this ~}}
-          "[{{../@key}}]{{@key}}\={{this}}",
+          "[{{../@key}}]{{this}}",
         {{~/each ~}}
       {{~/each ~}}
     ]

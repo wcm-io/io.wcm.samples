@@ -46,13 +46,13 @@
         "media": {
           "sling:resourceType": "granite/ui/components/foundation/include",
           "jcr:title": "Image",
-          "path": "/apps/wcm-io-samples/sample-app/components/global/include/mediaRefTab"
+          "path": "wcm-io-samples/sample-app/components/global/include/mediaRefTab"
         },
 
         "link": {
           "sling:resourceType": "granite/ui/components/foundation/include",
           "jcr:title": "Link",
-          "path": "/apps/wcm-io-samples/sample-app/components/global/include/linkRefTab"
+          "path": "wcm-io-samples/sample-app/components/global/include/linkRefTab"
         }
 
       }

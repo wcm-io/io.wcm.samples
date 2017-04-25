@@ -24,6 +24,13 @@
     org.apache.sling.commons.log.level="{{log.projectSpecificLogLevel}}"
     org.apache.sling.commons.log.names=["io.wcm"]
     org.apache.sling.commons.log.pattern="{0,date,dd.MM.yyyy\ HH:mm:ss.SSS}\ *{4}*\ [{2}]\ {3}\ {5}"
+
+  # Configure Sling Context-Aware Configuration for AEM - add lookup in jcr:content subnodes, ignore cq:* properties
+  org.apache.sling.caconfig.resource.impl.def.DefaultContextPathStrategy
+    configRefResourceNames=["jcr:content"]
+  
+  org.apache.sling.caconfig.management.impl.ConfigurationManagementSettingsImpl
+    ignorePropertyNameRegex=["^(jcr|cq):.+$"]
   
   # Context path strategy
   io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-wcmio-samples

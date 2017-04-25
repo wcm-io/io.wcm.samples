@@ -30,6 +30,9 @@
       <action type="update" dev="sseifert">
         Update to wcm.io Handler 1.x implementation.
       </action>
+      <action type="update" dev="sseifert">
+        Update to Apache Sling Context-Aware Implementation 1.4.
+      </action>
     </release>
 
     <release version="1.0.0" date="2017-02-09">

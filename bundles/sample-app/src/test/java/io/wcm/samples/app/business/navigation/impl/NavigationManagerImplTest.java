@@ -23,6 +23,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.util.List;
 
 import org.apache.sling.api.resource.Resource;
@@ -50,6 +52,11 @@ public class NavigationManagerImplTest {
 
   @Test
   public void testGetMainNavigation() throws Exception {
+    try (FileInputStream fis = new FileInputStream("src/main/webapp/app-root/components/admin/page/redirect.json");
+        BufferedInputStream bis = new BufferedInputStream(fis)) {
+      context.load().json(bis, "/apps/wcm-io-samples/sample-app/components/admin/page/redirect");
+    }
+
     NavigationPageItem rootItem = underTest.getMainNavigation(2);
     assertLinkItem("HOME", "/content/wcm-io-samples/en.html", rootItem);
 

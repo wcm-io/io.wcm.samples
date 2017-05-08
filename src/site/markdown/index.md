@@ -13,8 +13,8 @@ Sample application to demonstrate the usage of the wcm.io Handler infrastructure
 
 ### System requirements
 
-- AEM 6.0 SP1 or AEM 6.1
-- JDK 1.8 (compile time), JDK 1.7 (run time)
+- AEM 6.1 or higher
+- JDK 1.8
 
 
 ### GitHub Repository

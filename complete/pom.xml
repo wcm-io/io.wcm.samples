@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.complete</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>content-package</packaging>
 
   <name>Samples Applications</name>
@@ -41,7 +41,14 @@
     <content-package-name>wcm-io-samples-complete</content-package-name>
     <content-package-group>wcm-io-samples</content-package-group>
     <dependency-includeGroupIds>io.wcm</dependency-includeGroupIds>
-    <dependency-includeArtifactIds>org.apache.sling.models.api,org.apache.sling.models.impl</dependency-includeArtifactIds>
+    <dependency-includeArtifactIds>
+      org.apache.sling.models.api,
+      org.apache.sling.models.impl,
+      org.apache.sling.caconfig.api,
+      org.apache.sling.caconfig.spi,
+      org.apache.sling.caconfig.impl,
+      org.apache.sling.commons.johnzon
+    </dependency-includeArtifactIds>
   </properties>
 
   <dependencies>
@@ -49,24 +56,17 @@
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.app</artifactId>
-      <version>1.0.0</version>
+      <version>1.1.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.app.clientlibs</artifactId>
-      <version>1.0.0</version>
+      <version>1.1.0</version>
       <scope>compile</scope>
     </dependency>
 
-    <dependency>
-      <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.dam.asset-service</artifactId>
-      <version>1.2.0</version>
-      <scope>compile</scope>
-    </dependency>
-
-    <!-- Latest Sling Models bundles -->
+    <!-- Additional bundles -->
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.models.api</artifactId>
@@ -75,6 +75,46 @@
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.models.impl</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.spi</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.impl</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.commons.johnzon</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.caconfig.extensions</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.caconfig.editor</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.dam.asset-service</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.wcm.ui.extjs</artifactId>
       <scope>compile</scope>
     </dependency>
 
@@ -92,7 +132,7 @@
           <group>${content-package-group}</group>
           <filters>
             <filter>
-              <root>/apps/wcm-io/${content-package-name}</root>
+              <root>/apps/wcm-io-samples/${content-package-name}</root>
             </filter>
           </filters>
         </configuration>
@@ -112,7 +152,7 @@
             <configuration>
               <outputAbsoluteArtifactFilename>true</outputAbsoluteArtifactFilename>
               <includeGroupIds>${dependency-includeGroupIds}</includeGroupIds>
-              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io/${content-package-name}/install</outputDirectory>
+              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io-samples/${content-package-name}/install</outputDirectory>
               <includeScope>compile</includeScope>
             </configuration>
           </execution>
@@ -125,7 +165,7 @@
             <configuration>
               <outputAbsoluteArtifactFilename>true</outputAbsoluteArtifactFilename>
               <includeArtifactIds>${dependency-includeArtifactIds}</includeArtifactIds>
-              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io/${content-package-name}/install</outputDirectory>
+              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io-samples/${content-package-name}/install</outputDirectory>
               <includeScope>compile</includeScope>
             </configuration>
           </execution>

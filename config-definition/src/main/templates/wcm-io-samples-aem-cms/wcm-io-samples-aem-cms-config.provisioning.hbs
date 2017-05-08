@@ -3,7 +3,7 @@
 
 [configurations]
 
-  # Enalbe GZIP and Minification for Clientlibs
+  # Enable GZIP and Minification for Clientlibs
   com.adobe.granite.ui.clientlibs.impl.HtmlLibraryManagerImpl
     htmllibmanager.debug=B"false"
     htmllibmanager.timing=B"false"
@@ -21,26 +21,40 @@
   # Set loglevel for project-specific bundles
   org.apache.sling.commons.log.LogManager.factory.config-wcmio-samples
     org.apache.sling.commons.log.file="logs/error.log"
-    org.apache.sling.commons.log.level="{{log.projectSpecifcLogLevel}}"
+    org.apache.sling.commons.log.level="{{log.projectSpecificLogLevel}}"
     org.apache.sling.commons.log.names=["io.wcm"]
     org.apache.sling.commons.log.pattern="{0,date,dd.MM.yyyy\ HH:mm:ss.SSS}\ *{4}*\ [{2}]\ {3}\ {5}"
+
+  # Configure Sling Context-Aware Configuration for AEM - add lookup in jcr:content subnodes, ignore cq:* properties
+  org.apache.sling.caconfig.resource.impl.def.DefaultContextPathStrategy
+    configRefResourceNames=["jcr:content"]
   
-  # Configure wcm.io Configuration Persistence
-  io.wcm.config.core.persistence.impl.ToolsConfigPagePersistenceProvider
-    configPageTemplate="/apps/wcm-io-samples/handler-sample-app/templates/admin/configEditor"
-    structurePageTemplate="/apps/wcm-io-samples/handler-sample-app/templates/framework/structureElement"
+  org.apache.sling.caconfig.management.impl.ConfigurationManagementSettingsImpl
+    ignorePropertyNameRegex=["^(jcr|cq):.+$"]
+  
+  # Context path strategy
+  io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-wcmio-samples
+    templatePaths=["/apps/wcm-io-samples/sample-app/templates/content/homepage"]
+    minLevel=I"1"
+    maxLevel=I"5"
+    contextPathRegex="^/content/(dam/)?wcm-io-samples(/.*)?$"
+    configPathPatterns=["/conf$1","/content$1/tools/config/jcr:content"]
+
+  # Store configuration in tools/config pages
+  io.wcm.caconfig.extensions.persistence.impl.ToolsConfigPagePersistenceStrategy
     enabled=B"true"
+    configPageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/configEditor"
+    structurePageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/structureElement"
 
-
-# Override site configuration
 {{#if configOverrides}}
-  io.wcm.config.core.override.impl.OsgiConfigOverrideProvider-override
+  # Override site configuration
+  org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-override
     enabled=B"true"
     description="Site URL Config Overrides"
     overrides=[
       {{~#each configOverrides ~}}
         {{~#each this ~}}
-          "[{{../@key}}]{{@key}}\={{this}}",
+          "[{{../@key}}]{{this}}",
         {{~/each ~}}
       {{~/each ~}}
     ]

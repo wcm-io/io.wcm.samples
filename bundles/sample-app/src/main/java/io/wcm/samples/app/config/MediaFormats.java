@@ -20,7 +20,6 @@
 package io.wcm.samples.app.config;
 
 import static io.wcm.handler.media.format.MediaFormatBuilder.create;
-import static io.wcm.samples.app.config.impl.ApplicationProviderImpl.APPLICATION_ID;
 
 import io.wcm.handler.media.format.MediaFormat;
 
@@ -36,7 +35,7 @@ public final class MediaFormats {
   /**
    * Stage header (1.33)
    */
-  public static final MediaFormat STAGE_HEADER = create("stageHeader", APPLICATION_ID)
+  public static final MediaFormat STAGE_HEADER = create("stageHeader")
       .label("Stage header (1.33)")
       .fixedDimension(1000, 300)
       .extensions("gif", "jpg", "jpeg", "png")
@@ -46,7 +45,7 @@ public final class MediaFormats {
   /**
    * Content 480px (1.77)
    */
-  public static final MediaFormat CONTENT_480 = create("content_480", APPLICATION_ID)
+  public static final MediaFormat CONTENT_480 = create("content_480")
       .label("Content 480px (1.77)")
       .fixedDimension(480, 270)
       .extensions("gif", "jpg", "jpeg", "png")
@@ -56,7 +55,7 @@ public final class MediaFormats {
   /**
    * Sponsor-Logo
    */
-  public static final MediaFormat SPONSOR_TEASER = create("sponsorTeaser", APPLICATION_ID)
+  public static final MediaFormat SPONSOR_TEASER = create("sponsorTeaser")
       .label("Sponsor-Logo")
       .maxWidth(400)
       .maxHeight(400)
@@ -66,7 +65,7 @@ public final class MediaFormats {
   /**
    * Socialteaser-Logo (1:1)
    */
-  public static final MediaFormat SOCIAL_TEASER = create("socialTeaser", APPLICATION_ID)
+  public static final MediaFormat SOCIAL_TEASER = create("socialTeaser")
       .label("Socialteaser-Logo (1:1)")
       .fixedDimension(120, 120)
       .extensions("gif", "jpg", "png")
@@ -75,7 +74,7 @@ public final class MediaFormats {
   /**
    * Gallery Small
    */
-  public static final MediaFormat GALLERY_SMALL = create("gallerySmall", APPLICATION_ID)
+  public static final MediaFormat GALLERY_SMALL = create("gallerySmall")
       .label("Gallery Small")
       .fixedDimension(100, 50)
       .extensions("gif", "jpg", "png")
@@ -84,7 +83,7 @@ public final class MediaFormats {
   /**
    * Gallery Medium
    */
-  public static final MediaFormat GALLERY_MEDIUM = create("galleryMedium", APPLICATION_ID)
+  public static final MediaFormat GALLERY_MEDIUM = create("galleryMedium")
       .label("Gallery Medium")
       .fixedDimension(980, 490)
       .extensions("gif", "jpg", "png")
@@ -93,7 +92,7 @@ public final class MediaFormats {
   /**
    * Gallery Large
    */
-  public static final MediaFormat GALLERY_LARGE = create("galleryLarge", APPLICATION_ID)
+  public static final MediaFormat GALLERY_LARGE = create("galleryLarge")
       .label("Gallery Large")
       .minWidth(1000)
       .minHeight(500)
@@ -104,9 +103,10 @@ public final class MediaFormats {
   /**
    * Download
    */
-  public static final MediaFormat DOWNLOAD = create("download", APPLICATION_ID)
+  public static final MediaFormat DOWNLOAD = create("download")
       .label("Download")
       .extensions("pdf", "zip", "ppt", "pptx", "doc", "docx")
+      .download(true)
       .build();
 
 }

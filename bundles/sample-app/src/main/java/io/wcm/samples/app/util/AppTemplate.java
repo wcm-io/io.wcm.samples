@@ -30,12 +30,12 @@ public enum AppTemplate implements TemplatePathInfo {
   /**
    * Framework: structure element
    */
-  FRAMEWORK_STRUCTURE_ELEMENT("/apps/wcm-io-samples/sample-app/templates/framework/structureElement"),
+  ADMIN_STRUCTURE_ELEMENT("/apps/wcm-io-samples/sample-app/templates/admin/structureElement"),
 
   /**
    * Framework: redirect
    */
-  FRAMEWORK_REDIRECT("/apps/wcm-io-samples/sample-app/templates/framework/redirect"),
+  ADMIN_REDIRECT("/apps/wcm-io-samples/sample-app/templates/admin/redirect"),
 
   /**
    * Editorial: content

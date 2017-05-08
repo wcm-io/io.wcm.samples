@@ -31,7 +31,7 @@ public interface NavigationManager {
    * @param maxLevels Max. navigation hierarchy levels
    * @return Root page for navigation
    */
-  NavigationPageItem getMainNavigation(final int maxLevels);
+  NavigationPageItem getMainNavigation(int maxLevels);
 
   /**
    * Generation footer navigation links and navigation structure.

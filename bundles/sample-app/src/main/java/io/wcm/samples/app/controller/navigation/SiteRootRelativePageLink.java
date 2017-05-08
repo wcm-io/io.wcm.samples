@@ -48,8 +48,8 @@ public class SiteRootRelativePageLink {
   private String title;
 
   /**
-   * @param siteRoot
-   * @param linkHandler
+   * @param siteRoot Site root
+   * @param linkHandler Link handler
    * @param relativePath Relative path of page to link to
    * @param titleType Type of title to display: pageTitle or navigationTitle
    */

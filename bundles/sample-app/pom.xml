@@ -25,90 +25,74 @@
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.app</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>bundle</packaging>
 
-  <name>wcm.io Sample Application</name>
+  <name>Sample Application</name>
   <description>Sample application to demonstrate the usage of the wcm.io handler infrastructure and other wcm.io Features.</description>
 
   <dependencies>
   
     <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.sling.models</artifactId>
-      <version>1.2.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.wcm.commons</artifactId>
-      <version>0.6.2</version>
+      <artifactId>io.wcm.sling.commons</artifactId>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.config.api</artifactId>
-      <version>0.5.6</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.config.core</artifactId>
-      <version>0.6.4</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.config.editor</artifactId>
-      <version>0.7.0</version>
+      <artifactId>io.wcm.handler.commons</artifactId>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.handler.url</artifactId>
-      <version>0.8.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.handler.link</artifactId>
-      <version>0.8.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.handler.media</artifactId>
-      <version>0.10.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.handler.richtext</artifactId>
-      <version>0.6.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.wcm.commons</artifactId>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.wcm.parsys</artifactId>
-      <version>0.6.2</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.wcm.ui.granite</artifactId>
-      <version>0.6.2</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.wcm.ui.extjs</artifactId>
-      <version>0.5.2</version>
       <scope>compile</scope>
     </dependency>
 
@@ -131,35 +115,51 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.aem-mock</artifactId>
-      <version>1.9.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.testing.wcm-io-mock.sling</artifactId>
-      <version>0.6.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.testing.wcm-io-mock.config</artifactId>
-      <version>0.6.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
-      <version>0.6.0</version>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.testing.osgi-mock</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.testing.logging-mock</artifactId>
-      <version>1.0.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.testing.caconfig-mock-plugin</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.testing.wcm-io-mock.sling</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.testing.wcm-io-mock.caconfig</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
       <scope>test</scope>
     </dependency>
 
   </dependencies>
+  <dependencyManagement>
+    <dependencies>
+
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.3.2</version>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
 
   <build>
 
@@ -191,6 +191,9 @@
               com.day.cq.commons;version="[5,7)",
               *
             </Import-Package>
+            
+            <!-- All wcm.io Handler SPI implementation only get active for the resource paths of this application -->
+            <Wcmio-CAService-ContextPathRegex>^/content/(dam/)?wcm-io-samples(/.*)?$</Wcmio-CAService-ContextPathRegex>
 
           </instructions>
         </configuration>

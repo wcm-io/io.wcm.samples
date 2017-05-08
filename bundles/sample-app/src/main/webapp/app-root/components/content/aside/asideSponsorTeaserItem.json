@@ -24,7 +24,7 @@
         "media": {
           "sling:resourceType": "granite/ui/components/foundation/include",
           "jcr:title": "Image",
-          "path": "/apps/wcm-io-samples/sample-app/components/global/include/mediaRefTab"
+          "path": "wcm-io-samples/sample-app/components/global/include/mediaRefTab"
         },
 
         "mediaDimensions": {
@@ -58,7 +58,7 @@
         "link": {
           "sling:resourceType": "granite/ui/components/foundation/include",
           "jcr:title": "Link",
-          "path": "/apps/wcm-io-samples/sample-app/components/global/include/linkRefNoTitleTab"
+          "path": "wcm-io-samples/sample-app/components/global/include/linkRefNoTitleTab"
         }
 
       }

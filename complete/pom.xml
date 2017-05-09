@@ -47,7 +47,8 @@
       org.apache.sling.caconfig.api,
       org.apache.sling.caconfig.spi,
       org.apache.sling.caconfig.impl,
-      org.apache.sling.commons.johnzon
+      org.apache.sling.commons.johnzon,
+      org.apache.sling.jcr.contentloader
     </dependency-includeArtifactIds>
   </properties>
 
@@ -95,6 +96,11 @@
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.commons.johnzon</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.jcr.contentloader</artifactId>
       <scope>compile</scope>
     </dependency>
     <dependency>

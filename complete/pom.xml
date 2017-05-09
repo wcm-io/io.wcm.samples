@@ -42,12 +42,16 @@
     <content-package-group>wcm-io-samples</content-package-group>
     <dependency-includeGroupIds>io.wcm</dependency-includeGroupIds>
     <dependency-includeArtifactIds>
+      <!-- Latest Sling Models version (AEM 6.1 and 6.2 contain quite old versions -->
       org.apache.sling.models.api,
       org.apache.sling.models.impl,
+      <!-- Latest Sling Context-Aware Configuration -->
       org.apache.sling.caconfig.api,
       org.apache.sling.caconfig.spi,
       org.apache.sling.caconfig.impl,
-      org.apache.sling.commons.johnzon
+      org.apache.sling.commons.johnzon,
+      <!-- Latest JCR Content Loader to support i18n json files directly -->
+      org.apache.sling.jcr.contentloader
     </dependency-includeArtifactIds>
   </properties>
 
@@ -95,6 +99,11 @@
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.commons.johnzon</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.jcr.contentloader</artifactId>
       <scope>compile</scope>
     </dependency>
     <dependency>

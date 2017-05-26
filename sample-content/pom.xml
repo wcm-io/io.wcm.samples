@@ -42,10 +42,19 @@
 
   <build>
     <finalName>${content-package-name}-${project.version}</finalName>
+
+    <resources>
+      <resource>
+        <!-- Include all files from jcr_root in content package -->
+        <directory>jcr_root</directory>
+      </resource>
+    </resources>
+    
     <plugins>
       <plugin>
-        <groupId>com.day.jcr.vault</groupId>
-        <artifactId>content-package-maven-plugin</artifactId>
+        <groupId>io.wcm.maven.plugins</groupId>
+        <artifactId>wcmio-content-package-maven-plugin</artifactId>
+        <extensions>true</extensions>
         <configuration>
           <name>${content-package-name}</name>
           <group>${content-package-group}</group>

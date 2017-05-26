@@ -44,12 +44,17 @@
     <finalName>${content-package-name}-${project.version}</finalName>
 
     <resources>
+      <!-- Include all files from jcr_root in content package -->
       <resource>
-        <!-- Include all files from jcr_root in content package -->
         <directory>jcr_root</directory>
       </resource>
+      <!-- custom package thumbnail -->
+      <resource>
+        <directory>src/main/resources/META-INF/vault/definition</directory>
+        <targetPath>../vault-work/META-INF/vault/definition</targetPath>
+      </resource>
     </resources>
-    
+
     <plugins>
       <plugin>
         <groupId>io.wcm.maven.plugins</groupId>

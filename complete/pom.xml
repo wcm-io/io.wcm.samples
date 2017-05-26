@@ -131,6 +131,15 @@
 
   <build>
     <finalName>${content-package-name}-${project.version}</finalName>
+
+    <resources>
+      <!-- custom package thumbnail -->
+      <resource>
+        <directory>src/main/resources/META-INF/vault/definition</directory>
+        <targetPath>../vault-work/META-INF/vault/definition</targetPath>
+      </resource>
+    </resources>
+
     <plugins>
 
       <plugin>

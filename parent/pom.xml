@@ -84,12 +84,12 @@
       <dependency>
         <groupId>org.apache.sling</groupId>
         <artifactId>org.apache.sling.caconfig.spi</artifactId>
-        <version>1.3.0</version>
+        <version>1.3.2</version>
       </dependency>
       <dependency>
         <groupId>org.apache.sling</groupId>
         <artifactId>org.apache.sling.caconfig.impl</artifactId>
-        <version>1.4.0</version>
+        <version>1.4.2</version>
       </dependency>
       <dependency>
         <groupId>org.apache.sling</groupId>
@@ -193,7 +193,7 @@
       <dependency>
         <groupId>org.apache.sling</groupId>
         <artifactId>org.apache.sling.testing.caconfig-mock-plugin</artifactId>
-        <version>1.2.0</version>
+        <version>1.3.0</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

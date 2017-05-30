@@ -12,7 +12,7 @@
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "sling:resourceType": "cq/gui/components/authoring/dialog",
-    "jcr:title": "Teaserbar Item",
+    "jcr:title": "Link Item",
     "content": {
       "sling:resourceType": "granite/ui/components/foundation/container",
       "layout": {

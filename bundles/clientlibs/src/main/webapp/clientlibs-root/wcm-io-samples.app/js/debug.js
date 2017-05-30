@@ -18,9 +18,6 @@
  * #L%
  */
 ;/**
- * (Id: debug.js 676 2014-06-19 15:47:33Z sseifert )
- */
-/**
  * Logs messages to the firebug console or creates an HTML div as alternative console.
  * The plugin is based on the "jQuery plugin for debugging".
  *

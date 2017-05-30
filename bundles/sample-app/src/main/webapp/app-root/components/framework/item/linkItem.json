@@ -3,6 +3,11 @@
   "jcr:title": "Link Item",
   "componentGroup": "Content",
 
+  "cq:htmlTag": {
+    "cq:tagName": "li",
+    "class": "link-list-item"
+  },
+
   "cq:editConfig": {
     "cq:listeners": {
       "afteredit": "handlerSample.authoring.listener.refreshAjaxContentAfterEdit"

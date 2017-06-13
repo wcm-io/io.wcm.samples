@@ -23,10 +23,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.wcm</groupId>
-    <artifactId>io.wcm.parent_toplevel</artifactId>
-    <version>1.2.0</version>
-    <relativePath />
+    <groupId>io.wcm.samples</groupId>
+    <artifactId>io.wcm.samples.parent</artifactId>
+    <version>1.1.1-SNAPSHOT</version>
+    <relativePath>parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
@@ -60,6 +60,16 @@
 
   <build>
     <plugins>
+
+      <!-- Generate sites for root pom -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <configuration>
+          <skip>false</skip>
+          <skipDeploy>false</skipDeploy>
+        </configuration>
+      </plugin>
 
       <!-- do not deploy this hierarchy pom into maven repository -->
       <plugin>

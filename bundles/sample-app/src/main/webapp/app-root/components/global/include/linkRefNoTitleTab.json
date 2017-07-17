@@ -12,7 +12,6 @@
           "sling:resourceType": "granite/ui/components/foundation/form/select",
           "name": "./linkType",
           "fieldLabel": "Link type",
-          "defaultValue": "internal",
           "class": "cq-dialog-dropdown-showhide",
           "cq-dialog-dropdown-showhide-target": ".option-linktype-showhide-target",
           "items": {
@@ -92,7 +91,6 @@
           "sling:resourceType": "granite/ui/components/foundation/form/select",
           "name": "./linkWindowTarget",
           "fieldLabel": "Window target",
-          "defaultValue": "_self",
           "items": {
             "_self": {
               "value": "_self",

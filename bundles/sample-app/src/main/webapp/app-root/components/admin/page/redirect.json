@@ -23,10 +23,6 @@
             "sling:resourceType": "granite/ui/components/foundation/layouts/tabs"
           },
           "items": {
-            "basic": {
-              "path": "foundation/components/page/cq:dialog/content/items/tabs/items/basic",
-              "sling:resourceType": "granite/ui/components/foundation/include"
-            },
 
             "link": {
               "sling:resourceType": "granite/ui/components/foundation/include",
@@ -36,34 +32,10 @@
 
             "redirectStatus": {
               "sling:resourceType": "granite/ui/components/foundation/include",
-              "jcr:title": "Redirect Link",
+              "jcr:title": "Redirect Status",
               "path": "wcm-io/handler/link/components/global/include/redirectStatus"
-            },
-
-            "advanced": {
-              "path": "foundation/components/page/cq:dialog/content/items/tabs/items/advanced",
-              "sling:resourceType": "granite/ui/components/foundation/include"
-            },
-            "thumbnail": {
-              "path": "foundation/components/page/cq:dialog/content/items/tabs/items/thumbnail",
-              "sling:resourceType": "granite/ui/components/foundation/include"
-            },
-            "cloudservices": {
-              "path": "foundation/components/page/cq:dialog/content/items/tabs/items/cloudservices",
-              "sling:resourceType": "granite/ui/components/foundation/include"
-            },
-            "permissions": {
-              "path": "foundation/components/page/cq:dialog/content/items/tabs/items/permissions",
-              "sling:resourceType": "granite/ui/components/foundation/include"
-            },
-            "blueprint": {
-              "path": "foundation/components/page/cq:dialog/content/items/tabs/items/blueprint",
-              "sling:resourceType": "granite/ui/components/foundation/include"
-            },
-            "livecopy": {
-              "path": "foundation/components/page/cq:dialog/content/items/tabs/items/livecopy",
-              "sling:resourceType": "granite/ui/components/foundation/include"
             }
+
           }
         }
       }

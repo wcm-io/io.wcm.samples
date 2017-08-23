@@ -131,6 +131,14 @@
 
   <build>
     <finalName>${content-package-name}-${project.version}</finalName>
+
+    <resources>
+      <!-- Include all files from jcr_root in content package -->
+      <resource>
+        <directory>jcr_root</directory>
+      </resource>
+    </resources>
+
     <plugins>
 
       <plugin>
@@ -143,6 +151,9 @@
           <filters>
             <filter>
               <root>/apps/wcm-io-samples/${content-package-name}</root>
+            </filter>
+            <filter>
+              <root>/content/i18n/wcm-io-samples/sample-app/en.json</root>
             </filter>
           </filters>
         </configuration>

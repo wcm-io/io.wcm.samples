@@ -180,7 +180,6 @@
           <instructions>
             <Sling-Initial-Content>
               SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/sample-app,
-              SLING-INF/app-i18n;overwrite:=true;ignoreImportProviders:=json;path:=/apps/wcm-io-samples/sample-app/i18n,
               SLING-INF/app-config;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/config
             </Sling-Initial-Content>
             <Sling-Model-Packages>

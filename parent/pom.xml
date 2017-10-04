@@ -173,6 +173,11 @@
         <artifactId>io.wcm.dam.asset-service</artifactId>
         <version>1.3.0</version>
       </dependency>
+      <dependency>
+        <groupId>io.wcm.devops.conga.definitions</groupId>
+        <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
+        <version>0.9.4</version>
+      </dependency>
       
       <!-- wcm.io Testing -->
       <dependency>

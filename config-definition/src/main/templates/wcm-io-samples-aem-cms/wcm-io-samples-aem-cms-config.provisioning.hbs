@@ -19,11 +19,17 @@
     org.apache.sling.commons.log.pattern="{0,date,dd.MM.yyyy\ HH:mm:ss.SSS}\ *{4}*\ [{2}]\ {3}\ {5}"
 
   # Configure Sling Context-Aware Configuration for AEM - add lookup in jcr:content subnodes, ignore cq:* properties
-  org.apache.sling.caconfig.resource.impl.def.DefaultContextPathStrategy
-    configRefResourceNames=["jcr:content"]
-  
+   org.apache.sling.caconfig.resource.impl.def.DefaultContextPathStrategy
+    configRefResourceNames=["jcr:content","."]
+    configRefPropertyNames=["cq:conf"]
+
+  org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy
+    fallbackPaths=["/conf/global","/apps","/libs"]
+    configCollectionInheritancePropertyNames=["jcr:content/sling:configCollectionInherit", "jcr:content/mergeList","mergeList"]
+
   org.apache.sling.caconfig.management.impl.ConfigurationManagementSettingsImpl
     ignorePropertyNameRegex=["^(jcr|cq):.+$"]
+    configCollectionPropertiesResourceNames=["jcr:content","."]
   
   # Context path strategy
   io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-wcmio-samples
@@ -38,20 +44,6 @@
     enabled=B"true"
     configPageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/configEditor"
     structurePageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/structureElement"
-
-{{#if configOverrides}}
-  # Override site configuration
-  org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-override
-    enabled=B"true"
-    description="Site URL Config Overrides"
-    overrides=[
-      {{~#each configOverrides ~}}
-        {{~#each this ~}}
-          "[{{../@key}}]{{this}}",
-        {{~/each ~}}
-      {{~/each ~}}
-    ]
-{{/if}}
 
 
 

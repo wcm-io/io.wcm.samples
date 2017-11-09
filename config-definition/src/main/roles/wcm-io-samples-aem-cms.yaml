@@ -1,5 +1,8 @@
-# Adobe Experience Manager (AEM) Instance.
-# AEM quickstart runs directly from command line with embedded Jetty Servlet Container.
+# Project-specific AEM configuration
+
+# Inherit default AEM functionality from "AEM Definitions", see http://devops.wcm.io/conga/definitions/aem/
+inherits:
+- role: aem-cms
 
 variants:
 - variant: aem-author
@@ -61,11 +64,3 @@ config:
   # Log levels
   log:
     projectSpecificLogLevel: warn
-
-
-  # Example for config override configuration
-  #configOverrides:
-  #  "/path/to/config/scope":
-  #    siteUrl:
-  #    siteUrlSecure:
-  #    siteUrlAuthor:

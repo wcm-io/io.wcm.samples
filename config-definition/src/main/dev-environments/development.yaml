@@ -1,18 +1,14 @@
-# Local AEM configuration for pro!vision Development Environment
+# AEM configuration for local development environment
 
 nodes:
 
 - node: aem-author
   roles:
-  - role: aem-cms
-    variant: aem-author
   - role: wcm-io-samples-aem-cms
     variant: aem-author
 
 - node: aem-publish
   roles:
-  - role: aem-cms
-    variant: aem-publish
   - role: wcm-io-samples-aem-cms
     variant: aem-publish
 

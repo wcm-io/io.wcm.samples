@@ -55,7 +55,7 @@ echo ""
 mvn $sling_params $other_params -Pfast clean install eclipse:eclipse
 
 if [ "$?" -ne "0" ]; then
-  error_exit "*** Build artifacts FAILED ***"
+  exit_with_error "*** Build artifacts FAILED ***"
 fi
 }
 
@@ -69,10 +69,10 @@ echo "*** Deploy AEM packages  ***"
 echo ""
 
 cd config-definition
-mvn -B $sling_params -Pdeploy-packages conga-aem:package-install
+mvn $sling_params -Pdeploy-packages conga-aem:package-install
 
 if [ "$?" -ne "0" ]; then
-  error_exit "*** Deploying config packages FAILED ***"
+  exit_with_error "*** Deploying config packages FAILED ***"
 fi
 
 cd ../
@@ -81,12 +81,20 @@ cd ../
 
 #####
 
-error_exit()
-{
+# Display a pause message (only when the script was executed via double-click on windows)
+pause_on_windows_dblclick() {
+  if [[ $0 == *":\\"* ]]; then
+    echo ""
+    read -n1 -r -p "Press any key to continue..."
+  fi
+}
+
+# Displays error message and exit the script with error code
+exit_with_error() {
   echo ""
   echo "$1" 1>&2
   echo ""
-  read -n1 -r -p "Press any key to continue..." key
+  pause_on_windows_dblclick
   exit 1
 }
 
@@ -117,4 +125,4 @@ fi
 echo ""
 echo "*** Build complete ***"
 echo ""
-read -n1 -r -p "Press any key to continue..." key
+pause_on_windows_dblclick

@@ -13,6 +13,7 @@ DEPLOY=false
 HELP=false
 DEFAULT_COMMANDS=true
 
+# display pause message only when script was executed via double-click on windows
 if [[ $0 == *":\\"* ]]; then
   DISPLAY_PAUSE_MESSAGE=true
 fi

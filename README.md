@@ -18,7 +18,7 @@ See [Travis Maven settings.xml](https://github.com/wcm-io/wcm-io-samples/blob/ma
 
 - Clone the github repository https://github.com/wcm-io/wcm-io-samples
 - Start an AEM author instance at http://localhost:4502
-- Execute deploy script `clean_install_deploy_package.cmd` (on Windows) or `clean_install_deploy_package.sh` (on Mac/Linux) to deploy the application and sample content and configuration to the instance.
+- Execute deploy script `build-deploy.sh` to deploy the application and sample content and configuration to the instance.
 - Open http://localhost:4502/editor.html/content/wcm-io-samples/en.html in your browser
 
 

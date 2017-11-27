@@ -53,9 +53,9 @@
     <module>parent</module>
     <module>bundles/sample-app</module>
     <module>bundles/clientlibs</module>
+    <module>content-packages/complete</module>
+    <module>content-packages/sample-content</module>
     <module>config-definition</module>
-    <module>complete</module>
-    <module>sample-content</module>
   </modules>
 
   <build>

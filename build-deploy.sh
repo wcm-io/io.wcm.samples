@@ -145,8 +145,8 @@ execute_build() {
   echo "*** Build application ***"
   echo ""
 
-  mvn $JVM_ARGS \
-      -Dconga.environments=$CONGA_ENVIRONMENT  \
+  mvn ${JVM_ARGS} \
+      -Dconga.environments=${CONGA_ENVIRONMENT}  \
       -Pfast clean install eclipse:eclipse
   
   if [ "$?" -ne "0" ]; then
@@ -162,12 +162,12 @@ execute_deploy() {
   echo ""
 
   mvn -f config-definition \
-      $JVM_ARGS \
-      -Dconga.environments=$CONGA_ENVIRONMENT \
-      -Dconga.nodeDirectory=target/configuration/$CONGA_ENVIRONMENT/$CONGA_NODE \
-      -Dsling.url=$SLING_URL \
-      -Dsling.user=$SLING_USER \
-      -Dsling.password=$SLING_PASSWORD \
+      ${JVM_ARGS} \
+      -Dconga.environments=${CONGA_ENVIRONMENT} \
+      -Dconga.nodeDirectory=target/configuration/${CONGA_ENVIRONMENT}/${CONGA_NODE} \
+      -Dsling.url=${SLING_URL} \
+      -Dsling.user=${SLING_USER} \
+      -Dsling.password=${SLING_PASSWORD} \
       conga-aem:package-install
 
   if [ "$?" -ne "0" ]; then

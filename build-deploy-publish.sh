@@ -8,4 +8,4 @@ if [[ $0 == *":\\"* ]]; then
   DISPLAY_PAUSE_MESSAGE=true
 fi
 
-./build-deploy.sh --sling.url=$SLING_URL --conga.node=$CONGA_NODE --display.pause.message=$DISPLAY_PAUSE_MESSAGE "$@"
+./build-deploy.sh --sling.url=${SLING_URL} --conga.node=${CONGA_NODE} --display.pause.message=${DISPLAY_PAUSE_MESSAGE} "$@"

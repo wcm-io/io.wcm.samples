@@ -26,15 +26,15 @@ SLING_PASSWORD="admin"
 CONGA_ENVIRONMENT="development"
 CONGA_NODE="aem-author"
 JVM_ARGS=""
-BUILD=false
-DEPLOY=false
-HELP=false
-DEFAULT_COMMANDS=true
 
 # display pause message only when script was executed via double-click on windows
 if [[ $0 == *":\\"* ]]; then
   DISPLAY_PAUSE_MESSAGE=true
 fi
+BUILD=false
+DEPLOY=false
+HELP=false
+DEFAULT_COMMANDS=true
 
 ####
 
@@ -145,11 +145,11 @@ help_message() {
 completion_message() {
   echo ""
   if [ "$BUILD" = true ] && [ "$DEPLOY" = true ]; then
-    echo "*** Build+Deploy complete ***"
+    echo -e "*** \e[1mBuild+Deploy complete\e[0m ***"
   elif [ "$BUILD" = true ]; then
-    echo "*** Build complete ***"
+    echo -e "*** \e[1mBuild complet\e[0m ***"
   elif [ "$DEPLOY" = true ]; then
-    echo "*** Deploy complete ***"
+    echo -e "*** \e[1mDeploy complete\e[0m ***"
   fi
   echo ""
 

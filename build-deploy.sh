@@ -38,7 +38,28 @@ DEFAULT_COMMANDS=true
 
 ####
 
-parse_parameters() {  
+help_message_exit() {
+  echo ""
+  echo "  Syntax <parameters> <commands>"
+  echo ""
+  echo "  Parameters:"
+  echo "    --sling.url=${SLING_URL}"
+  echo "    --sling.user=${SLING_USER}"
+  echo "    --sling.password=${SLING_PASSWORD}"
+  echo "    --conga.environment=${CONGA_ENVIRONMENT}"
+  echo "    --conga.node=${CONGA_NODE}"
+  echo "    --jvm.args=${JVM_ARGS}"
+  echo ""
+  echo "  Commands:"
+  echo "    build  - Clean and install maven project"
+  echo "    deploy - Deploy packages to AEM instance"
+  echo "    help   - display this help message"
+  echo ""
+
+  exit 0
+}
+
+parse_parameters() {
 
   for i in "$@"
   do
@@ -121,27 +142,6 @@ welcome_message() {
   echo "********************************************************************"
 }
 
-help_message() {
-  echo ""
-  echo "  Syntax <parameters> <commands>"
-  echo ""
-  echo "  Parameters:"
-  echo "    --sling.url=${SLING_URL}"
-  echo "    --sling.user=${SLING_USER}"
-  echo "    --sling.password=${SLING_PASSWORD}"
-  echo "    --conga.environment=${CONGA_ENVIRONMENT}"
-  echo "    --conga.node=${CONGA_NODE}"
-  echo "    --jvm.args=${JVM_ARGS}"
-  echo ""
-  echo "  Commands:"
-  echo "    build  - Clean and install maven project"
-  echo "    deploy - Deploy packages to AEM instance"
-  echo "    help   - display this help message"
-  echo ""
-
-  exit 0
-}
-
 completion_message() {
   echo ""
   if [ "$BUILD" = true ] && [ "$DEPLOY" = true ]; then
@@ -217,7 +217,7 @@ exit_with_error() {
 parse_parameters "$@"
 welcome_message
 if [ "$HELP" = true ]; then
-  help_message
+  help_message_exit
 fi
 if [ "$BUILD" = true ]; then
   execute_build

@@ -147,7 +147,7 @@ completion_message() {
   if [ "$BUILD" = true ] && [ "$DEPLOY" = true ]; then
     echo -e "*** \e[1mBuild+Deploy complete\e[0m ***"
   elif [ "$BUILD" = true ]; then
-    echo -e "*** \e[1mBuild complet\e[0m ***"
+    echo -e "*** \e[1mBuild complete\e[0m ***"
   elif [ "$DEPLOY" = true ]; then
     echo -e "*** \e[1mDeploy complete\e[0m ***"
   fi

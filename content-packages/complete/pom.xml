@@ -137,12 +137,14 @@
 
           <embeddedTarget>/apps/wcm-io-samples/${contentPackage.name}/install</embeddedTarget>
           <embeddeds>
+            <!-- Include application bundles from io.wcm.samples and their dependencies from io.wcm -->
             <embedded>
               <groupId>
                 io.wcm,
                 io.wcm.samples
               </groupId>
             </embedded>
+            <!-- Include some Apache Sling bundles newer than those shipped with AEM -->
             <embedded>
               <groupId>
                 org.apache.sling

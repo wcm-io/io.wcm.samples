@@ -36,10 +36,10 @@
                 title="Call for Papers">
                 <links
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm-io-samples/core/components/framework/parsys/linkListParsys">
+                    sling:resourceType="wcm-io-samples/core/components/structure/parsys/linkListParsys">
                     <linkItem
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wcm-io-samples/core/components/framework/item/linkItem"
+                        sling:resourceType="wcm-io-samples/core/components/structure/item/linkItem"
                         linkContentRef="/content/wcm-io-samples/en/conference/call-for-papers"
                         linkMediaDownload="{Boolean}false"
                         linkTitle="Call for Papers"

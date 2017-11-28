@@ -6,7 +6,7 @@
 
   <head>
     <meta data-sly-resource="${@ resourceType='wcm-io-samples/core/components/global/wcmInit' }" data-sly-unwrap></meta>
-    <meta data-sly-resource="${@ resourceType='wcm-io-samples/core/components/framework/common/htmlHead' }" data-sly-unwrap></meta>
+    <meta data-sly-resource="${@ resourceType='wcm-io-samples/core/components/structure/common/htmlHead' }" data-sly-unwrap></meta>
   </head>
 
   <body>
@@ -15,13 +15,13 @@
 
       <!-- Page header (Logo etc) -->
       <header class="header-site clearfix"
-          data-sly-resource="${@ resourceType='wcm-io-samples/core/components/framework/common/pageHeader' }">
+          data-sly-resource="${@ resourceType='wcm-io-samples/core/components/structure/common/pageHeader' }">
       </header>
       <hr />
 
       <!-- Global navigation -->
       <nav id="nav-main" class="clearfix"
-          data-sly-resource="${@ resourceType='wcm-io-samples/core/components/framework/navigation/mainNavigation' }">
+          data-sly-resource="${@ resourceType='wcm-io-samples/core/components/structure/navigation/mainNavigation' }">
       </nav>
       <hr />
 
@@ -38,12 +38,12 @@
 
       <!-- The page-footer -->
       <footer class="footer-site"
-          data-sly-resource="${@ resourceType='wcm-io-samples/core/components/framework/common/pageFooter'}">
+          data-sly-resource="${@ resourceType='wcm-io-samples/core/components/structure/common/pageFooter'}">
       </footer>
     </div>
 
     <!-- The javascript includes -->
-    <div data-sly-resource="${@ resourceType='wcm-io-samples/core/components/framework/common/pageFooterJavaScript'}" data-sly-unwrap></div>
+    <div data-sly-resource="${@ resourceType='wcm-io-samples/core/components/structure/common/pageFooterJavaScript'}" data-sly-unwrap></div>
 
   </body>
 

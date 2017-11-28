@@ -42,7 +42,7 @@
           "wcm-io-samples/core/components/content/aside/asideTeaser"
         ],
         "allowedChildren": [
-          "wcm-io-samples/core/components/framework/item/linkItem"
+          "wcm-io-samples/core/components/structure/item/linkItem"
         ]
       },
       "aside_SponsorTeaser": {

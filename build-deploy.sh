@@ -1,4 +1,22 @@
 #!/bin/sh
+# #%L
+#  wcm.io
+#  %%
+#  Copyright (C) 2017 wcm.io
+#  %%
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#  #L%
+
 # Call with "help" parameter to display syntax information
 
 # defaults
@@ -80,7 +98,7 @@ parse_parameters() {
 }
 
 welcome_message() {
-  echo "********************************************************************"
+  echo -e "********************************************************************\e[96m"
   if ([ "$BUILD" = true ] && [ "$DEPLOY" = true ]) || [ "$HELP" = true ]; then
     echo "   ___ _   _ ___ _    ___      _     ___  ___ ___ _    _____   __"
     echo "  | _ ) | | |_ _| |  |   \   _| |_  |   \| __| _ \ |  / _ \ \ / /"
@@ -97,8 +115,8 @@ welcome_message() {
     echo "  | |) | _||  _/ |_| (_) \ V /"
     echo "  |___/|___|_| |____\___/ |_|"
   fi
-  echo ""
-  echo "  Destination: ${SLING_URL} (${CONGA_NODE})"
+  echo -e "\e[0m"
+  echo -e "  Destination: \e[1m${SLING_URL}\e[0m (\e[1m${CONGA_NODE}\e[0m)"
   echo ""
   echo "********************************************************************"
 }
@@ -142,7 +160,7 @@ completion_message() {
 
 execute_build() {
   echo ""
-  echo "*** Build application ***"
+  echo -e "*** \e[1mBuild application\e[0m ***"
   echo ""
 
   mvn ${JVM_ARGS} \
@@ -158,7 +176,7 @@ execute_build() {
 
 execute_deploy() {
   echo ""
-  echo "*** Deploy to AEM ***"
+  echo -e "*** \e[1mDeploy to AEM\e[0m ***"
   echo ""
 
   mvn -f config-definition \
@@ -181,7 +199,6 @@ execute_deploy() {
 # Display a pause message (only when the script was executed via double-click on windows)
 pause_message() {
   if [ "$DISPLAY_PAUSE_MESSAGE" = true ]; then
-    echo ""
     read -n1 -r -p "Press any key to continue..."
   fi
 }
@@ -189,7 +206,7 @@ pause_message() {
 # Displays error message and exit the script with error code
 exit_with_error() {
   echo ""
-  echo "$1" 1>&2
+  echo -e "\e[91m$1\e[0m" 1>&2
   echo ""
   pause_message
   exit 1

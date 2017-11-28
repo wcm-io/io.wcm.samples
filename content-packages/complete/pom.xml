@@ -40,19 +40,6 @@
   <properties>
     <content-package-name>wcm-io-samples-complete</content-package-name>
     <content-package-group>wcm-io-samples</content-package-group>
-    <dependency-includeGroupIds>io.wcm</dependency-includeGroupIds>
-    <dependency-includeArtifactIds>
-      <!-- Latest Sling Models version (AEM 6.1 and 6.2 contain quite old versions -->
-      org.apache.sling.models.api,
-      org.apache.sling.models.impl,
-      <!-- Latest Sling Context-Aware Configuration -->
-      org.apache.sling.caconfig.api,
-      org.apache.sling.caconfig.spi,
-      org.apache.sling.caconfig.impl,
-      org.apache.sling.commons.johnzon,
-      <!-- Latest JCR Content Loader to support i18n json files directly -->
-      org.apache.sling.jcr.contentloader
-    </dependency-includeArtifactIds>
   </properties>
 
   <dependencies>
@@ -134,52 +121,48 @@
     <plugins>
 
       <plugin>
-        <groupId>io.wcm.maven.plugins</groupId>
-        <artifactId>wcmio-content-package-maven-plugin</artifactId>
+        <groupId>org.apache.jackrabbit</groupId>
+        <artifactId>filevault-package-maven-plugin</artifactId>
         <extensions>true</extensions>
         <configuration>
           <name>${content-package-name}</name>
           <group>${content-package-group}</group>
+          <packageType>container</packageType>
+
           <filters>
             <filter>
               <root>/apps/wcm-io-samples/${content-package-name}</root>
             </filter>
           </filters>
-        </configuration>
-      </plugin>
 
-      <!-- copy the application's dependencies -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>copy-dependencies-by-groupid</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-              <outputAbsoluteArtifactFilename>true</outputAbsoluteArtifactFilename>
-              <includeGroupIds>${dependency-includeGroupIds}</includeGroupIds>
-              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io-samples/${content-package-name}/install</outputDirectory>
-              <includeScope>compile</includeScope>
-            </configuration>
-          </execution>
-          <execution>
-            <id>copy-dependencies-by-artifactid</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-              <outputAbsoluteArtifactFilename>true</outputAbsoluteArtifactFilename>
-              <includeArtifactIds>${dependency-includeArtifactIds}</includeArtifactIds>
-              <outputDirectory>${project.build.directory}/vault-work/jcr_root/apps/wcm-io-samples/${content-package-name}/install</outputDirectory>
-              <includeScope>compile</includeScope>
-            </configuration>
-          </execution>
-        </executions>
+          <embeddedTarget>/apps/wcm-io-samples/${content-package-name}/install</embeddedTarget>
+          <embeddeds>
+            <embedded>
+              <groupId>
+                io.wcm,
+                io.wcm.samples
+              </groupId>
+            </embedded>
+            <embedded>
+              <groupId>
+                org.apache.sling
+              </groupId>
+              <artifactId>
+                <!-- Latest Sling Models version (AEM 6.1 and 6.2 contain quite old versions) -->
+                org.apache.sling.models.api,
+                org.apache.sling.models.impl,
+                <!-- Latest Sling Context-Aware Configuration -->
+                org.apache.sling.caconfig.api,
+                org.apache.sling.caconfig.spi,
+                org.apache.sling.caconfig.impl,
+                org.apache.sling.commons.johnzon,
+                <!-- Latest JCR Content Loader to support i18n json files directly -->
+                org.apache.sling.jcr.contentloader
+              </artifactId>
+            </embedded>
+          </embeddeds>
+
+        </configuration>
       </plugin>
 
       <!-- Do not generate eclipse project files -->

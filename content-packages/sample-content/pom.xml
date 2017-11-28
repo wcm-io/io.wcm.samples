@@ -36,12 +36,12 @@
   <packaging>content-package</packaging>
 
   <properties>
-    <content-package-name>wcm-io-samples-sample-content</content-package-name>
-    <content-package-group>wcm-io-samples</content-package-group>
+    <contentPackage.name>wcm-io-samples-sample-content</contentPackage.name>
+    <contentPackage.group>wcm-io-samples</contentPackage.group>
   </properties>
 
   <build>
-    <finalName>${content-package-name}-${project.version}</finalName>
+    <finalName>${contentPackage.name}-${project.version}</finalName>
 
     <plugins>
       <plugin>
@@ -49,8 +49,8 @@
         <artifactId>filevault-package-maven-plugin</artifactId>
         <extensions>true</extensions>
         <configuration>
-          <name>${content-package-name}</name>
-          <group>${content-package-group}</group>
+          <name>${contentPackage.name}</name>
+          <group>${contentPackage.group}</group>
           <packageType>content</packageType>
           <filters>
             <filter>

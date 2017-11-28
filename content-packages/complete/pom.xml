@@ -38,8 +38,8 @@
   <description>AEM content package with all sample application bundles and dependencies.</description>
 
   <properties>
-    <content-package-name>wcm-io-samples-complete</content-package-name>
-    <content-package-group>wcm-io-samples</content-package-group>
+    <contentPackage.name>wcm-io-samples-complete</contentPackage.name>
+    <contentPackage.group>wcm-io-samples</contentPackage.group>
   </properties>
 
   <dependencies>
@@ -117,7 +117,7 @@
   </dependencies>
 
   <build>
-    <finalName>${content-package-name}-${project.version}</finalName>
+    <finalName>${contentPackage.name}-${project.version}</finalName>
     <plugins>
 
       <plugin>
@@ -125,17 +125,17 @@
         <artifactId>filevault-package-maven-plugin</artifactId>
         <extensions>true</extensions>
         <configuration>
-          <name>${content-package-name}</name>
-          <group>${content-package-group}</group>
+          <name>${contentPackage.name}</name>
+          <group>${contentPackage.group}</group>
           <packageType>container</packageType>
 
           <filters>
             <filter>
-              <root>/apps/wcm-io-samples/${content-package-name}</root>
+              <root>/apps/wcm-io-samples/${contentPackage.name}</root>
             </filter>
           </filters>
 
-          <embeddedTarget>/apps/wcm-io-samples/${content-package-name}/install</embeddedTarget>
+          <embeddedTarget>/apps/wcm-io-samples/${contentPackage.name}/install</embeddedTarget>
           <embeddeds>
             <embedded>
               <groupId>

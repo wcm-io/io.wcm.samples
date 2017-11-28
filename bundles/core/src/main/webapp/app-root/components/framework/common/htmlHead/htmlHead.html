@@ -29,19 +29,7 @@
 
   <!--/* CSS */-->
   <meta
-      data-sly-call="${clientLib.css @ categories=['wcm-io-samples.app']}"
-      data-sly-unwrap
-  ></meta>
-
-  <!--/* JavaScript */-->
-${'<!--[if lt IE 9]>' @ context='unsafe'}
-  <meta
-      data-sly-call="${clientLib.js @ categories=['wcm-io-samples.lib.html5shiv']}"
-      data-sly-unwrap
-  ></meta>
-${'<![endif]-->' @ context='unsafe'}
-  <meta
-      data-sly-call="${clientLib.js @ categories=['wcm-io-samples.lib.modernizr']}"
+      data-sly-call="${clientLib.css @ categories=['wcm-io-samples.all']}"
       data-sly-unwrap
   ></meta>
 

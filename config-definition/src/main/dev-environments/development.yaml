@@ -13,7 +13,7 @@ nodes:
     variant: aem-publish
 
 config:
-  contentPackage.group: "wcm-io-samples"
+  contentPackage.group: wcm-io-samples
   app.sampleContent: true
 
   # Log levels

@@ -56,7 +56,7 @@ files:
 config:
   contentPackage:
     group: wcm-io-samples
-    version: "${version}"
+    version: ${version}
 
   app:
     sampleContent: false

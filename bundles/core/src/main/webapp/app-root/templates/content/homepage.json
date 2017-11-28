@@ -1,0 +1,16 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "wcm.io Handler Sample Homepage",
+
+  "allowedPaths": "^/content/wcm-io-samples(/.+)?$",
+  "allowedChildren": "^/apps/wcm-io-samples/core/.*$",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "wcm-io-samples/core/components/content/page/homepage",
+
+    /* This is only required for the homepage to enable responsive preview mode */
+    "cq:deviceGroups": ["/etc/mobile/groups/responsive"]
+
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "wcm.io Handler Sample Configuration Editor",
+
+  "allowedPaths": "^/content/wcm-io-samples(/.+)*/tools(/.+)?$",
+  "allowedChildren": "",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "wcm-io-samples/core/components/admin/page/configEditor"
+  }
+}

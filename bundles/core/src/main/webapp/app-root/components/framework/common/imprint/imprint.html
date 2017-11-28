@@ -1,0 +1,11 @@
+<p class="col-2-4 footer-text box-padding"
+    data-sly-use.link="${'io.wcm.samples.core.controller.navigation.SiteRootRelativePageLink' @ relativePath='/tools/navigation/imprint'}"
+    data-sly-use.currentDate="io.wcm.samples.core.controller.common.CurrentDate">
+
+  ${'Credits: ©{0} wcm.io' @ i18n, hint='wcm-io-samples', format=[currentDate.year]}
+
+  <span data-sly-test="${link.valid}" data-sly-unwrap>
+    - <a data-sly-attribute="${link.attributes}" class="navlink">${link.title}</a>
+  </span>
+
+</p>

@@ -30,7 +30,7 @@
   </parent>
 
   <groupId>io.wcm.samples</groupId>
-  <artifactId>io.wcm.samples.app.clientlibs</artifactId>
+  <artifactId>io.wcm.samples.clientlibs</artifactId>
   <version>1.1.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
@@ -47,7 +47,7 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
-              SLING-INF/clientlibs-root;overwrite:=true;ignoreImportProviders:=xml;path:=/etc/clientlibs/wcm-io-samples/sample-app
+              SLING-INF/clientlibs-root;overwrite:=true;ignoreImportProviders:=xml;path:=/etc/clientlibs/wcm-io-samples/core
             </Sling-Initial-Content>
           </instructions>
         </configuration>

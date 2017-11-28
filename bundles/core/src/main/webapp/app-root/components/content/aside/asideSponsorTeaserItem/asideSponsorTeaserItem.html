@@ -1,0 +1,10 @@
+<p class="small-center"
+    data-sly-use.link="io.wcm.samples.core.controller.resource.ResourceLink"
+    data-sly-use.media="${'io.wcm.samples.core.controller.resource.ResourceMedia' @ mediaFormat='sponsorTeaser'}"
+    data-sly-unwrap="${!media.valid}">
+
+  <a data-sly-attribute="${link.attributes}" data-sly-unwrap="${!link.valid}">
+    ${media.markup @ context='html'}
+  </a>
+
+</p>

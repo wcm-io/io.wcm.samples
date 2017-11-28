@@ -19,26 +19,25 @@
  */
 ;/**
  * init.js
- * @author bbaumann
  */
 
 // enable jQuery noConflict mode
 jQuery.noConflict();
 
 // enable underscore noConflict mode
-//var handlerSample_underscore = _.noConflict();
+//var sampleApp_underscore = _.noConflict();
 
 // set up namespace
-var handlerSample = handlerSample || {};
+var sampleApp = sampleApp || {};
 // set configuration
-handlerSample.config = handlerSample.config || {};
+sampleApp.config = sampleApp.config || {};
 // whether site runs in debug mode
-handlerSample.config.debug = (location.search.match(/frontend-debug/i) !== null || location.hostname.match(/local/i) !== null)? true : false;
+sampleApp.config.debug = (location.search.match(/frontend-debug/i) !== null || location.hostname.match(/local/i) !== null)? true : false;
 // start application
 jQuery(document).ready(function ($) {
   if (jQuery.debug) {
     // use Logging proxy
-    jQuery.debug(handlerSample.config.debug);
+    jQuery.debug(sampleApp.config.debug);
   } else {
     // Else create dummy log function to prevent errors
     jQuery.extend({ log: function () {} });

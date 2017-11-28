@@ -313,7 +313,7 @@
   <profiles>
     <!-- profile used for building releases and deployment to sonatype/maven central -->
     <profile>
-      <id>release</id>
+      <id>release-profile</id>
       <activation>
         <property>
           <name>performRelease</name>

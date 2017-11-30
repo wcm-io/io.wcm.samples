@@ -1,4 +1,4 @@
-[feature name=wcm-io-samplesaem-cms-config]
+[feature name=wcm-io-samples-aem-cms-config]
 
 
 [configurations]
@@ -33,7 +33,7 @@
   
   # Context path strategy
   io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-wcmio-samples
-    templatePaths=["/apps/wcm-io-samples/sample-app/templates/content/homepage"]
+    templatePaths=["/apps/wcm-io-samples/core/templates/content/homepage"]
     minLevel=I"1"
     maxLevel=I"5"
     contextPathRegex="^/content/(dam/)?wcm-io-samples(/.*)?$"
@@ -42,8 +42,8 @@
   # Store configuration in tools/config pages
   io.wcm.caconfig.extensions.persistence.impl.ToolsConfigPagePersistenceStrategy
     enabled=B"true"
-    configPageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/configEditor"
-    structurePageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/structureElement"
+    configPageTemplate="/apps/wcm-io-samples/core/templates/admin/configEditor"
+    structurePageTemplate="/apps/wcm-io-samples/core/templates/admin/structureElement"
 
 
 
@@ -63,7 +63,7 @@
 
   # Configure Responsive Preview Mode
   io.wcm.wcm.ui.granite.emulator.impl.EmulatorProviderImpl-wcmio-samples
-    templatePathPatterns=["^/apps/wcm-io-samples/sample-app/.*$"]
+    templatePathPatterns=["^/apps/wcm-io-samples/core/.*$"]
 
 
 [configurations runModes=publish]

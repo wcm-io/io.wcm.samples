@@ -9,8 +9,7 @@
       "content": {
         "allowedChildren": [
           "wcm-io-samples/core/components/content/common/contentHeadline",
-          "wcm-io-samples/core/components/content/common/contentRichText",
-          "wcm-io-samples/core/components/content/stage/stagegallery"
+          "wcm-io-samples/core/components/content/common/contentRichText"
         ]
       }
 

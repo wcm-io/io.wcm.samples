@@ -35,11 +35,10 @@
           "showhidetargetvalue": "internal",
           "items": {
             "linkContentRef": {
-              "sling:resourceType": "granite/ui/components/foundation/form/pathbrowser",
+              "sling:resourceType": "wcm-io/wcm/ui/granite/components/form/configScopePathBrowser",
               "name": "./linkContentRef",
               "fieldLabel": "Internal page",
-              "fieldDescription": "Link to target page in CMS (same site)",
-              "rootPath": "/content/wcm-io-samples"
+              "fieldDescription": "Link to target page in CMS (same site)"
             }
           }
         },
@@ -69,21 +68,11 @@
               "rootPath": "/content/dam/wcm-io-samples"
             },
             "linkMediaDownload": {
-              "sling:resourceType": "granite/ui/components/foundation/form/checkbox",
+              "sling:resourceType": "wcm-io/wcm/ui/granite/components/form/checkbox",
               "name": "./linkMediaDownload",
               "text": "Download",
               "value": "true",
               "fieldDescription": "Open DAM asset item with download dialog"
-            },
-            "linkMediaDownloadDelete": {
-              "sling:resourceType": "granite/ui/components/foundation/form/hidden",
-              "name": "./linkMediaDownload@Delete",
-              "value": "true"
-            },
-            "linkMediaDownloadTypeHint": {
-              "sling:resourceType": "granite/ui/components/foundation/form/hidden",
-              "name": "./linkMediaDownload@TypeHint",
-              "value": "Boolean"
             }
           }
         },

@@ -36,14 +36,12 @@
     templatePaths=["/apps/wcm-io-samples/core/templates/content/homepage"]
     minLevel=I"1"
     maxLevel=I"5"
-    contextPathRegex="^/content/(dam/)?wcm-io-samples(/.*)?$"
-    configPathPatterns=["/conf$1","/content$1/tools/config/jcr:content"]
+    contextPathRegex="^/content/(dam/)?(wcm-io-samples/.*)?$"
+    configPathPatterns=["/conf/$2"]
 
   # Store configuration in tools/config pages
-  io.wcm.caconfig.extensions.persistence.impl.ToolsConfigPagePersistenceStrategy
+  io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy
     enabled=B"true"
-    configPageTemplate="/apps/wcm-io-samples/core/templates/admin/configEditor"
-    structurePageTemplate="/apps/wcm-io-samples/core/templates/admin/structureElement"
 
 
 

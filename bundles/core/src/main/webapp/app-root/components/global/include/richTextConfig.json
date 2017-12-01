@@ -13,7 +13,7 @@
           "b": "strong",
           "i": "em"
         },
-        "isXhtmlStrict": true
+        "isXhtmlStrict": false
       }
     },
 

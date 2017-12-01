@@ -11,11 +11,14 @@
       "items": {
 
         "mediaRef": {
-          "sling:resourceType": "cq/gui/components/authoring/dialog/image",
-          "name": "./mediaRef"
+          "sling:resourceType": "granite/ui/components/foundation/form/pathbrowser",
+          "name": "./mediaRef",
+          "fieldLabel": "Asset reference",
+          "fieldDescription": "Reference to asset from DAM",
+          "rootPath": "/content/dam/wcm-io-samples"
         }
-      }
 
+      }
     }
   }
 }

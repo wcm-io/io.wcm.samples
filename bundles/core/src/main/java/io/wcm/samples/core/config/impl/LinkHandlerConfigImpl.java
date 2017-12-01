@@ -24,7 +24,7 @@ import org.osgi.service.component.annotations.Component;
 import com.day.cq.wcm.api.Page;
 
 import io.wcm.handler.link.spi.LinkHandlerConfig;
-import io.wcm.samples.core.util.AppTemplate;
+import io.wcm.samples.core.config.AppTemplate;
 import io.wcm.wcm.commons.util.Template;
 
 /**

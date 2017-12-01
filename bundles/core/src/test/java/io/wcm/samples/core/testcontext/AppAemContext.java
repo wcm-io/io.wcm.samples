@@ -29,10 +29,10 @@ import java.io.IOException;
 import org.apache.sling.api.resource.PersistenceException;
 
 import io.wcm.handler.media.spi.MediaFormatProvider;
+import io.wcm.samples.core.config.AppTemplate;
 import io.wcm.samples.core.config.impl.LinkHandlerConfigImpl;
 import io.wcm.samples.core.config.impl.MediaFormatProviderImpl;
 import io.wcm.samples.core.config.impl.MediaHandlerConfigImpl;
-import io.wcm.samples.core.util.AppTemplate;
 import io.wcm.testing.mock.aem.junit.AemContext;
 import io.wcm.testing.mock.aem.junit.AemContextBuilder;
 import io.wcm.testing.mock.aem.junit.AemContextCallback;

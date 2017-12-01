@@ -17,7 +17,7 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.core.util;
+package io.wcm.samples.core.config;
 
 import io.wcm.wcm.commons.util.Template;
 import io.wcm.wcm.commons.util.TemplatePathInfo;
@@ -28,32 +28,22 @@ import io.wcm.wcm.commons.util.TemplatePathInfo;
 public enum AppTemplate implements TemplatePathInfo {
 
   /**
-   * Framework: structure element
+   * Structure element
    */
   ADMIN_STRUCTURE_ELEMENT("/apps/wcm-io-samples/core/templates/admin/structureElement"),
 
   /**
-   * Framework: redirect
+   * Redirect
    */
   ADMIN_REDIRECT("/apps/wcm-io-samples/core/templates/admin/redirect"),
 
   /**
-   * Editorial: content
+   * Content
    */
   EDITORIAL_CONTENT("/apps/wcm-io-samples/core/templates/content/content"),
 
   /**
-   * Editorial: tickets
-   */
-  EDITORIAL_TICKETS("/apps/wcm-io-samples/core/templates/content/tickets"),
-
-  /**
-   * Editorial: venue
-   */
-  EDITORIAL_VENUE("/apps/wcm-io-samples/core/templates/content/venue"),
-
-  /**
-   * Editorial: homepage
+   * Homepage
    */
   EDITORIAL_HOMEPAGE("/apps/wcm-io-samples/core/templates/content/homepage");
 

@@ -36,6 +36,7 @@
 
   <name>Samples Root</name>
   <description>Sample projects and applications to demonstrate and test wcm.io features.</description>
+  <url>${site.url}/${site.url.module.prefix}/</url>
 
   <scm>
     <connection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</connection>

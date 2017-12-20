@@ -1,0 +1,13 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "wcm.io Handler Sample Redirect",
+
+  "allowedPaths": "^/content/wcm-io-samples/.+$",
+  "allowedParents": "^/apps/wcm-io-samples/core/templates/.*$",
+  "allowedChildren": "^/apps/wcm-io-samples/core/templates/.*$",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "wcm-io-samples/core/components/admin/page/redirect"
+  }
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:Iptc4xmpCore="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="dam:Asset">
+    <jcr:content
+        cq:name="stageheader-outside2.jpg"
+        cq:parentPath="/content/dam/wcm-io-samples/content"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:By-line="Alexander Muthmann"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:size="{Long}102447"
+            dam:writebackEnable="False"
+            dc:creator="[Alexander Muthmann,Alexander Muthmann,Alexander Muthmann,Alexander Muthmann]"
+            dc:creator_xmpArrayType="rdf:Seq"
+            dc:format="image/jpeg"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}300"
+            tiff:ImageWidth="{Long}1000"
+            xmp:CreatorTool="Adobe Photoshop Lightroom 4.1 (Windows)"
+            xmpMM:DocumentID="xmp.did:42090EAB07E711E29B31DA957123FF4A"
+            xmpMM:InstanceID="xmp.iid:42090EAA07E711E29B31DA957123FF4A"
+            xmpMM:OriginalDocumentID="7FB7DF5116679A580510EDDB873FFB4D"
+            writebackEnable="{Boolean}true">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:825F5834DB07E211B8B0BC57A6B59EC1"
+                stRef:instanceID="xmp.iid:825F5834DB07E211B8B0BC57A6B59EC1"
+                xmpNodeType="xmpStruct"/>
+            <Iptc4xmpCore:CreatorContactInfo
+                Iptc4xmpCore:CiAdrCity="Berlin"
+                Iptc4xmpCore:CiAdrCtry="Deutschland"
+                Iptc4xmpCore:CiAdrExtadr="Wilmersdorfer Strasse 152"
+                Iptc4xmpCore:CiAdrPcode="10585"
+                Iptc4xmpCore:CiAdrRegion="Berlin"
+                jcr:primaryType="nt:unstructured"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <renditionsMetadata jcr:primaryType="nt:unstructured">
+            <cq5dam.web.1280.1280.jpeg
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}300"
+                imageWidth="{Long}1000"/>
+            <cq5dam.thumbnail.140.100.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}43"
+                imageWidth="{Long}140"/>
+            <cq5dam.thumbnail.319.319.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}95"
+                imageWidth="{Long}319"/>
+            <cq5dam.thumbnail.48.48.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}14"
+                imageWidth="{Long}48"/>
+        </renditionsMetadata>
+    </jcr:content>
+</jcr:root>

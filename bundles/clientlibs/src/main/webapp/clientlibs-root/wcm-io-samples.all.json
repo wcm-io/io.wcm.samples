@@ -1,0 +1,15 @@
+{
+  "jcr:primaryType": "cq:ClientLibraryFolder",
+  "categories": [
+    "wcm-io-samples.all"
+  ],
+  "embed": [
+    "wcm-io-samples.lib",
+    "wcm-io-samples.app"    
+  ],
+  "jsProcessor": [
+    "default:none",
+    "min:gcc;compilationLevel=whitespace"
+  ],
+  "longCacheKey": "${project.version}-${buildNumber}"
+}

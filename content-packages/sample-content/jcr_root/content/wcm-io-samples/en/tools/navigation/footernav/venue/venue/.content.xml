@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/apps/wcm-io-samples/core/templates/admin/redirect"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Venue"
+        sling:resourceType="wcm-io-samples/core/components/admin/page/redirect"
+        linkContentRef="/content/wcm-io-samples/en/venue"
+        linkType="internal"
+        linkWindowTarget="_self"
+        redirectStatus="302"/>
+</jcr:root>

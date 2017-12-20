@@ -1,14 +1,7 @@
-[feature name=wcm-io-samplesaem-cms-config]
+[feature name=wcm-io-samples-aem-cms-config]
 
 
 [configurations]
-
-  # Enable GZIP and Minification for Clientlibs
-  com.adobe.granite.ui.clientlibs.impl.HtmlLibraryManagerImpl
-    htmllibmanager.debug=B"false"
-    htmllibmanager.timing=B"false"
-    htmllibmanager.minify=B"true"
-    htmllibmanager.gzip=B"true"
 
   # Default LogManager configuration
   org.apache.sling.commons.log.LogManager
@@ -19,46 +12,36 @@
     org.apache.sling.commons.log.file.number=I"15"
 
   # Set loglevel for project-specific bundles
-  org.apache.sling.commons.log.LogManager.factory.config-wcmio-samples
+  org.apache.sling.commons.log.LogManager.factory.config-wcm-io-samples
     org.apache.sling.commons.log.file="logs/error.log"
     org.apache.sling.commons.log.level="{{log.projectSpecificLogLevel}}"
     org.apache.sling.commons.log.names=["io.wcm"]
     org.apache.sling.commons.log.pattern="{0,date,dd.MM.yyyy\ HH:mm:ss.SSS}\ *{4}*\ [{2}]\ {3}\ {5}"
 
   # Configure Sling Context-Aware Configuration for AEM - add lookup in jcr:content subnodes, ignore cq:* properties
-  org.apache.sling.caconfig.resource.impl.def.DefaultContextPathStrategy
-    configRefResourceNames=["jcr:content"]
-  
+   org.apache.sling.caconfig.resource.impl.def.DefaultContextPathStrategy
+    configRefResourceNames=["jcr:content","."]
+    configRefPropertyNames=["cq:conf"]
+
+  org.apache.sling.caconfig.resource.impl.def.DefaultConfigurationResourceResolvingStrategy
+    fallbackPaths=["/conf/global","/apps","/libs"]
+    configCollectionInheritancePropertyNames=["jcr:content/sling:configCollectionInherit", "jcr:content/mergeList","mergeList"]
+
   org.apache.sling.caconfig.management.impl.ConfigurationManagementSettingsImpl
     ignorePropertyNameRegex=["^(jcr|cq):.+$"]
+    configCollectionPropertiesResourceNames=["jcr:content","."]
   
   # Context path strategy
-  io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-wcmio-samples
-    templatePaths=["/apps/wcm-io-samples/sample-app/templates/content/homepage"]
+  io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-wcm-io-samples
+    templatePaths=["/apps/wcm-io-samples/core/templates/content/homepage"]
     minLevel=I"1"
     maxLevel=I"5"
-    contextPathRegex="^/content/(dam/)?wcm-io-samples(/.*)?$"
-    configPathPatterns=["/conf$1","/content$1/tools/config/jcr:content"]
+    contextPathRegex="^/content/(dam/)?(wcm-io-samples/.*)?$"
+    configPathPatterns=["/conf/$2"]
 
   # Store configuration in tools/config pages
-  io.wcm.caconfig.extensions.persistence.impl.ToolsConfigPagePersistenceStrategy
+  io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy
     enabled=B"true"
-    configPageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/configEditor"
-    structurePageTemplate="/apps/wcm-io-samples/sample-app/templates/admin/structureElement"
-
-{{#if configOverrides}}
-  # Override site configuration
-  org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-override
-    enabled=B"true"
-    description="Site URL Config Overrides"
-    overrides=[
-      {{~#each configOverrides ~}}
-        {{~#each this ~}}
-          "[{{../@key}}]{{this}}",
-        {{~/each ~}}
-      {{~/each ~}}
-    ]
-{{/if}}
 
 
 
@@ -73,12 +56,12 @@
     authoringUIModeService.default="TOUCH"
   
   # Define service user for wcm.io Media Handler
-  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-wcmio-samples
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-wcm-io-samples
     user.mapping=["io.wcm.handler.media\=wcmioDamSystemUser"]
 
   # Configure Responsive Preview Mode
-  io.wcm.wcm.ui.granite.emulator.impl.EmulatorProviderImpl-wcmio-samples
-    templatePathPatterns=["^/apps/wcm-io-samples/sample-app/.*$"]
+  io.wcm.wcm.ui.granite.emulator.impl.EmulatorProviderImpl-wcm-io-samples
+    templatePathPatterns=["^/apps/wcm-io-samples/core/.*$"]
 
 
 [configurations runModes=publish]

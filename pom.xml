@@ -31,11 +31,12 @@
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <packaging>pom</packaging>
 
   <name>Samples Root</name>
   <description>Sample projects and applications to demonstrate and test wcm.io features.</description>
+  <url>${site.url}/${site.url.module.prefix}/</url>
 
   <scm>
     <connection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</connection>
@@ -51,11 +52,11 @@
 
   <modules>
     <module>parent</module>
-    <module>bundles/sample-app</module>
+    <module>bundles/core</module>
     <module>bundles/clientlibs</module>
+    <module>content-packages/complete</module>
+    <module>content-packages/sample-content</module>
     <module>config-definition</module>
-    <module>complete</module>
-    <module>sample-content</module>
   </modules>
 
   <build>

@@ -1,0 +1,12 @@
+{
+  "jcr:primaryType": "cq:Template",
+  "jcr:title": "wcm.io Handler Sample Structure Element",
+
+  "allowedPaths": "^/content/wcm-io-samples(/.+)?$",
+  "allowedChildren": "^/apps/wcm-io-samples/core/templates/.*$",
+
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "wcm-io-samples/core/components/admin/page/structureElement"
+  }
+}

@@ -36,10 +36,7 @@
 
           "wcmioDamSystemUser": {
             "jcr:primaryType": "rep:SystemUser",
-            /* The UUID is important - create a system user with the defined path and principalName via CRX user administration, 
-               and then paste the UUID here. There seems to be some relation from UUID to principalName.
-               Otherwise import of package may fail with NPE in org.apache.jackrabbit.oak.security.user.UserImporter. */
-            "jcr:uuid": "04fdc272-3f39-3999-9e06-ea9e1a5f4f04",
+            "jcr:uuid": "{{oakAuthorizableUuid "wcmioDamSystemUser"}}",
             "rep:authorizableId": "wcmioDamSystemUser",
             "rep:principalName": "wcmioDamSystemUser"
           }

@@ -20,7 +20,7 @@
 # Call with "help" parameter to display syntax information
 
 # defaults
-SLING_URL="http://localhost:4502"
+SLING_URL="http://localhost:45024"
 SLING_USER="admin"
 SLING_PASSWORD="admin"
 CONGA_ENVIRONMENT="development"

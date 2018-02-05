@@ -25,7 +25,7 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>1.2.15-SNAPSHOT</version>
+    <version>1.2.16</version>
     <relativePath />
   </parent>
 
@@ -116,7 +116,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.caconfig.editor</artifactId>
-        <version>1.2.10</version>
+        <version>1.2.12</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -131,12 +131,12 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.url</artifactId>
-        <version>1.1.0</version>
+        <version>1.1.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.link</artifactId>
-        <version>1.0.5-SNAPSHOT</version>
+        <version>1.0.6</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -176,7 +176,7 @@
       <dependency>
         <groupId>io.wcm.devops.conga.definitions</groupId>
         <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
-        <version>1.2.0-SNAPSHOT</version>
+        <version>1.2.0</version>
       </dependency>
       
       <!-- wcm.io Testing -->

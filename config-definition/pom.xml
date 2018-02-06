@@ -73,7 +73,7 @@
 
           <!-- Generate configuration for local development AEM instance -->
           <execution>
-            <id>lauchpad-configuration-generate</id>
+            <id>dev-environment-config</id>
             <phase>generate-resources</phase>
             <goals>
               <goal>generate</goal>

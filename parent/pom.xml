@@ -61,7 +61,7 @@
     </dependency>
 
   </dependencies>
-  
+
   <dependencyManagement>
     <dependencies>
 
@@ -101,7 +101,7 @@
         <artifactId>org.apache.sling.jcr.contentloader</artifactId>
         <version>2.2.4</version>
       </dependency>
-      
+
       <!-- wcm.io -->
       <dependency>
         <groupId>io.wcm</groupId>
@@ -167,7 +167,7 @@
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.ui.extjs</artifactId>
         <version>1.0.0</version>
-      </dependency>      
+      </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.dam.asset-service</artifactId>
@@ -178,7 +178,7 @@
         <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
         <version>1.2.0</version>
       </dependency>
-      
+
       <!-- wcm.io Testing -->
       <dependency>
         <groupId>io.wcm</groupId>
@@ -252,7 +252,7 @@
 
   <build>
     <plugins>
-    
+
       <!-- Do not generate sites for the sample apps -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

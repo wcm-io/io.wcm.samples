@@ -166,7 +166,7 @@ execute_build() {
   mvn ${JVM_ARGS} \
       -Dconga.environments=${CONGA_ENVIRONMENT}  \
       -Pfast clean install eclipse:eclipse
-  
+
   if [ "$?" -ne "0" ]; then
     exit_with_error "*** BUILD FAILED ***"
   fi

@@ -2,7 +2,7 @@
   "jcr:primaryType": "cq:Component",
   "componentGroup": "Aside",
   "jcr:title": "Aside teaser",
-  
+
   "cq:htmlTag": {
     "class": "col-1-4"
   },

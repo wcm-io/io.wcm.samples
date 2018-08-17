@@ -25,7 +25,7 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>1.2.22</version>
+    <version>1.2.24</version>
     <relativePath />
   </parent>
 
@@ -176,7 +176,7 @@
       <dependency>
         <groupId>io.wcm.devops.conga.definitions</groupId>
         <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
-        <version>1.4.0</version>
+        <version>1.4.2</version>
       </dependency>
 
       <!-- wcm.io Testing -->

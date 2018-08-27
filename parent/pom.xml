@@ -25,7 +25,7 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>1.2.25-SNAPSHOT</version>
+    <version>1.2.26</version>
     <relativePath />
   </parent>
 
@@ -209,17 +209,17 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.wcm-io-mock.sling</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.wcm-io-mock.caconfig</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.4</version>
       </dependency>
 
       <!-- Import AEM dependencies -->

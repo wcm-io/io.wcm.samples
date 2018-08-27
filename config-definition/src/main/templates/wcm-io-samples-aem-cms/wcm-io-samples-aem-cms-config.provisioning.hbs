@@ -44,7 +44,6 @@
     enabled=B"true"
 
 
-
 [configurations runModes=author]
 
   # Show "Sites" view in TouchUI after login
@@ -65,8 +64,12 @@
 
 
 [configurations runModes=publish]
-  
-  # Disable built-in JSON and XML access features for resources
+
+  # Disable Configuration Editor on publish
+  io.wcm.caconfig.editor.impl.EditorConfig
+    enabled=B"false"
+
+  # Disable default renderings for Sling GET servlet on publish
   org.apache.sling.servlets.get.DefaultGetServlet
     enable.html=B"false"
     enable.json=B"false"
@@ -75,4 +78,4 @@
     index=B"false"
     index.files="[index,index.html]"
     aliases="xml:pdf"
-    json.maximumresults=I"1000"
+    json.maximumresults=I"100"

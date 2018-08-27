@@ -25,20 +25,20 @@
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.2</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.core</artifactId>
-  <version>1.2.0</version>
+  <version>1.2.2</version>
   <packaging>bundle</packaging>
 
   <name>Sample Application</name>
   <description>Sample application to demonstrate the usage of the wcm.io handler infrastructure and other wcm.io Features.</description>
 
   <dependencies>
-  
+
     <dependency>
       <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.caconfig.api</artifactId>
@@ -99,17 +99,22 @@
     <dependency>
       <groupId>org.osgi</groupId>
       <artifactId>osgi.core</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.osgi</groupId>
       <artifactId>osgi.cmpn</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.adobe.aem</groupId>
       <artifactId>aem-api</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -119,7 +124,7 @@
     </dependency>
     <dependency>
       <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.testing.osgi-mock</artifactId>
+      <artifactId>org.apache.sling.testing.osgi-mock.junit4</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -192,7 +197,7 @@
               com.day.cq.commons;version="[5,7)",
               *
             </Import-Package>
-            
+
             <!-- All wcm.io Handler SPI implementation only get active for the resource paths of this application -->
             <Wcmio-CAService-ContextPathRegex>^/content/(dam/)?wcm-io-samples(/.*)?$</Wcmio-CAService-ContextPathRegex>
 

@@ -14,20 +14,20 @@
      */
     "wcm-io-urlhandler-externalizer"
   ],
-  
+
   "serializerType": "htmlwriter",
-  
+
   "order": "1",
-  
+
   "contentTypes": [
     "text/html"
   ],
-  
+
   /* Apply only to templates from this application */
   "resourceTypes": [
     "wcm-io-samples/core/components/global/page"
   ],
-  
+
   /* Configure HTML elements/attributes to rewrite */
   "transformer-wcm-io-urlhandler-externalizer": {
     "rewriteElements": [

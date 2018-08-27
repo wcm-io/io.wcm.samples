@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.2.1-SNAPSHOT</version>
+    <version>1.2.3-SNAPSHOT</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.core</artifactId>
-  <version>1.2.1-SNAPSHOT</version>
+  <version>1.2.3-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <name>Sample Application</name>

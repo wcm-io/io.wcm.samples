@@ -209,17 +209,17 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.wcm-io-mock.sling</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.4</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.wcm-io-mock.caconfig</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.4</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.6</version>
       </dependency>
 
       <!-- Import AEM dependencies -->

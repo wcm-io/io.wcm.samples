@@ -120,7 +120,7 @@
 
     <dependency>
       <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.testing.aem-mock.junit4</artifactId>
+      <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -150,17 +150,6 @@
     </dependency>
 
   </dependencies>
-  <dependencyManagement>
-    <dependencies>
-
-      <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-lang3</artifactId>
-        <version>3.3.2</version>
-      </dependency>
-
-    </dependencies>
-  </dependencyManagement>
 
   <build>
 

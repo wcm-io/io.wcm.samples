@@ -19,21 +19,22 @@
  */
 package io.wcm.samples.core.controller.resource;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import io.wcm.samples.core.testcontext.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 
-public class ResourceMediaTest {
+@ExtendWith(AemContextExtension.class)
+class ResourceMediaTest {
 
-  @Rule
-  public final AemContext context = AppAemContext.newAemContext();
+  private final AemContext context = AppAemContext.newAemContext();
 
   @Test
-  public void testMedia() {
+  void testMedia() {
     context.currentResource("/content/wcm-io-samples/en/jcr:content/teaserbar/teaserbaritem");
     context.request().setAttribute("mediaFormat", "content_480");
 

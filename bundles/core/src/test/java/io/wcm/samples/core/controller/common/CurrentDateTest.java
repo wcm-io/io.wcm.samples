@@ -19,28 +19,29 @@
  */
 package io.wcm.samples.core.controller.common;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-import io.wcm.testing.mock.aem.junit.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 
-public class CurrentDateTest {
+@ExtendWith(AemContextExtension.class)
+class CurrentDateTest {
 
-  @Rule
-  public AemContext context = new AemContext();
+  private final AemContext context = new AemContext();
 
   private CurrentDate underTest;
 
-  @Before
-  public void setUp() {
+  @BeforeEach
+  void setUp() {
     underTest = context.request().adaptTo(CurrentDate.class);
   }
 
   @Test
-  public void testYear() {
+  void testYear() {
     assertTrue(underTest.getYear() >= 2014);
   }
 

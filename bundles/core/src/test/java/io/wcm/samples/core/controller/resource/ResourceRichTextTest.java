@@ -19,24 +19,25 @@
  */
 package io.wcm.samples.core.controller.resource;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.apache.commons.lang3.StringUtils;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import io.wcm.samples.core.testcontext.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 
-public class ResourceRichTextTest {
+@ExtendWith(AemContextExtension.class)
+class ResourceRichTextTest {
 
-  @Rule
-  public final AemContext context = AppAemContext.newAemContext();
+  private final AemContext context = AppAemContext.newAemContext();
 
   @Test
-  public void testRichText() {
+  void testRichText() {
     context.currentResource("/content/wcm-io-samples/en/jcr:content/content/contentrichtext");
     ResourceRichText underTest = context.request().adaptTo(ResourceRichText.class);
     assertTrue(underTest.isValid());
@@ -44,7 +45,7 @@ public class ResourceRichTextTest {
   }
 
   @Test
-  public void testInvalidRichText() {
+  void testInvalidRichText() {
     context.currentResource("/content/wcm-io-samples/en/jcr:content/content/contentheadline");
     ResourceRichText underTest = context.request().adaptTo(ResourceRichText.class);
     assertFalse(underTest.isValid());

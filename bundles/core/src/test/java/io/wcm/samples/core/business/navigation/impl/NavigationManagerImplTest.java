@@ -19,39 +19,40 @@
  */
 package io.wcm.samples.core.business.navigation.impl;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.util.List;
 
 import org.apache.sling.api.resource.Resource;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import io.wcm.samples.core.business.navigation.NavigationManager;
 import io.wcm.samples.core.business.navigation.NavigationPageItem;
 import io.wcm.samples.core.testcontext.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 
-public class NavigationManagerImplTest {
+@ExtendWith(AemContextExtension.class)
+class NavigationManagerImplTest {
 
-  @Rule
-  public final AemContext context = AppAemContext.newAemContext();
+  private final AemContext context = AppAemContext.newAemContext();
 
   private NavigationManager underTest;
 
-  @Before
-  public void setUp() {
+  @BeforeEach
+  void setUp() {
     underTest = context.request().adaptTo(NavigationManager.class);
     assertNotNull(underTest);
   }
 
   @Test
-  public void testGetMainNavigation() throws Exception {
+  void testGetMainNavigation() throws Exception {
     try (FileInputStream fis = new FileInputStream("src/main/webapp/app-root/components/admin/page/redirect.json");
         BufferedInputStream bis = new BufferedInputStream(fis)) {
       context.load().json(bis, "/apps/wcm-io-samples/core/components/admin/page/redirect");
@@ -74,7 +75,7 @@ public class NavigationManagerImplTest {
   }
 
   @Test
-  public void testGetMainNavigation_1Levels() throws Exception {
+  void testGetMainNavigation_1Levels() throws Exception {
     NavigationPageItem rootItem = underTest.getMainNavigation(1);
     List<NavigationPageItem> mainnavItems = rootItem.getChildren();
     assertEquals(5, mainnavItems.size());
@@ -83,7 +84,7 @@ public class NavigationManagerImplTest {
   }
 
   @Test
-  public void testGetMainNavigation_0Levels() throws Exception {
+  void testGetMainNavigation_0Levels() throws Exception {
     NavigationPageItem rootItem = underTest.getMainNavigation(0);
     List<NavigationPageItem> mainnavItems = rootItem.getChildren();
     assertEquals(0, mainnavItems.size());
@@ -93,7 +94,7 @@ public class NavigationManagerImplTest {
    * Test footer navigation with separate definition at tools/footernav/*
    */
   @Test
-  public void testGetFooterNavigation_ToolsFooterNav() throws Exception {
+  void testGetFooterNavigation_ToolsFooterNav() throws Exception {
     NavigationPageItem rootItem = underTest.getFooterNavigation();
     List<NavigationPageItem> footerNavItems = rootItem.getChildren();
     assertEquals(3, footerNavItems.size());
@@ -112,7 +113,7 @@ public class NavigationManagerImplTest {
    * Test footer navigation with separate definition derived from main navigation
    */
   @Test
-  public void testGetFooterNavigation_MainNav() throws Exception {
+  void testGetFooterNavigation_MainNav() throws Exception {
 
     // delete footer navigation in sample content
     Resource footerNavResource = context.resourceResolver().getResource("/content/wcm-io-samples/en/tools/navigation/footernav");

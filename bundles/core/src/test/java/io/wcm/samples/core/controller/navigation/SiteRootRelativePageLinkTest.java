@@ -19,33 +19,34 @@
  */
 package io.wcm.samples.core.controller.navigation;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import io.wcm.samples.core.testcontext.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 
-public class SiteRootRelativePageLinkTest {
+@ExtendWith(AemContextExtension.class)
+class SiteRootRelativePageLinkTest {
 
-  @Rule
-  public final AemContext context = AppAemContext.newAemContext();
+  private final AemContext context = AppAemContext.newAemContext();
 
   @Test
-  public void testSiteRoot() {
+  void testSiteRoot() {
     assertLink("HOME", "/content/wcm-io-samples/en.html");
   }
 
   @Test
-  public void testSiteRoot_PageTitle() {
+  void testSiteRoot_PageTitle() {
     context.request().setAttribute("titleType", "pageTitle");
     assertLink("Handler Sample 2014", "/content/wcm-io-samples/en.html");
   }
 
   @Test
-  public void testImprint() {
+  void testImprint() {
     context.request().setAttribute("relativePath", "/tools/navigation/imprint");
     assertLink("Imprint", "/content/wcm-io-samples/en/tools/navigation/imprint.html");
   }

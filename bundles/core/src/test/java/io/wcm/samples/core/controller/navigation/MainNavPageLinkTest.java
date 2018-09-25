@@ -19,22 +19,22 @@
  */
 package io.wcm.samples.core.controller.navigation;
 
-import static org.junit.Assert.assertSame;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import io.wcm.samples.core.business.navigation.NavigationManager;
 import io.wcm.samples.core.business.navigation.NavigationPageItem;
 
-@RunWith(MockitoJUnitRunner.class)
-public class MainNavPageLinkTest {
+@ExtendWith(MockitoExtension.class)
+class MainNavPageLinkTest {
 
   @Mock
   private NavigationManager navigationManager;
@@ -42,13 +42,13 @@ public class MainNavPageLinkTest {
 
   private MainNavPageLink underTest;
 
-  @Before
-  public void setUp() throws Exception {
+  @BeforeEach
+  void setUp() throws Exception {
     when(navigationManager.getMainNavigation(anyInt())).thenReturn(navigationPageItem);
   }
 
   @Test
-  public void testGetRoot() throws Exception {
+  void testGetRoot() throws Exception {
     underTest = new MainNavPageLink(navigationManager, 5);
     verify(navigationManager).getMainNavigation(5);
     assertSame(navigationPageItem, underTest.getRoot());

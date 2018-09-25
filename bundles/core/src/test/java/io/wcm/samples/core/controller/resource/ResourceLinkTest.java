@@ -19,23 +19,24 @@
  */
 package io.wcm.samples.core.controller.resource;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import io.wcm.samples.core.testcontext.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 
-public class ResourceLinkTest {
+@ExtendWith(AemContextExtension.class)
+class ResourceLinkTest {
 
-  @Rule
-  public final AemContext context = AppAemContext.newAemContext();
+  private final AemContext context = AppAemContext.newAemContext();
 
   @Test
-  public void testValidLink() {
+  void testValidLink() {
     context.currentResource("/content/wcm-io-samples/en/jcr:content/teaserbar/teaserbaritem");
     ResourceLink underTest = context.request().adaptTo(ResourceLink.class);
     assertTrue(underTest.isValid());
@@ -44,7 +45,7 @@ public class ResourceLinkTest {
   }
 
   @Test
-  public void testInvalidLink() {
+  void testInvalidLink() {
     context.currentResource("/content/wcm-io-samples/en/jcr:content/teaserbar");
     ResourceLink underTest = context.request().adaptTo(ResourceLink.class);
     assertFalse(underTest.isValid());

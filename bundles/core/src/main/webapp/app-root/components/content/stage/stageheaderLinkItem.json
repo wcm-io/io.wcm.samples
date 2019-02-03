@@ -1,7 +1,7 @@
 {
   "jcr:primaryType": "cq:Component",
-  "jcr:title": "Stage Header Link Item",
   "componentGroup": "Stage",
+  "jcr:title": "Stage Header Link Item",
 
   "cq:editConfig": {
     "cq:listeners": {

@@ -2,16 +2,20 @@
   "jcr:primaryType": "cq:Component",
   "componentGroup": "Teaser",
   "jcr:title": "Teaserbar Item",
+
   "cq:htmlTag": {
     "cq:tagName": "section",
     "class": "teaser col-1-4"
   },
+
   "cq:editConfig": {
     "cq:listeners": {
       "afteredit": "sampleApp.authoring.listener.refreshAjaxContentAfterEdit"
     }
   },
+
   "wcmio:mediaFormats": ["content_480"],
+
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "sling:resourceType": "cq/gui/components/authoring/dialog",
@@ -52,4 +56,5 @@
       }
     }
   }
+
 }

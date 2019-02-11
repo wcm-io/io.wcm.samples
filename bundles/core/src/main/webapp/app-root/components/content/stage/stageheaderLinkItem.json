@@ -2,11 +2,13 @@
   "jcr:primaryType": "cq:Component",
   "componentGroup": "Stage",
   "jcr:title": "Stage Header Link Item",
+
   "cq:editConfig": {
     "cq:listeners": {
       "afteredit": "sampleApp.authoring.listener.refreshAjaxContentAfterEdit"
     }
   },
+
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "sling:resourceType": "cq/gui/components/authoring/dialog",
@@ -21,4 +23,5 @@
       }
     }
   }
+
 }

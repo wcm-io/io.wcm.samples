@@ -1,6 +1,7 @@
 {
   "jcr:primaryType": "cq:Component",
   "sling:resourceSuperType": "wcm/foundation/components/page",
+
   "wcmio:parsysConfig": {
     "jcr:primaryType": "nt:unstructured",
     "paths": {
@@ -58,6 +59,7 @@
       }
     }
   },
+  
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "jcr:title": "Page",
@@ -86,4 +88,5 @@
       }
     }
   }
+
 }

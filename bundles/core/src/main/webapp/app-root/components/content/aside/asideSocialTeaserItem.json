@@ -2,12 +2,15 @@
   "jcr:primaryType": "cq:Component",
   "componentGroup": "Aside",
   "jcr:title": "Social teaser item",
+
   "cq:editConfig": {
     "cq:listeners": {
       "afteredit": "sampleApp.authoring.listener.refreshAjaxContentAfterEdit"
     }
   },
+
   "wcmio:mediaFormats": ["socialTeaser"],
+
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "sling:resourceType": "cq/gui/components/authoring/dialog",
@@ -43,4 +46,5 @@
       }
     }
   }
+
 }

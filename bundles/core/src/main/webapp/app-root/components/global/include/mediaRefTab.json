@@ -11,10 +11,8 @@
       "items": {
 
         "mediaRef": {
-          "sling:resourceType": "granite/ui/components/foundation/form/pathbrowser",
-          "name": "./mediaRef",
+          "sling:resourceType": "wcm-io/handler/media/components/granite/form/fileupload",
           "fieldLabel": "Asset reference",
-          "fieldDescription": "Reference to asset from DAM",
           "rootPath": "/content/dam/wcm-io-samples"
         }
 

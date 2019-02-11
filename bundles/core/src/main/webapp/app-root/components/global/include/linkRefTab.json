@@ -76,11 +76,11 @@
           "showhidetargetvalue": "media",
           "items": {
             "linkMediaRef": {
-              "sling:resourceType": "granite/ui/components/foundation/form/pathbrowser",
+              "sling:resourceType": "wcm-io/handler/media/components/granite/form/pathfield",
               "name": "./linkMediaRef",
               "fieldLabel": "Asset reference",
-              "fieldDescription": "Reference to asset from DAM",
-              "rootPath": "/content/dam/wcm-io-samples"
+              "rootPath": "/content/dam/wcm-io-samples",
+              "mediaFormats": ["download"]
             },
             "linkMediaDownload": {
               "sling:resourceType": "wcm-io/wcm/ui/granite/components/form/checkbox",

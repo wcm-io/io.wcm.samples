@@ -9,6 +9,8 @@
     }
   },
 
+  "wcmio:mediaFormats": ["sponsorTeaser"],
+
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "sling:resourceType": "cq/gui/components/authoring/dialog",

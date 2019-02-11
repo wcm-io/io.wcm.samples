@@ -1,18 +1,9 @@
 {
-  /*
-   * Root page component
-   * Default Page properties dialog
-   */
   "jcr:primaryType": "cq:Component",
   "sling:resourceSuperType": "wcm/foundation/components/page",
-
-  /*
-   * Global definition of item sub-components for components
-   */
   "wcmio:parsysConfig": {
     "jcr:primaryType": "nt:unstructured",
     "paths": {
-
       "stageheaderLinks": {
         "pattern": "^jcr:content/.*$",
         "parentAncestorLevel": 2,
@@ -67,10 +58,6 @@
       }
     }
   },
-
-  /*
-   * Global page properties dialog
-   */
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "jcr:title": "Page",
@@ -90,23 +77,19 @@
             "type": "nav"
           },
           "items": {
-
             "basic": {
               "sling:resourceType": "granite/ui/components/foundation/include",
               "jcr:title": "Basic",
               "path": "wcm-io-samples/core/components/global/include/pagepropsBasicTab"
             },
-
             "advanced": {
               "sling:resourceType": "granite/ui/components/foundation/include",
               "jcr:title": "Advanced",
               "path": "wcm-io-samples/core/components/global/include/pagepropsAdvancedTab"
             }
-
           }
         }
       }
     }
   }
-
 }

@@ -9,13 +9,11 @@
     "column": {
       "sling:resourceType": "granite/ui/components/foundation/container",
       "items": {
-
         "mediaRef": {
           "sling:resourceType": "wcm-io/handler/media/components/granite/form/fileupload",
           "fieldLabel": "Asset reference",
           "rootPath": "/content/dam/wcm-io-samples"
         }
-
       }
     }
   }

@@ -80,7 +80,9 @@
               "name": "./linkMediaRef",
               "fieldLabel": "Asset reference",
               "rootPath": "/content/dam/wcm-io-samples",
-              "mediaFormats": ["download"]
+              "mediaFormats": [
+                "download"
+              ]
             },
             "linkMediaDownload": {
               "sling:resourceType": "wcm-io/wcm/ui/granite/components/form/checkbox",
@@ -107,7 +109,6 @@
           }
         }
       }
-
     }
   }
 }

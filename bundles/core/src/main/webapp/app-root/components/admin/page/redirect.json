@@ -1,7 +1,6 @@
 {
   "jcr:primaryType": "cq:Component",
   "sling:resourceSuperType": "wcm-io/handler/link/components/page/redirect",
-
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "jcr:title": "Page",
@@ -23,23 +22,19 @@
             "sling:resourceType": "granite/ui/components/foundation/layouts/tabs"
           },
           "items": {
-
             "link": {
               "sling:resourceType": "granite/ui/components/foundation/include",
               "jcr:title": "Redirect Link",
               "path": "wcm-io-samples/core/components/global/include/linkRefNoTitleTab"
             },
-
             "redirectStatus": {
               "sling:resourceType": "granite/ui/components/foundation/include",
               "jcr:title": "Redirect Status",
               "path": "wcm-io/handler/link/components/global/include/redirectStatus"
             }
-
           }
         }
       }
     }
   }
-
 }

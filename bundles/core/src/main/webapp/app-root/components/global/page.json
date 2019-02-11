@@ -1,18 +1,10 @@
 {
-  /*
-   * Root page component
-   * Default Page properties dialog
-   */
   "jcr:primaryType": "cq:Component",
   "sling:resourceSuperType": "wcm/foundation/components/page",
 
-  /*
-   * Global definition of item sub-components for components
-   */
   "wcmio:parsysConfig": {
     "jcr:primaryType": "nt:unstructured",
     "paths": {
-
       "stageheaderLinks": {
         "pattern": "^jcr:content/.*$",
         "parentAncestorLevel": 2,
@@ -67,10 +59,7 @@
       }
     }
   },
-
-  /*
-   * Global page properties dialog
-   */
+  
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "jcr:title": "Page",
@@ -81,28 +70,19 @@
     "mode": "edit",
     "sling:resourceType": "cq/gui/components/authoring/dialog",
     "content": {
-      "sling:resourceType": "granite/ui/components/foundation/container",
+      "sling:resourceType": "granite/ui/components/coral/foundation/container",
       "items": {
         "tabs": {
-          "sling:resourceType": "granite/ui/components/foundation/container",
-          "layout": {
-            "sling:resourceType": "granite/ui/components/foundation/layouts/tabs",
-            "type": "nav"
-          },
+          "sling:resourceType": "granite/ui/components/coral/foundation/tabs",
           "items": {
-
             "basic": {
-              "sling:resourceType": "granite/ui/components/foundation/include",
-              "jcr:title": "Basic",
+              "sling:resourceType": "granite/ui/components/coral/foundation/include",
               "path": "wcm-io-samples/core/components/global/include/pagepropsBasicTab"
             },
-
             "advanced": {
-              "sling:resourceType": "granite/ui/components/foundation/include",
-              "jcr:title": "Advanced",
+              "sling:resourceType": "granite/ui/components/coral/foundation/include",
               "path": "wcm-io-samples/core/components/global/include/pagepropsAdvancedTab"
             }
-
           }
         }
       }

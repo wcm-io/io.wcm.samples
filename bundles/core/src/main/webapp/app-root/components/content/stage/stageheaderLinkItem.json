@@ -14,19 +14,12 @@
     "sling:resourceType": "cq/gui/components/authoring/dialog",
     "jcr:title": "Stage Header Link ",
     "content": {
-      "sling:resourceType": "granite/ui/components/foundation/container",
-      "layout": {
-        "sling:resourceType": "granite/ui/components/foundation/layouts/tabs",
-        "type": "nav"
-      },
+      "sling:resourceType": "granite/ui/components/coral/foundation/tabs",
       "items": {
-
         "link": {
-          "sling:resourceType": "granite/ui/components/foundation/include",
-          "jcr:title": "Link",
+          "sling:resourceType": "granite/ui/components/coral/foundation/include",
           "path": "wcm-io-samples/core/components/global/include/linkRefTab"
         }
-
       }
     }
   }

@@ -1,25 +1,28 @@
 {
   "jcr:primaryType": "nt:unstructured",
-  "sling:resourceType": "granite/ui/components/foundation/section",
+  "sling:resourceType": "granite/ui/components/coral/foundation/fixedcolumns",
   "jcr:title": "Link",
-  "layout": {
-    "sling:resourceType": "granite/ui/components/foundation/layouts/fixedcolumns"
-  },
+  "margin": true,
+  "cq:showOnCreate": false,
   "items": {
     "column": {
-      "sling:resourceType": "granite/ui/components/foundation/container",
+      "sling:resourceType": "granite/ui/components/coral/foundation/container",
       "items": {
+
         "linkTitle": {
-          "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+          "sling:resourceType": "granite/ui/components/coral/foundation/form/textfield",
           "name": "./linkTitle",
           "fieldLabel": "Link title"
         },
+
         "linkType": {
-          "sling:resourceType": "granite/ui/components/foundation/form/select",
+          "sling:resourceType": "granite/ui/components/coral/foundation/form/select",
           "name": "./linkType",
           "fieldLabel": "Link type",
-          "class": "cq-dialog-dropdown-showhide",
-          "cq-dialog-dropdown-showhide-target": ".option-linktype-showhide-target",
+          "granite:class": "cq-dialog-dropdown-showhide",
+          "granite:data": {
+            "cq-dialog-dropdown-showhide-target": ".option-linktype-showhide-target"
+          },
           "items": {
             "internal": {
               "value": "internal",
@@ -35,45 +38,45 @@
             }
           }
         },
+
         "internalWell": {
-          "sling:resourceType": "granite/ui/components/foundation/container",
-          "layout": {
-            "sling:resourceType": "granite/ui/components/foundation/layouts/well"
+          "sling:resourceType": "granite/ui/components/coral/foundation/well",
+          "granite:class": "hide option-linktype-showhide-target foundation-layout-util-vmargin",
+          "granite:data": {
+            "showhidetargetvalue": "internal"
           },
-          "class": "hide option-linktype-showhide-target foundation-layout-util-vmargin",
-          "showhidetargetvalue": "internal",
           "items": {
             "linkContentRef": {
-              "sling:resourceType": "wcm-io/wcm/ui/granite/components/form/configScopePathBrowser",
+              "sling:resourceType": "wcm-io/handler/url/components/granite/form/siteRootPathField",
               "name": "./linkContentRef",
               "fieldLabel": "Internal page",
               "fieldDescription": "Link to target page in CMS (same site)"
             }
           }
         },
+
         "externalWell": {
-          "sling:resourceType": "granite/ui/components/foundation/container",
-          "layout": {
-            "sling:resourceType": "granite/ui/components/foundation/layouts/well"
+          "sling:resourceType": "granite/ui/components/coral/foundation/well",
+          "granite:class": "hide option-linktype-showhide-target foundation-layout-util-vmargin",
+          "granite:data": {
+            "showhidetargetvalue": "external"
           },
-          "class": "hide option-linktype-showhide-target foundation-layout-util-vmargin",
-          "showhidetargetvalue": "external",
           "items": {
             "linkExternalRef": {
-              "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+              "sling:resourceType": "granite/ui/components/coral/foundation/form/textfield",
               "name": "./linkExternalRef",
               "fieldLabel": "URL",
               "fieldDescription": "Link to external destination"
             }
           }
         },
+
         "mediaWell": {
-          "sling:resourceType": "granite/ui/components/foundation/container",
-          "layout": {
-            "sling:resourceType": "granite/ui/components/foundation/layouts/well"
+          "sling:resourceType": "granite/ui/components/coral/foundation/well",
+          "granite:class": "hide option-linktype-showhide-target foundation-layout-util-vmargin",
+          "granite:data": {
+            "showhidetargetvalue": "media"
           },
-          "class": "hide option-linktype-showhide-target foundation-layout-util-vmargin",
-          "showhidetargetvalue": "media",
           "items": {
             "linkMediaRef": {
               "sling:resourceType": "wcm-io/handler/media/components/granite/form/pathfield",
@@ -86,11 +89,11 @@
               "sling:resourceType": "wcm-io/wcm/ui/granite/components/form/checkbox",
               "name": "./linkMediaDownload",
               "text": "Download",
-              "value": "true",
               "fieldDescription": "Open DAM asset item with download dialog"
             }
           }
         },
+
         "linkWindowTarget": {
           "sling:resourceType": "granite/ui/components/foundation/form/select",
           "name": "./linkWindowTarget",
@@ -106,8 +109,8 @@
             }
           }
         }
-      }
 
+      }
     }
   }
 }

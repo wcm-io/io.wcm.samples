@@ -14,34 +14,31 @@
     "sling:resourceType": "cq/gui/components/authoring/dialog",
     "jcr:title": "Content Headline",
     "content": {
-      "sling:resourceType": "granite/ui/components/foundation/section",
-      "layout": {
-        "sling:resourceType": "granite/ui/components/foundation/layouts/fixedcolumns"
-      },
+      "sling:resourceType": "granite/ui/components/coral/foundation/fixedcolumns",
       "items": {
         "column": {
-          "sling:resourceType": "granite/ui/components/foundation/container",
+          "sling:resourceType": "granite/ui/components/coral/foundation/container",
           "items": {
             "headline": {
-              "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+              "sling:resourceType": "granite/ui/components/coral/foundation/form/textfield",
               "name": "./headline",
               "fieldLabel": "Headline",
               "required": true
             },
             "smaller": {
-              "sling:resourceType": "granite/ui/components/foundation/form/checkbox",
+              "sling:resourceType": "granite/ui/components/coral/foundation/form/checkbox",
               "name": "./smaller",
               "text": "Smaller Headline",
               "value": "true",
               "fieldDescription": "h2 instead of h1"
             },
             "smallerDelete": {
-              "sling:resourceType": "granite/ui/components/foundation/form/hidden",
+              "sling:resourceType": "granite/ui/components/coral/foundation/form/hidden",
               "name": "./smaller@Delete",
               "value": "true"
             },
             "smallerTypeHint": {
-              "sling:resourceType": "granite/ui/components/foundation/form/hidden",
+              "sling:resourceType": "granite/ui/components/coral/foundation/form/hidden",
               "name": "./smaller@TypeHint",
               "value": "Boolean"
             }

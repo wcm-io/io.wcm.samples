@@ -11,25 +11,19 @@
     "mode": "edit",
     "sling:resourceType": "cq/gui/components/authoring/dialog",
     "content": {
-      "class": "cq-dialog-content-page",
-      "sling:resourceType": "granite/ui/components/foundation/container",
+      "sling:resourceType": "granite/ui/components/coral/foundation/container",
+      "granite:class": "cq-dialog-content-page",
       "items": {
         "tabs": {
-          "rel": "cq-siteadmin-admin-properties-tabs",
-          "sling:resourceType": "granite/ui/components/foundation/container",
-          "layout": {
-            "type": "nav",
-            "sling:resourceType": "granite/ui/components/foundation/layouts/tabs"
-          },
+          "sling:resourceType": "granite/ui/components/coral/foundation/tabs",
+          "granite:rel": "cq-siteadmin-admin-properties-tabs",
           "items": {
             "link": {
-              "sling:resourceType": "granite/ui/components/foundation/include",
-              "jcr:title": "Redirect Link",
+              "sling:resourceType": "granite/ui/components/coral/foundation/include",
               "path": "wcm-io-samples/core/components/global/include/linkRefNoTitleTab"
             },
             "redirectStatus": {
-              "sling:resourceType": "granite/ui/components/foundation/include",
-              "jcr:title": "Redirect Status",
+              "sling:resourceType": "granite/ui/components/coral/foundation/include",
               "path": "wcm-io/handler/link/components/global/include/redirectStatus"
             }
           }

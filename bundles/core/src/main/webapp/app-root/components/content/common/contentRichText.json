@@ -18,13 +18,10 @@
     "sling:resourceType": "cq/gui/components/authoring/dialog",
     "jcr:title": "Content Richtext",
     "content": {
-      "sling:resourceType": "granite/ui/components/foundation/section",
-      "layout": {
-        "sling:resourceType": "granite/ui/components/foundation/layouts/fixedcolumns"
-      },
+      "sling:resourceType": "granite/ui/components/coral/foundation/fixedcolumns",
       "items": {
         "column": {
-          "sling:resourceType": "granite/ui/components/foundation/container",
+          "sling:resourceType": "granite/ui/components/coral/foundation/container",
           "items": {
             "xhtmlText": {
               "sling:resourceType": "cq/gui/components/authoring/dialog/richtext/readonly",

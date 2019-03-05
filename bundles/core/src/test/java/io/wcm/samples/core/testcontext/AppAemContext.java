@@ -73,9 +73,6 @@ public final class AppAemContext {
       context.registerInjectActivateService(new LinkHandlerConfigImpl());
       context.registerService(MediaFormatProvider.class, new MediaFormatProviderImpl());
 
-      // register sling models
-      context.addModelsForPackage("io.wcm.samples.core");
-
       // import sample content
       context.load().json("/sample-content.json", CONTENT_ROOT);
       context.load().json("/sample-content-dam.json", DAM_ROOT);

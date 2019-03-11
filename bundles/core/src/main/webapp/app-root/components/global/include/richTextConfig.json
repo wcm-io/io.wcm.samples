@@ -51,7 +51,17 @@
       "features": "*"
     },
     "edit": {
-      "features": "*"
+      "features": "*",
+      "htmlPasteRules": {
+        "allowedAttributes": {
+          "a": [
+            "href", "name", "title", "alt",
+            // allow attributes of custom RTE link plugin
+            "data-link-type", "data-link-content-ref", "data-link-cross-context-content-ref",
+            "data-link-media-ref", "data-link-external-ref", "data-link-window-target", "data-link-media-download"
+          ]
+        }
+      }
     },
     "findreplace": {
       "features": "*"

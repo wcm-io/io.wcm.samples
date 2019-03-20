@@ -27,6 +27,9 @@
       <action type="update" dev="sseifert">
         Switch to AEM 6.2 and JUnit 5.
       </action>
+      <action type="update" dev="bdang">
+        Align url handler externalizer's rewriteElements config to the archetype best practise.
+      </action>
     </release>
 
     <release version="1.2.2" date="2018-08-27">

@@ -31,6 +31,7 @@
   /* Configure HTML elements/attributes to rewrite */
   "transformer-wcm-io-urlhandler-externalizer": {
     "rewriteElements": [
+      "a:href",
       "img:src",
       "link:href",
       "script:src",

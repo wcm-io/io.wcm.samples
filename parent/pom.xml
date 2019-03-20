@@ -191,7 +191,7 @@
       <dependency>
         <groupId>io.wcm.devops.conga.definitions</groupId>
         <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
-        <version>1.4.4</version>
+        <version>1.5.0</version>
       </dependency>
 
       <!-- wcm.io Testing -->

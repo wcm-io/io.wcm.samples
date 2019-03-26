@@ -20,11 +20,11 @@
 package io.wcm.samples.core.config.impl;
 
 import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.osgi.service.component.annotations.Component;
 
 import com.day.cq.wcm.api.Page;
-import com.drew.lang.annotations.NotNull;
-import com.drew.lang.annotations.Nullable;
 
 import io.wcm.handler.link.spi.LinkHandlerConfig;
 import io.wcm.handler.link.type.MediaLinkType;

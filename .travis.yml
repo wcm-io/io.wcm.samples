@@ -33,10 +33,10 @@ script:
 # Remove wcm.io artefacts from repository before cache
 - rm -rf $HOME/.m2/repository/io/wcm
 
-# exlude release tags like xyz-1.0.0 or xyz-1
+# exclude release tags like xyz.xyz-1.0.0 or xyz-xyz-1
 branches:
   except:
-    - /^.*\-\d+(\.\d+\.\d+)?(\..*|\-.*)?$/
+    - /^.+(\.|\-).+\-\d+(\.\d+\.\d+)?(\..*|\-.*)?$/
 
 # Cache Maven Repository
 cache:

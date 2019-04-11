@@ -178,7 +178,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.parsys</artifactId>
-        <version>1.3.0</version>
+        <version>1.3.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

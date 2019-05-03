@@ -151,8 +151,8 @@
 
     <!-- For build compatibility with Java 11 -->
     <dependency>
-      <groupId>javax.annotation</groupId>
-      <artifactId>javax.annotation-api</artifactId>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-annotation_1.3_spec</artifactId>
       <scope>provided</scope>
     </dependency>
 

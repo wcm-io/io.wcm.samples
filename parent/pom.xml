@@ -38,12 +38,11 @@
   <description>Sample projects and applications to demonstrate and test wcm.io features.</description>
 
   <properties>
-    <!-- compiler settings -->
+
+    <!-- Java version -->
     <java.version>1.8</java.version>
     <build.compiler.release>8</build.compiler.release>
 
-    <!-- Do not make baseline checks for sample applications -->
-    <baseline.skip>true</baseline.skip>
   </properties>
 
   <dependencies>

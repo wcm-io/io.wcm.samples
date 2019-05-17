@@ -21,8 +21,10 @@ package io.wcm.samples.core.config.impl;
 
 import java.util.List;
 
+import org.jetbrains.annotations.NotNull;
 import org.osgi.service.component.annotations.Component;
 
+import com.day.cq.wcm.api.Page;
 import com.google.common.collect.ImmutableList;
 
 import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
@@ -36,6 +38,8 @@ import io.wcm.samples.core.handler.ResponsiveImageMediaMarkupBuilder;
 @Component(service = MediaHandlerConfig.class)
 public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
+  static final String DAM_ROOT = "/content/dam/wcm-io-samples";
+
   private static final List<Class<? extends MediaMarkupBuilder>> MEDIA_MARKUP_BUILDERS = ImmutableList.<Class<? extends MediaMarkupBuilder>>of(
       ResponsiveImageMediaMarkupBuilder.class,
       DummyImageMediaMarkupBuilder.class
@@ -44,6 +48,11 @@ public class MediaHandlerConfigImpl extends MediaHandlerConfig {
   @Override
   public List<Class<? extends MediaMarkupBuilder>> getMarkupBuilders() {
     return MEDIA_MARKUP_BUILDERS;
+  }
+
+  @Override
+  public @NotNull String getDamRootPath(@NotNull Page page) {
+    return DAM_ROOT;
   }
 
 }

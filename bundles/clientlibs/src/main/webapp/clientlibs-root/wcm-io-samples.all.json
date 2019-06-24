@@ -11,5 +11,6 @@
     "default:none",
     "min:gcc;compilationLevel=whitespace"
   ],
-  "longCacheKey": "${project.version}-${buildNumber}"
+  "longCacheKey": "${project.version}-${buildNumber}",
+  "allowProxy": true
 }

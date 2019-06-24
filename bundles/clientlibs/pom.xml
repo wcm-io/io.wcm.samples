@@ -47,7 +47,7 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
-              SLING-INF/clientlibs-root;overwrite:=true;ignoreImportProviders:=xml;path:=/etc/clientlibs/wcm-io-samples
+              SLING-INF/clientlibs-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/clientlibs
             </Sling-Initial-Content>
           </instructions>
         </configuration>

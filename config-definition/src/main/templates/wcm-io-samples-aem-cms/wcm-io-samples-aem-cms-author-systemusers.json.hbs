@@ -1,5 +1,5 @@
 {{!--
-  Create system user "wcmioDamSystemUser" and grant read/write/replicate access to everything below /content/dam.
+  Create system user "wcmioDamSystemUser" and grant read/write access to everything below /content/dam.
 --}}
 {
   "jcr:primaryType": "rep:root",
@@ -15,7 +15,7 @@
         "allow-wcmioDamSystemUser": {
           "jcr:primaryType": "rep:GrantACE",
           "rep:principalName": "wcmioDamSystemUser",
-          "rep:privileges": [ "jcr:read", "rep:write", "crx:replicate" ]
+          "rep:privileges": [ "jcr:read", "rep:write" ]
         }
       }
 

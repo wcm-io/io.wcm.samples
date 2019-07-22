@@ -234,7 +234,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
-        <version>1.2.0</version>
+        <version>1.2.2</version>
       </dependency>
 
       <!-- Import AEM dependencies -->

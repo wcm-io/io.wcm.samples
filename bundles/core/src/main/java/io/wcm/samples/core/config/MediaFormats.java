@@ -33,40 +33,40 @@ public final class MediaFormats {
   }
 
   /**
-   * Stage header (1.33)
+   * Stage header
    */
   public static final MediaFormat STAGE_HEADER = create("stageHeader")
-      .label("Stage header (1.33)")
+      .label("Stage header")
       .fixedDimension(1000, 300)
       .extensions("gif", "jpg", "jpeg", "png")
       .renditionGroup("/apps/wcm-io-samples/core/renditiongroup/stageHeader")
       .build();
 
   /**
-   * Content 480px (1.77)
+   * Content
    */
   public static final MediaFormat CONTENT_480 = create("content_480")
-      .label("Content 480px (1.77)")
+      .label("Content")
       .fixedDimension(480, 270)
       .extensions("gif", "jpg", "jpeg", "png")
       .renditionGroup("/apps/wcm-io-samples/core/renditiongroup/content")
       .build();
 
   /**
-   * Sponsor-Logo
+   * Sponsor Logo
    */
   public static final MediaFormat SPONSOR_TEASER = create("sponsorTeaser")
-      .label("Sponsor-Logo")
+      .label("Sponsor Logo")
       .maxWidth(400)
       .maxHeight(400)
       .extensions("gif", "jpg", "png")
       .build();
 
   /**
-   * Socialteaser-Logo (1:1)
+   * Socialteaser Logo
    */
   public static final MediaFormat SOCIAL_TEASER = create("socialTeaser")
-      .label("Socialteaser-Logo (1:1)")
+      .label("Socialteaser Logo")
       .fixedDimension(120, 120)
       .extensions("gif", "jpg", "png")
       .build();

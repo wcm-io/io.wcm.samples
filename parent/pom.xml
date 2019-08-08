@@ -147,7 +147,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.commons</artifactId>
-        <version>1.2.0</version>
+        <version>1.2.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -234,7 +234,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
-        <version>1.2.2</version>
+        <version>1.2.3-SNAPSHOT</version>
       </dependency>
 
       <!-- Import AEM dependencies -->

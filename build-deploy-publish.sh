@@ -2,7 +2,7 @@
 # #%L
 #  wcm.io
 #  %%
-#  Copyright (C) 2017 wcm.io
+#  Copyright (C) 2017 - 2019 wcm.io
 #  %%
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -19,11 +19,12 @@
 
 # Call with "help" parameter to display syntax information
 
-SLING_URL="http://localhost:4503"
+MAVEN_PROFILES="fast,publish"
 CONGA_NODE="aem-publish"
 
 if [[ $0 == *":\\"* ]]; then
   DISPLAY_PAUSE_MESSAGE=true
 fi
 
-./build-deploy.sh --sling.url=${SLING_URL} --conga.node=${CONGA_NODE} --display.pause.message=${DISPLAY_PAUSE_MESSAGE} "$@"
+./build-deploy.sh --maven.profiles=${MAVEN_PROFILES} --conga.node=${CONGA_NODE} --display.pause.message=${DISPLAY_PAUSE_MESSAGE} "$@"
+

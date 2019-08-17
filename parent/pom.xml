@@ -39,6 +39,10 @@
 
   <properties>
 
+    <!-- AEM instance parameters -->
+    <sling.url>http://localhost:4502</sling.url>
+    <sling.publish.url>http://localhost:4503</sling.publish.url>
+
     <!-- Java version -->
     <java.version>1.8</java.version>
     <build.compiler.release>8</build.compiler.release>

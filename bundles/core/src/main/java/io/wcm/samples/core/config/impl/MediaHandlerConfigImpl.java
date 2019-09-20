@@ -30,6 +30,9 @@ import com.google.common.collect.ImmutableList;
 import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
 import io.wcm.handler.media.spi.MediaHandlerConfig;
 import io.wcm.handler.media.spi.MediaMarkupBuilder;
+import io.wcm.handler.media.spi.MediaSource;
+import io.wcm.handler.mediasource.dam.DamMediaSource;
+import io.wcm.handler.mediasource.inline.InlineMediaSource;
 import io.wcm.samples.core.handler.ResponsiveImageMediaMarkupBuilder;
 
 /**
@@ -40,10 +43,18 @@ public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
   static final String DAM_ROOT = "/content/dam/wcm-io-samples";
 
+  private static final List<Class<? extends MediaSource>> MEDIA_SOURCES = ImmutableList.<Class<? extends MediaSource>>of(
+      DamMediaSource.class,
+      InlineMediaSource.class);
+
   private static final List<Class<? extends MediaMarkupBuilder>> MEDIA_MARKUP_BUILDERS = ImmutableList.<Class<? extends MediaMarkupBuilder>>of(
       ResponsiveImageMediaMarkupBuilder.class,
-      DummyImageMediaMarkupBuilder.class
-      );
+      DummyImageMediaMarkupBuilder.class);
+
+  @Override
+  public @NotNull List<Class<? extends MediaSource>> getSources() {
+    return MEDIA_SOURCES;
+  }
 
   @Override
   public List<Class<? extends MediaMarkupBuilder>> getMarkupBuilders() {

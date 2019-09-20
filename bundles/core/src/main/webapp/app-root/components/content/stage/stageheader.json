@@ -10,6 +10,7 @@
   },
 
   "wcmio:mediaFormats": ["stageHeader"],
+  "wcmio:mediaCropAuto": true,
 
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",

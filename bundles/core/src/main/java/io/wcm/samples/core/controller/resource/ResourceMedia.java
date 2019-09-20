@@ -32,7 +32,6 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 import io.wcm.handler.commons.dom.HtmlElement;
 import io.wcm.handler.media.Media;
-import io.wcm.handler.media.MediaArgs;
 import io.wcm.handler.media.MediaHandler;
 
 /**
@@ -61,7 +60,9 @@ public class ResourceMedia {
 
   @PostConstruct
   private void activate() {
-    media = mediaHandler.get(resource, new MediaArgs(mediaFormat)).build();
+    media = mediaHandler.get(resource)
+        .mediaFormatName(mediaFormat)
+        .build();
 
     if (media.isValid() && media.getElement() != null) {
       HtmlElement element = media.getElement();

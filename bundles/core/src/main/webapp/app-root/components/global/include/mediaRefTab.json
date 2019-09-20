@@ -8,7 +8,8 @@
       "items": {
         "mediaRef": {
           "sling:resourceType": "wcm-io/handler/media/components/granite/form/fileupload",
-          "fieldLabel": "Asset reference"
+          "fieldLabel": "Asset reference",
+          "allowUpload": true
         }
       }
     }

@@ -18,35 +18,25 @@
     "sling:resourceType": "cq/gui/components/authoring/dialog",
     "jcr:title": "Sponsor teaser",
     "content": {
-      "sling:resourceType": "granite/ui/components/foundation/container",
-      "layout": {
-        "sling:resourceType": "granite/ui/components/foundation/layouts/tabs",
-        "type": "nav"
-      },
+      "sling:resourceType": "granite/ui/components/coral/foundation/tabs",
       "items": {
-
         "teaser": {
-          "sling:resourceType": "granite/ui/components/foundation/section",
+          "sling:resourceType": "granite/ui/components/coral/foundation/fixedcolumns",
           "jcr:title": "Teaser",
-          "layout": {
-            "sling:resourceType": "granite/ui/components/foundation/layouts/fixedcolumns"
-          },
           "items": {
             "column": {
-              "sling:resourceType": "granite/ui/components/foundation/container",
+              "sling:resourceType": "granite/ui/components/coral/foundation/container",
               "items": {
                 "title": {
-                  "sling:resourceType": "granite/ui/components/foundation/form/textfield",
+                  "sling:resourceType": "granite/ui/components/coral/foundation/form/textfield",
                   "name": "./title",
                   "fieldLabel": "Title",
                   "required": true
                 }
               }
-
             }
           }
         }
-
       }
     }
   }

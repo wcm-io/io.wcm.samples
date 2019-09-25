@@ -32,12 +32,15 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 import io.wcm.handler.commons.dom.HtmlElement;
 import io.wcm.handler.media.Media;
-import io.wcm.handler.media.MediaArgs;
 import io.wcm.handler.media.MediaHandler;
 
 /**
  * Generic resource-based media model.
  * The "mediaFormat" can be specified as parameter.
+ * <p>
+ * Compared to @link {@link io.wcm.handler.media.ui.ResourceMedia} this class
+ * has additional support for imageWidth and imageHeight properties.
+ * </p>
  */
 @Model(adaptables = SlingHttpServletRequest.class)
 public class ResourceMedia {
@@ -57,7 +60,9 @@ public class ResourceMedia {
 
   @PostConstruct
   private void activate() {
-    media = mediaHandler.get(resource, new MediaArgs(mediaFormat)).build();
+    media = mediaHandler.get(resource)
+        .mediaFormatName(mediaFormat)
+        .build();
 
     if (media.isValid() && media.getElement() != null) {
       HtmlElement element = media.getElement();

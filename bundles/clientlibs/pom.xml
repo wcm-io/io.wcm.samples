@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.2.2</version>
+    <version>1.3.0</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.clientlibs</artifactId>
-  <version>1.2.2</version>
+  <version>1.3.0</version>
   <packaging>bundle</packaging>
 
   <name>Sample Application Clientlibs</name>
@@ -47,7 +47,7 @@
         <configuration>
           <instructions>
             <Sling-Initial-Content>
-              SLING-INF/clientlibs-root;overwrite:=true;ignoreImportProviders:=xml;path:=/etc/clientlibs/wcm-io-samples
+              SLING-INF/clientlibs-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/clientlibs
             </Sling-Initial-Content>
           </instructions>
         </configuration>

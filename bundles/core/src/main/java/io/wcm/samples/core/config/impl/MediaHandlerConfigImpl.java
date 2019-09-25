@@ -21,13 +21,18 @@ package io.wcm.samples.core.config.impl;
 
 import java.util.List;
 
+import org.jetbrains.annotations.NotNull;
 import org.osgi.service.component.annotations.Component;
 
+import com.day.cq.wcm.api.Page;
 import com.google.common.collect.ImmutableList;
 
 import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
 import io.wcm.handler.media.spi.MediaHandlerConfig;
 import io.wcm.handler.media.spi.MediaMarkupBuilder;
+import io.wcm.handler.media.spi.MediaSource;
+import io.wcm.handler.mediasource.dam.DamMediaSource;
+import io.wcm.handler.mediasource.inline.InlineMediaSource;
 import io.wcm.samples.core.handler.ResponsiveImageMediaMarkupBuilder;
 
 /**
@@ -36,14 +41,29 @@ import io.wcm.samples.core.handler.ResponsiveImageMediaMarkupBuilder;
 @Component(service = MediaHandlerConfig.class)
 public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
+  static final String DAM_ROOT = "/content/dam/wcm-io-samples";
+
+  private static final List<Class<? extends MediaSource>> MEDIA_SOURCES = ImmutableList.<Class<? extends MediaSource>>of(
+      DamMediaSource.class,
+      InlineMediaSource.class);
+
   private static final List<Class<? extends MediaMarkupBuilder>> MEDIA_MARKUP_BUILDERS = ImmutableList.<Class<? extends MediaMarkupBuilder>>of(
       ResponsiveImageMediaMarkupBuilder.class,
-      DummyImageMediaMarkupBuilder.class
-      );
+      DummyImageMediaMarkupBuilder.class);
+
+  @Override
+  public @NotNull List<Class<? extends MediaSource>> getSources() {
+    return MEDIA_SOURCES;
+  }
 
   @Override
   public List<Class<? extends MediaMarkupBuilder>> getMarkupBuilders() {
     return MEDIA_MARKUP_BUILDERS;
+  }
+
+  @Override
+  public @NotNull String getDamRootPath(@NotNull Page page) {
+    return DAM_ROOT;
   }
 
 }

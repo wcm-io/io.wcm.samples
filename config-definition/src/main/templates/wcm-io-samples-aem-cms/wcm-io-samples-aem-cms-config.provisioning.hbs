@@ -43,6 +43,9 @@
   io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy
     enabled=B"true"
 
+  # Define service user for wcm.io URL handler
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-url
+    user.mapping=["io.wcm.handler.url:clientlibs-service\=sling-scripting"]
 
 [configurations runModes=author]
 
@@ -55,7 +58,7 @@
     authoringUIModeService.default="TOUCH"
   
   # Define service user for wcm.io Media Handler
-  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-wcm-io-samples
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-media
     user.mapping=["io.wcm.handler.media\=wcmioDamSystemUser"]
 
   # Configure Responsive Preview Mode

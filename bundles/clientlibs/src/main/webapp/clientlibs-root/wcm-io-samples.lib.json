@@ -2,5 +2,6 @@
   "jcr:primaryType": "cq:ClientLibraryFolder",
   "categories": [
     "wcm-io-samples.lib"
-  ]
+  ],
+  "allowProxy": true
 }

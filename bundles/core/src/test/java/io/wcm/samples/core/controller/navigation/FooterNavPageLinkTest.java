@@ -19,20 +19,20 @@
  */
 package io.wcm.samples.core.controller.navigation;
 
-import static org.junit.Assert.assertSame;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.Mockito.when;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import io.wcm.samples.core.business.navigation.NavigationManager;
 import io.wcm.samples.core.business.navigation.NavigationPageItem;
 
-@RunWith(MockitoJUnitRunner.class)
-public class FooterNavPageLinkTest {
+@ExtendWith(MockitoExtension.class)
+class FooterNavPageLinkTest {
 
   @Mock
   private NavigationManager navigationManager;
@@ -40,14 +40,14 @@ public class FooterNavPageLinkTest {
 
   private FooterNavPageLink underTest;
 
-  @Before
-  public void setUp() throws Exception {
+  @BeforeEach
+  void setUp() throws Exception {
     when(navigationManager.getFooterNavigation()).thenReturn(navigationPageItem);
     underTest = new FooterNavPageLink(navigationManager);
   }
 
   @Test
-  public void testGetRoot() throws Exception {
+  void testGetRoot() throws Exception {
     assertSame(navigationPageItem, underTest.getRoot());
   }
 

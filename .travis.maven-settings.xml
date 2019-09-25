@@ -31,7 +31,7 @@
 
         <repository>
           <id>central</id>
-          <url>http://repo1.maven.org/maven2/</url>
+          <url>https://repo1.maven.org/maven2/</url>
           <layout>default</layout>
           <releases>
             <enabled>true</enabled>
@@ -57,7 +57,7 @@
 
         <repository>
           <id>wcm-io-apache-intermediate-release</id>
-          <url>http://wcm.io/maven/repositories/apache-intermediate-release</url>
+          <url>https://wcm.io/maven/repositories/apache-intermediate-release</url>
           <layout>default</layout>
           <releases>
             <enabled>true</enabled>
@@ -83,7 +83,7 @@
 
         <repository>
           <id>apache-snapshots</id>
-          <url>http://repository.apache.org/snapshots</url>
+          <url>https://repository.apache.org/snapshots</url>
           <layout>default</layout>
           <releases>
             <enabled>false</enabled>
@@ -100,7 +100,7 @@
 
         <pluginRepository>
           <id>central</id>
-          <url>http://repo1.maven.org/maven2/</url>
+          <url>https://repo1.maven.org/maven2/</url>
           <layout>default</layout>
           <releases>
             <enabled>true</enabled>
@@ -126,7 +126,7 @@
 
         <pluginRepository>
           <id>wcm-io-apache-intermediate-release</id>
-          <url>http://wcm.io/maven/repositories/apache-intermediate-release</url>
+          <url>https://wcm.io/maven/repositories/apache-intermediate-release</url>
           <layout>default</layout>
           <releases>
             <enabled>true</enabled>
@@ -152,7 +152,7 @@
 
         <pluginRepository>
           <id>apache-snapshots</id>
-          <url>http://repository.apache.org/snapshots</url>
+          <url>https://repository.apache.org/snapshots</url>
           <layout>default</layout>
           <releases>
             <enabled>false</enabled>

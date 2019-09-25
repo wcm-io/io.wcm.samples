@@ -33,9 +33,9 @@ import io.wcm.samples.core.config.AppTemplate;
 import io.wcm.samples.core.config.impl.LinkHandlerConfigImpl;
 import io.wcm.samples.core.config.impl.MediaFormatProviderImpl;
 import io.wcm.samples.core.config.impl.MediaHandlerConfigImpl;
-import io.wcm.testing.mock.aem.junit.AemContext;
-import io.wcm.testing.mock.aem.junit.AemContextBuilder;
-import io.wcm.testing.mock.aem.junit.AemContextCallback;
+import io.wcm.testing.mock.aem.junit5.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContextBuilder;
+import io.wcm.testing.mock.aem.junit5.AemContextCallback;
 import io.wcm.testing.mock.wcmio.caconfig.MockCAConfig;
 
 /**
@@ -72,9 +72,6 @@ public final class AppAemContext {
       context.registerInjectActivateService(new MediaHandlerConfigImpl());
       context.registerInjectActivateService(new LinkHandlerConfigImpl());
       context.registerService(MediaFormatProvider.class, new MediaFormatProviderImpl());
-
-      // register sling models
-      context.addModelsForPackage("io.wcm.samples.core");
 
       // import sample content
       context.load().json("/sample-content.json", CONTENT_ROOT);

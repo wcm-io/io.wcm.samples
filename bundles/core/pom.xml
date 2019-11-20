@@ -32,7 +32,7 @@
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.core</artifactId>
   <version>1.3.1-SNAPSHOT</version>
-  <packaging>bundle</packaging>
+  <packaging>jar</packaging>
 
   <name>Sample Application</name>
   <description>Sample application to demonstrate the usage of the wcm.io handler infrastructure and other wcm.io Features.</description>
@@ -183,28 +183,38 @@
       </plugin>
 
       <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-maven-plugin</artifactId>
         <configuration>
-          <instructions>
-            <Sling-Initial-Content>
-              SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/core,
-              SLING-INF/app-i18n;overwrite:=true;ignoreImportProviders:=json;path:=/apps/wcm-io-samples/core/i18n,
-              SLING-INF/app-config;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/config
-            </Sling-Initial-Content>
+          <bnd>
+            <!-- Export all non-internal packages by default -->
+            Export-Package: !*.impl.*,!*.internal.*,\
+              io.wcm.samples.*
 
-            <Import-Package>
-              <!-- Exported package versions differ in major version between AEM60, AEM61 and AEM62 -->
-              com.day.cq.commons;version="[5,7)",
-              <!-- For build compatibility with Java 11 -->
-              javax.annotation;version="[0.0,2)",
+            Sling-Initial-Content: \
+              SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/core,\
+              SLING-INF/app-i18n;overwrite:=true;ignoreImportProviders:=json;path:=/apps/wcm-io-samples/core/i18n,\
+              SLING-INF/app-config;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/config
+
+            Import-Package: \
+              <!-- Exported package versions differ in major version between AEM60, AEM61 and AEM62 -->\
+              com.day.cq.commons;version="[5,7)",\
+              <!-- For build compatibility with Java 11 -->\
+              javax.annotation;version="[0.0,2)",\
               *
-            </Import-Package>
 
             <!-- All wcm.io Handler SPI implementation only get active for the resource paths of this application -->
-            <Wcmio-CAService-ContextPathRegex>^/content/(dam/)?wcm-io-samples(/.*)?$</Wcmio-CAService-ContextPathRegex>
-
-          </instructions>
+            Wcmio-CAService-ContextPathRegex: ^/content/(dam/)?wcm-io-samples(/.*)?$
+          </bnd>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+          </archive>
         </configuration>
       </plugin>
 

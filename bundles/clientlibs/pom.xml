@@ -39,14 +39,6 @@
 
   <build>
     <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>false</filtering>
-        <excludes>
-          <!-- those resources are processed by the i18n-maven-plugin -->
-          <exclude>i18n/**</exclude>
-        </excludes>
-      </resource>
       <!-- copy webapp resources to SLING-INF/app-root -->
       <resource>
         <directory>src/main/webapp</directory>

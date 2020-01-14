@@ -160,6 +160,11 @@
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.testing.wcm-io-mock.wcm</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.wcm-io-mock.caconfig</artifactId>
       <scope>test</scope>
     </dependency>

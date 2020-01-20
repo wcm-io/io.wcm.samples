@@ -12,4 +12,5 @@
     <jcr:content jcr:primaryType="nt:unstructured">
         <folderThumbnail/>
     </jcr:content>
+    <test-video.mp4/>
 </jcr:root>

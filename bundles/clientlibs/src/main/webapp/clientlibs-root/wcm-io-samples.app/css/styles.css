@@ -713,7 +713,7 @@ dl dd {
   margin: 0.4em 0
 }
 
-img {
+img, video {
   margin: 0 auto;
   max-width: 100%;
   height: auto

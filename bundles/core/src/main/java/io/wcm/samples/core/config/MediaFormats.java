@@ -48,7 +48,7 @@ public final class MediaFormats {
   public static final MediaFormat CONTENT_480 = create("content_480")
       .label("Content")
       .fixedDimension(480, 270)
-      .extensions("gif", "jpg", "jpeg", "png")
+      .extensions("gif", "jpg", "jpeg", "png", "mp4")
       .renditionGroup("/apps/wcm-io-samples/core/renditiongroup/content")
       .build();
 

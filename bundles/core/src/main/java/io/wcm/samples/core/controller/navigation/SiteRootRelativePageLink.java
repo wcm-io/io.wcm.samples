@@ -27,6 +27,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 
@@ -57,8 +58,8 @@ public class SiteRootRelativePageLink {
   public SiteRootRelativePageLink(
       @Self SiteRoot siteRoot,
       @Self LinkHandler linkHandler,
-      @RequestAttribute(name = "relativePath", optional = true) String relativePath,
-      @RequestAttribute(name = "titleType", optional = true) @Default(values = "navigationTitle") String titleType
+      @RequestAttribute(name = "relativePath", injectionStrategy = InjectionStrategy.OPTIONAL) String relativePath,
+      @RequestAttribute(name = "titleType", injectionStrategy = InjectionStrategy.OPTIONAL) @Default(values = "navigationTitle") String titleType
       ) {
     Page page;
     if (StringUtils.isNotEmpty(relativePath)) {

@@ -83,10 +83,10 @@ public class NavigationPageItem {
   }
 
   /**
-   * @param pChildren Child navigation page items
+   * @param children Child navigation page items
    */
-  public void setChildren(List<NavigationPageItem> pChildren) {
-    this.children = pChildren;
+  public void setChildren(List<NavigationPageItem> children) {
+    this.children = children;
   }
 
 }

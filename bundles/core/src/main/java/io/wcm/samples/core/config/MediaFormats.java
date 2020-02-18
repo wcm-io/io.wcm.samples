@@ -39,7 +39,6 @@ public final class MediaFormats {
       .label("Stage header")
       .fixedDimension(1000, 300)
       .extensions("gif", "jpg", "jpeg", "png")
-      .renditionGroup("/apps/wcm-io-samples/core/renditiongroup/stageHeader")
       .build();
 
   /**
@@ -49,7 +48,6 @@ public final class MediaFormats {
       .label("Content")
       .fixedDimension(480, 270)
       .extensions("gif", "jpg", "jpeg", "png", "mp4")
-      .renditionGroup("/apps/wcm-io-samples/core/renditiongroup/content")
       .build();
 
   /**

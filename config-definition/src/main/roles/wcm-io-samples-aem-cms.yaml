@@ -21,6 +21,7 @@ files:
   postProcessorOptions:
     contentPackage:
       name: wcm-io-samples-aem-cms-config
+      packageType: container
       rootPath: /apps/wcm-io-samples-aem-cms-config/config
       filters:
       - filter: /apps/wcm-io-samples-aem-cms-config

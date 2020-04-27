@@ -128,6 +128,7 @@
                 io.wcm,
                 io.wcm.samples
               </groupId>
+              <type>jar</type>
             </embedded>
             <!-- Include some Apache Sling bundles newer than those shipped with AEM -->
             <embedded>
@@ -142,6 +143,7 @@
                 <!-- Latest JCR Content Loader to support i18n json files directly -->
                 org.apache.sling.jcr.contentloader
               </artifactId>
+              <type>jar</type>
             </embedded>
           </embeddeds>
 

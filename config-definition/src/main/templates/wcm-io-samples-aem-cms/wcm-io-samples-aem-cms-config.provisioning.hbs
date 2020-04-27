@@ -82,3 +82,11 @@
     index.files="[index,index.html]"
     aliases="xml:pdf"
     json.maximumresults=I"100"
+
+
+[:repoinit runModes=author]
+# Create service user for wcm.io Media Handler
+create service user wcmioDamSystemUser
+set ACL on /content/dam
+  allow jcr:read,rep:write for wcmioDamSystemUser
+end

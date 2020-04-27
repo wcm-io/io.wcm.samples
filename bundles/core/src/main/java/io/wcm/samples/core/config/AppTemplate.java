@@ -25,6 +25,7 @@ import io.wcm.wcm.commons.util.TemplatePathInfo;
 /**
  * List of templates with special handling in code.
  */
+@SuppressWarnings("CQRules:CQBP-71") // template paths have to be absolute starting with /apps
 public enum AppTemplate implements TemplatePathInfo {
 
   /**

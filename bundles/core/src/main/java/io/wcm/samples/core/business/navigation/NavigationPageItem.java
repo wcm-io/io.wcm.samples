@@ -27,6 +27,7 @@ import io.wcm.handler.link.Link;
 /**
  * Navigation item with link metadata and title.
  */
+@SuppressWarnings("squid:S2384") // ignore modifiable lists in API
 public class NavigationPageItem {
 
   private final Link link;

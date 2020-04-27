@@ -80,6 +80,9 @@ public class SiteRootRelativePageLink {
           break;
       }
     }
+    else {
+      link = linkHandler.invalid();
+    }
   }
 
   /**

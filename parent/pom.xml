@@ -40,8 +40,8 @@
   <properties>
 
     <!-- AEM instance parameters -->
-    <sling.url>http://localhost:4502</sling.url>
-    <sling.publish.url>http://localhost:4503</sling.publish.url>
+    <sling.url>http://localhost:45026</sling.url>
+    <sling.publish.url>http://localhost:45036</sling.publish.url>
 
     <!-- Java version -->
     <java.version>1.8</java.version>
@@ -82,28 +82,6 @@
 
   <dependencyManagement>
     <dependencies>
-
-      <!-- Sling -->
-      <dependency>
-        <groupId>org.apache.sling</groupId>
-        <artifactId>org.apache.sling.caconfig.spi</artifactId>
-        <version>1.3.2</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.sling</groupId>
-        <artifactId>org.apache.sling.caconfig.impl</artifactId>
-        <version>1.4.16</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.sling</groupId>
-        <artifactId>org.apache.sling.commons.johnzon</artifactId>
-        <version>1.1.0</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.sling</groupId>
-        <artifactId>org.apache.sling.jcr.contentloader</artifactId>
-        <version>2.2.4</version>
-      </dependency>
 
       <!-- wcm.io -->
       <dependency>
@@ -227,8 +205,8 @@
       <!-- Import AEM dependencies -->
       <dependency>
         <groupId>io.wcm.maven</groupId>
-        <artifactId>io.wcm.maven.aem-dependencies</artifactId>
-        <version>6.3.0.0002</version>
+        <artifactId>io.wcm.maven.aem-cloud-dependencies</artifactId>
+        <version>2020.04.2793.20200403T195013Z-200130.0000</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -366,5 +344,21 @@
       </build>
     </profile>
   </profiles>
+
+  <!-- Workaround to obtain aem-sdk-api from Experience Cloud Maven repository -->
+  <repositories>
+    <repository>
+      <id>adobe-experiencecloud</id>
+      <url>https://downloads.experiencecloud.adobe.com/content/maven/public/</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
 
 </project>

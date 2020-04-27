@@ -52,6 +52,12 @@
           <name>${contentPackage.name}</name>
           <group>${contentPackage.group}</group>
           <packageType>content</packageType>
+
+          <!-- Do not deploy directly via AEM cloud manager, only as part of CONGA-generated "all" package -->
+          <properties>
+            <cloudManagerTarget>none</cloudManagerTarget>
+          </properties>
+
           <filters>
             <filter>
               <root>/content/dam/wcm-io-samples</root>
@@ -60,6 +66,7 @@
               <root>/content/wcm-io-samples</root>
             </filter>
           </filters>
+
         </configuration>
       </plugin>
 

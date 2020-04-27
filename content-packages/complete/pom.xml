@@ -59,26 +59,6 @@
 
     <!-- Additional bundles -->
     <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.caconfig.spi</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.caconfig.impl</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.commons.johnzon</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.jcr.contentloader</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.caconfig.extensions</artifactId>
       <scope>provided</scope>
@@ -114,6 +94,11 @@
           <group>${contentPackage.group}</group>
           <packageType>container</packageType>
 
+          <!-- Do not deploy directly via AEM cloud manager, only as part of CONGA-generated "all" package -->
+          <properties>
+            <cloudManagerTarget>none</cloudManagerTarget>
+          </properties>
+
           <filters>
             <filter>
               <root>/apps/wcm-io-samples/${contentPackage.name}</root>
@@ -128,21 +113,6 @@
                 io.wcm,
                 io.wcm.samples
               </groupId>
-              <type>jar</type>
-            </embedded>
-            <!-- Include some Apache Sling bundles newer than those shipped with AEM -->
-            <embedded>
-              <groupId>
-                org.apache.sling
-              </groupId>
-              <artifactId>
-                <!-- Latest Sling Context-Aware Configuration -->
-                org.apache.sling.caconfig.spi,
-                org.apache.sling.caconfig.impl,
-                org.apache.sling.commons.johnzon,
-                <!-- Latest JCR Content Loader to support i18n json files directly -->
-                org.apache.sling.jcr.contentloader
-              </artifactId>
               <type>jar</type>
             </embedded>
           </embeddeds>

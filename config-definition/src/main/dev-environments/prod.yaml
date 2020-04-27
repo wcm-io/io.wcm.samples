@@ -1,0 +1,50 @@
+# AEM configuration for local development environment
+
+nodes:
+
+- node: aem-author
+  roles:
+  - role: wcm-io-samples-aem-cms
+    variant: aem-author
+
+- node: aem-publish
+  roles:
+  - role: wcm-io-samples-aem-cms
+    variant: aem-publish
+
+- node: aem-dispatcher
+  roles:
+  - role: aem-dispatcher-cloud
+    variant: aem-publish
+
+config:
+  contentPackage.group: wcm-io-samples
+  app.sampleContent: false
+
+  # Log levels
+  log:
+    projectSpecificLogLevel: warn
+
+  # Replication configuration not required for AEM cloud service
+  replication:
+    author.generatePackage: false
+    publish.generatePackage: false
+
+  # Defines the DispatcherLogLevel (Error, Warn, Info, Debug and Trace1)
+  dispatcher.logging.level: Trace1
+
+  # Use this AEM configuration for STAGE and PROD environments in AEM Cloud service
+  # Please note: the dispatcher configuration is used for DEV as well, because AEM cloud service supports only a single dispatcher configuration
+  cloudManager.target:
+  - stage
+  - prod
+
+tenants:
+- tenant: wcm-io-samples
+  config:
+    httpd:
+      serverName: publish
+      serverAliasNames:
+      - "*"
+      rootRedirect.url: /en.html
+    sling.mapping.rootPath: /content/wcm-io-samples

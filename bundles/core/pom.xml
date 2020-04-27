@@ -164,8 +164,7 @@
     </dependency>
     <dependency>
       <groupId>com.adobe.aem</groupId>
-      <artifactId>uber-jar</artifactId>
-      <classifier>apis</classifier>
+      <artifactId>aem-sdk-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>

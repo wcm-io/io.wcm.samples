@@ -6,12 +6,6 @@ nodes:
   roles:
   - role: wcm-io-samples-aem-cms
     variant: aem-author
-  config:
-    replication.author.publishTargets:
-    - name: publish1
-      url: ${maven::sling.publish.url}
-      transportUser: admin
-      transportPassword: admin
 
 - node: aem-publish
   roles:
@@ -26,6 +20,12 @@ config:
   log:
     projectSpecificLogLevel: info
 
-  # Not used for AEM cloud
+  # Replication configuration not required for AEM cloud service
+  replication:
+    author.generatePackage: false
+    publish.generatePackage: false
+
+  # Use this AEM configuration for DEV environments in AEM Cloud service
+  # For the DEV dispatcher the PROD configuration is reused
   cloudManager.target:
-  - none
+  - dev

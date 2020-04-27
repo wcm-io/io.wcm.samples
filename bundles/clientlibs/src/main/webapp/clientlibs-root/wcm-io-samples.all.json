@@ -11,6 +11,7 @@
     "default:none",
     "min:gcc;compilationLevel=whitespace;languageIn=ECMASCRIPT_2016;languageOut=ECMASCRIPT5;"
   ],
-  "longCacheKey": "${project.version}-${buildNumber}",
+  /* Workaround: disabled because AEM Cloud 2020.4 does not support it currently */
+  /*"longCacheKey": "${project.version}-${buildNumber}",*/
   "allowProxy": true
 }

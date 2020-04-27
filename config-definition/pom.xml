@@ -71,7 +71,7 @@
         <artifactId>conga-maven-plugin</artifactId>
         <executions>
 
-          <!-- Generate configuration for local development AEM instance -->
+          <!-- Generate configuration for environments defined in this application code repository -->
           <execution>
             <id>dev-environment-config</id>
             <phase>generate-resources</phase>

@@ -7,7 +7,8 @@ Sample projects and applications to demonstrate and test wcm.io features.
 Documentation: https://wcm.io/samples/<br/>
 Issues: https://wcm-io.atlassian.net/browse/WSAM<br/>
 Wiki: https://wcm-io.atlassian.net/wiki/<br/>
-Continuous Integration: https://travis-ci.org/wcm-io/wcm-io-samples/
+Continuous Integration: https://travis-ci.org/wcm-io/wcm-io-samples/<br/>
+Commercial support: https://wcm.io/commercial-support.html
 
 
 ### Build and deploy samples from source

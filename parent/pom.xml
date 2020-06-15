@@ -139,12 +139,12 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.link</artifactId>
-        <version>1.5.0</version>
+        <version>1.5.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.media</artifactId>
-        <version>1.9.0</version>
+        <version>1.9.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -159,7 +159,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.parsys</artifactId>
-        <version>1.4.0</version>
+        <version>1.4.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -228,7 +228,7 @@
       <dependency>
         <groupId>io.wcm.maven</groupId>
         <artifactId>io.wcm.maven.aem-dependencies</artifactId>
-        <version>6.3.0.0002</version>
+        <version>6.3.3.0001-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

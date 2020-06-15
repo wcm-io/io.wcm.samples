@@ -65,14 +65,14 @@
     },
     "aside":{
       "jcr:primaryType":"nt:unstructured",
-      "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideParsys",
+      "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys",
       "asidesponsorteaser":{
         "jcr:primaryType":"nt:unstructured",
         "title":"Sponsors",
         "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideSponsorTeaser",
         "images":{
           "jcr:primaryType":"nt:unstructured",
-          "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideSponsorTeaserParsys",
+          "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys",
           "asidesponsorteaserit":{
             "jcr:primaryType":"nt:unstructured",
             "linkWindowTarget":"_blank",
@@ -103,7 +103,7 @@
         "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideSocialTeaser",
         "images":{
           "jcr:primaryType":"nt:unstructured",
-          "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideSponsorTeaserParsys",
+          "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys",
           "asidesocialteaserite":{
             "jcr:primaryType":"nt:unstructured",
             "linkWindowTarget":"_blank",
@@ -380,7 +380,7 @@
       },
       "aside":{
         "jcr:primaryType":"nt:unstructured",
-        "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideParsys",
+        "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys",
         "asideteaser":{
           "jcr:primaryType":"nt:unstructured",
           "teaserContent":"<p>Submit your paper to attend the conference as speaker<\/p>\n",
@@ -407,7 +407,7 @@
           "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideSponsorTeaser",
           "images":{
             "jcr:primaryType":"nt:unstructured",
-            "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideSponsorTeaserParsys",
+            "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys",
             "asidesponsorteaserit":{
               "jcr:primaryType":"nt:unstructured",
               "linkWindowTarget":"_blank",
@@ -455,7 +455,7 @@
         },
         "aside":{
           "jcr:primaryType":"nt:unstructured",
-          "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideParsys",
+          "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys",
           "asideteaser":{
             "jcr:primaryType":"nt:unstructured",
             "teaserContent":"<p><strong>Deadline:<\/strong> 6. May 2013<\/p>\n<p><strong>E-Mail:<\/strong> <a data=\"{&quot;linkType&quot;:&quot;external&quot;,&quot;linkExternalRef&quot;:&quot;mailto:papers@sampleApp.org&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">papers@sampleApp.org<\/a><\/p>\n<p><strong>Content:<\/strong><\/p>\n<ul>\n<li>Summary<\/li>\n<li>Style of Session<\/li>\n<li>Additional Material<\/li>\n<\/ul>\n<p><\/p>\n",
@@ -657,7 +657,7 @@
       },
       "aside":{
         "jcr:primaryType":"nt:unstructured",
-        "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideParsys"
+        "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys"
       }
     }
   },
@@ -692,7 +692,7 @@
       },
       "aside":{
         "jcr:primaryType":"nt:unstructured",
-        "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideParsys"
+        "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys"
       }
     }
   },
@@ -720,7 +720,7 @@
       },
       "aside":{
         "jcr:primaryType":"nt:unstructured",
-        "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideParsys"
+        "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys"
       }
     },
     "sampleApp---2012":{

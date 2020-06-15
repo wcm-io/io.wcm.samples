@@ -263,6 +263,16 @@
   </dependencyManagement>
 
   <build>
+    <extensions>
+
+      <!-- Add wcm.io file header to code templates -->
+      <extension>
+        <groupId>io.wcm.maven</groupId>
+        <artifactId>io.wcm.maven.global-build-tools-mixin</artifactId>
+        <version>2</version>
+      </extension>
+
+    </extensions>
     <plugins>
 
       <!-- Do not generate sites for the sample apps -->

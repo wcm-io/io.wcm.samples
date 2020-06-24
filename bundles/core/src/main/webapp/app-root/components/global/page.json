@@ -59,7 +59,7 @@
       }
     }
   },
-  
+
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",
     "jcr:title": "Page",

@@ -25,7 +25,7 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>1.4.11-SNAPSHOT</version>
+    <version>1.4.12</version>
     <relativePath />
   </parent>
 
@@ -119,7 +119,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.caconfig.editor</artifactId>
-        <version>1.7.0</version>
+        <version>1.7.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -139,12 +139,12 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.link</artifactId>
-        <version>1.5.1-SNAPSHOT</version>
+        <version>1.5.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.media</artifactId>
-        <version>1.9.1-SNAPSHOT</version>
+        <version>1.9.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -159,12 +159,12 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.parsys</artifactId>
-        <version>1.4.1-SNAPSHOT</version>
+        <version>1.5.0</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.ui.granite</artifactId>
-        <version>1.6.0</version>
+        <version>1.6.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -184,7 +184,7 @@
       <dependency>
         <groupId>io.wcm.devops.conga.definitions</groupId>
         <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
-        <version>1.7.1-SNAPSHOT</version>
+        <version>1.8.0</version>
       </dependency>
 
       <!-- wcm.io Testing -->
@@ -228,7 +228,7 @@
       <dependency>
         <groupId>io.wcm.maven</groupId>
         <artifactId>io.wcm.maven.aem-dependencies</artifactId>
-        <version>6.3.3.0001-SNAPSHOT</version>
+        <version>6.3.3.0001</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

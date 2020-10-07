@@ -60,6 +60,11 @@
     <!-- Additional bundles -->
     <dependency>
       <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
       <artifactId>org.apache.sling.caconfig.spi</artifactId>
       <scope>provided</scope>
     </dependency>
@@ -137,6 +142,7 @@
               </groupId>
               <artifactId>
                 <!-- Latest Sling Context-Aware Configuration -->
+                org.apache.sling.caconfig.api,
                 org.apache.sling.caconfig.spi,
                 org.apache.sling.caconfig.impl,
                 org.apache.sling.commons.johnzon,

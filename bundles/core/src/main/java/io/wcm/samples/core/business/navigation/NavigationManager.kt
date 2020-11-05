@@ -17,21 +17,21 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.core.business.navigation;
+package io.wcm.samples.core.business.navigation
 
 /**
  * Generates navigation page items based on a page hierarchy for navigation controllers.
  * Only pages that are valid and not hidden with valid links are included.
  * Optionally, structure element pages without links can be included as well.
  */
-public interface NavigationManager {
+interface NavigationManager {
 
   /**
    * Generation main navigation links.
    * @param maxLevels Max. navigation hierarchy levels
    * @return Root page for navigation
    */
-  NavigationPageItem getMainNavigation(int maxLevels);
+  fun getMainNavigation(maxLevels: Int): NavigationPageItem
 
   /**
    * Generation footer navigation links and navigation structure.
@@ -41,6 +41,5 @@ public interface NavigationManager {
    * including their children as link entries.
    * @return Root page for navigation
    */
-  NavigationPageItem getFooterNavigation();
-
+  fun getFooterNavigation(): NavigationPageItem
 }

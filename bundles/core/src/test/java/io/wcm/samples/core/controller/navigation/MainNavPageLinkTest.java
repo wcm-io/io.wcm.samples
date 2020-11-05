@@ -33,12 +33,14 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import io.wcm.samples.core.business.navigation.NavigationManager;
 import io.wcm.samples.core.business.navigation.NavigationPageItem;
 
+import java.util.Collections;
+
 @ExtendWith(MockitoExtension.class)
 class MainNavPageLinkTest {
 
   @Mock
   private NavigationManager navigationManager;
-  private NavigationPageItem navigationPageItem = new NavigationPageItem("dummy");
+  private NavigationPageItem navigationPageItem = new NavigationPageItem("dummy", false, null, Collections.emptyList());
 
   private MainNavPageLink underTest;
 

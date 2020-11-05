@@ -17,38 +17,22 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.core.controller.navigation;
+package io.wcm.samples.core.controller.navigation
 
-import javax.inject.Inject;
-
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.Self;
-
-import io.wcm.samples.core.business.navigation.NavigationManager;
-import io.wcm.samples.core.business.navigation.NavigationPageItem;
+import io.wcm.samples.core.business.navigation.NavigationManager
+import io.wcm.samples.core.business.navigation.NavigationPageItem
+import org.apache.sling.api.SlingHttpServletRequest
+import org.apache.sling.models.annotations.Model
+import org.apache.sling.models.annotations.injectorspecific.Self
+import javax.inject.Inject
 
 /**
  * Controller for footer navigation.
  */
-@Model(adaptables = SlingHttpServletRequest.class)
-public class FooterNavPageLink {
-
-  private final NavigationPageItem root;
-
-  /**
-   * @param navigationManager Navigation manager
-   */
-  @Inject
-  public FooterNavPageLink(@Self NavigationManager navigationManager) {
-    root = navigationManager.getFooterNavigation();
-  }
-
+@Model(adaptables = [SlingHttpServletRequest::class])
+class FooterNavPageLink @Inject constructor(@Self navigationManager: NavigationManager) {
   /**
    * @return Root navigation page item
    */
-  public NavigationPageItem getRoot() {
-    return root;
-  }
-
+  val root: NavigationPageItem = navigationManager.getFooterNavigation()
 }

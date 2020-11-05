@@ -17,19 +17,14 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.core.controller.common
+package io.wcm.samples.core.config.impl
 
-import org.apache.sling.api.SlingHttpServletRequest
-import org.apache.sling.models.annotations.Model
-import java.util.Calendar
+import io.wcm.handler.media.spi.MediaFormatProvider
+import io.wcm.samples.core.config.MediaFormats
+import org.osgi.service.component.annotations.Component
 
 /**
- * Model that provides the current date.
+ * Media format provider.
  */
-@Model(adaptables = [SlingHttpServletRequest::class])
-class CurrentDate {
-  /**
-   * @return Current year
-   */
-  val year: Int = Calendar.getInstance()[Calendar.YEAR]
-}
+@Component(service = [MediaFormatProvider::class])
+class MediaFormatProviderImpl : MediaFormatProvider(MediaFormats::class.java)

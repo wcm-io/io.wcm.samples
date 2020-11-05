@@ -17,90 +17,81 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.core.controller.resource;
+package io.wcm.samples.core.controller.resource
 
-import javax.annotation.PostConstruct;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ValueMap;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
-import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
-import org.apache.sling.models.annotations.injectorspecific.Self;
-import org.apache.sling.models.annotations.injectorspecific.SlingObject;
-
-import io.wcm.handler.commons.dom.HtmlElement;
-import io.wcm.handler.media.Media;
-import io.wcm.handler.media.MediaHandler;
+import io.wcm.handler.media.Media
+import io.wcm.handler.media.MediaHandler
+import org.apache.commons.lang3.StringUtils
+import org.apache.sling.api.SlingHttpServletRequest
+import org.apache.sling.api.resource.Resource
+import org.apache.sling.models.annotations.Model
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy
+import org.apache.sling.models.annotations.injectorspecific.RequestAttribute
+import org.apache.sling.models.annotations.injectorspecific.Self
+import org.apache.sling.models.annotations.injectorspecific.SlingObject
+import javax.annotation.PostConstruct
 
 /**
  * Generic resource-based media model.
  * The "mediaFormat" can be specified as parameter.
- * <p>
- * Compared to @link {@link io.wcm.handler.media.ui.ResourceMedia} this class
+ *
+ *
+ * Compared to @link [io.wcm.handler.media.ui.ResourceMedia] this class
  * has additional support for imageWidth and imageHeight properties.
- * </p>
+ *
  */
-@Model(adaptables = SlingHttpServletRequest.class)
-public class ResourceMedia {
-
+@Model(adaptables = [SlingHttpServletRequest::class])
+class ResourceMedia {
   @RequestAttribute
-  private String mediaFormat;
+  private lateinit var mediaFormat: String
 
   @RequestAttribute(injectionStrategy = InjectionStrategy.OPTIONAL)
-  private String cssClass;
+  private var cssClass: String? = null
 
   @Self
-  private MediaHandler mediaHandler;
-  @SlingObject
-  private Resource resource;
+  private lateinit var mediaHandler: MediaHandler
 
-  private Media media;
+  @SlingObject
+  private lateinit var resource: Resource
+
+  /**
+   * @return Media metadata
+   */
+  lateinit var metadata: Media
+    private set
 
   @PostConstruct
-  private void activate() {
-    media = mediaHandler.get(resource)
-        .mediaFormatName(mediaFormat)
-        .build();
+  private fun activate() {
+    metadata = mediaHandler[resource]
+      .mediaFormatName(mediaFormat)
+      .build()
 
-    if (media.isValid() && media.getElement() != null) {
-      HtmlElement element = media.getElement();
+    if (metadata.isValid && metadata.element != null) {
+      val element = metadata.element
       if (StringUtils.isNotEmpty(cssClass)) {
-        element.addCssClass(cssClass);
+        element.addCssClass(cssClass)
       }
-      ValueMap props = resource.getValueMap();
-      int imageWidth = props.get("imageWidth", 0);
+      val props = resource.valueMap
+      val imageWidth = props.get("imageWidth", 0)
       if (imageWidth > 0) {
-        element.setAttribute("width", Integer.toString(imageWidth));
+        element.setAttribute("width", imageWidth.toString())
       }
-      int imageHeight = props.get("imageWidth", 0);
+      val imageHeight = props.get("imageWidth", 0)
       if (imageHeight > 0) {
-        element.setAttribute("height", Integer.toString(imageHeight));
+        element.setAttribute("height", imageHeight.toString())
       }
     }
   }
 
   /**
-   * @return Media metadata
-   */
-  public Media getMetadata() {
-    return media;
-  }
-
-  /**
    * @return Media is valid
    */
-  public boolean isValid() {
-    return media.isValid();
-  }
+  val isValid: Boolean
+    get() = metadata.isValid
 
   /**
    * @return Media markup
    */
-  public String getMarkup() {
-    return media.getMarkup();
-  }
-
+  val markup: String
+    get() = metadata.markup
 }

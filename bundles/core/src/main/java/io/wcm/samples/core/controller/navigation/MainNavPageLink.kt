@@ -17,44 +17,31 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.core.controller.navigation;
+package io.wcm.samples.core.controller.navigation
 
-import javax.inject.Inject;
-
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.models.annotations.Default;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
-import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
-import org.apache.sling.models.annotations.injectorspecific.Self;
-
-import io.wcm.samples.core.business.navigation.NavigationManager;
-import io.wcm.samples.core.business.navigation.NavigationPageItem;
+import io.wcm.samples.core.business.navigation.NavigationManager
+import io.wcm.samples.core.business.navigation.NavigationPageItem
+import org.apache.sling.api.SlingHttpServletRequest
+import org.apache.sling.models.annotations.Default
+import org.apache.sling.models.annotations.Model
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy
+import org.apache.sling.models.annotations.injectorspecific.RequestAttribute
+import org.apache.sling.models.annotations.injectorspecific.Self
+import javax.inject.Inject
 
 /**
  * Controller for main navigation.
  */
-@Model(adaptables = SlingHttpServletRequest.class)
-public class MainNavPageLink {
-
-  private final NavigationPageItem root;
-
-  /**
-   * @param navigationManager Navigation manager
-   * @param levels Number of navigation hierarchy levels
-   */
-  @Inject
-  public MainNavPageLink(
-      @Self NavigationManager navigationManager,
-      @RequestAttribute(name = "levels", injectionStrategy = InjectionStrategy.OPTIONAL) @Default(intValues = 1) int levels) {
-    root = navigationManager.getMainNavigation(levels);
-  }
-
+@Model(adaptables = [SlingHttpServletRequest::class])
+class MainNavPageLink @Inject constructor(
+    @Self navigationManager: NavigationManager,
+    @RequestAttribute(
+        name = "levels",
+        injectionStrategy = InjectionStrategy.OPTIONAL
+    ) @Default(intValues = [1]) levels: Int
+) {
   /**
    * @return Root navigation page item
    */
-  public NavigationPageItem getRoot() {
-    return root;
-  }
-
+  val root: NavigationPageItem = navigationManager.getMainNavigation(levels)
 }

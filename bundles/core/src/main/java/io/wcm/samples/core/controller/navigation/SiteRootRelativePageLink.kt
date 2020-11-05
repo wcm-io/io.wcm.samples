@@ -17,100 +17,76 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.core.controller.navigation;
+package io.wcm.samples.core.controller.navigation
 
-import java.util.Map;
-
-import javax.inject.Inject;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.models.annotations.Default;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
-import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
-import org.apache.sling.models.annotations.injectorspecific.Self;
-
-import com.day.cq.wcm.api.Page;
-
-import io.wcm.handler.link.Link;
-import io.wcm.handler.link.LinkHandler;
-import io.wcm.handler.url.ui.SiteRoot;
+import io.wcm.handler.link.Link
+import io.wcm.handler.link.LinkHandler
+import io.wcm.handler.url.ui.SiteRoot
+import org.apache.commons.lang3.StringUtils
+import org.apache.sling.api.SlingHttpServletRequest
+import org.apache.sling.models.annotations.Default
+import org.apache.sling.models.annotations.Model
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy
+import org.apache.sling.models.annotations.injectorspecific.RequestAttribute
+import org.apache.sling.models.annotations.injectorspecific.Self
+import javax.inject.Inject
 
 /**
  * Generic model for building a link to page addressed via a path relative to site root.
  * If not path is given, the site root is referenced.
  * The link title is set to navigation title / page title / title text (whatever is not empty).
  */
-@Model(adaptables = SlingHttpServletRequest.class)
-public class SiteRootRelativePageLink {
-
-  private Link link;
-  private String title;
-
-  /**
-   * @param siteRoot Site root
-   * @param linkHandler Link handler
-   * @param relativePath Relative path of page to link to
-   * @param titleType Type of title to display: pageTitle or navigationTitle
-   */
-  @Inject
-  public SiteRootRelativePageLink(
-      @Self SiteRoot siteRoot,
-      @Self LinkHandler linkHandler,
-      @RequestAttribute(name = "relativePath", injectionStrategy = InjectionStrategy.OPTIONAL) String relativePath,
-      @RequestAttribute(name = "titleType", injectionStrategy = InjectionStrategy.OPTIONAL) @Default(values = "navigationTitle") String titleType
-      ) {
-    Page page;
-    if (StringUtils.isNotEmpty(relativePath)) {
-      page = siteRoot.getRelativePage(relativePath);
-    }
-    else {
-      page = siteRoot.getRootPage();
-    }
-    if (page != null) {
-      link = linkHandler.get(page).build();
-      switch (titleType) {
-        case "pageTitle":
-          title = StringUtils.defaultString(page.getPageTitle(), page.getTitle());
-          break;
-        case "navigationTitle":
-        default:
-          title = StringUtils.defaultString(page.getNavigationTitle(), page.getTitle());
-          break;
-      }
-    }
-    else {
-      link = linkHandler.invalid();
-    }
-  }
-
+@Model(adaptables = [SlingHttpServletRequest::class])
+class SiteRootRelativePageLink @Inject constructor(
+    @Self siteRoot: SiteRoot,
+    @Self linkHandler: LinkHandler,
+    @RequestAttribute(
+        name = "relativePath",
+        injectionStrategy = InjectionStrategy.OPTIONAL
+    ) relativePath: String?,
+    @RequestAttribute(
+        name = "titleType",
+        injectionStrategy = InjectionStrategy.OPTIONAL
+    ) @Default(values = ["navigationTitle"]) titleType: String?
+) {
   /**
    * @return Link
    */
-  public Link getMetadata() {
-    return link;
-  }
-
-  /**
-   * @return Link is valid
-   */
-  public boolean isValid() {
-    return link.isValid();
-  }
-
-  /**
-   * @return Anchor attributes
-   */
-  public Map<String, String> getAttributes() {
-    return link.getAnchorAttributes();
-  }
+  val metadata: Link
 
   /**
    * @return Link title
    */
-  public String getTitle() {
-    return title;
-  }
+  val title: String?
 
+  /**
+   * @return Link is valid
+   */
+  val isValid: Boolean
+    get() = metadata.isValid
+
+  /**
+   * @return Anchor attributes
+   */
+  val attributes: Map<String, String>
+    get() = metadata.anchorAttributes
+
+  init {
+    val page = if (StringUtils.isNotEmpty(relativePath)) {
+      siteRoot.getRelativePage(relativePath)
+    } else {
+      siteRoot.rootPage
+    }
+    if (page != null) {
+      metadata = linkHandler[page].build()
+      title = when (titleType) {
+        "pageTitle" -> StringUtils.defaultString(page.pageTitle, page.title)
+        "navigationTitle" -> StringUtils.defaultString(page.navigationTitle, page.title)
+        else -> StringUtils.defaultString(page.navigationTitle, page.title)
+      }
+    } else {
+      metadata = linkHandler.invalid()
+      title = null
+    }
+  }
 }

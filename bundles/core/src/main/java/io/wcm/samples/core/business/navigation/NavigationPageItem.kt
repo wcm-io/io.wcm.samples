@@ -17,24 +17,16 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.core.config.impl;
+package io.wcm.samples.core.business.navigation
 
-import org.osgi.service.component.annotations.Component;
-
-import io.wcm.handler.media.spi.MediaFormatProvider;
-import io.wcm.samples.core.config.MediaFormats;
+import io.wcm.handler.link.Link
 
 /**
- * Media format provider.
+ * Navigation item with link metadata and title.
  */
-@Component(service = MediaFormatProvider.class)
-public class MediaFormatProviderImpl extends MediaFormatProvider {
-
-  /**
-   * Constructor
-   */
-  public MediaFormatProviderImpl() {
-    super(MediaFormats.class);
-  }
-
-}
+data class NavigationPageItem(
+    val title: String,
+    val active: Boolean = false,
+    val link: Link? = null,
+    var children: List<NavigationPageItem> = listOf()
+)

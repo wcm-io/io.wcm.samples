@@ -17,35 +17,26 @@
  * limitations under the License.
  * #L%
  */
-package io.wcm.samples.core.handler;
+package io.wcm.samples.core.handler
 
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Model;
-
-import io.wcm.handler.commons.dom.HtmlElement;
-import io.wcm.handler.media.Media;
-import io.wcm.handler.media.markup.SimpleImageMediaMarkupBuilder;
+import io.wcm.handler.commons.dom.HtmlElement
+import io.wcm.handler.media.Media
+import io.wcm.handler.media.markup.SimpleImageMediaMarkupBuilder
+import org.apache.sling.api.SlingHttpServletRequest
+import org.apache.sling.api.resource.Resource
+import org.apache.sling.models.annotations.Model
 
 /**
  * Image media markup builder which generates special markup for responsive image replacement.
  */
-@Model(adaptables = {
-    SlingHttpServletRequest.class, Resource.class
-})
-public class ResponsiveImageMediaMarkupBuilder extends SimpleImageMediaMarkupBuilder {
+@Model(adaptables = [SlingHttpServletRequest::class, Resource::class])
+class ResponsiveImageMediaMarkupBuilder : SimpleImageMediaMarkupBuilder() {
 
-  @Override
-  protected HtmlElement<?> getImageElement(Media media) {
-    HtmlElement image = super.getImageElement(media);
-
-    if (image != null) {
+  override fun getImageElement(media: Media): HtmlElement<*>? {
+    return super.getImageElement(media)?.also {
       // clear with/height attribute, size is controlled via CSS and JavaScript
-      image.removeAttribute("width");
-      image.removeAttribute("height");
+      it.removeAttribute("width")
+      it.removeAttribute("height")
     }
-
-    return image;
   }
-
 }

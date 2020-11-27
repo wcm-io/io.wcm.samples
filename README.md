@@ -1,13 +1,13 @@
 <img src="https://wcm.io/images/favicon-16@2x.png"/> wcm.io Samples
 ======
-[![Build Status](https://travis-ci.org/wcm-io/wcm-io-samples.png?branch=develop)](https://travis-ci.org/wcm-io/wcm-io-samples)
+[![Build Status](https://travis-ci.com/wcm-io/wcm-io-samples.png?branch=develop)](https://travis-ci.com/wcm-io/wcm-io-samples)
 
 Sample projects and applications to demonstrate and test wcm.io features.
 
 Documentation: https://wcm.io/samples/<br/>
 Issues: https://wcm-io.atlassian.net/browse/WSAM<br/>
 Wiki: https://wcm-io.atlassian.net/wiki/<br/>
-Continuous Integration: https://travis-ci.org/wcm-io/wcm-io-samples/<br/>
+Continuous Integration: https://travis-ci.com/wcm-io/wcm-io-samples/<br/>
 Commercial support: https://wcm.io/commercial-support.html
 
 

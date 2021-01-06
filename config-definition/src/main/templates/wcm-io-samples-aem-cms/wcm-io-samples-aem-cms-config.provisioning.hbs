@@ -43,9 +43,13 @@
   io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy
     enabled=B"true"
 
-  # Define service user for wcm.io URL handler
+  # Service user mapping for wcm.io URL handler
   org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-wcm
-    user.mapping=["io.wcm.handler.url:clientlibs-service\=sling-scripting","io.wcm.wcm.commons:component-properties\=sling-scripting"]
+    user.mapping=["io.wcm.handler.url:clientlibs-service\=[sling-scripting]","io.wcm.wcm.commons:component-properties\=[sling-scripting]"]
+
+  # Service user mapping for wcm.io Media Handler
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-media-dynamicmedia
+    user.mapping=["io.wcm.handler.media:dynamic-media-support\=[configuration-reader-service]"]
 
 [configurations runModes=author]
 
@@ -57,9 +61,9 @@
   com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl
     authoringUIModeService.default="TOUCH"
 
-  # Define service user for wcm.io Media Handler
-  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-media
-    user.mapping=["io.wcm.handler.media\=wcmioDamSystemUser"]
+  # Service user mapping for wcm.io Media Handler
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-media-metadata
+    user.mapping=["io.wcm.handler.media:dam-rendition-metadata\=[dam-writer-service]"]
 
   # Configure Responsive Preview Mode
   io.wcm.wcm.ui.granite.emulator.impl.EmulatorProviderImpl-wcm-io-samples
@@ -82,11 +86,3 @@
     index.files="[index,index.html]"
     aliases="xml:pdf"
     json.maximumresults=I"100"
-
-
-[:repoinit runModes=author]
-# Create service user for wcm.io Media Handler
-create service user wcmioDamSystemUser
-set ACL on /content/dam
-  allow jcr:read,rep:write for wcmioDamSystemUser
-end

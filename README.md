@@ -25,5 +25,5 @@ See [Travis Maven settings.xml](https://github.com/wcm-io/wcm-io-samples/blob/ma
 
 ### System requirements
 
-- AEM 6.3 SP3, AEM 6.4 SP5, AEM 6.5, AEM Cloud Service
+- AEM 6.4 SP5, AEM 6.5, AEM Cloud Service
 - JDK 1.8 or Java 11

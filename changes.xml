@@ -23,9 +23,15 @@
     xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
   <body>
 
+    <release version="1.4.0" date="not released">
+      <action type="update" dev="sseifert">
+        Switch to AEM 6.4 as minimum version.
+      </action>
+    </release>
+
     <release version="1.3.0" date="2019-09-25">
       <action type="update" dev="sseifert">
-        Switch to AEM 6.2 and JUnit 5.
+        Switch to AEM 6.3 and JUnit 5.
       </action>
       <action type="update" dev="bdang">
         Align url handler externalizer's rewriteElements config to the archetype best practise.

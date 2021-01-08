@@ -74,16 +74,6 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.commons.johnzon</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.jcr.contentloader</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.caconfig.extensions</artifactId>
       <scope>provided</scope>
@@ -144,10 +134,7 @@
                 <!-- Latest Sling Context-Aware Configuration -->
                 org.apache.sling.caconfig.api,
                 org.apache.sling.caconfig.spi,
-                org.apache.sling.caconfig.impl,
-                org.apache.sling.commons.johnzon,
-                <!-- Latest JCR Content Loader to support i18n json files directly -->
-                org.apache.sling.jcr.contentloader
+                org.apache.sling.caconfig.impl
               </artifactId>
               <type>jar</type>
             </embedded>

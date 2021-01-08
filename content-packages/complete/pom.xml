@@ -108,6 +108,13 @@
           <name>${contentPackage.name}</name>
           <group>${contentPackage.group}</group>
           <packageType>container</packageType>
+          <validatorsSettings>
+            <jackrabbit-filter>
+              <options>
+                <validRoots>/apps/wcm-io-samples</validRoots>
+              </options>
+            </jackrabbit-filter>
+          </validatorsSettings>
 
           <filters>
             <filter>

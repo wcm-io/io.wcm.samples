@@ -52,6 +52,18 @@
           <name>${contentPackage.name}</name>
           <group>${contentPackage.group}</group>
           <packageType>content</packageType>
+          <validatorsSettings>
+            <jackrabbit-filter>
+              <options>
+                <validRoots>/content,/content/dam</validRoots>
+              </options>
+            </jackrabbit-filter>
+            <jackrabbit-nodetypes>
+              <options>
+                <validNameSpaces>creatorAtom=http://ns.adobe.com/creatorAtom/1.0/</validNameSpaces>
+              </options>
+            </jackrabbit-nodetypes>
+          </validatorsSettings>
           <filters>
             <filter>
               <root>/content/dam/wcm-io-samples</root>

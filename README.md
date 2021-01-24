@@ -1,6 +1,7 @@
 <img src="https://wcm.io/images/favicon-16@2x.png"/> wcm.io Samples
 ======
-[![Build Status](https://travis-ci.com/wcm-io/wcm-io-samples.png?branch=develop)](https://travis-ci.com/wcm-io/wcm-io-samples)
+[![Verify](https://github.com/wcm-io/wcm-io-samples/workflows/Verify/badge.svg?branch=develop)](https://github.com/wcm-io/wcm-io-samples/actions?query=workflow%3AVerify+branch%3Adevelop)
+[![Code Coverage](https://codecov.io/gh/wcm-io/wcm-io-samples/branch/develop/graph/badge.svg)](https://codecov.io/gh/wcm-io/wcm-io-samples)
 
 Sample projects and applications to demonstrate and test wcm.io features.
 
@@ -15,7 +16,7 @@ Commercial support: https://wcm.io/commercial-support.html
 
 If you want to build wcm.io from sources make sure you have configured all [Maven Repositories](https://wcm.io/maven.html) in your settings.xml.
 
-See [Travis Maven settings.xml](https://github.com/wcm-io/wcm-io-samples/blob/master/.travis.maven-settings.xml) for an example with a full configuration.
+See [Maven Settings](https://github.com/wcm-io/wcm-io-samples/blob/develop/.maven-settings.xml) for an example with a full configuration.
 
 - Clone the github repository https://github.com/wcm-io/wcm-io-samples
 - Start an AEM author instance at http://localhost:4502

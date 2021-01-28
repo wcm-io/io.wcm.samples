@@ -1,6 +1,6 @@
 <img src="https://wcm.io/images/favicon-16@2x.png"/> wcm.io Samples
 ======
-[![Verify](https://github.com/wcm-io/wcm-io-samples/workflows/Verify/badge.svg?branch=develop)](https://github.com/wcm-io/wcm-io-samples/actions?query=workflow%3AVerify+branch%3Adevelop)
+[![Build](https://github.com/wcm-io/wcm-io-samples/workflows/Build/badge.svg?branch=develop)](https://github.com/wcm-io/wcm-io-samples/actions?query=workflow%3ABuild+branch%3Adevelop)
 [![Code Coverage](https://codecov.io/gh/wcm-io/wcm-io-samples/branch/develop/graph/badge.svg)](https://codecov.io/gh/wcm-io/wcm-io-samples)
 
 Sample projects and applications to demonstrate and test wcm.io features.

@@ -1,7 +1,7 @@
 # Default build validation "clean verify" for non-experimental branches
 # "master" branch is excluded, it's updated only on an gitflow release
 
-name: Verify
+name: Build
 
 on:
   push:

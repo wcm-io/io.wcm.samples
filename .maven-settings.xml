@@ -181,7 +181,8 @@
     </server>
     <server>
       <id>github</id>
-      <password>${env.GITHUB_TOKEN}}</password>
+      <username>${env.GITHUB_USERNAME}</username>
+      <password>${env.GITHUB_PAT}</password>
     </server>
   </servers>
 

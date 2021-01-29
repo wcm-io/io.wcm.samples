@@ -31,7 +31,11 @@ jobs:
         with:
           name: 'Tobias Richter'
           email: 'tobias.richter@diva-e.com'
-          token: '${{ secrets.GH_SITE_DEPLOY }}'
+          token: '${{ secrets.GH_SITE_DEPLOY_PAT }}'
+
+      # Debug git config
+      - name: Debug git config
+        run: git config --list
 
       # Set up environment with Java and Maven
       - name: Setup JDK

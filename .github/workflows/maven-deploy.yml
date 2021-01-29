@@ -33,8 +33,18 @@ jobs:
           email: 'tobias.richter@diva-e.com'
           token: '${{ secrets.GH_SITE_DEPLOY_PAT }}'
 
+      # Debug git config 1
+      - name: Debug git config 1
+        run: git config --list
+
       # Debug git config
-      - name: Debug git config
+      - name: Set git config
+        run: |
+          git config --global user.email "tobias.richter@diva-e.com"
+          git config --global user.name "Tobias Richter"
+
+      # Debug git config 2
+      - name: Debug git config 2
         run: git config --list
 
       # Set up environment with Java and Maven

@@ -26,6 +26,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Configure git credentials
+      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          name: 'Tobias Richter'
+          email: 'tobias.richter@diva-e.com'
+          token: '${{ secrets.GH_SITE_DEPLOY }}'
+
       # Set up environment with Java and Maven
       - name: Setup JDK
         uses: actions/setup-java@v1
@@ -50,6 +57,4 @@ jobs:
 
       # Deploy site to Github Pages
       - name: Deploy site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: mvn -s ./.maven-settings.xml -Pcontinuous-integration -B scm-publish:publish-scm

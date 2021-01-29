@@ -1,7 +1,7 @@
 # Default build validation "clean verify" for non-experimental branches
 # "master" branch is excluded, it's updated only on an gitflow release
 
-name: Verify
+name: Build
 
 on:
   push:
@@ -47,5 +47,5 @@ jobs:
         run: mvn -s ./.maven-settings.xml -Pcontinuous-integration -B -U clean verify
 
       # Run code coverage check
-      - name: Run core coverage check
+      - name: Run code coverage check
         run: bash <(curl -s https://codecov.io/bash)

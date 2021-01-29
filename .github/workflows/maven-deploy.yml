@@ -75,4 +75,4 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ secrets.GH_SITE_DEPLOY_USERNAME }}
           GITHUB_PAT: ${{ secrets.GH_SITE_DEPLOY_PAT }}
-        run: mvn -s ./.maven-settings.xml -Pcontinuous-integration -B scm-publish:publish-scm
+        run: mvn -s ./.maven-settings.xml -Pcontinuous-integration -B scm-publish:publish-scm -Dusername=${{ secrets.GH_SITE_DEPLOY_USERNAME }} -Dpassword=${{ secrets.GH_SITE_DEPLOY_PAT }}

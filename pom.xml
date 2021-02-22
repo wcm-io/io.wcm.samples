@@ -91,6 +91,7 @@
           <artifactId>maven-scm-publish-plugin</artifactId>
           <configuration>
             <subDirectory>${site.url.module.prefix}</subDirectory>
+            <skipDeletedFiles>true</skipDeletedFiles>
           </configuration>
         </plugin>
       </plugins>

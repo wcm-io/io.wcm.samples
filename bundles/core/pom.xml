@@ -195,6 +195,7 @@
               SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/core,\
               SLING-INF/app-i18n;overwrite:=true;ignoreImportProviders:=json;path:=/apps/wcm-io-samples/core/i18n,\
               SLING-INF/app-config;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/config
+            Sling-Namespaces: wcmio=http://wcm.io/ns
 
             Import-Package: \
               <!-- Exported package versions differ in major version between AEM60, AEM61 and AEM62 -->\

@@ -158,22 +158,22 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.url</artifactId>
-        <version>1.5.0</version>
+        <version>1.5.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.link</artifactId>
-        <version>1.6.0</version>
+        <version>1.6.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.media</artifactId>
-        <version>1.11.0</version>
+        <version>1.11.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.richtext</artifactId>
-        <version>1.5.0</version>
+        <version>1.5.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -183,12 +183,12 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.parsys</artifactId>
-        <version>1.6.2</version>
+        <version>1.6.4</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.ui.granite</artifactId>
-        <version>1.7.2</version>
+        <version>1.7.4</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -307,6 +307,25 @@
           <skip>true</skip>
           <skipDeploy>true</skipDeploy>
         </configuration>
+      </plugin>
+
+      <!-- For OSGi bundles with Sling-Initial-Content: Additionaly generated two attached files for each bundle containing the content 
+           in a content package and the OGSi bundle without Sling-Initial-Content as an alternative for AEMaaCS deployment.
+           See https://wcm-io.atlassian.net/l/c/3wZPHGBo for more context -->
+      <plugin>
+        <groupId>io.wcm.maven.plugins</groupId>
+        <artifactId>sling-initial-content-transform-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>transform</goal>
+            </goals>
+            <configuration>
+              <group>wcm-io</group>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
 
     </plugins>

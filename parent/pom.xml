@@ -168,7 +168,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.media</artifactId>
-        <version>1.11.2</version>
+        <version>1.12.0</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -183,12 +183,12 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.parsys</artifactId>
-        <version>1.6.4</version>
+        <version>1.6.6</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.ui.granite</artifactId>
-        <version>1.7.4</version>
+        <version>1.7.6</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

@@ -163,12 +163,12 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.link</artifactId>
-        <version>1.6.2</version>
+        <version>1.6.4</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.media</artifactId>
-        <version>1.12.4</version>
+        <version>1.12.6</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

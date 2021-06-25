@@ -46,11 +46,11 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm-io-samples/core/components/content/teaserbar/teaserbarItem"
                 linkContentRef="/content/wcm-io-samples/en/conference/call-for-papers"
-                linkMediaDownload="{Boolean}false"
-                linkTitle="Submit your proposal here"
-                linkType="internal"
+                linkExternalRef="https://adapt.to"
+                linkTitle="External Link"
+                linkType="external"
                 linkWindowFeatures="default"
-                linkWindowTarget="_self"
+                linkWindowTarget="_blank"
                 mediaRef="/content/dam/wcm-io-samples/content/talk.png"
                 teaserContent="If you have insight and experiences with Apache Sling and want to share them? We are actually asking for your participation!"
                 title="Want to share?"/>
@@ -117,7 +117,8 @@
             <contentrichtext
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm-io-samples/core/components/content/common/contentRichText"
-                text="&lt;p&gt;adaptTo() is a meetup in Berlin focused on Apache Sling including Apache Jackrabbit and Apache Felix and is addressed to all using this stack or parts of it.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a data=&quot;{&amp;quot;linkType&amp;quot;:&amp;quot;internal&amp;quot;,&amp;quot;linkContentRef&amp;quot;:&amp;quot;/content/wcm-io-samples/handler/en/conference&amp;quot;,&amp;quot;linkWindowTarget&amp;quot;:&amp;quot;_self&amp;quot;,&amp;quot;linkWindowFeatures&amp;quot;:&amp;quot;default&amp;quot;}&quot; href=&quot;#&quot;&gt;Read more...&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;/p&gt;&#xA;"/>
+                text="&lt;p&gt;adaptTo() is a meetup in Berlin focused on Apache Sling including Apache Jackrabbit and Apache Felix and is addressed to all using this stack or parts of it.&lt;/p&gt;&#xD;&#xA;&lt;p&gt;&lt;a data=&quot;{&amp;quot;linkType&amp;quot;:&amp;quot;internal&amp;quot;,&amp;quot;linkContentRef&amp;quot;:&amp;quot;/content/wcm-io-samples/handler/en/conference&amp;quot;,&amp;quot;linkWindowTarget&amp;quot;:&amp;quot;_self&amp;quot;,&amp;quot;linkWindowFeatures&amp;quot;:&amp;quot;default&amp;quot;}&quot; href=&quot;#&quot; data-link-type=&quot;internal&quot; data-link-content-ref=&quot;/content/wcm-io-samples/en/conference&quot; data-link-external-ref=&quot;#&quot; data-link-window-target=&quot;_self&quot;&gt;Read more...&lt;/a&gt;&lt;/p&gt;&#xD;&#xA;"
+                textIsRich="true"/>
             <contentheadline
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm-io-samples/core/components/content/common/contentHeadline"
@@ -126,7 +127,8 @@
             <contentrichtext_0
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm-io-samples/core/components/content/common/contentRichText"
-                text="&lt;p&gt;Although we got some great submissions for adaptTo() 2013, we still have some slots for further sessions. Therefore we extend the timeslot for submissions to the call for papers and for feedback by two weeks. This means you still can submit you submissions till 06.05.2013. We're looking forward to get more of your great talks.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a data=&quot;{&amp;quot;linkType&amp;quot;:&amp;quot;internal&amp;quot;,&amp;quot;linkContentRef&amp;quot;:&amp;quot;/content/wcm-io-samples/handler/en/conference/call-for-papers&amp;quot;,&amp;quot;linkWindowTarget&amp;quot;:&amp;quot;_self&amp;quot;,&amp;quot;linkWindowFeatures&amp;quot;:&amp;quot;default&amp;quot;}&quot; href=&quot;#&quot;&gt;Read more...&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;/p&gt;&#xA;"/>
+                text="&lt;p&gt;Although we got some great submissions for adaptTo() 2013, we still have some slots for further sessions. Therefore we extend the timeslot for submissions to the call for papers and for feedback by two weeks. This means you still can submit you submissions till 06.05.2013. We're looking forward to get more of your great talks.&lt;/p&gt;&#xD;&#xA;&lt;p&gt;&lt;a data=&quot;{&amp;quot;linkType&amp;quot;:&amp;quot;internal&amp;quot;,&amp;quot;linkContentRef&amp;quot;:&amp;quot;/content/wcm-io-samples/handler/en/conference/call-for-papers&amp;quot;,&amp;quot;linkWindowTarget&amp;quot;:&amp;quot;_self&amp;quot;,&amp;quot;linkWindowFeatures&amp;quot;:&amp;quot;default&amp;quot;}&quot; href=&quot;#&quot; data-link-type=&quot;media&quot; data-link-content-ref=&quot;/content/wcm-io-samples/en/conference&quot; data-link-external-ref=&quot;#&quot; data-link-window-target=&quot;_self&quot; data-link-media-ref=&quot;/content/dam/wcm-io-samples/content/sample.pdf&quot; data-link-media-download=&quot;true&quot;&gt;Read more...&lt;/a&gt;&lt;/p&gt;&#xD;&#xA;"
+                textIsRich="true"/>
         </content>
         <stage
             jcr:primaryType="nt:unstructured"

@@ -2,19 +2,14 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="sling:OrderedFolder">
+    <cq:graphql/>
     <rep:policy/>
     <dam/>
+    <campaigns/>
+    <projects/>
     <experience-fragments/>
     <cq:tags/>
-    <projects/>
     <usergenerated/>
-    <screens/>
-    <catalogs/>
     <launches/>
-    <campaigns/>
-    <communities/>
-    <sites/>
-    <forms/>
-    <community/>
     <wcm-io-samples/>
 </jcr:root>

@@ -58,12 +58,13 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm-io-samples/core/components/content/teaserbar/teaserbarItem"
                 linkContentRef="/content/wcm-io-samples/en/archive"
-                linkMediaDownload="{Boolean}false"
-                linkTitle="Dive into the archive"
-                linkType="internal"
+                linkMediaDownload="{Boolean}true"
+                linkMediaRef="/content/dam/wcm-io-samples/content/sample.pdf"
+                linkTitle="Download PDF"
+                linkType="media"
                 linkWindowFeatures="default"
                 linkWindowTarget="_self"
-                mediaRef="/content/dam/wcm-io-samples/content/archive.png"
+                mediaRef="/content/dam/wcm-io-samples/content/wcm-io.svg"
                 teaserContent="adaptTo() is not a new event. Take a look at what was said and done previously."
                 title="Take a look back"/>
         </teaserbar>

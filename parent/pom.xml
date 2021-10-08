@@ -173,7 +173,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.richtext</artifactId>
-        <version>1.5.2</version>
+        <version>1.5.4</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

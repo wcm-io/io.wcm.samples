@@ -61,6 +61,10 @@
   com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl
     authoringUIModeService.default="TOUCH"
 
+  # Instance type
+  io.wcm.wcm.commons.instancetype.impl.InstanceTypeServiceImpl
+    instance.type="author"
+
   # Service user mapping for wcm.io Media Handler
   org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-media-metadata
     user.mapping=["io.wcm.handler.media:dam-rendition-metadata\=[dam-writer-service]"]
@@ -86,3 +90,7 @@
     index.files="[index,index.html]"
     aliases="xml:pdf"
     json.maximumresults=I"100"
+
+  # Instance type
+  io.wcm.wcm.commons.instancetype.impl.InstanceTypeServiceImpl
+    instance.type="publish"

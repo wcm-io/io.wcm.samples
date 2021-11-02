@@ -188,7 +188,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.ui.granite</artifactId>
-        <version>1.7.6</version>
+        <version>1.7.8</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

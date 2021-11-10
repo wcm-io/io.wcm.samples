@@ -19,16 +19,23 @@
  */
 package io.wcm.samples.core.config.impl;
 
+import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.osgi.service.component.annotations.Component;
 
 import com.day.cq.wcm.api.Page;
+import com.google.common.collect.ImmutableList;
 
 import io.wcm.handler.link.spi.LinkHandlerConfig;
+import io.wcm.handler.link.spi.LinkType;
+import io.wcm.handler.link.type.ExternalLinkType;
+import io.wcm.handler.link.type.InternalLinkType;
 import io.wcm.handler.link.type.MediaLinkType;
 import io.wcm.samples.core.config.AppTemplate;
+import io.wcm.samples.core.config.WikipediaLinkType;
 import io.wcm.wcm.commons.util.Template;
 
 /**
@@ -36,6 +43,20 @@ import io.wcm.wcm.commons.util.Template;
  */
 @Component(service = LinkHandlerConfig.class)
 public class LinkHandlerConfigImpl extends LinkHandlerConfig {
+
+  private static final List<Class<? extends LinkType>> LINK_TYPES = ImmutableList.<Class<? extends LinkType>>of(
+      InternalLinkType.class,
+      ExternalLinkType.class,
+      MediaLinkType.class,
+      WikipediaLinkType.class);
+
+  /**
+   * @return Supported link types
+   */
+  @Override
+  public @NotNull List<Class<? extends LinkType>> getLinkTypes() {
+    return LINK_TYPES;
+  }
 
   @Override
   public boolean isValidLinkTarget(@NotNull Page page) {

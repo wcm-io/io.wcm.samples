@@ -3,5 +3,10 @@
   "Meta Navigation ((wcm-io-samples))": "Meta Navigation",
   "Disclaimer Text. ((wcm-io-samples))": "Disclaimer Text.",
   "Credits: ©{0} wcm.io ((wcm-io-samples))": "Credits: ©{0} wcm.io",
-  "WCM.IO HANDLER SAMPLE APPLICATION ((wcm-io-samples))": "WCM.IO HANDLER SAMPLE APPLICATION"
+  "WCM.IO HANDLER SAMPLE APPLICATION ((wcm-io-samples))": "WCM.IO HANDLER SAMPLE APPLICATION",
+  "io.wcm.handler.link.components.granite.form.linkRefContainer.wikipedia.type": "Wikipedia",
+  "io.wcm.samples.components.global.linktype.wikipedia.linkWikipediaRef.fieldLabel": "Wiki Page Name",
+  "io.wcm.samples.components.global.linktype.wikipedia.linkWikipediaRef.fieldDescription": "Wikipedia Page Name (last part in URL).",
+  "io.wcm.samples.components.global.linktype.wikipedia.linkWikipediaLanguage.fieldLabel": "Wikipedia Language",
+  "io.wcm.samples.components.global.linktype.wikipedia.linkWikipediaLanguage.fieldDescription": "Language of Wikipedia where page is located."
 }

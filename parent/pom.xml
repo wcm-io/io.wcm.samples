@@ -133,7 +133,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.caconfig.extensions</artifactId>
-        <version>1.8.6</version>
+        <version>1.8.8</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -163,7 +163,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.link</artifactId>
-        <version>1.7.5-SNAPSHOT</version>
+        <version>1.8.0</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -173,7 +173,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.richtext</artifactId>
-        <version>1.5.4</version>
+        <version>1.5.6</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

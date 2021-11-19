@@ -168,7 +168,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.media</artifactId>
-        <version>1.13.6</version>
+        <version>1.13.8</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

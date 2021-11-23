@@ -25,7 +25,7 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>1.15.12</version>
+    <version>1.15.13-SNAPSHOT</version>
     <relativePath />
   </parent>
 
@@ -188,7 +188,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.ui.granite</artifactId>
-        <version>1.8.0</version>
+        <version>1.8.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

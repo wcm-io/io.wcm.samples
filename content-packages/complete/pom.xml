@@ -74,6 +74,21 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.models.api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.models.impl</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.models.jacksonexporter</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.caconfig.extensions</artifactId>
       <scope>provided</scope>
@@ -141,7 +156,10 @@
                 <!-- Latest Sling Context-Aware Configuration -->
                 org.apache.sling.caconfig.api,
                 org.apache.sling.caconfig.spi,
-                org.apache.sling.caconfig.impl
+                org.apache.sling.caconfig.impl,
+                org.apache.sling.models.api,
+                org.apache.sling.models.impl,
+                org.apache.sling.models.jacksonexporter
               </artifactId>
               <type>jar</type>
             </embedded>

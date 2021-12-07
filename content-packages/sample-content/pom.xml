@@ -56,6 +56,7 @@
             <jackrabbit-filter>
               <options>
                 <validRoots>/content,/content/dam</validRoots>
+                <severityForUncoveredAncestorNodes>debug</severityForUncoveredAncestorNodes>
               </options>
             </jackrabbit-filter>
             <jackrabbit-nodetypes>

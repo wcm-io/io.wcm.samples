@@ -25,7 +25,7 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>1.15.14</version>
     <relativePath />
   </parent>
 
@@ -111,23 +111,6 @@
 
   <dependencyManagement>
     <dependencies>
-
-      <!-- Sling -->
-      <dependency>
-        <groupId>org.apache.sling</groupId>
-        <artifactId>org.apache.sling.caconfig.api</artifactId>
-        <version>1.2.0</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.sling</groupId>
-        <artifactId>org.apache.sling.caconfig.spi</artifactId>
-        <version>1.3.4</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.sling</groupId>
-        <artifactId>org.apache.sling.caconfig.impl</artifactId>
-        <version>1.5.0</version>
-      </dependency>
 
       <!-- wcm.io -->
       <dependency>
@@ -215,7 +198,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
-        <version>4.1.7-SNAPSHOT</version>
+        <version>4.1.6</version>
       </dependency>
       <dependency>
         <groupId>org.apache.sling</groupId>
@@ -225,7 +208,7 @@
       <dependency>
         <groupId>org.apache.sling</groupId>
         <artifactId>org.apache.sling.testing.caconfig-mock-plugin</artifactId>
-        <version>1.3.5-SNAPSHOT</version>
+        <version>1.3.4</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -252,7 +235,7 @@
       <dependency>
         <groupId>io.wcm.maven</groupId>
         <artifactId>io.wcm.maven.aem-dependencies</artifactId>
-        <version>6.4.0.0004</version>
+        <version>6.5.0.0005</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

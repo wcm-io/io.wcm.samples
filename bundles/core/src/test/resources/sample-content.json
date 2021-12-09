@@ -27,7 +27,7 @@
         "jcr:primaryType":"nt:unstructured",
         "linkWindowTarget":"_self",
         "linkTitle":"More information",
-        "teaserContent":"Take a look at the new venue for 2013. The Kulturbrauerei in the Prenzlauer Berg district.",
+        "teaserContent":"Take a look at the new venue. The Kulturbrauerei in the Prenzlauer Berg district.",
         "mediaRef":"/content/dam/wcm-io-samples/content/location.png",
         "title":"Location",
         "linkContentRef":"/content/wcm-io-samples/en/venue",
@@ -135,7 +135,7 @@
       },
       "contentrichtext_0":{
         "jcr:primaryType":"nt:unstructured",
-        "text":"<p>Although we got some great submissions for Handler Sample 2013, we still have some slots for further sessions. Therefore we extend the timeslot for submissions to the call for papers and for feedback by two weeks. This means you still can submit you submissions till 06.05.2013. We're looking forward to get more of your great talks.<\/p>\n<p><a data=\"{&quot;linkType&quot;:&quot;internal&quot;,&quot;linkContentRef&quot;:&quot;/content/wcm-io-samples/en/conference/call-for-papers&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">Read more...<\/a><\/p>\n<p><\/p>\n",
+        "text":"<p>Although we got some great submissions for Handler Sample, we still have some slots for further sessions. Therefore we extend the timeslot for submissions to the call for papers and for feedback by two weeks. This means you still can submit you submissions till 06.05. We're looking forward to get more of your great talks.<\/p>\n<p><a data=\"{&quot;linkType&quot;:&quot;internal&quot;,&quot;linkContentRef&quot;:&quot;/content/wcm-io-samples/en/conference/call-for-papers&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">Read more...<\/a><\/p>\n<p><\/p>\n",
         "sling:resourceType":"wcm-io-samples/core/components/content/common/contentRichText"
       }
     },
@@ -144,10 +144,10 @@
       "sling:resourceType":"wcm-io/wcm/parsys/components/parsys",
       "stageheader":{
         "jcr:primaryType":"nt:unstructured",
-        "subtitle":"23.\u201325. September 2013\nKulturbrauerei Berlin",
+        "subtitle":"Kulturbrauerei Berlin",
         "linkWindowTarget":"_self",
         "mediaRef":"/content/dam/wcm-io-samples/content/stageheader-outside2.jpg",
-        "title":"Handler Sample 2013",
+        "title":"Handler Sample",
         "linkMediaDownload":false,
         "linkType":"internal",
         "sling:resourceType":"wcm-io-samples/core/components/content/stage/stageheader",
@@ -369,7 +369,7 @@
         "sling:resourceType":"wcm-io/wcm/parsys/components/parsys",
         "contentheadline":{
           "jcr:primaryType":"nt:unstructured",
-          "headline":"About Handler Sample 2013",
+          "headline":"About Handler Sample",
           "sling:resourceType":"wcm-io-samples/core/components/content/common/contentHeadline"
         },
         "contentrichtext":{
@@ -444,12 +444,12 @@
           "sling:resourceType":"wcm-io/wcm/parsys/components/parsys",
           "contentheadline":{
             "jcr:primaryType":"nt:unstructured",
-            "headline":"Call for papers Handler Sample 2013",
+            "headline":"Call for papers Handler Sample",
             "sling:resourceType":"wcm-io-samples/core/components/content/common/contentHeadline"
           },
           "contentrichtext":{
             "jcr:primaryType":"nt:unstructured",
-            "text":"<h4>Why attend as speaker?<\/h4>\n<p>First of all this is a community event, so everyone attending is encouraged to actively participate at this meetup. By having a number of various tracks covering the various facets of the overall topic Apache Sling we want to give the community some startingpoints to discuss and interact. Since we just can cover our perspective we do need your help to get a really rich experience for everyone.<\/p>\n<p>As a speaker you also will get free entrance to the meetup and obtain the speakershirt.<\/p>\n<h4>Session Details<\/h4>\n<ul>\n<li>Timeframe: the default timeframe for a talk is 45 minutes including the Q&amp;As<\/li>\n<li>Please add note to Submission if you require more or less time<\/li>\n<li>Style: all kind of sessions are welcome<\/li>\n<\/ul>\n<h4>Submission Details<\/h4>\n<ul>\n<li>Submission by mail via <a data=\"{&quot;linkType&quot;:&quot;external&quot;,&quot;linkExternalRef&quot;:&quot;mailto:papers.sampleApp.org&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">papers@sampleApp.org<\/a><\/li>\n<li>Short summary (3-4 sentences) of your session<\/li>\n<li>Style of your session (e.g. Front presentation, Hands-on-Session, Workshop...)<\/li>\n<li>Planned Material beside the slides (e.g. Codesamples that should be made available to attendees)<\/li>\n<\/ul>\n<h4>Topics of interest include, but are not limited to:<\/h4>\n<ul>\n<li>Integration of other Frameworks<\/li>\n<li>Implementations based on Apache Sling<\/li>\n<li>Field reports of projects utilizing Apache Sling / Apache Jackrabbit / Apache Felix and/or Products based upon this stack (like Adobe CQ5)<\/li>\n<li>Hands-on sessions covering specific parts of the Stack (like Apache Sling CRUD or Apache Oak Extensions)<\/li>\n<li>Solutions supporting development based on the Sling stack (like Dev-Tooling or Sling Extensions)<\/li>\n<li>Best Practices (adressing topics like Security, Performance or Testing)<\/li>\n<\/ul>\n<h4>Manuscript Details<\/h4>\n<ul>\n<li>We will provide a standardized conference slidedeck to ensure a stable user experience (like fontsizes, colors and so on..)<\/li>\n<li>Codesamples that should be made available for download need to be provided together with the manuscript<\/li>\n<li>Livedemos should get a summary in the notes of the corresponding slide(just to ensure that the timeframe matches the amount of content of your session)<\/li>\n<\/ul>\n<h4>Important Dates<\/h4>\n<ul>\n<li>Submission deadline: 06.05.2013<\/li>\n<li>Last opportunity to send in your submission to&nbsp;<a data=\"{&quot;linkType&quot;:&quot;external&quot;,&quot;linkExternalRef&quot;:&quot;mailto:papers@sampleApp.org&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">papers@sampleApp.org<\/a><\/li>\n<li>Notification: 20.05.2013<\/li>\n<li>Till this date we will decide which sessions can be part of Handler Sample 2013 and get a feedback to you if we require some changes (e.g. when we identify overlap with other sessions)<\/li>\n<li>Final manuscript due: 02.09.2013<\/li>\n<li>Till this date we need the manuscript and corresponding material sent in for feedback and approval.<\/li>\n<\/ul>\n<p><\/p>\n",
+            "text":"<h4>Why attend as speaker?<\/h4>\n<p>First of all this is a community event, so everyone attending is encouraged to actively participate at this meetup. By having a number of various tracks covering the various facets of the overall topic Apache Sling we want to give the community some startingpoints to discuss and interact. Since we just can cover our perspective we do need your help to get a really rich experience for everyone.<\/p>\n<p>As a speaker you also will get free entrance to the meetup and obtain the speakershirt.<\/p>\n<h4>Session Details<\/h4>\n<ul>\n<li>Timeframe: the default timeframe for a talk is 45 minutes including the Q&amp;As<\/li>\n<li>Please add note to Submission if you require more or less time<\/li>\n<li>Style: all kind of sessions are welcome<\/li>\n<\/ul>\n<h4>Submission Details<\/h4>\n<ul>\n<li>Submission by mail via <a data=\"{&quot;linkType&quot;:&quot;external&quot;,&quot;linkExternalRef&quot;:&quot;mailto:papers.sampleApp.org&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">papers@sampleApp.org<\/a><\/li>\n<li>Short summary (3-4 sentences) of your session<\/li>\n<li>Style of your session (e.g. Front presentation, Hands-on-Session, Workshop...)<\/li>\n<li>Planned Material beside the slides (e.g. Codesamples that should be made available to attendees)<\/li>\n<\/ul>\n<h4>Topics of interest include, but are not limited to:<\/h4>\n<ul>\n<li>Integration of other Frameworks<\/li>\n<li>Implementations based on Apache Sling<\/li>\n<li>Field reports of projects utilizing Apache Sling / Apache Jackrabbit / Apache Felix and/or Products based upon this stack (like Adobe CQ5)<\/li>\n<li>Hands-on sessions covering specific parts of the Stack (like Apache Sling CRUD or Apache Oak Extensions)<\/li>\n<li>Solutions supporting development based on the Sling stack (like Dev-Tooling or Sling Extensions)<\/li>\n<li>Best Practices (adressing topics like Security, Performance or Testing)<\/li>\n<\/ul>\n<h4>Manuscript Details<\/h4>\n<ul>\n<li>We will provide a standardized conference slidedeck to ensure a stable user experience (like fontsizes, colors and so on..)<\/li>\n<li>Codesamples that should be made available for download need to be provided together with the manuscript<\/li>\n<li>Livedemos should get a summary in the notes of the corresponding slide(just to ensure that the timeframe matches the amount of content of your session)<\/li>\n<\/ul>\n<h4>Important Dates<\/h4>\n<ul>\n<li>Submission deadline: 06.05.<\/li>\n<li>Last opportunity to send in your submission to&nbsp;<a data=\"{&quot;linkType&quot;:&quot;external&quot;,&quot;linkExternalRef&quot;:&quot;mailto:papers@sampleApp.org&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">papers@sampleApp.org<\/a><\/li>\n<li>Notification: 20.05.<\/li>\n<li>Till this date we will decide which sessions can be part of Handler Sample and get a feedback to you if we require some changes (e.g. when we identify overlap with other sessions)<\/li>\n<li>Final manuscript due: 02.09.<\/li>\n<li>Till this date we need the manuscript and corresponding material sent in for feedback and approval.<\/li>\n<\/ul>\n<p><\/p>\n",
             "sling:resourceType":"wcm-io-samples/core/components/content/common/contentRichText"
           }
         },
@@ -458,7 +458,7 @@
           "sling:resourceType":"wcm-io-samples/core/components/structure/parsys/asideParsys",
           "asideteaser":{
             "jcr:primaryType":"nt:unstructured",
-            "teaserContent":"<p><strong>Deadline:<\/strong> 6. May 2013<\/p>\n<p><strong>E-Mail:<\/strong> <a data=\"{&quot;linkType&quot;:&quot;external&quot;,&quot;linkExternalRef&quot;:&quot;mailto:papers@sampleApp.org&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">papers@sampleApp.org<\/a><\/p>\n<p><strong>Content:<\/strong><\/p>\n<ul>\n<li>Summary<\/li>\n<li>Style of Session<\/li>\n<li>Additional Material<\/li>\n<\/ul>\n<p><\/p>\n",
+            "teaserContent":"<p><strong>Deadline:<\/strong> 6. May<\/p>\n<p><strong>E-Mail:<\/strong> <a data=\"{&quot;linkType&quot;:&quot;external&quot;,&quot;linkExternalRef&quot;:&quot;mailto:papers@sampleApp.org&quot;,&quot;linkWindowTarget&quot;:&quot;_self&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">papers@sampleApp.org<\/a><\/p>\n<p><strong>Content:<\/strong><\/p>\n<ul>\n<li>Summary<\/li>\n<li>Style of Session<\/li>\n<li>Additional Material<\/li>\n<\/ul>\n<p><\/p>\n",
             "title":"Submission Details",
             "sling:resourceType":"wcm-io-samples/core/components/content/aside/asideTeaser"
           }
@@ -494,7 +494,7 @@
         "sling:resourceType":"wcm-io/wcm/parsys/components/parsys",
         "scheduleday":{
           "jcr:primaryType":"nt:unstructured",
-          "date":"2013-09-23T10:15:00.000+02:00",
+          "date":"2021-09-23T10:15:00.000+02:00",
           "title":"Day 1",
           "sling:resourceType":"wcm-io-samples/core/components/content/schedule/scheduleDay",
           "items":{
@@ -532,7 +532,7 @@
         },
         "scheduleday_0":{
           "jcr:primaryType":"nt:unstructured",
-          "date":"2013-09-24T10:00:00.000+02:00",
+          "date":"2021-09-24T10:00:00.000+02:00",
           "title":"Day 2",
           "sling:resourceType":"wcm-io-samples/core/components/content/schedule/scheduleDay",
           "items":{
@@ -556,7 +556,7 @@
         },
         "scheduleday_1":{
           "jcr:primaryType":"nt:unstructured",
-          "date":"2013-09-25T10:00:00.000+02:00",
+          "date":"2021-09-25T10:00:00.000+02:00",
           "title":"Day 3",
           "sling:resourceType":"wcm-io-samples/core/components/content/schedule/scheduleDay",
           "items":{
@@ -651,7 +651,7 @@
         "sling:resourceType":"wcm-io/wcm/parsys/components/parsys",
         "contentheadline":{
           "jcr:primaryType":"nt:unstructured",
-          "headline":"Register for Handler Sample 2013",
+          "headline":"Register for Handler Sample",
           "sling:resourceType":"wcm-io-samples/core/components/content/common/contentHeadline"
         }
       },
@@ -674,7 +674,7 @@
         "sling:resourceType":"wcm-io/wcm/parsys/components/parsys",
         "contentheadline":{
           "jcr:primaryType":"nt:unstructured",
-          "headline":"New venue for Handler Sample 2013",
+          "headline":"New venue for Handler Sample",
           "sling:resourceType":"wcm-io-samples/core/components/content/common/contentHeadline"
         },
         "googlemap":{
@@ -686,7 +686,7 @@
         },
         "contentrichtext":{
           "jcr:primaryType":"nt:unstructured",
-          "text":"<p>Handler Sample 2013 will take place in the Kulturbrauerei. More infos to follow.<\/p>\n<p>Meanwhile you can read about its history on <a data=\"{&quot;linkType&quot;:&quot;external&quot;,&quot;linkExternalRef&quot;:&quot;http://en.wikipedia.org/wiki/Kulturbrauerei&quot;,&quot;linkWindowTarget&quot;:&quot;_blank&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">Wikipedia Page<\/a>.<\/p>\n<p><\/p>\n<p><\/p>\n",
+          "text":"<p>Handler Sample will take place in the Kulturbrauerei. More infos to follow.<\/p>\n<p>Meanwhile you can read about its history on <a data=\"{&quot;linkType&quot;:&quot;external&quot;,&quot;linkExternalRef&quot;:&quot;http://en.wikipedia.org/wiki/Kulturbrauerei&quot;,&quot;linkWindowTarget&quot;:&quot;_blank&quot;,&quot;linkWindowFeatures&quot;:&quot;default&quot;}\" href=\"#\">Wikipedia Page<\/a>.<\/p>\n<p><\/p>\n<p><\/p>\n",
           "sling:resourceType":"wcm-io-samples/core/components/content/common/contentRichText"
         }
       },

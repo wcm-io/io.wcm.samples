@@ -19,19 +19,19 @@
   #L%
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.3.0</version>
+    <version>1.4.0</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.complete</artifactId>
-  <version>1.3.0</version>
+  <version>1.4.0</version>
   <packaging>content-package</packaging>
 
   <name>Samples Application</name>
@@ -47,71 +47,36 @@
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.core</artifactId>
-      <version>1.3.0</version>
-      <scope>compile</scope>
+      <version>1.4.0</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.clientlibs</artifactId>
-      <version>1.3.0</version>
-      <scope>compile</scope>
+      <version>1.4.0</version>
+      <scope>provided</scope>
     </dependency>
 
     <!-- Additional bundles -->
     <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.models.api</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.models.impl</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.caconfig.api</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.caconfig.spi</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.caconfig.impl</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.commons.johnzon</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.sling</groupId>
-      <artifactId>org.apache.sling.jcr.contentloader</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.caconfig.extensions</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.caconfig.editor</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.dam.asset-service</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.wcm.ui.extjs</artifactId>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
 
   </dependencies>
@@ -128,6 +93,13 @@
           <name>${contentPackage.name}</name>
           <group>${contentPackage.group}</group>
           <packageType>container</packageType>
+          <validatorsSettings>
+            <jackrabbit-filter>
+              <options>
+                <validRoots>/apps/wcm-io-samples</validRoots>
+              </options>
+            </jackrabbit-filter>
+          </validatorsSettings>
 
           <filters>
             <filter>
@@ -143,24 +115,7 @@
                 io.wcm,
                 io.wcm.samples
               </groupId>
-            </embedded>
-            <!-- Include some Apache Sling bundles newer than those shipped with AEM -->
-            <embedded>
-              <groupId>
-                org.apache.sling
-              </groupId>
-              <artifactId>
-                <!-- Latest Sling Models version (AEM 6.1 and 6.2 contain quite old versions) -->
-                org.apache.sling.models.api,
-                org.apache.sling.models.impl,
-                <!-- Latest Sling Context-Aware Configuration -->
-                org.apache.sling.caconfig.api,
-                org.apache.sling.caconfig.spi,
-                org.apache.sling.caconfig.impl,
-                org.apache.sling.commons.johnzon,
-                <!-- Latest JCR Content Loader to support i18n json files directly -->
-                org.apache.sling.jcr.contentloader
-              </artifactId>
+              <type>jar</type>
             </embedded>
           </embeddeds>
 
@@ -176,12 +131,12 @@
         </configuration>
       </plugin>
 
-      <!-- Do not deploy sources to repository -->
+      <!-- Do not generate sources JAR -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <configuration>
-          <attach>false</attach>
+          <skipSource>true</skipSource>
         </configuration>
       </plugin>
 

@@ -55,6 +55,9 @@ public class PageTitle {
    * @return Html title
    */
   private String getRecursivePageTitle(Page page) {
+    if (page == null) {
+      return "";
+    }
     if (siteRoot.isRootPage(page)) {
       return StringUtils.defaultString(page.getPageTitle(), page.getTitle());
     }
@@ -70,7 +73,13 @@ public class PageTitle {
    * @return Site root page title
    */
   public String getSiteRootPageTitle() {
-    return siteRoot.getRootPage().getPageTitle();
+    Page rootPage = siteRoot.getRootPage();
+    if (rootPage != null) {
+      return rootPage.getPageTitle();
+    }
+    else {
+      return null;
+    }
   }
 
 }

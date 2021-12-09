@@ -30,7 +30,7 @@ import org.apache.sling.models.annotations.Model;
 @Model(adaptables = SlingHttpServletRequest.class)
 public class CurrentDate {
 
-  private int year;
+  private final int year;
 
   /**
    * Constructor

@@ -26,6 +26,7 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
@@ -48,7 +49,7 @@ public class ResourceMedia {
   @RequestAttribute
   private String mediaFormat;
 
-  @RequestAttribute(optional = true)
+  @RequestAttribute(injectionStrategy = InjectionStrategy.OPTIONAL)
   private String cssClass;
 
   @Self

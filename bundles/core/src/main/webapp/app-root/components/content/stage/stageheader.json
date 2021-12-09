@@ -11,6 +11,12 @@
 
   "wcmio:mediaFormats": ["stageHeader"],
   "wcmio:mediaCropAuto": true,
+  "wcmio:mediaResponsiveType": "imageSizes",
+  "wcmio:mediaResponsiveImageSizes": {
+    "jcr:primaryType": "nt:unstructured",
+    "sizes": "(min-width: 1280px) 2000px, 100vw",
+    "widths": "2000?,1000,500"
+  },
 
   "cq:dialog": {
     "jcr:primaryType": "nt:unstructured",

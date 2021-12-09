@@ -10,7 +10,7 @@
 
   <figure class="image-small" data-sly-unwrap="${media.valid}">
     <a href="conference.shtml" data-sly-attribute="${link.attributes}" data-sly-unwrap="${!link.valid}">
-      ${media.markup @ context='html'}
+      ${media.markup @ context='unsafe'}
     </a>
   </figure>
 

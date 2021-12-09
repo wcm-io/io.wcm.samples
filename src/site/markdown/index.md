@@ -7,14 +7,14 @@ Sample application to demonstrate the usage of the wcm.io Handler infrastructure
 
 - Clone the github repository https://github.com/wcm-io/wcm-io-samples
 - Start an AEM author instance at http://localhost:4502
-- Execute deploy script `clean_install_deploy_package.cmd` (on Windows) or `clean_install_deploy_package.sh` (on Mac/Linux) to deploy the application and sample content and configuration to the instance.
+- Execute deploy script `build-deploy.sh` to deploy the application and sample content and configuration to the instance.
 - Open http://localhost:4502/editor.html/content/wcm-io-samples/en.html in your browser
 
 
 ### System requirements
 
-- AEM 6.2 or higher
-- JDK 1.8
+- AEM 6.5 or AEMaaCS
+- JDK 1.8 or Java 11
 
 
 ### GitHub Repository

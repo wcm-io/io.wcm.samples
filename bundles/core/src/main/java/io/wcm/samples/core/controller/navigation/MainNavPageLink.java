@@ -24,6 +24,7 @@ import javax.inject.Inject;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 
@@ -45,7 +46,7 @@ public class MainNavPageLink {
   @Inject
   public MainNavPageLink(
       @Self NavigationManager navigationManager,
-      @RequestAttribute(name = "levels", optional = true) @Default(intValues = 1) int levels) {
+      @RequestAttribute(name = "levels", injectionStrategy = InjectionStrategy.OPTIONAL) @Default(intValues = 1) int levels) {
     root = navigationManager.getMainNavigation(levels);
   }
 

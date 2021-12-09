@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="dam:Asset">
+    <jcr:content jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Author="Stefan Seifert"
+            dam:numPages="{Long}1"
+            dam:Physicalheightininches="{Decimal}11.693333333333333"
+            dam:Physicalwidthininches="{Decimal}8.268333333333334"
+            dam:Producer="Microsoft® Word für Microsoft 365"
+            dam:size="{Long}8441"
+            dc:creator="[Stefan Seifert]"
+            dc:creator_xmpArrayType="rdf:Seq"
+            dc:format="application/pdf"
+            jcr:primaryType="nt:unstructured"
+            pdf:Producer="Microsoft® Word für Microsoft 365"
+            xmp:CreateDate="{Date}2021-06-25T19:55:06.000+02:00"
+            xmp:CreatorTool="Microsoft® Word für Microsoft 365"
+            xmp:ModifyDate="{Date}2021-06-25T19:55:06.000+02:00"
+            xmpMM:DocumentID="uuid:B1C9FDB5-9863-4989-B880-D61874EED8D3"
+            xmpMM:InstanceID="uuid:B1C9FDB5-9863-4989-B880-D61874EED8D3"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditionsMetadata jcr:primaryType="nt:unstructured">
+            <cq5dam.thumbnail.140.100.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}100"
+                imageWidth="{Long}70"/>
+            <cqdam.preview.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}841"
+                imageWidth="{Long}595"/>
+            <cq5dam.thumbnail.48.48.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}48"
+                imageWidth="{Long}33"/>
+            <cq5dam.thumbnail.319.319.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}319"
+                imageWidth="{Long}225"/>
+            <cq5dam.web.1280.1280.jpeg
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}841"
+                imageWidth="{Long}595"/>
+        </renditionsMetadata>
+    </jcr:content>
+</jcr:root>

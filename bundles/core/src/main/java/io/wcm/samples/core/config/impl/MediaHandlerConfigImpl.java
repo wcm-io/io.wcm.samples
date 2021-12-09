@@ -32,6 +32,7 @@ import io.wcm.handler.media.spi.MediaHandlerConfig;
 import io.wcm.handler.media.spi.MediaMarkupBuilder;
 import io.wcm.handler.media.spi.MediaSource;
 import io.wcm.handler.mediasource.dam.DamMediaSource;
+import io.wcm.handler.mediasource.dam.markup.DamVideoMediaMarkupBuilder;
 import io.wcm.handler.mediasource.inline.InlineMediaSource;
 import io.wcm.samples.core.handler.ResponsiveImageMediaMarkupBuilder;
 
@@ -49,6 +50,7 @@ public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
   private static final List<Class<? extends MediaMarkupBuilder>> MEDIA_MARKUP_BUILDERS = ImmutableList.<Class<? extends MediaMarkupBuilder>>of(
       ResponsiveImageMediaMarkupBuilder.class,
+      DamVideoMediaMarkupBuilder.class,
       DummyImageMediaMarkupBuilder.class);
 
   @Override

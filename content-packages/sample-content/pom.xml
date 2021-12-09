@@ -19,20 +19,20 @@
   #L%
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.3.0</version>
+    <version>1.4.0</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.sample-content</artifactId>
   <description>AEM Application sample content</description>
-  <version>1.3.0</version>
+  <version>1.4.0</version>
   <packaging>content-package</packaging>
 
   <properties>
@@ -52,6 +52,19 @@
           <name>${contentPackage.name}</name>
           <group>${contentPackage.group}</group>
           <packageType>content</packageType>
+          <validatorsSettings>
+            <jackrabbit-filter>
+              <options>
+                <validRoots>/content,/content/dam</validRoots>
+                <severityForUncoveredAncestorNodes>debug</severityForUncoveredAncestorNodes>
+              </options>
+            </jackrabbit-filter>
+            <jackrabbit-nodetypes>
+              <options>
+                <validNameSpaces>creatorAtom=http://ns.adobe.com/creatorAtom/1.0/</validNameSpaces>
+              </options>
+            </jackrabbit-nodetypes>
+          </validatorsSettings>
           <filters>
             <filter>
               <root>/content/dam/wcm-io-samples</root>
@@ -72,12 +85,12 @@
         </configuration>
       </plugin>
 
-      <!-- Do not deploy sources to repository -->
+      <!-- Do not generate sources JAR -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <configuration>
-          <attach>false</attach>
+          <skipSource>true</skipSource>
         </configuration>
       </plugin>
 

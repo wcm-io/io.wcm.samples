@@ -30,7 +30,7 @@
   org.apache.sling.caconfig.management.impl.ConfigurationManagementSettingsImpl
     ignorePropertyNameRegex=["^(jcr|cq):.+$"]
     configCollectionPropertiesResourceNames=["jcr:content","."]
-  
+
   # Context path strategy
   io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy-wcm-io-samples
     templatePaths=["/apps/wcm-io-samples/core/templates/content/homepage"]
@@ -43,9 +43,13 @@
   io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy
     enabled=B"true"
 
-  # Define service user for wcm.io URL handler
-  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-url
-    user.mapping=["io.wcm.handler.url:clientlibs-service\=sling-scripting"]
+  # Service user mapping for wcm.io URL handler
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-wcm
+    user.mapping=["io.wcm.handler.url:clientlibs-service\=[sling-scripting]","io.wcm.wcm.commons:component-properties\=[sling-scripting]"]
+
+  # Service user mapping for wcm.io Media Handler
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-media-dynamicmedia
+    user.mapping=["io.wcm.handler.media:dynamic-media-support\=[configuration-reader-service]"]
 
 [configurations runModes=author]
 
@@ -56,10 +60,14 @@
   # Set TouchUI as primary authoring UI
   com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl
     authoringUIModeService.default="TOUCH"
-  
-  # Define service user for wcm.io Media Handler
-  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-media
-    user.mapping=["io.wcm.handler.media\=wcmioDamSystemUser"]
+
+  # Instance type
+  io.wcm.wcm.commons.instancetype.impl.InstanceTypeServiceImpl
+    instance.type="author"
+
+  # Service user mapping for wcm.io Media Handler
+  org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-samples-wcmio-handler-media-metadata
+    user.mapping=["io.wcm.handler.media:dam-rendition-metadata\=[dam-writer-service]"]
 
   # Configure Responsive Preview Mode
   io.wcm.wcm.ui.granite.emulator.impl.EmulatorProviderImpl-wcm-io-samples
@@ -82,3 +90,7 @@
     index.files="[index,index.html]"
     aliases="xml:pdf"
     json.maximumresults=I"100"
+
+  # Instance type
+  io.wcm.wcm.commons.instancetype.impl.InstanceTypeServiceImpl
+    instance.type="publish"

@@ -6,6 +6,12 @@ nodes:
   roles:
   - role: wcm-io-samples-aem-cms
     variant: aem-author
+  config:
+    replication.author.publishTargets:
+    - name: publish1
+      url: ${maven::sling.publish.url}
+      transportUser: admin
+      transportPassword: admin
 
 - node: aem-publish
   roles:

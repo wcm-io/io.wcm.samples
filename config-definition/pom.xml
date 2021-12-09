@@ -19,20 +19,20 @@
   #L%
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.3.0</version>
+    <version>1.4.0</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.config-definition</artifactId>
   <description>AEM Application CONGA roles and templates</description>
-  <version>1.3.0</version>
+  <version>1.4.0</version>
   <packaging>config-definition</packaging>
 
   <dependencies>
@@ -48,14 +48,14 @@
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.complete</artifactId>
-      <version>1.3.0</version>
+      <version>1.4.0</version>
       <type>zip</type>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.sample-content</artifactId>
-      <version>1.3.0</version>
+      <version>1.4.0</version>
       <type>zip</type>
       <scope>compile</scope>
     </dependency>
@@ -71,7 +71,7 @@
         <artifactId>conga-maven-plugin</artifactId>
         <executions>
 
-          <!-- Generate configuration for local development AEM instance -->
+          <!-- Generate configuration for environments defined in this application code repository -->
           <execution>
             <id>dev-environment-config</id>
             <phase>generate-resources</phase>

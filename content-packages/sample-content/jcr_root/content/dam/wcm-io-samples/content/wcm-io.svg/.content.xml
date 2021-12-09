@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="dam:Asset">
+    <jcr:content jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:size="{Long}2332"
+            dc:format="image/svg+xml"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditionsMetadata jcr:primaryType="nt:unstructured">
+            <original
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}270"
+                imageWidth="{Long}480"/>
+            <cq5dam.thumbnail.319.319.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}179"
+                imageWidth="{Long}319"/>
+            <cq5dam.thumbnail.48.48.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}27"
+                imageWidth="{Long}48"/>
+            <cq5dam.thumbnail.140.100.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}78"
+                imageWidth="{Long}140"/>
+            <cq5dam.web.1280.1280.jpeg
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}270"
+                imageWidth="{Long}480"/>
+        </renditionsMetadata>
+    </jcr:content>
+</jcr:root>

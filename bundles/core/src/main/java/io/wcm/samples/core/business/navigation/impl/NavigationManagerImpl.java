@@ -63,6 +63,9 @@ public class NavigationManagerImpl implements NavigationManager {
   @Override
   public NavigationPageItem getMainNavigation(final int maxLevels) {
     Page siteRootPage = siteRoot.getRootPage();
+    if (siteRootPage == null) {
+      siteRootPage = currentPage;
+    }
     NavigationPageItem rootItem = createLinkableItem(siteRootPage);
     if (maxLevels > 0) {
       rootItem.setChildren(createChildItemsRecursively(siteRootPage, new ValidLinkableItemCreator(), 1, maxLevels));
@@ -85,7 +88,11 @@ public class NavigationManagerImpl implements NavigationManager {
       return getFooterNavigationSpecific(footerNavRoot);
     }
     else {
-      return getFooterNavigationDerivedFromMainNav(siteRoot.getRootPage());
+      Page siteRootPage = siteRoot.getRootPage();
+      if (siteRootPage == null) {
+        siteRootPage = currentPage;
+      }
+      return getFooterNavigationDerivedFromMainNav(siteRootPage);
     }
   }
 

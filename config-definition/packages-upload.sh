@@ -18,7 +18,7 @@
 #  #L%
 
 
-CONGA_ENVIRONMENT="development"
+CONGA_ENVIRONMENT="local"
 CONGA_NODE="aem-author"
 
 if [[ $0 == *":\\"* ]]; then

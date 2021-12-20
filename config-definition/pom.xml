@@ -138,4 +138,21 @@
     </plugins>
   </build>
 
+  <profiles>
+
+    <!-- Skip building of Cloud Manager ZIP in "fast" profile -->
+    <profile>
+      <id>fast</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <conga.cloudManager.allPackage.skip>true</conga.cloudManager.allPackage.skip>
+        <conga.cloudManager.dispatcherConfig.skip>true</conga.cloudManager.dispatcherConfig.skip>
+        <aem.analyser.skip>true</aem.analyser.skip>
+      </properties>
+    </profile>
+
+  </profiles>
+
 </project>

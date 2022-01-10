@@ -260,13 +260,6 @@
         <version>4.2.0</version>
       </dependency>
 
-      <!-- For build compatibility with Java 11 -->
-      <dependency>
-        <groupId>org.apache.geronimo.specs</groupId>
-        <artifactId>geronimo-annotation_1.3_spec</artifactId>
-        <version>1.0</version>
-      </dependency>
-
     </dependencies>
   </dependencyManagement>
 

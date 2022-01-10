@@ -5,10 +5,10 @@ Sample application to demonstrate the usage of the wcm.io Handler infrastructure
 
 ### Build and deploy samples from source
 
-- Clone the github repository https://github.com/wcm-io/wcm-io-samples
+- Clone the github repository https://github.com/wcm-io/io.wcm.samples
 - Start an AEM author instance at http://localhost:4502
 - Execute deploy script `build-deploy.sh` to deploy the application and sample content and configuration to the instance.
-- Open http://localhost:4502/editor.html/content/wcm-io-samples/en.html in your browser
+- Open http://localhost:4502/editor.html/content/io.wcm.samples/en.html in your browser
 
 
 ### System requirements
@@ -19,4 +19,4 @@ Sample application to demonstrate the usage of the wcm.io Handler infrastructure
 
 ### GitHub Repository
 
-Sources: https://github.com/wcm-io/wcm-io-samples
+Sources: https://github.com/wcm-io/io.wcm.samples

@@ -39,15 +39,15 @@
   <url>${site.url}/${site.url.module.prefix}/</url>
 
   <scm>
-    <connection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</connection>
-    <developerConnection>scm:git:https://github.com/wcm-io/wcm-io-samples.git</developerConnection>
-    <url>https://github.com/wcm-io/wcm-io-samples</url>
+    <connection>scm:git:https://github.com/wcm-io/io.wcm.samples.git</connection>
+    <developerConnection>scm:git:https://github.com/wcm-io/io.wcm.samples.git</developerConnection>
+    <url>https://github.com/wcm-io/io.wcm.samples</url>
     <tag>HEAD</tag>
   </scm>
 
   <ciManagement>
     <system>GitHub Actions</system>
-    <url>https://github.com/wcm-io/wcm-io-samples/actions</url>
+    <url>https://github.com/wcm-io/io.wcm.samples/actions</url>
   </ciManagement>
 
   <properties>

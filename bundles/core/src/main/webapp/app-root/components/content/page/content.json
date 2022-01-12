@@ -9,7 +9,16 @@
       "content": {
         "allowedChildren": [
           "wcm-io-samples/core/components/content/common/contentHeadline",
-          "wcm-io-samples/core/components/content/common/contentRichText"
+          "wcm-io-samples/core/components/content/common/contentRichText",
+          "wcm-io/wcm/parsys/components/parsys"
+        ]
+      },
+
+      "content_nested": {
+         "pattern": "^jcr:content/content/.*$",
+        "allowedChildren": [
+          "wcm-io-samples/core/components/content/common/contentRichText",
+          "wcm-io/wcm/parsys/components/parsys"
         ]
       }
 

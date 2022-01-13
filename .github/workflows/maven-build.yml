@@ -25,32 +25,13 @@ jobs:
         distribution: [temurin]
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Maven Build with SonarCloud
+        uses: wcm-io-devops/github-action-maven-build-sonar@v1
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-
-      - name: Setup JDK
-        uses: actions/setup-java@v2
-        with:
-          distribution: ${{ matrix.distribution }}
+          os: ${{ matrix.os }}
           java-version: ${{ matrix.java }}
-          cache: 'maven'
-
-      - name: Cache SonarCloud packages
-        uses: actions/cache@v1
-        with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
-
-      - name: Build and verify
-        run: ./mvnw -s ./.maven-settings.xml -Pcontinuous-integration -B -U clean verify
-
-      - name: Analyze in SonarCloud
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        # SONAR_TOKEN is not present when building for external PR
-        run:  ([ -z $SONAR_TOKEN ] || ./mvnw -s ./.maven-settings.xml -Pcontinuous-integration -B sonar:sonar -Dsonar.projectKey=${{github.repository_owner}}_${{github.event.repository.name}} -Dsonar.projectName=${{github.event.repository.name}})
-        if: ${{ matrix.java == '11' && matrix.os == 'ubuntu-latest' }}
+          maven-executable: ./mvnw
+          sonar-run-on-os: ubuntu-latest
+          sonar-run-on-java-version: 11
+          sonar-token: ${{ secrets.SONAR_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

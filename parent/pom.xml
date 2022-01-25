@@ -122,7 +122,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.caconfig.editor</artifactId>
-        <version>1.9.1-SNAPSHOT</version>
+        <version>1.10.0</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -172,7 +172,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.ui.granite</artifactId>
-        <version>1.8.3-SNAPSHOT</version>
+        <version>1.9.0</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

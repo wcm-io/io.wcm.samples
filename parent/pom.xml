@@ -187,7 +187,7 @@
       <dependency>
         <groupId>io.wcm.devops.conga.definitions</groupId>
         <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
-        <version>1.12.0</version>
+        <version>1.12.2</version>
       </dependency>
 
       <!-- wcm.io Testing -->
@@ -231,7 +231,7 @@
       <dependency>
         <groupId>io.wcm.maven</groupId>
         <artifactId>io.wcm.maven.aem-dependencies</artifactId>
-        <version>6.5.7.0003-SNAPSHOT</version>
+        <version>6.5.7.0003</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

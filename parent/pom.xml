@@ -31,7 +31,7 @@
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.parent</artifactId>
-  <version>1.4.1-SNAPSHOT</version>
+  <version>1.4.1</version>
   <packaging>pom</packaging>
 
   <name>Samples</name>
@@ -48,7 +48,7 @@
     <build.compiler.release>8</build.compiler.release>
 
     <!-- Enable reproducible builds -->
-    <project.build.outputTimestamp>2021-05-27T00:00:00Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2022-08-10T15:14:41Z</project.build.outputTimestamp>
 
   </properties>
 

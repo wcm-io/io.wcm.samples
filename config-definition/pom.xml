@@ -25,14 +25,14 @@
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.4.1-SNAPSHOT</version>
+    <version>1.4.1</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.config-definition</artifactId>
   <description>AEM Application CONGA roles and templates</description>
-  <version>1.4.1-SNAPSHOT</version>
+  <version>1.4.3-SNAPSHOT</version>
   <packaging>config-definition</packaging>
 
   <dependencies>
@@ -48,14 +48,14 @@
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.complete</artifactId>
-      <version>1.4.1-SNAPSHOT</version>
+      <version>1.4.1</version>
       <type>zip</type>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.sample-content</artifactId>
-      <version>1.4.1-SNAPSHOT</version>
+      <version>1.4.1</version>
       <type>zip</type>
       <scope>compile</scope>
     </dependency>
@@ -86,6 +86,27 @@
         </executions>
       </plugin>
 
+      <plugin>
+        <groupId>io.wcm.devops.conga.plugins</groupId>
+        <artifactId>conga-aem-maven-plugin</artifactId>
+        <executions>
+
+          <!-- Generate "all" packages including all packages from CONGA configuration - only for testing the validation with aemanalyser-maven-plugin -->
+          <execution>
+            <id>cloudmanager-all-package</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>cloudmanager-all-package</goal>
+            </goals>
+            <configuration>
+              <group>wcm-io-samples</group>
+              <runModeOptimization>ELIMINATE_DUPLICATES</runModeOptimization>
+            </configuration>
+          </execution>
+
+        </executions>
+      </plugin>
+
       <!-- Do not generate eclipse project files -->
       <plugin>
         <groupId>io.wcm.devops.maven.plugins</groupId>
@@ -97,5 +118,21 @@
 
     </plugins>
   </build>
+
+  <profiles>
+
+    <!-- Skip building of Cloud Manager ZIP in "fast" profile -->
+    <profile>
+      <id>fast</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <conga.cloudManager.allPackage.skip>true</conga.cloudManager.allPackage.skip>
+        <conga.cloudManager.dispatcherConfig.skip>true</conga.cloudManager.dispatcherConfig.skip>
+      </properties>
+    </profile>
+
+  </profiles>
 
 </project>

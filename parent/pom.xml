@@ -152,7 +152,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.media</artifactId>
-        <version>1.14.16</version>
+        <version>1.14.18</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

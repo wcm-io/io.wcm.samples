@@ -25,14 +25,14 @@
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.4.1-SNAPSHOT</version>
+    <version>2022.1121.1114337.0000000588</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.sample-content</artifactId>
   <description>AEM Application sample content</description>
-  <version>1.4.1-SNAPSHOT</version>
+  <version>2022.1121.1114337.0000000588</version>
   <packaging>content-package</packaging>
 
   <properties>

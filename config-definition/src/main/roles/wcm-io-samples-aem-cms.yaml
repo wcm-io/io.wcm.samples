@@ -12,6 +12,15 @@ templateDir: wcm-io-samples-aem-cms
 
 files:
 
+# Application package
+- url: mvn:io.wcm.samples/io.wcm.samples.complete//zip
+  dir: packages
+
+# Application sample content package
+- url: mvn:io.wcm.samples/io.wcm.samples.sample-content//zip
+  dir: packages
+  condition: ${app.sampleContent}
+
 # AEM OSGi System Configuration
 - file: wcm-io-samples-aem-cms-config.provisioning
   dir: packages
@@ -25,14 +34,6 @@ files:
       filters:
       - filter: /apps/wcm-io-samples-aem-cms-config
 
-# Application package
-- url: mvn:io.wcm.samples/io.wcm.samples.complete//zip
-  dir: packages
-
-# Application sample content package
-- url: mvn:io.wcm.samples/io.wcm.samples.sample-content//zip
-  dir: packages
-  condition: ${app.sampleContent}
 
 
 # Defines configuration parameters and default values

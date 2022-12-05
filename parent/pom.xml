@@ -117,7 +117,7 @@
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.caconfig.extensions</artifactId>
         <!-- Stick with version 1.8.x because 1.9.x depends on latest Sling Context-Aware Configuration SPI/Impl -->
-        <version>1.8.8</version>
+        <version>1.9.0</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

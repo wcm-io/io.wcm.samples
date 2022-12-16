@@ -27,7 +27,6 @@ import org.jetbrains.annotations.Nullable;
 import org.osgi.service.component.annotations.Component;
 
 import com.day.cq.wcm.api.Page;
-import com.google.common.collect.ImmutableList;
 
 import io.wcm.handler.link.spi.LinkHandlerConfig;
 import io.wcm.handler.link.spi.LinkType;
@@ -44,7 +43,7 @@ import io.wcm.wcm.commons.util.Template;
 @Component(service = LinkHandlerConfig.class)
 public class LinkHandlerConfigImpl extends LinkHandlerConfig {
 
-  private static final List<Class<? extends LinkType>> LINK_TYPES = ImmutableList.<Class<? extends LinkType>>of(
+  private static final List<Class<? extends LinkType>> LINK_TYPES = List.of(
       InternalLinkType.class,
       ExternalLinkType.class,
       MediaLinkType.class,

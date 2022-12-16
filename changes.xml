@@ -25,6 +25,9 @@
 
     <release version="1.4.2" date="not released">
       <action type="update" dev="sseifert">
+        Switch to Java 11 as minimum version.
+      </action>
+      <action type="update" dev="sseifert">
         Switch to AEM 6.5.7 as minimum version.
       </action>
     </release>

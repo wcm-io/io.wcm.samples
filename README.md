@@ -6,7 +6,7 @@
 Sample projects and applications to demonstrate and test wcm.io features.
 
 Documentation: https://wcm.io/samples/<br/>
-Issues: https://wcm-io.atlassian.net/browse/WSAM<br/>
+Issues: https://github.com/wcm-io/io.wcm.samples/issues<br/>
 Wiki: https://wcm-io.atlassian.net/wiki/<br/>
 Continuous Integration: https://github.com/wcm-io/io.wcm.samples/actions<br/>
 Commercial support: https://wcm.io/commercial-support.html

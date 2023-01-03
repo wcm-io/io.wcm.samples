@@ -43,8 +43,9 @@
     <sling.url>http://localhost:4502</sling.url>
     <sling.publish.url>http://localhost:4503</sling.publish.url>
 
-    <!-- Java version -->
+    <!-- Versions -->
     <java.version>11</java.version>
+    <mockito.version>4.11.0</mockito.version>
 
     <!-- Enable reproducible builds -->
     <project.build.outputTimestamp>2021-05-27T00:00:00Z</project.build.outputTimestamp>
@@ -246,12 +247,12 @@
       <dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-core</artifactId>
-        <version>4.11.0</version>
+        <version>${mockito.version}</version>
       </dependency>
       <dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-junit-jupiter</artifactId>
-        <version>4.11.0</version>
+        <version>${mockito.version}</version>
       </dependency>
 
     </dependencies>

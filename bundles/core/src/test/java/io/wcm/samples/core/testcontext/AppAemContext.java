@@ -53,8 +53,7 @@ public final class AppAemContext {
 
   public static AemContext newAemContext() {
     return new AemContextBuilder()
-        .plugin(CACONFIG)
-        .plugin(WCMIO_SLING, WCMIO_WCM, WCMIO_CACONFIG, WCMIO_HANDLER)
+        .plugin(CACONFIG, WCMIO_SLING, WCMIO_WCM, WCMIO_CACONFIG, WCMIO_HANDLER)
         .afterSetUp(SETUP_CALLBACK)
         .build();
   }

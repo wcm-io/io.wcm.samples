@@ -25,7 +25,6 @@ import org.jetbrains.annotations.NotNull;
 import org.osgi.service.component.annotations.Component;
 
 import com.day.cq.wcm.api.Page;
-import com.google.common.collect.ImmutableList;
 
 import io.wcm.handler.media.markup.DummyImageMediaMarkupBuilder;
 import io.wcm.handler.media.spi.MediaHandlerConfig;
@@ -44,11 +43,11 @@ public class MediaHandlerConfigImpl extends MediaHandlerConfig {
 
   static final String DAM_ROOT = "/content/dam/wcm-io-samples";
 
-  private static final List<Class<? extends MediaSource>> MEDIA_SOURCES = ImmutableList.<Class<? extends MediaSource>>of(
+  private static final List<Class<? extends MediaSource>> MEDIA_SOURCES = List.of(
       DamMediaSource.class,
       InlineMediaSource.class);
 
-  private static final List<Class<? extends MediaMarkupBuilder>> MEDIA_MARKUP_BUILDERS = ImmutableList.<Class<? extends MediaMarkupBuilder>>of(
+  private static final List<Class<? extends MediaMarkupBuilder>> MEDIA_MARKUP_BUILDERS = List.of(
       ResponsiveImageMediaMarkupBuilder.class,
       DamVideoMediaMarkupBuilder.class,
       DummyImageMediaMarkupBuilder.class);

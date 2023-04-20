@@ -174,10 +174,8 @@ public class NavigationManagerImpl implements NavigationManager {
       @Override
       public NavigationPageItem create(final Page pPage) {
         NavigationPageItem item = itemCreator.create(pPage);
-        if (item != null) {
-          if (level < maxLevels) {
-            item.setChildren(createChildItemsRecursively(pPage, itemCreator, level + 1, maxLevels));
-          }
+        if (item != null && level < maxLevels) {
+          item.setChildren(createChildItemsRecursively(pPage, itemCreator, level + 1, maxLevels));
         }
         return item;
       }

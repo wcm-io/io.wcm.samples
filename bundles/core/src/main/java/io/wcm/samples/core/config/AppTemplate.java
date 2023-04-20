@@ -56,11 +56,6 @@ public enum AppTemplate implements TemplatePathInfo {
     this.resourceType = Template.getResourceTypeFromTemplatePath(templatePath);
   }
 
-  AppTemplate(String templatePath, String resourceType) {
-    this.templatePath = templatePath;
-    this.resourceType = resourceType;
-  }
-
   /**
    * Template path
    * @return Path

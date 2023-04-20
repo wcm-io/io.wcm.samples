@@ -8,7 +8,7 @@ nodes:
     variant: aem-author
   config:
     replication.author.publishTargets:
-    - name: publish1
+    - name: publish
       url: ${maven::sling.publish.url}
       transportUser: admin
       transportPassword: admin

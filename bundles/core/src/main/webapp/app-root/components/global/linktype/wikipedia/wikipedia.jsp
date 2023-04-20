@@ -17,12 +17,12 @@
   limitations under the License.
   #L%
   --%>
+<%@page import="java.util.List"%>
 <%@page import="org.apache.sling.api.resource.Resource"%>
 <%@page import="com.adobe.granite.ui.components.Config"%>
 <%@page import="com.adobe.granite.ui.components.ComponentHelper.Options"%>
 <%@page import="com.adobe.granite.ui.components.Tag"%>
 <%@page import="com.day.cq.commons.jcr.JcrConstants"%>
-<%@page import="com.google.common.collect.ImmutableList"%>
 <%@page import="io.wcm.handler.link.LinkNameConstants"%>
 <%@page import="io.wcm.sling.commons.resource.ImmutableValueMap"%>
 <%@page import="io.wcm.wcm.ui.granite.resource.GraniteUiSyntheticResource"%>
@@ -60,7 +60,7 @@ ImmutableValueMap.Builder linkWikipediaLanguageProps = ImmutableValueMap.builder
 Resource languageSelect = GraniteUiSyntheticResource.child(items, WikipediaLinkType.PN_LINK_WIKIPEDIA_LANGUAGE, "granite/ui/components/coral/foundation/form/select",
     linkWikipediaLanguageProps.build());
 Resource languageItems = GraniteUiSyntheticResource.child(languageSelect, "items", JcrConstants.NT_UNSTRUCTURED);
-for (String language : ImmutableList.of("en", "de")) {
+for (String language : List.of("en", "de")) {
   GraniteUiSyntheticResource.child(languageItems, language, JcrConstants.NT_UNSTRUCTURED,
       ImmutableValueMap.builder()
       .put("value", language)

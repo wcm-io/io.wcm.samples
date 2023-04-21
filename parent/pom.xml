@@ -185,6 +185,16 @@
         <version>1.5.0</version>
       </dependency>
       <dependency>
+        <groupId>io.wcm</groupId>
+        <artifactId>io.wcm.site-api.processor</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>io.wcm</groupId>
+        <artifactId>io.wcm.site-api.handler</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+      <dependency>
         <groupId>io.wcm.devops.conga.definitions</groupId>
         <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
         <version>1.15.0</version>

@@ -172,7 +172,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.ui.granite</artifactId>
-        <version>1.9.10</version>
+        <version>1.9.12</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -204,7 +204,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
-        <version>5.2.0</version>
+        <version>5.2.2</version>
       </dependency>
       <dependency>
         <groupId>org.apache.sling</groupId>
@@ -214,7 +214,7 @@
       <dependency>
         <groupId>org.apache.sling</groupId>
         <artifactId>org.apache.sling.testing.caconfig-mock-plugin</artifactId>
-        <version>1.4.2</version>
+        <version>1.5.0</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

@@ -31,6 +31,7 @@ import com.day.cq.wcm.api.Page;
 import io.wcm.handler.link.spi.LinkHandlerConfig;
 import io.wcm.handler.link.spi.LinkType;
 import io.wcm.handler.link.type.ExternalLinkType;
+import io.wcm.handler.link.type.InternalCrossContextLinkType;
 import io.wcm.handler.link.type.InternalLinkType;
 import io.wcm.handler.link.type.MediaLinkType;
 import io.wcm.samples.core.config.AppTemplate;
@@ -45,6 +46,7 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
 
   private static final List<Class<? extends LinkType>> LINK_TYPES = List.of(
       InternalLinkType.class,
+      InternalCrossContextLinkType.class,
       ExternalLinkType.class,
       MediaLinkType.class,
       WikipediaLinkType.class);

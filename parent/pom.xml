@@ -152,12 +152,12 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.media</artifactId>
-        <version>1.15.8</version>
+        <version>1.15.9-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.richtext</artifactId>
-        <version>1.6.4</version>
+        <version>1.6.5-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -167,7 +167,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.parsys</artifactId>
-        <version>1.7.0</version>
+        <version>1.7.1-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -204,7 +204,7 @@
       <dependency>
         <groupId>org.apache.sling</groupId>
         <artifactId>org.apache.sling.testing.caconfig-mock-plugin</artifactId>
-        <version>1.5.2</version>
+        <version>1.5.4</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>

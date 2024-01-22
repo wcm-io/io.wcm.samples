@@ -36,7 +36,7 @@ import io.wcm.handler.media.markup.SimpleImageMediaMarkupBuilder;
 public class ResponsiveImageMediaMarkupBuilder extends SimpleImageMediaMarkupBuilder {
 
   @Override
-  protected HtmlElement<?> getImageElement(Media media) {
+  protected HtmlElement getImageElement(Media media) {
     HtmlElement image = super.getImageElement(media);
 
     if (image != null) {

@@ -45,7 +45,7 @@
 
     <!-- Versions -->
     <java.version>11</java.version>
-    <mockito.version>5.11.0</mockito.version>
+    <mockito.version>5.12.0</mockito.version>
 
     <!-- Enable reproducible builds -->
     <project.build.outputTimestamp>2023-12-19T12:58:47Z</project.build.outputTimestamp>

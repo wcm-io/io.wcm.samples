@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="29d0a27a-7c9f-4d62-bb2e-53b32c90d30a">
     <jcr:content jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Author="Stefan Seifert"
@@ -16,9 +18,9 @@
             pdf:Producer="Microsoft® Word für Microsoft 365"
             xmp:CreateDate="{Date}2021-06-25T19:55:06.000+02:00"
             xmp:CreatorTool="Microsoft® Word für Microsoft 365"
-            xmp:ModifyDate="{Date}2021-06-25T19:55:06.000+02:00"
             xmpMM:DocumentID="uuid:B1C9FDB5-9863-4989-B880-D61874EED8D3"
-            xmpMM:InstanceID="uuid:B1C9FDB5-9863-4989-B880-D61874EED8D3"/>
+            xmpMM:InstanceID="uuid:B1C9FDB5-9863-4989-B880-D61874EED8D3"
+            xmp:ModifyDate="{Date}2021-06-25T19:55:06.000+02:00"/>
         <related jcr:primaryType="nt:unstructured"/>
         <renditionsMetadata jcr:primaryType="nt:unstructured">
             <cq5dam.thumbnail.140.100.png

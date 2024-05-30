@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="64bdcee7-801e-425e-b728-1147b65b3ca6">
     <jcr:content
         cq:name="provision-logo.png"
         cq:parentPath="/content/dam/wcm-io-samples/content"
@@ -16,7 +18,7 @@
             dam:Physicalwidthindpi="{Long}72"
             dam:Physicalwidthininches="{Decimal}5.556821346282959"
             dam:Progressive="no"
-            dam:size="{Long}19108"
+            dam:size="{Long}20682"
             dam:writebackEnable="False"
             dc:format="image/png"
             jcr:primaryType="nt:unstructured"
@@ -36,6 +38,10 @@
                 jcr:primaryType="nt:unstructured"
                 imageHeight="{Long}9"
                 imageWidth="{Long}48"/>
+            <cq5dam.thumbnail.319.319.png
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}65"
+                imageWidth="{Long}319"/>
         </renditionsMetadata>
     </jcr:content>
 </jcr:root>

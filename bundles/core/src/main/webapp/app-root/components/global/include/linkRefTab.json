@@ -11,6 +11,7 @@
         "linkRef": {
           "sling:resourceType": "wcm-io/handler/link/components/granite/form/linkRefContainer",
           "showLinkTitle": true,
+          "required": true,
           "allLinkTypeFields": {
             "linkFragment": {
               "sling:resourceType": "granite/ui/components/coral/foundation/form/textfield",

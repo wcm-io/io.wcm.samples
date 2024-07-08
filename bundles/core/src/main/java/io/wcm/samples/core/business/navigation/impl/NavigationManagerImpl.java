@@ -186,7 +186,7 @@ public class NavigationManagerImpl implements NavigationManager {
     NavigationPageItem create(Page pPage);
   }
 
-  private class ValidLinkableItemCreator implements ItemCreator {
+  private final class ValidLinkableItemCreator implements ItemCreator {
     @Override
     public NavigationPageItem create(Page page) {
       NavigationPageItem item = createLinkableItem(page);

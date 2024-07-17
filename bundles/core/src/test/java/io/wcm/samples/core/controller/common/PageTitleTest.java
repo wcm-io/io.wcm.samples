@@ -24,6 +24,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import io.wcm.samples.core.testcontext.AppAemContext;
 import io.wcm.testing.mock.aem.junit5.AemContext;
@@ -34,36 +36,21 @@ class PageTitleTest {
 
   private final AemContext context = AppAemContext.newAemContext();
 
-  @Test
-  void testGetRecursivePageTitle_Root() throws Exception {
-    context.currentPage("/content/wcm-io-samples/en");
+  @ParameterizedTest
+  @CsvSource({
+      "/content/wcm-io-samples/en,Handler Sample 2014",
+      "/content/wcm-io-samples/en/conference,Conference - Handler Sample 2014",
+      "/content/wcm-io-samples/en/conference/call-for-papers,Call for Papers - Conference - Handler Sample 2014",
+      "/content/wcm-io-samples/en/tools/navigation/imprint,Imprint - Handler Sample 2014"
+  })
+  void testGetRecursivePageTitle(String path, String expectedTitle) {
+    context.currentPage(path);
     PageTitle underTest = context.request().adaptTo(PageTitle.class);
-    assertEquals("Handler Sample 2014", underTest.getRecursivePageTitle());
+    assertEquals(expectedTitle, underTest.getRecursivePageTitle());
   }
 
   @Test
-  void testGetRecursivePageTitle_Conference() throws Exception {
-    context.currentPage("/content/wcm-io-samples/en/conference");
-    PageTitle underTest = context.request().adaptTo(PageTitle.class);
-    assertEquals("Conference - Handler Sample 2014", underTest.getRecursivePageTitle());
-  }
-
-  @Test
-  void testGetRecursivePageTitle_Conference_CallForPapers() throws Exception {
-    context.currentPage("/content/wcm-io-samples/en/conference/call-for-papers");
-    PageTitle underTest = context.request().adaptTo(PageTitle.class);
-    assertEquals("Call for Papers - Conference - Handler Sample 2014", underTest.getRecursivePageTitle());
-  }
-
-  @Test
-  void testGetRecursivePageTitle_Tools_Imprint() throws Exception {
-    context.currentPage("/content/wcm-io-samples/en/tools/navigation/imprint");
-    PageTitle underTest = context.request().adaptTo(PageTitle.class);
-    assertEquals("Imprint - Handler Sample 2014", underTest.getRecursivePageTitle());
-  }
-
-  @Test
-  void testGetSiteRootPageTitle() throws Exception {
+  void testGetSiteRootPageTitle() {
     PageTitle underTest = context.request().adaptTo(PageTitle.class);
     assertEquals("Handler Sample 2014", underTest.getSiteRootPageTitle());
   }

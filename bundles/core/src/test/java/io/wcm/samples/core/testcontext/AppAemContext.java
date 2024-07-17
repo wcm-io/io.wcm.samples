@@ -27,8 +27,6 @@ import static org.apache.sling.testing.mock.caconfig.ContextPlugins.CACONFIG;
 
 import java.io.IOException;
 
-import org.apache.sling.api.resource.PersistenceException;
-
 import io.wcm.handler.media.spi.MediaFormatProvider;
 import io.wcm.samples.core.config.AppTemplate;
 import io.wcm.samples.core.config.impl.LinkHandlerConfigImpl;
@@ -63,7 +61,7 @@ public final class AppAemContext {
    */
   private static final AemContextCallback SETUP_CALLBACK = new AemContextCallback() {
     @Override
-    public void execute(AemContext context) throws PersistenceException, IOException {
+    public void execute(AemContext context) throws IOException {
 
       // context path strategy
       MockCAConfig.contextPathStrategyRootTemplate(context, AppTemplate.EDITORIAL_HOMEPAGE.getTemplatePath());

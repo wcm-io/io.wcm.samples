@@ -98,17 +98,14 @@ public class NavigationManagerImpl implements NavigationManager {
 
   private NavigationPageItem getFooterNavigationSpecific(final Page footerNavRoot) {
     NavigationPageItem rootItem = createStructureItem(footerNavRoot);
-    rootItem.setChildren(createChildItems(footerNavRoot, new ItemCreator() {
-      @Override
-      public NavigationPageItem create(final Page pPage) {
-        NavigationPageItem columnItem = createStructureItem(pPage);
-        columnItem.setChildren(createChildItems(pPage, new ValidLinkableItemCreator()));
-        if (columnItem.getChildren().isEmpty()) {
-          return null;
-        }
-        else {
-          return columnItem;
-        }
+    rootItem.setChildren(createChildItems(footerNavRoot, page -> {
+      NavigationPageItem columnItem = createStructureItem(page);
+      columnItem.setChildren(createChildItems(page, new ValidLinkableItemCreator()));
+      if (columnItem.getChildren().isEmpty()) {
+        return null;
+      }
+      else {
+        return columnItem;
       }
     }));
     return rootItem;
@@ -116,23 +113,20 @@ public class NavigationManagerImpl implements NavigationManager {
 
   private NavigationPageItem getFooterNavigationDerivedFromMainNav(final Page siteRootPage) {
     NavigationPageItem rootItem = createStructureItem(siteRootPage);
-    rootItem.setChildren(createChildItems(siteRootPage, new ItemCreator() {
-      @Override
-      public NavigationPageItem create(final Page pPage) {
-        NavigationPageItem columnItem = createStructureItem(pPage);
-        List<NavigationPageItem> linkItems = new ArrayList<>();
-        NavigationPageItem mainnavLinkItem = createLinkableItem(pPage);
-        if (mainnavLinkItem.getLink().isValid()) {
-          linkItems.add(mainnavLinkItem);
-        }
-        linkItems.addAll(createChildItems(pPage, new ValidLinkableItemCreator()));
-        columnItem.setChildren(linkItems);
-        if (columnItem.getChildren().isEmpty()) {
-          return null;
-        }
-        else {
-          return columnItem;
-        }
+    rootItem.setChildren(createChildItems(siteRootPage, page -> {
+      NavigationPageItem columnItem = createStructureItem(page);
+      List<NavigationPageItem> linkItems = new ArrayList<>();
+      NavigationPageItem mainnavLinkItem = createLinkableItem(page);
+      if (mainnavLinkItem.getLink().isValid()) {
+        linkItems.add(mainnavLinkItem);
+      }
+      linkItems.addAll(createChildItems(page, new ValidLinkableItemCreator()));
+      columnItem.setChildren(linkItems);
+      if (columnItem.getChildren().isEmpty()) {
+        return null;
+      }
+      else {
+        return columnItem;
       }
     }));
     return rootItem;
@@ -170,15 +164,12 @@ public class NavigationManagerImpl implements NavigationManager {
 
   private List<NavigationPageItem> createChildItemsRecursively(final Page parentPage, final ItemCreator itemCreator,
       final int level, final int maxLevels) {
-    return createChildItems(parentPage, new ItemCreator() {
-      @Override
-      public NavigationPageItem create(final Page pPage) {
-        NavigationPageItem item = itemCreator.create(pPage);
-        if (item != null && level < maxLevels) {
-          item.setChildren(createChildItemsRecursively(pPage, itemCreator, level + 1, maxLevels));
-        }
-        return item;
+    return createChildItems(parentPage, page -> {
+      NavigationPageItem item = itemCreator.create(page);
+      if (item != null && level < maxLevels) {
+        item.setChildren(createChildItemsRecursively(page, itemCreator, level + 1, maxLevels));
       }
+      return item;
     });
   }
 

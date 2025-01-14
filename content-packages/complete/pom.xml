@@ -68,6 +68,21 @@
       <artifactId>io.wcm.caconfig.editor</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.spi</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.impl</artifactId>
+      <scope>compile</scope>
+    </dependency>
 
   </dependencies>
 
@@ -105,6 +120,15 @@
                 io.wcm,
                 io.wcm.samples
               </groupId>
+              <type>jar</type>
+            </embedded>
+            <!-- Include updated Sling Context-Aware Configuration bundles -->
+            <embedded>
+              <artifactId>
+                org.apache.sling.caconfig.api,
+                org.apache.sling.caconfig.spi,
+                org.apache.sling.caconfig.impl
+              </artifactId>
               <type>jar</type>
             </embedded>
           </embeddeds>

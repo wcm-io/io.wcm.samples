@@ -235,7 +235,7 @@
       <dependency>
         <groupId>org.apache.sling</groupId>
         <artifactId>org.apache.sling.caconfig.impl</artifactId>
-        <version>1.6.0</version>
+        <version>1.7.2</version>
       </dependency>
 
       <!-- Import AEM dependencies -->

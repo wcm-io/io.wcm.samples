@@ -4,14 +4,9 @@ name: Build
 
 on:
   push:
-    branches-ignore:
-      - master
-      - experimental/**
+    branches:
+      - develop
   pull_request:
-    types: [opened, synchronize, reopened]
-    branches-ignore:
-      - master
-      - experimental/**
   workflow_dispatch:
 
 jobs:

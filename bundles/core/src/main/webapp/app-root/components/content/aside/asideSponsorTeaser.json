@@ -32,6 +32,27 @@
                   "name": "./title",
                   "fieldLabel": "Title",
                   "required": true
+                },
+                "checkbox": {
+                  "sling:resourceType": "granite/ui/components/coral/foundation/form/checkbox",
+                  "name": "./inversedCheckbox",
+                  "fieldDescription": "Checked equals false, unchecked equals true",
+                  "text": "Check to hide other field",
+                  "uncheckedValue": "true",
+                  "granite:class": "wcmio-dialog-showhide",
+                  "granite:data": {
+                    "wcmio-dialog-showhide-target": ".checkbox-target"
+                  }
+                },
+                "other-field": {
+                  "sling:resourceType": "granite/ui/components/coral/foundation/form/textfield",
+                  "granite:class": "checkbox-target",
+                  "fieldLabel": "Label",
+                  "fieldDescription": "Should be shown when checkbox is checked (value = false)",
+                  "name": "./name",
+                  "granite:data": {
+                    "showhidetargetvalue": "false"
+                  }
                 }
               }
             }

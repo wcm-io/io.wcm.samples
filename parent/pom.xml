@@ -31,7 +31,7 @@
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.parent</artifactId>
-  <version>1.5.0</version>
+  <version>1.5.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Samples</name>
@@ -48,7 +48,7 @@
     <mockito.version>5.17.0</mockito.version>
 
     <!-- Enable reproducible builds -->
-    <project.build.outputTimestamp>2025-04-07T15:43:58Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-04-07T15:46:26Z</project.build.outputTimestamp>
 
   </properties>
 

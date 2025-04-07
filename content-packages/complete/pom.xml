@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.4.2</version>
+    <version>1.5.0</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.complete</artifactId>
-  <version>1.4.2</version>
+  <version>1.5.0</version>
   <packaging>content-package</packaging>
 
   <name>Samples Application</name>
@@ -47,13 +47,13 @@
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.core</artifactId>
-      <version>1.4.2</version>
+      <version>1.5.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.wcm.samples</groupId>
       <artifactId>io.wcm.samples.clientlibs</artifactId>
-      <version>1.4.2</version>
+      <version>1.5.0</version>
       <scope>provided</scope>
     </dependency>
 
@@ -69,9 +69,19 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>io.wcm</groupId>
-      <artifactId>io.wcm.dam.asset-service</artifactId>
-      <scope>provided</scope>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.spi</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.caconfig.impl</artifactId>
+      <scope>compile</scope>
     </dependency>
 
   </dependencies>
@@ -110,6 +120,15 @@
                 io.wcm,
                 io.wcm.samples
               </groupId>
+              <type>jar</type>
+            </embedded>
+            <!-- Include updated Sling Context-Aware Configuration bundles -->
+            <embedded>
+              <artifactId>
+                org.apache.sling.caconfig.api,
+                org.apache.sling.caconfig.spi,
+                org.apache.sling.caconfig.impl
+              </artifactId>
               <type>jar</type>
             </embedded>
           </embeddeds>

@@ -90,7 +90,8 @@ public final class WikipediaLinkType extends LinkType {
     ValueMap props = link.getLinkRequest().getResourceProperties();
 
     // get wikipedia reference from link properties
-    String wikiPageName = props.get(PN_LINK_WIKIPEDIA_REF, link.getLinkRequest().getReference());
+    String wikiPageName = StringUtils.defaultString(props.get(PN_LINK_WIKIPEDIA_REF, String.class),
+        link.getLinkRequest().getReference());
     String language = props.get(PN_LINK_WIKIPEDIA_LANGUAGE, DEFAULT_LANGUAGE);
 
     // build link URL which is only an anchor tag in the preview.

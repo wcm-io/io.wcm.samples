@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:creatorAtom="http://ns.adobe.com/creatorAtom/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:creatorAtom="http://ns.adobe.com/creatorAtom/1.0/" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/" xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#" xmlns:dam="http://www.day.com/dam/1.0" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="9efe504e-1850-4c10-b607-cb882650c207">
     <jcr:content jcr:primaryType="dam:AssetContent">
         <metadata
             dam:size="{Long}955481"
@@ -11,8 +13,6 @@
             tiff:ImageWidth="{Long}480"
             tiff:Orientation="{Long}1"
             xmp:CreateDate="{Date}2020-01-20T20:28:45.000Z"
-            xmp:MetadataDate="{Date}2020-01-20T21:28:45.000+01:00"
-            xmp:ModifyDate="{Date}2020-01-20T20:28:45.000Z"
             xmpDM:audioChannelType="Stereo"
             xmpDM:audioSampleRate="{Long}48000"
             xmpDM:audioSampleType="16Int"
@@ -21,9 +21,11 @@
             xmpDM:videoFieldOrder="Progressive"
             xmpDM:videoFrameRate="25.000000"
             xmpDM:videoPixelAspectRatio="1/1"
+            xmp:MetadataDate="{Date}2020-01-20T21:28:45.000+01:00"
             xmpMM:DocumentID="06f1c0a1-4545-ddbd-4a9a-784500000047"
             xmpMM:InstanceID="xmp.iid:5082d121-2487-bd4e-9132-1254346a94ad"
-            xmpMM:OriginalDocumentID="xmp.did:4cf4288f-df9b-6546-9eaf-85061bddee1e">
+            xmpMM:OriginalDocumentID="xmp.did:4cf4288f-df9b-6546-9eaf-85061bddee1e"
+            xmp:ModifyDate="{Date}2020-01-20T20:28:45.000Z">
             <xmpDM:projectRef
                 jcr:primaryType="nt:unstructured"
                 xmpDM:type="movie"
@@ -82,21 +84,6 @@
                     stEvt:when="{Date}2020-01-20T21:28:45.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
-            <xmpMM:Ingredients
-                jcr:primaryType="nt:unstructured"
-                xmpArraySize="{Long}1"
-                xmpArrayType="rdf:Bag"
-                xmpNodeType="xmpArray">
-                <_x0031_
-                    jcr:primaryType="nt:unstructured"
-                    stRef:documentID="cac0907d-f2ba-e0d4-c76c-8e0400000043"
-                    stRef:filePath="P1030651.MP4"
-                    stRef:fromPart="time:0d304819200000f254016000000"
-                    stRef:instanceID="a38656e7-d40c-1ada-1b9c-923e00000070"
-                    stRef:maskMarkers="None"
-                    stRef:toPart="time:0d304819200000f254016000000"
-                    xmpNodeType="xmpStruct"/>
-            </xmpMM:Ingredients>
             <xmpMM:Pantry
                 jcr:primaryType="nt:unstructured"
                 xmpArraySize="{Long}1"
@@ -107,10 +94,10 @@
                     tiff:Orientation="{Long}1"
                     xmp:CreateDate="{Date}2019-07-04T13:07:25.000Z"
                     xmp:MetadataDate="{Date}2020-01-20T21:28:21.000+01:00"
-                    xmp:ModifyDate="{Date}2020-01-20T21:28:21.000+01:00"
                     xmpMM:DocumentID="cac0907d-f2ba-e0d4-c76c-8e0400000043"
                     xmpMM:InstanceID="a38656e7-d40c-1ada-1b9c-923e00000070"
                     xmpMM:OriginalDocumentID="xmp.did:9a1b78ca-cd0d-4e48-8bdc-970928fee4e7"
+                    xmp:ModifyDate="{Date}2020-01-20T21:28:21.000+01:00"
                     xmpNodeType="xmpStruct">
                     <xmpDM:duration
                         jcr:primaryType="nt:unstructured"
@@ -149,6 +136,21 @@
                 creatorAtom:invocationAppleEvent="{Long}1129468018"
                 jcr:primaryType="nt:unstructured"
                 xmpNodeType="xmpStruct"/>
+            <xmpMM:Ingredients
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}1"
+                xmpArrayType="rdf:Bag"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stRef:documentID="cac0907d-f2ba-e0d4-c76c-8e0400000043"
+                    stRef:filePath="P1030651.MP4"
+                    stRef:fromPart="time:0d304819200000f254016000000"
+                    stRef:instanceID="a38656e7-d40c-1ada-1b9c-923e00000070"
+                    stRef:maskMarkers="None"
+                    stRef:toPart="time:0d304819200000f254016000000"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:Ingredients>
         </metadata>
         <related jcr:primaryType="nt:unstructured"/>
         <renditionsMetadata jcr:primaryType="nt:unstructured">

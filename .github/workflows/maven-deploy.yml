@@ -2,6 +2,8 @@
 
 name: Deploy
 
+concurrency: ${{ github.workflow }}
+
 on:
   push:
     branches:
@@ -15,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configure GIT
         run: |
@@ -23,7 +25,7 @@ jobs:
           git config --global user.name "${{ secrets.GH_SITE_DEPLOY_NAME }}"
 
       - name: Setup JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 11

@@ -43,12 +43,12 @@ class MainNavPageLinkTest {
   private MainNavPageLink underTest;
 
   @BeforeEach
-  void setUp() throws Exception {
+  void setUp() {
     when(navigationManager.getMainNavigation(anyInt())).thenReturn(navigationPageItem);
   }
 
   @Test
-  void testGetRoot() throws Exception {
+  void testGetRoot() {
     underTest = new MainNavPageLink(navigationManager, 5);
     verify(navigationManager).getMainNavigation(5);
     assertSame(navigationPageItem, underTest.getRoot());

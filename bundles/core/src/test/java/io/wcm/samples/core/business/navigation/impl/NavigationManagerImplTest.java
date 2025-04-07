@@ -75,7 +75,7 @@ class NavigationManagerImplTest {
   }
 
   @Test
-  void testGetMainNavigation_1Levels() throws Exception {
+  void testGetMainNavigation_1Levels() {
     NavigationPageItem rootItem = underTest.getMainNavigation(1);
     List<NavigationPageItem> mainnavItems = rootItem.getChildren();
     assertEquals(5, mainnavItems.size());
@@ -84,7 +84,7 @@ class NavigationManagerImplTest {
   }
 
   @Test
-  void testGetMainNavigation_0Levels() throws Exception {
+  void testGetMainNavigation_0Levels() {
     NavigationPageItem rootItem = underTest.getMainNavigation(0);
     List<NavigationPageItem> mainnavItems = rootItem.getChildren();
     assertEquals(0, mainnavItems.size());
@@ -94,7 +94,7 @@ class NavigationManagerImplTest {
    * Test footer navigation with separate definition at tools/footernav/*
    */
   @Test
-  void testGetFooterNavigation_ToolsFooterNav() throws Exception {
+  void testGetFooterNavigation_ToolsFooterNav() {
     NavigationPageItem rootItem = underTest.getFooterNavigation();
     List<NavigationPageItem> footerNavItems = rootItem.getChildren();
     assertEquals(3, footerNavItems.size());

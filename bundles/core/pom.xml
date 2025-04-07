@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm.samples</groupId>
     <artifactId>io.wcm.samples.parent</artifactId>
-    <version>1.4.2</version>
+    <version>1.5.0</version>
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.samples</groupId>
   <artifactId>io.wcm.samples.core</artifactId>
-  <version>1.4.2</version>
+  <version>1.5.0</version>
   <packaging>jar</packaging>
 
   <name>Sample Application</name>
@@ -182,6 +182,7 @@
               SLING-INF/app-root;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/core,\
               SLING-INF/app-i18n;overwrite:=true;ignoreImportProviders:=json;path:=/apps/wcm-io-samples/core/i18n,\
               SLING-INF/app-config;overwrite:=true;ignoreImportProviders:=xml;path:=/apps/wcm-io-samples/config
+
             Sling-Namespaces: wcmio=http://wcm.io/ns
 
             Import-Package: \

@@ -13,9 +13,9 @@ templateDir: wcm-io-samples-aem-cms
 files:
 
 # AEM OSGi System Configuration
-- file: wcm-io-samples-aem-cms-config.provisioning
+- file: wcm-io-samples-aem-cms-config.osgiconfig.json
   dir: packages
-  template: wcm-io-samples-aem-cms-config.provisioning.hbs
+  template: wcm-io-samples-aem-cms-config.osgiconfig.json.hbs
   postProcessors:
   - aem-contentpackage-osgiconfig
   postProcessorOptions:

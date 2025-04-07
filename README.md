@@ -26,5 +26,5 @@ See [Maven Settings](https://github.com/wcm-io/io.wcm.samples/blob/develop/.mave
 
 ### System requirements
 
-- AEM 6.5.7+ or AEMaaCS SDK
+- AEM 6.5.17+ or AEMaaCS SDK
 - Java 11

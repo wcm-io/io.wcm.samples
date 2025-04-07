@@ -10,7 +10,18 @@
       "items": {
         "linkRef": {
           "sling:resourceType": "wcm-io/handler/link/components/granite/form/linkRefContainer",
-          "showLinkTitle": true
+          "showLinkTitle": true,
+          "allLinkTypeFields": {
+            "linkFragment": {
+              "sling:resourceType": "granite/ui/components/coral/foundation/form/textfield",
+              "name": "./linkFragment",
+              "fieldLabel": "Fragment",
+              "granite:class": "linkRefContainer-option-linktype-showhide-target",
+              "granite:data": {
+                "showhidetargetvalues": "internal,internalCrossContext"
+              }
+            }
+          }
         }
       }
     }

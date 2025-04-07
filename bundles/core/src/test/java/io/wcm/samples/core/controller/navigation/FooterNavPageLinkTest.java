@@ -41,13 +41,13 @@ class FooterNavPageLinkTest {
   private FooterNavPageLink underTest;
 
   @BeforeEach
-  void setUp() throws Exception {
+  void setUp() {
     when(navigationManager.getFooterNavigation()).thenReturn(navigationPageItem);
     underTest = new FooterNavPageLink(navigationManager);
   }
 
   @Test
-  void testGetRoot() throws Exception {
+  void testGetRoot() {
     assertSame(navigationPageItem, underTest.getRoot());
   }
 

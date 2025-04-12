@@ -43,8 +43,8 @@
         </repository>
 
         <repository>
-          <id>oss-snapshots</id>
-          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+          <id>sonatype-central-snapshots</id>
+          <url>https://central.sonatype.com/repository/maven-snapshots</url>
           <layout>default</layout>
           <releases>
             <enabled>false</enabled>
@@ -86,8 +86,8 @@
         </pluginRepository>
 
         <pluginRepository>
-          <id>oss-snapshots</id>
-          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+          <id>sonatype-central-snapshots</id>
+          <url>https://central.sonatype.com/repository/maven-snapshots</url>
           <layout>default</layout>
           <releases>
             <enabled>false</enabled>
@@ -123,7 +123,12 @@
 
   <servers>
     <server>
-      <id>ossrh</id>
+      <id>sonatype-central</id>
+      <username>${env.SONATYPE_USERNAME}</username>
+      <password>${env.SONATYPE_PASSWORD}</password>
+    </server>
+    <server>
+      <id>sonatype-central-snapshots</id>
       <username>${env.SONATYPE_USERNAME}</username>
       <password>${env.SONATYPE_PASSWORD}</password>
     </server>

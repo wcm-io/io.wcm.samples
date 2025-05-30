@@ -83,6 +83,16 @@
       <artifactId>org.apache.sling.caconfig.impl</artifactId>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.site-api.processor</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.wcm</groupId>
+      <artifactId>io.wcm.site-api.handler</artifactId>
+      <scope>provided</scope>
+    </dependency>
 
   </dependencies>
 

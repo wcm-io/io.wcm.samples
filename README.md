@@ -1,6 +1,6 @@
 <img src="https://wcm.io/images/favicon-16@2x.png"/> wcm.io Samples
 ======
-[![Build](https://github.com/wcm-io/io.wcm.samples/workflows/Build/badge.svg?branch=develop)](https://github.com/wcm-io/io.wcm.samples/actions?query=workflow%3ABuild+branch%3Adevelop)
+[![Build](https://github.com/wcm-io/io.wcm.samples/actions/workflows/maven-build.yml/badge.svg?branch=develop)](https://github.com/wcm-io/io.wcm.samples/actions?query=workflow%3ABuild+branch%3Adevelop)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=wcm-io_io.wcm.samples&metric=coverage)](https://sonarcloud.io/summary/new_code?id=wcm-io_io.wcm.samples)
 
 Sample projects and applications to demonstrate and test wcm.io features.

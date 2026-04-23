@@ -16,30 +16,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Configure GIT
-        run: |
-          git config --global user.email "${{ secrets.GH_SITE_DEPLOY_EMAIL }}"
-          git config --global user.name "${{ secrets.GH_SITE_DEPLOY_NAME }}"
-
-      - name: Setup JDK
-        uses: actions/setup-java@v5
+      - name: Maven Deploy with Site
+        uses: wcm-io-devops/github-action-maven-deploy-site@v1
         with:
-          distribution: temurin
           java-version: 21
-          cache: maven
-
-      - name: Build, verify, deploy, generate site
-        env:
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-        run: ./mvnw -s ./.maven-settings.xml -Pcontinuous-integration -B -U clean deploy site
-
-      - name: Stage and deploy site
-        run: >
-          ./mvnw -s ./.maven-settings.xml -Pcontinuous-integration -B site:stage scm-publish:publish-scm
-          -Dscmpublish.checkinComment="Maven site: ${{ github.repository }}"
-          -Dusername=${{ secrets.GH_SITE_DEPLOY_USERNAME }}
-          -Dpassword=${{ secrets.GH_SITE_DEPLOY_PAT }}
+          maven-executable: ./mvnw
+          sonatype-username: ${{ secrets.SONATYPE_USERNAME }}
+          sonatype-password: ${{ secrets.SONATYPE_PASSWORD }}
+          github-site-site-deploy-email: ${{ secrets.GH_SITE_DEPLOY_EMAIL }}
+          github-site-site-deploy-name: ${{ secrets.GH_SITE_DEPLOY_NAME }}
+          github-site-site-deploy-username: ${{ secrets.GH_SITE_DEPLOY_USERNAME }}
+          github-site-site-deploy-password: ${{ secrets.GH_SITE_DEPLOY_PAT }}

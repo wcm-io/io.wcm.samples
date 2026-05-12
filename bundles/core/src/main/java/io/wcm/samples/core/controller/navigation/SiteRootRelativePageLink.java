@@ -20,6 +20,7 @@
 package io.wcm.samples.core.controller.navigation;
 
 import java.util.Map;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -72,11 +73,11 @@ public class SiteRootRelativePageLink {
       link = linkHandler.get(page).build();
       switch (titleType) {
         case "pageTitle":
-          title = StringUtils.defaultString(page.getPageTitle(), page.getTitle());
+          title = Objects.toString(page.getPageTitle(), page.getTitle());
           break;
         case "navigationTitle":
         default:
-          title = StringUtils.defaultString(page.getNavigationTitle(), page.getTitle());
+          title = Objects.toString(page.getNavigationTitle(), page.getTitle());
           break;
       }
     }

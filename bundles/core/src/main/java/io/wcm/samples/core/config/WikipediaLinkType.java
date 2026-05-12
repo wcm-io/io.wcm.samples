@@ -19,6 +19,8 @@
  */
 package io.wcm.samples.core.config;
 
+import java.util.Objects;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
@@ -90,7 +92,7 @@ public final class WikipediaLinkType extends LinkType {
     ValueMap props = link.getLinkRequest().getResourceProperties();
 
     // get wikipedia reference from link properties
-    String wikiPageName = StringUtils.defaultString(props.get(PN_LINK_WIKIPEDIA_REF, String.class),
+    String wikiPageName = Objects.toString(props.get(PN_LINK_WIKIPEDIA_REF, String.class),
         link.getLinkRequest().getReference());
     String language = props.get(PN_LINK_WIKIPEDIA_LANGUAGE, DEFAULT_LANGUAGE);
 

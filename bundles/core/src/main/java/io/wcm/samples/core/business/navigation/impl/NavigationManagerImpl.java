@@ -22,8 +22,9 @@ package io.wcm.samples.core.business.navigation.impl;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.Self;
@@ -140,13 +141,13 @@ public class NavigationManagerImpl implements NavigationManager {
 
   private NavigationPageItem createLinkableItem(final Page page) {
     String title = getItemTitle(page);
-    boolean isCurrentPage = StringUtils.equals(page.getPath(), currentPage.getPath());
+    boolean isCurrentPage = Strings.CS.equals(page.getPath(), currentPage.getPath());
     Link link = linkHandler.get(page).build();
     return new NavigationPageItem(title, isCurrentPage, link);
   }
 
   private String getItemTitle(final Page page) {
-    return StringUtils.defaultString(page.getNavigationTitle(), page.getTitle());
+    return Objects.toString(page.getNavigationTitle(), page.getTitle());
   }
 
   private List<NavigationPageItem> createChildItems(final Page parentPage, final ItemCreator itemCreator) {

@@ -38,6 +38,7 @@ import io.wcm.handler.media.MediaHandler;
 /**
  * Generic resource-based media model.
  * The "mediaFormat" can be specified as parameter.
+ *
  * <p>
  * Compared to @link {@link io.wcm.handler.media.ui.ResourceMedia} this class
  * has additional support for imageWidth and imageHeight properties.

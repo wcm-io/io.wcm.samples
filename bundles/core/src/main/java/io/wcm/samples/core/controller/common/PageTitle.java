@@ -19,7 +19,8 @@
  */
 package io.wcm.samples.core.controller.common;
 
-import org.apache.commons.lang3.StringUtils;
+import java.util.Objects;
+
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.Self;
@@ -59,13 +60,13 @@ public class PageTitle {
       return "";
     }
     if (siteRoot.isRootPage(page)) {
-      return StringUtils.defaultString(page.getPageTitle(), page.getTitle());
+      return Objects.toString(page.getPageTitle(), page.getTitle());
     }
     else if (Template.is(page, AppTemplate.ADMIN_STRUCTURE_ELEMENT)) {
       return getRecursivePageTitle(page.getParent());
     }
     else {
-      return StringUtils.defaultString(page.getPageTitle(), page.getTitle()) + " - " + getRecursivePageTitle(page.getParent());
+      return Objects.toString(page.getPageTitle(), page.getTitle()) + " - " + getRecursivePageTitle(page.getParent());
     }
   }
 

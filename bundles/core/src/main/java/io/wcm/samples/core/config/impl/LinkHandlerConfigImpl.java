@@ -21,7 +21,7 @@ package io.wcm.samples.core.config.impl;
 
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.osgi.service.component.annotations.Component;
@@ -71,7 +71,7 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
 
   @Override
   public @Nullable String getLinkRootPath(@NotNull Page page, @NotNull String linkTypeId) {
-    if (StringUtils.equals(linkTypeId, MediaLinkType.ID)) {
+    if (Strings.CS.equals(linkTypeId, MediaLinkType.ID)) {
       return MediaHandlerConfigImpl.DAM_ROOT;
     }
     return super.getLinkRootPath(page, linkTypeId);

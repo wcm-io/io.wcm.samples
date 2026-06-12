@@ -37,6 +37,7 @@ public class FooterNavPageLink {
   private final NavigationPageItem root;
 
   /**
+   * Initializes the footer navigation controller.
    * @param navigationManager Navigation manager
    */
   @Inject
@@ -45,6 +46,7 @@ public class FooterNavPageLink {
   }
 
   /**
+   * Get root navigation page item.
    * @return Root navigation page item
    */
   public NavigationPageItem getRoot() {

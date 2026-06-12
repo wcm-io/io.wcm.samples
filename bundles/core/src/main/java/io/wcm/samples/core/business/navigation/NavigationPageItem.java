@@ -56,6 +56,7 @@ public class NavigationPageItem {
   }
 
   /**
+   * Get link.
    * @return Link
    */
   public Link getLink() {
@@ -63,6 +64,7 @@ public class NavigationPageItem {
   }
 
   /**
+   * Get link title.
    * @return Link title
    */
   public String getTitle() {
@@ -70,6 +72,7 @@ public class NavigationPageItem {
   }
 
   /**
+   * Checks if the page is the current page.
    * @return Page is current page
    */
   public boolean isActive() {
@@ -77,6 +80,7 @@ public class NavigationPageItem {
   }
 
   /**
+   * Get child navigation page items.
    * @return Child navigation page items
    */
   public List<NavigationPageItem> getChildren() {
@@ -84,6 +88,7 @@ public class NavigationPageItem {
   }
 
   /**
+   * Set child navigation page items.
    * @param children Child navigation page items
    */
   public void setChildren(List<NavigationPageItem> children) {

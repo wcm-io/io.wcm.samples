@@ -40,6 +40,7 @@ public class MainNavPageLink {
   private final NavigationPageItem root;
 
   /**
+   * Initializes the main navigation controller.
    * @param navigationManager Navigation manager
    * @param levels Number of navigation hierarchy levels
    */
@@ -51,6 +52,7 @@ public class MainNavPageLink {
   }
 
   /**
+   * Get root navigation page item.
    * @return Root navigation page item
    */
   public NavigationPageItem getRoot() {

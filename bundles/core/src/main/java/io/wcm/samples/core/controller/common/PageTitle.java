@@ -44,6 +44,7 @@ public class PageTitle {
   private SiteRoot siteRoot;
 
   /**
+   * Get recursive page title for HTML title.
    * @return Recursive page title for HTML title
    */
   public String getRecursivePageTitle() {
@@ -71,6 +72,7 @@ public class PageTitle {
   }
 
   /**
+   * Get site root page title.
    * @return Site root page title
    */
   public String getSiteRootPageTitle() {

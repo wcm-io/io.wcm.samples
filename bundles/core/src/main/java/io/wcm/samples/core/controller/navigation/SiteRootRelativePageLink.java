@@ -50,6 +50,7 @@ public class SiteRootRelativePageLink {
   private String title;
 
   /**
+   * Initializes the site root relative page link controller.
    * @param siteRoot Site root
    * @param linkHandler Link handler
    * @param relativePath Relative path of page to link to
@@ -87,6 +88,7 @@ public class SiteRootRelativePageLink {
   }
 
   /**
+   * Get link.
    * @return Link
    */
   public Link getMetadata() {
@@ -94,6 +96,7 @@ public class SiteRootRelativePageLink {
   }
 
   /**
+   * Checks if the link is valid.
    * @return Link is valid
    */
   public boolean isValid() {
@@ -101,6 +104,7 @@ public class SiteRootRelativePageLink {
   }
 
   /**
+   * Get anchor attributes.
    * @return Anchor attributes
    */
   public Map<String, String> getAttributes() {
@@ -108,6 +112,7 @@ public class SiteRootRelativePageLink {
   }
 
   /**
+   * Get link title.
    * @return Link title
    */
   public String getTitle() {

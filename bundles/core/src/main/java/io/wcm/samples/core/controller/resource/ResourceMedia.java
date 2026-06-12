@@ -84,6 +84,7 @@ public class ResourceMedia {
   }
 
   /**
+   * Get media metadata.
    * @return Media metadata
    */
   public Media getMetadata() {
@@ -91,6 +92,7 @@ public class ResourceMedia {
   }
 
   /**
+   * Checks if the media is valid.
    * @return Media is valid
    */
   public boolean isValid() {
@@ -98,6 +100,7 @@ public class ResourceMedia {
   }
 
   /**
+   * Get media markup.
    * @return Media markup
    */
   public String getMarkup() {

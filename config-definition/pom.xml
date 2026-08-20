@@ -59,6 +59,12 @@
       <type>zip</type>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>com.adobe.cq</groupId>
+      <artifactId>core.wcm.components.all</artifactId>
+      <type>zip</type>
+      <scope>compile</scope>
+    </dependency>
 
   </dependencies>
 

@@ -26,6 +26,8 @@ files:
       - filter: /apps/wcm-io-samples-aem-cms-config
 
 # Application package
+- url: mvn:com.adobe.cq/core.wcm.components.all//zip
+  dir: packages
 - url: mvn:io.wcm.samples/io.wcm.samples.complete//zip
   dir: packages
 

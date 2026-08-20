@@ -25,9 +25,108 @@
         "column": {
           "sling:resourceType": "granite/ui/components/coral/foundation/container",
           "items": {
-            "xhtmlText": {
-              "sling:resourceType": "cq/gui/components/authoring/dialog/richtext/readonly",
-              "name": "./text"
+            "text": {
+              "sling:resourceType": "cq/gui/components/authoring/dialog/richtext",
+              "name": "./text",
+              "useFixedInlineToolbar": true,
+
+              "htmlRules": {
+
+                // Ensure valid XHTML markup with <strong> and <em> tags
+                "docType": {
+                  "baseType": "xhtml",
+                  "version": "1.0",
+                  "typeConfig": {
+                    "useSemanticMarkup": true,
+                    "semanticMarkupMap": {
+                      "b": "strong",
+                      "i": "em"
+                    },
+                    "isXhtmlStrict": false
+                  }
+                },
+
+                // Default link dialog configuration
+                "links": {
+                  "cssMode": "keep",
+                  "protocols": [
+                    "http://",
+                    "https://",
+                    "mailto:"
+                  ],
+                  "targetConfig": {
+                    "mode": "blank"
+                  },
+                  "ensureInternalLinkExt": false
+                }
+
+              },
+
+              "rtePlugins": {
+                /* Disable OOTB link support */
+                "links": {
+                  "features": "-"
+                },
+                /* Enable wcm.io RTE link plugin */
+                "wcmio-links": {
+                  "features": [
+                    "modifylink",
+                    "unlink"
+                  ]
+                },
+                "edit": {
+                  "features": ["cut","copy","paste-plaintext","paste-wordhtml"],
+                  "defaultPasteMode": "wordhtml",
+                  "htmlPasteRules": {
+                    "allowedAttributes": {
+                      "a": [
+                        "href", "name", "title", "alt",
+                        // allow attributes of custom RTE link plugin
+                        "data-link-type", "data-link-content-ref", "data-link-cross-context-content-ref",
+                        "data-link-media-ref", "data-link-external-ref", "data-link-window-target", "data-link-media-download"
+                      ]
+                    }
+                  }
+                }
+              },
+
+              "uiSettings": {
+                "cui": {
+                  "inline": {
+                    "toolbar": [
+                      "format#bold",
+                      "format#italic",
+                      "format#underline",
+                      "#justify",
+                      "#lists",
+                      /* Use wcm.io RTE Link plugin actions */
+                      "wcmio-links#modifylink",
+                      "wcmio-links#unlink",
+                      "#paraformat"
+                    ]
+                  },
+                  "dialogFullScreen": {
+                    "toolbar": [
+                      "format#bold",
+                      "format#italic",
+                      "format#underline",
+                      "justify#justifyleft",
+                      "justify#justifycenter",
+                      "justify#justifyright",
+                      "lists#unordered",
+                      "lists#ordered",
+                      "lists#outdent",
+                      "lists#indent",
+                      /* Use wcm.io RTE Link plugin actions */
+                      "wcmio-links#modifylink",
+                      "wcmio-links#unlink",
+                      "table#createoredit",
+                      "#paraformat",
+                      "image#imageProps"
+                    ]
+                  }
+                }
+              }
             }
           }
         }

@@ -156,7 +156,7 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.handler.richtext</artifactId>
-        <version>2.1.1-SNAPSHOT</version>
+        <version>2.1.2</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
